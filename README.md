@@ -1,6 +1,6 @@
 # PAL-Jittor
 
-> **English abstract.** This repository is a faithful [Jittor](https://github.com/Jittor/jittor) re-implementation of **PAL** (*From Easy to Hard: Progressive Active Learning Framework for Infrared Small Target Detection with Single Point Supervision*, ICCV 2025; original PyTorch repo: <https://github.com/Tianfang-Ye/PAL>). It ports the complete PAL three-stage progressive active-learning pipeline together with four segmentation networks — **ACM** (WACV 2021), **ALCNet** (IEEE TGRS), **SCTransNet** (IEEE TGRS 2024) and **ISNet** (CVPR 2022, with a hand-written pure-Jittor deformable-convolution operator) — and verifies them against the PyTorch reference down to fp64-level structural equivalence (max abs diff 1e-14 ~ 1e-9, zero binarized-pixel disagreement). On top of the migration, we identify and characterize an **"all-background collapse attractor"** in point-supervised training with the edgeSCE loss, and propose **PAL-Guard**, an original anti-collapse mechanism (collapse trigger → balanced-BCE takeover → λ-blended graceful exit) whose A/B behavior is reported honestly, including negative results. This is a learning-oriented reproduction built for the 新芽计划 (New Sprout Program) assessment; all rights of the original PAL code belong to its authors (see [许可与致谢](#许可与致谢)).
+> **English abstract.** This repository is a faithful [Jittor](https://github.com/Jittor/jittor) re-implementation of **PAL** (*From Easy to Hard: Progressive Active Learning Framework for Infrared Small Target Detection with Single Point Supervision*, ICCV 2025; original PyTorch repo: <https://github.com/YuChuang1205/PAL>). It ports the complete PAL three-stage progressive active-learning pipeline together with four segmentation networks — **ACM** (WACV 2021), **ALCNet** (IEEE TGRS), **SCTransNet** (IEEE TGRS 2024) and **ISNet** (CVPR 2022, with a hand-written pure-Jittor deformable-convolution operator) — and verifies them against the PyTorch reference down to fp64-level structural equivalence (max abs diff 1e-14 ~ 1e-9, zero binarized-pixel disagreement). On top of the migration, we identify and characterize an **"all-background collapse attractor"** in point-supervised training with the edgeSCE loss, and propose **PAL-Guard**, an original anti-collapse mechanism (collapse trigger → balanced-BCE takeover → λ-blended graceful exit) whose A/B behavior is reported honestly, including negative results. This is a learning-oriented reproduction built for the 新芽计划 (New Sprout Program) assessment; all rights of the original PAL code belong to its authors (see [许可与致谢](#许可与致谢)).
 
 ![四个网络在 PAL 三阶段训练下的 val mIoU 曲线](assets/figures/fig1_four_nets_curves.png)
 
@@ -8,7 +8,7 @@
 
 ## 项目简介
 
-[PAL](https://github.com/Tianfang-Ye/PAL)（ICCV 2025）是面向红外小目标检测（IRSTD）的**单点监督**渐进式主动学习框架：从粗点标签出发，经"预启动 → 增强（难度准入 + 标签自更新）→ 精炼"三阶段，让网络由易到难主动扩充训练池，在只有点标注的条件下逼近全监督水位。
+[PAL](https://github.com/YuChuang1205/PAL)（ICCV 2025）是面向红外小目标检测（IRSTD）的**单点监督**渐进式主动学习框架：从粗点标签出发，经"预启动 → 增强（难度准入 + 标签自更新）→ 精炼"三阶段，让网络由易到难主动扩充训练池，在只有点标注的条件下逼近全监督水位。
 
 本仓库把 PAL 完整迁移到国产深度学习框架 **Jittor**，内容包括：
 
@@ -99,7 +99,7 @@ pip install jittor==1.3.8.5 "numpy<2" opencv-python scipy scikit-image albumenta
 
 ### 数据集准备
 
-1. 从 PAL 官方仓库的网盘下载处理好的数据集（含 coarse/centroid 点标签，无需碰 MATLAB）：<https://pan.baidu.com/s/1_QIs9zUM_7MqJgwzO2aC0Q?pwd=1234>（官方说明见 [PAL README](https://github.com/Tianfang-Ye/PAL)）；
+1. 从 PAL 官方仓库的网盘下载处理好的数据集（含 coarse/centroid 点标签，无需碰 MATLAB）：<https://pan.baidu.com/s/1_QIs9zUM_7MqJgwzO2aC0Q?pwd=1234>（官方说明见 [PAL README](https://github.com/YuChuang1205/PAL)）；
 2. 解压后按原版布局放置，使得 `dataset/SIRST3/` 结构如下（train 各 1676 张，val 各 1079 张）：
 
    ```
