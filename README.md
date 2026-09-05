@@ -324,5 +324,5 @@ PAL-Jittor/
 
 - 感谢 PAL 作者团队（Yu Chuang、Zhao Jinmiao、Liu Yunpeng、Zhao Sicheng、Dai Yimian、Yue Xiangyu）开源高质量代码与处理好的数据集；
 - 感谢 ACM / ALCNet / SCTransNet / ISNet 各网络原作者的工作；
-- 感谢新芽计划提供本次复现考核机会；
+- 感谢新芽计划提供本次机会；
 - 本仓库中 Jittor 迁移代码与 PAL-Guard 机制为复现者所加，以学习与科研交流为目的发布，不用于商业用途。原 PAL 仓库未附带开源许可证文件，其代码权利归原作者所有。
