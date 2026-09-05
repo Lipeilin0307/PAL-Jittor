@@ -201,7 +201,7 @@ PAL-Jittor/
 
 ## 引用
 
-若本仓库对你有帮助，请引用原始论文与相关网络（venue/年份以 PAL 原仓库 README 的链接为准）：
+若本仓库对你有帮助，请引用原始论文与相关网络：
 
 ```bibtex
 @inproceedings{yu2025easy,
@@ -221,12 +221,13 @@ PAL-Jittor/
 }
 
 @article{dai2021alcnet,
-  title={Attention-guided pyramid context networks for infrared small target detection},
+  title={Attentional local contrast networks for infrared small target detection},
   author={Dai, Yimian and Wu, Yiquan and Zhou, Fei and Barnard, Kobus},
   journal={IEEE Transactions on Geoscience and Remote Sensing},
-  volume={60},
-  pages={1--11},
-  year={2022}
+  volume={59},
+  number={11},
+  pages={9813--9824},
+  year={2021}
 }
 
 @article{yuan2024sctransnet,
