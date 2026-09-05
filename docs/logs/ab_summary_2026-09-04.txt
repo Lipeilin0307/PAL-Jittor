@@ -1,0 +1,12 @@
+================ PAL-Guard A/B 汇总 ================
+实验目录: /root/autodl-tmp/work_pal/PAL_jittor/work_dirs/ab_2026-09-04_16-12-31    汇总时间: 2026-09-04 23:55:47
+逃离 epoch = 首个 val mIoU>0.01 的 epoch ('-' 表示 100 轮内未逃离)
+
+run    | vanilla逃离 guard逃离 | vanilla末mIoU guard末mIoU | GUARD事件
+----------------------------------------------------------------------
+#1     | 55         41         | 0.3829     0.1340     | 3       
+#2     | -          26         | 0.0000     0.4594     | 0       
+#3     | 97         47         | 0.1934     0.1148     | 3       
+
+失败 run 数: 0 / 6
+明细: grep '\[GUARD\]' /root/autodl-tmp/work_pal/PAL_jittor/work_dirs/ab_2026-09-04_16-12-31/ab_guard_*.log 查看每次激活/关闭

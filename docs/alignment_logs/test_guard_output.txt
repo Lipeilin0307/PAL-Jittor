@@ -1,0 +1,53 @@
+# 运行日期: 2026-09-05
+# 解释器: D:/Anaconda/envs/jittor/python.exe (Python 3.9.25, jittor 1.3.8.5); 运行目录: C:/Users/Alienware/Documents/kimi/workspace/PAL_jittor
+# 环境变量: PAL_JT_FORCE_CPU=1（确定性回归；GPU cudnn autotune 会使 ③ 组内两次前向产生 1e-3 级非确定性差异）
+
+[i 0905 22:15:00.931000 68 compiler.py:956] Jittor(1.3.8.5) src: d:\anaconda\envs\jittor\lib\site-packages\jittor
+[i 0905 22:15:01.013000 68 compiler.py:957] cl at C:\Users\Alienware\.cache\jittor\msvc\VC\_\_\_\_\_\bin\cl.exe(19.29.30133)
+[i 0905 22:15:01.014000 68 compiler.py:958] cache_path: C:\Users\Alienware\.cache\jittor\jt1.3.8\cl\py3.9.25\Windows-10-10.x85\11thGenIntelRCxaa\default
+[i 0905 22:15:01.021000 68 install_cuda.py:93] cuda_driver_version: [13, 2, 0]
+[i 0905 22:15:01.095000 68 __init__.py:411] Found C:\Users\Alienware\.cache\jittor\jtcuda\cuda11.2_cudnn8_win\bin\nvcc.exe(11.2.67) at C:\Users\Alienware\.cache\jittor\jtcuda\cuda11.2_cudnn8_win\bin\nvcc.exe.
+[i 0905 22:15:01.201000 68 compiler.py:1011] cuda key:cu11.2.67
+[i 0905 22:15:01.204000 68 __init__.py:227] Total mem: 31.67GB, using 10 procs for compiling.
+[i 0905 22:15:03.157000 68 jit_compiler.cc:28] Load cc_path: C:\Users\Alienware\.cache\jittor\msvc\VC\_\_\_\_\_\bin\cl.exe
+[i 0905 22:15:03.167000 68 init.cc:62] Found cuda archs: [86,]
+[i 0905 22:15:15.041000 68 cuda_flags.cc:49] CUDA enabled.
+=== test_balanced_bce_numeric ===
+  自动 pos_weight: n_pos=16 n_neg=112 pw=7.00
+  jt_auto=2.0674631596  jt_expl=2.0674631596  np=2.0674631596
+  cap=1000: jt=0.9211440682  np(pw=1000)=0.9211452603
+  全背景: jt=1.2433532476  np=1.2433526516
+  torch=2.0674633980  |jt-torch|=2.384e-07
+[PASS] ① 平衡 BCE 数值对拍  jt_auto=2.06746316, np=2.06746316, cap/全背景均过
+=== test_guard_controller_fsm ===
+  blend λ 调度实测: [1.0, 0.9, 0.8, 0.7, 0.6, 0.5, 0.4, 0.3, 0.2, 0.1] -> None
+  日志: 激活×3 退出进blend×2 blend完成×1 再塌缩回退×1 硬切关闭×1
+    [GUARD] epoch 40: 最近 5 轮 train_IoU 最大值 0.00000 < 0.005, 判定陷入全背景塌缩, 激活保护 (切换为平衡 BCE, pos_weight=min(n_neg/n_pos,1000), 无 OHEM)
+    [GUARD] epoch 45: train_IoU=0.0700 已连续 3 轮 > 0.05, 开始退出: 进入 blend 期 (10 轮线性退火, 下轮 λ=1.00)
+    [GUARD] epoch 55: blend 10 轮完成, λ=0, 完全恢复 edgeSCE(top-50% OHEM)
+    [GUARD] epoch 60: 最近 5 轮 train_IoU 最大值 0.00000 < 0.005, 判定陷入全背景塌缩, 激活保护 (切换为平衡 BCE, pos_weight=min(n_neg/n_pos,1000), 无 OHEM)
+    [GUARD] epoch 63: train_IoU=0.0600 已连续 3 轮 > 0.05, 开始退出: 进入 blend 期 (10 轮线性退火, 下轮 λ=1.00)
+    [GUARD] epoch 68: blend 期最近 5 轮 train_IoU 最大值 0.00000 < 0.005, 再塌缩, λ 立即回 1, 重新进入全保护
+    [GUARD] epoch 40: 最近 5 轮 train_IoU 最大值 0.00000 < 0.005, 判定陷入全背景塌缩, 激活保护 (切换为平衡 BCE, pos_weight=min(n_neg/n_pos,1000), 无 OHEM)
+    [GUARD] epoch 43: train_IoU=0.0600 已连续 3 轮 > 0.05, 关闭保护 (无 blend), 恢复 edgeSCE(top-50% OHEM)
+[PASS] ② GuardController v2 状态机  触发@40 / >0.05×3退出@45 / blend λ:1.0→0.1→完成 / 再触发@60 / blend再塌缩@68 λ回1 / blend=0硬切 / disabled恒关
+=== test_guard_off_equivalence ===
+  (a) 静态: guard-off 分支 == edgeSCE_loss 字面调用, --guard 默认关, v2 参数默认 0.05/3/10 ✓
+  (b) 进程内冻结权重: old=3.2369099855422974  new(guard off)=3.2368162870407104
+Traceback (most recent call last):
+  File "C:\Users\Alienware\Documents\kimi\workspace\PAL_jittor\tests\test_guard.py", line 377, in <module>
+    fn()
+  File "C:\Users\Alienware\Documents\kimi\workspace\PAL_jittor\tests\test_guard.py", line 268, in test_guard_off_equivalence
+    assert loss_old == loss_new, \
+AssertionError: guard-off loss 序列应与旧函数逐位一致: 3.2369099855422974 vs 3.2368162870407104
+
+# 退出码: 1
+
+== 补跑: 单组 ④ 冒烟（③ 失败后脚本中止，④ 未执行，单独补跑） ==
+=== test_smoke_both_modes ===
+  guard off: losses=[3.244408, 3.045931, 2.941804] ✓
+  guard on: losses=[3.244807, 3.043361, 2.941958] ✓
+[PASS] ④ 双模式 3-epoch 冒烟 (无 NaN)  off=[3.244807, 3.043361, 2.941958] on 同形态
+
+合计 1 项, 失败 0 项
+# 单组④退出码: 0

@@ -1,0 +1,168 @@
+# 运行日期: 2026-09-05
+# 解释器: D:/Anaconda/envs/jittor/python.exe (Python 3.9.25, jittor 1.3.8.5); 运行目录: C:/Users/Alienware/Documents/kimi/workspace/PAL_jittor
+# 备注: 测试内 jt.flags.use_cuda=0 强制 CPU 对齐（规避 CUDA TF32 噪声）；全程约 11 分钟，stdout 经文件缓冲
+
+[i 0905 22:13:31.717000 40 compiler.py:956] Jittor(1.3.8.5) src: d:\anaconda\envs\jittor\lib\site-packages\jittor
+[i 0905 22:13:31.787000 40 compiler.py:957] cl at C:\Users\Alienware\.cache\jittor\msvc\VC\_\_\_\_\_\bin\cl.exe(19.29.30133)
+[i 0905 22:13:31.787000 40 compiler.py:958] cache_path: C:\Users\Alienware\.cache\jittor\jt1.3.8\cl\py3.9.25\Windows-10-10.x85\11thGenIntelRCxaa\default
+[i 0905 22:13:31.796000 40 install_cuda.py:93] cuda_driver_version: [13, 2, 0]
+[i 0905 22:13:31.861000 40 __init__.py:411] Found C:\Users\Alienware\.cache\jittor\jtcuda\cuda11.2_cudnn8_win\bin\nvcc.exe(11.2.67) at C:\Users\Alienware\.cache\jittor\jtcuda\cuda11.2_cudnn8_win\bin\nvcc.exe.
+[i 0905 22:13:31.966000 40 compiler.py:1011] cuda key:cu11.2.67
+[i 0905 22:13:31.973000 40 __init__.py:227] Total mem: 31.67GB, using 10 procs for compiling.
+[i 0905 22:13:33.996000 40 jit_compiler.cc:28] Load cc_path: C:\Users\Alienware\.cache\jittor\msvc\VC\_\_\_\_\_\bin\cl.exe
+[i 0905 22:13:34.006000 40 init.cc:62] Found cuda archs: [86,]
+
+Compiling Operators(87/87) used: 2.75s eta:    0s 
+[w 0905 22:21:51.964000 40 grad.cc:81] grads[4] 'inc.0.bn1.running_mean' doesn't have gradient. It will be set to zero: Var(73237:2:1:1:i1:o0:s0:n0,float32,inc.0.bn1.running_mean,0)[32,]
+[w 0905 22:21:51.964000 40 grad.cc:81] grads[5] 'inc.0.bn1.running_var' doesn't have gradient. It will be set to zero: Var(73251:2:1:1:i1:o0:s0:n0,float32,inc.0.bn1.running_var,0)[32,]
+[w 0905 22:21:51.964000 40 grad.cc:81] grads[10] 'inc.0.bn2.running_mean' doesn't have gradient. It will be set to zero: Var(73337:2:1:1:i1:o0:s0:n0,float32,inc.0.bn2.running_mean,0)[32,]
+[w 0905 22:21:51.964000 40 grad.cc:81] grads[11] 'inc.0.bn2.running_var' doesn't have gradient. It will be set to zero: Var(73351:2:1:1:i1:o0:s0:n0,float32,inc.0.bn2.running_var,0)[32,]
+[w 0905 22:21:51.964000 40 grad.cc:81] grads[16] 'inc.0.shortcut.1.running_mean' doesn't have gradient. It will be set to zero: Var(73155:2:1:1:i1:o0:s0:n0,float32,inc.0.shortcut.1.running_mean,0)[32,]
+[w 0905 22:21:51.964000 40 grad.cc:81] grads[17] 'inc.0.shortcut.1.running_var' doesn't have gradient. It will be set to zero: Var(73169:2:1:1:i1:o0:s0:n0,float32,inc.0.shortcut.1.running_var,0)[32,]
+[w 0905 22:21:51.964000 40 grad.cc:81] grads[22] 'down_encoder1.0.bn1.running_mean' doesn't have gradient. It will be set to zero: Var(73523:2:1:1:i1:o0:s0:n0,float32,down_encoder1.0.bn1.running_mean,0)[64,]
+[w 0905 22:21:51.965000 40 grad.cc:81] grads[23] 'down_encoder1.0.bn1.running_var' doesn't have gradient. It will be set to zero: Var(73537:2:1:1:i1:o0:s0:n0,float32,down_encoder1.0.bn1.running_var,0)[64,]
+[w 0905 22:21:51.965000 40 grad.cc:81] grads[28] 'down_encoder1.0.bn2.running_mean' doesn't have gradient. It will be set to zero: Var(73623:2:1:1:i1:o0:s0:n0,float32,down_encoder1.0.bn2.running_mean,0)[64,]
+[w 0905 22:21:51.965000 40 grad.cc:81] grads[29] 'down_encoder1.0.bn2.running_var' doesn't have gradient. It will be set to zero: Var(73637:2:1:1:i1:o0:s0:n0,float32,down_encoder1.0.bn2.running_var,0)[64,]
+[w 0905 22:21:51.965000 40 grad.cc:81] grads[34] 'down_encoder1.0.shortcut.1.running_mean' doesn't have gradient. It will be set to zero: Var(73441:2:1:1:i1:o0:s0:n0,float32,down_encoder1.0.shortcut.1.running_mean,0)[64,]
+[w 0905 22:21:51.965000 40 grad.cc:81] grads[35] 'down_encoder1.0.shortcut.1.running_var' doesn't have gradient. It will be set to zero: Var(73455:2:1:1:i1:o0:s0:n0,float32,down_encoder1.0.shortcut.1.running_var,0)[64,]
+[w 0905 22:21:51.965000 40 grad.cc:81] grads[40] 'down_encoder2.0.bn1.running_mean' doesn't have gradient. It will be set to zero: Var(73809:2:1:1:i1:o0:s0:n0,float32,down_encoder2.0.bn1.running_mean,0)[128,]
+[w 0905 22:21:51.965000 40 grad.cc:81] grads[41] 'down_encoder2.0.bn1.running_var' doesn't have gradient. It will be set to zero: Var(73823:2:1:1:i1:o0:s0:n0,float32,down_encoder2.0.bn1.running_var,0)[128,]
+[w 0905 22:21:51.965000 40 grad.cc:81] grads[46] 'down_encoder2.0.bn2.running_mean' doesn't have gradient. It will be set to zero: Var(73909:2:1:1:i1:o0:s0:n0,float32,down_encoder2.0.bn2.running_mean,0)[128,]
+[w 0905 22:21:51.965000 40 grad.cc:81] grads[47] 'down_encoder2.0.bn2.running_var' doesn't have gradient. It will be set to zero: Var(73923:2:1:1:i1:o0:s0:n0,float32,down_encoder2.0.bn2.running_var,0)[128,]
+[w 0905 22:21:51.965000 40 grad.cc:81] grads[52] 'down_encoder2.0.shortcut.1.running_mean' doesn't have gradient. It will be set to zero: Var(73727:2:1:1:i1:o0:s0:n0,float32,down_encoder2.0.shortcut.1.running_mean,0)[128,]
+[w 0905 22:21:51.965000 40 grad.cc:81] grads[53] 'down_encoder2.0.shortcut.1.running_var' doesn't have gradient. It will be set to zero: Var(73741:2:1:1:i1:o0:s0:n0,float32,down_encoder2.0.shortcut.1.running_var,0)[128,]
+[w 0905 22:21:51.965000 40 grad.cc:81] grads[58] 'down_encoder3.0.bn1.running_mean' doesn't have gradient. It will be set to zero: Var(74095:2:1:1:i1:o0:s0:n0,float32,down_encoder3.0.bn1.running_mean,0)[256,]
+[w 0905 22:21:51.965000 40 grad.cc:81] grads[59] 'down_encoder3.0.bn1.running_var' doesn't have gradient. It will be set to zero: Var(74109:2:1:1:i1:o0:s0:n0,float32,down_encoder3.0.bn1.running_var,0)[256,]
+[w 0905 22:21:51.965000 40 grad.cc:81] grads[64] 'down_encoder3.0.bn2.running_mean' doesn't have gradient. It will be set to zero: Var(74195:2:1:1:i1:o0:s0:n0,float32,down_encoder3.0.bn2.running_mean,0)[256,]
+[w 0905 22:21:51.965000 40 grad.cc:81] grads[65] 'down_encoder3.0.bn2.running_var' doesn't have gradient. It will be set to zero: Var(74209:2:1:1:i1:o0:s0:n0,float32,down_encoder3.0.bn2.running_var,0)[256,]
+[w 0905 22:21:51.965000 40 grad.cc:81] grads[70] 'down_encoder3.0.shortcut.1.running_mean' doesn't have gradient. It will be set to zero: Var(74013:2:1:1:i1:o0:s0:n0,float32,down_encoder3.0.shortcut.1.running_mean,0)[256,]
+[w 0905 22:21:51.965000 40 grad.cc:81] grads[71] 'down_encoder3.0.shortcut.1.running_var' doesn't have gradient. It will be set to zero: Var(74027:2:1:1:i1:o0:s0:n0,float32,down_encoder3.0.shortcut.1.running_var,0)[256,]
+[w 0905 22:21:51.965000 40 grad.cc:81] grads[76] 'down_encoder4.0.bn1.running_mean' doesn't have gradient. It will be set to zero: Var(74299:2:1:1:i1:o0:s0:n0,float32,down_encoder4.0.bn1.running_mean,0)[256,]
+[w 0905 22:21:51.965000 40 grad.cc:81] grads[77] 'down_encoder4.0.bn1.running_var' doesn't have gradient. It will be set to zero: Var(74313:2:1:1:i1:o0:s0:n0,float32,down_encoder4.0.bn1.running_var,0)[256,]
+[w 0905 22:21:51.965000 40 grad.cc:81] grads[82] 'down_encoder4.0.bn2.running_mean' doesn't have gradient. It will be set to zero: Var(74399:2:1:1:i1:o0:s0:n0,float32,down_encoder4.0.bn2.running_mean,0)[256,]
+[w 0905 22:21:51.965000 40 grad.cc:81] grads[83] 'down_encoder4.0.bn2.running_var' doesn't have gradient. It will be set to zero: Var(74413:2:1:1:i1:o0:s0:n0,float32,down_encoder4.0.bn2.running_var,0)[256,]
+[w 0905 22:21:51.965000 40 grad.cc:81] grads[84] 'mtc.embeddings_1.position_embeddings' doesn't have gradient. It will be set to zero: Var(72287:1:1:1:i1:o0:s0:n0,float32,mtc.embeddings_1.position_embeddings,0)[1,256,32,]
+[w 0905 22:21:51.965000 40 grad.cc:81] grads[87] 'mtc.embeddings_2.position_embeddings' doesn't have gradient. It will be set to zero: Var(72293:1:1:1:i1:o0:s0:n0,float32,mtc.embeddings_2.position_embeddings,0)[1,256,64,]
+[w 0905 22:21:51.965000 40 grad.cc:81] grads[90] 'mtc.embeddings_3.position_embeddings' doesn't have gradient. It will be set to zero: Var(72299:1:1:1:i1:o0:s0:n0,float32,mtc.embeddings_3.position_embeddings,0)[1,256,128,]
+[w 0905 22:21:51.965000 40 grad.cc:81] grads[93] 'mtc.embeddings_4.position_embeddings' doesn't have gradient. It will be set to zero: Var(72305:1:1:1:i1:o0:s0:n0,float32,mtc.embeddings_4.position_embeddings,0)[1,256,256,]
+[w 0905 22:21:51.965000 40 grad.cc:81] grads[106] 'mtc.encoder.layer.0.channel_attn.q1_attn1' doesn't have gradient. It will be set to zero: Var(72331:1:1:1:i1:o0:s0:n0,float32,mtc.encoder.layer.0.channel_attn.q1_attn1,0)[1,]
+[w 0905 22:21:51.965000 40 grad.cc:81] grads[107] 'mtc.encoder.layer.0.channel_attn.q1_attn2' doesn't have gradient. It will be set to zero: Var(72333:1:1:1:i1:o0:s0:n0,float32,mtc.encoder.layer.0.channel_attn.q1_attn2,0)[1,]
+[w 0905 22:21:51.965000 40 grad.cc:81] grads[108] 'mtc.encoder.layer.0.channel_attn.q1_attn3' doesn't have gradient. It will be set to zero: Var(72335:1:1:1:i1:o0:s0:n0,float32,mtc.encoder.layer.0.channel_attn.q1_attn3,0)[1,]
+[w 0905 22:21:51.965000 40 grad.cc:81] grads[109] 'mtc.encoder.layer.0.channel_attn.q1_attn4' doesn't have gradient. It will be set to zero: Var(72337:1:1:1:i1:o0:s0:n0,float32,mtc.encoder.layer.0.channel_attn.q1_attn4,0)[1,]
+[w 0905 22:21:51.965000 40 grad.cc:81] grads[110] 'mtc.encoder.layer.0.channel_attn.q2_attn1' doesn't have gradient. It will be set to zero: Var(72339:1:1:1:i1:o0:s0:n0,float32,mtc.encoder.layer.0.channel_attn.q2_attn1,0)[1,]
+[w 0905 22:21:51.965000 40 grad.cc:81] grads[111] 'mtc.encoder.layer.0.channel_attn.q2_attn2' doesn't have gradient. It will be set to zero: Var(72341:1:1:1:i1:o0:s0:n0,float32,mtc.encoder.layer.0.channel_attn.q2_attn2,0)[1,]
+[w 0905 22:21:51.965000 40 grad.cc:81] grads[112] 'mtc.encoder.layer.0.channel_attn.q2_attn3' doesn't have gradient. It will be set to zero: Var(72343:1:1:1:i1:o0:s0:n0,float32,mtc.encoder.layer.0.channel_attn.q2_attn3,0)[1,]
+[w 0905 22:21:51.965000 40 grad.cc:81] grads[113] 'mtc.encoder.layer.0.channel_attn.q2_attn4' doesn't have gradient. It will be set to zero: Var(72345:1:1:1:i1:o0:s0:n0,float32,mtc.encoder.layer.0.channel_attn.q2_attn4,0)[1,]
+[w 0905 22:21:51.966000 40 grad.cc:81] grads[114] 'mtc.encoder.layer.0.channel_attn.q3_attn1' doesn't have gradient. It will be set to zero: Var(72347:1:1:1:i1:o0:s0:n0,float32,mtc.encoder.layer.0.channel_attn.q3_attn1,0)[1,]
+[w 0905 22:21:51.966000 40 grad.cc:81] grads[115] 'mtc.encoder.layer.0.channel_attn.q3_attn2' doesn't have gradient. It will be set to zero: Var(72349:1:1:1:i1:o0:s0:n0,float32,mtc.encoder.layer.0.channel_attn.q3_attn2,0)[1,]
+[w 0905 22:21:51.966000 40 grad.cc:81] grads[116] 'mtc.encoder.layer.0.channel_attn.q3_attn3' doesn't have gradient. It will be set to zero: Var(72351:1:1:1:i1:o0:s0:n0,float32,mtc.encoder.layer.0.channel_attn.q3_attn3,0)[1,]
+[w 0905 22:21:51.966000 40 grad.cc:81] grads[117] 'mtc.encoder.layer.0.channel_attn.q3_attn4' doesn't have gradient. It will be set to zero: Var(72353:1:1:1:i1:o0:s0:n0,float32,mtc.encoder.layer.0.channel_attn.q3_attn4,0)[1,]
+[w 0905 22:21:51.966000 40 grad.cc:81] grads[118] 'mtc.encoder.layer.0.channel_attn.q4_attn1' doesn't have gradient. It will be set to zero: Var(72355:1:1:1:i1:o0:s0:n0,float32,mtc.encoder.layer.0.channel_attn.q4_attn1,0)[1,]
+[w 0905 22:21:51.966000 40 grad.cc:81] grads[119] 'mtc.encoder.layer.0.channel_attn.q4_attn2' doesn't have gradient. It will be set to zero: Var(72357:1:1:1:i1:o0:s0:n0,float32,mtc.encoder.layer.0.channel_attn.q4_attn2,0)[1,]
+[w 0905 22:21:51.966000 40 grad.cc:81] grads[120] 'mtc.encoder.layer.0.channel_attn.q4_attn3' doesn't have gradient. It will be set to zero: Var(72359:1:1:1:i1:o0:s0:n0,float32,mtc.encoder.layer.0.channel_attn.q4_attn3,0)[1,]
+[w 0905 22:21:51.966000 40 grad.cc:81] grads[121] 'mtc.encoder.layer.0.channel_attn.q4_attn4' doesn't have gradient. It will be set to zero: Var(72361:1:1:1:i1:o0:s0:n0,float32,mtc.encoder.layer.0.channel_attn.q4_attn4,0)[1,]
+[w 0905 22:21:51.966000 40 grad.cc:81] grads[176] 'mtc.encoder.layer.1.channel_attn.q1_attn1' doesn't have gradient. It will be set to zero: Var(72471:1:1:1:i1:o0:s0:n0,float32,mtc.encoder.layer.1.channel_attn.q1_attn1,0)[1,]
+[w 0905 22:21:51.966000 40 grad.cc:81] grads[177] 'mtc.encoder.layer.1.channel_attn.q1_attn2' doesn't have gradient. It will be set to zero: Var(72473:1:1:1:i1:o0:s0:n0,float32,mtc.encoder.layer.1.channel_attn.q1_attn2,0)[1,]
+[w 0905 22:21:51.966000 40 grad.cc:81] grads[178] 'mtc.encoder.layer.1.channel_attn.q1_attn3' doesn't have gradient. It will be set to zero: Var(72475:1:1:1:i1:o0:s0:n0,float32,mtc.encoder.layer.1.channel_attn.q1_attn3,0)[1,]
+[w 0905 22:21:51.966000 40 grad.cc:81] grads[179] 'mtc.encoder.layer.1.channel_attn.q1_attn4' doesn't have gradient. It will be set to zero: Var(72477:1:1:1:i1:o0:s0:n0,float32,mtc.encoder.layer.1.channel_attn.q1_attn4,0)[1,]
+[w 0905 22:21:51.966000 40 grad.cc:81] grads[180] 'mtc.encoder.layer.1.channel_attn.q2_attn1' doesn't have gradient. It will be set to zero: Var(72479:1:1:1:i1:o0:s0:n0,float32,mtc.encoder.layer.1.channel_attn.q2_attn1,0)[1,]
+[w 0905 22:21:51.966000 40 grad.cc:81] grads[181] 'mtc.encoder.layer.1.channel_attn.q2_attn2' doesn't have gradient. It will be set to zero: Var(72481:1:1:1:i1:o0:s0:n0,float32,mtc.encoder.layer.1.channel_attn.q2_attn2,0)[1,]
+[w 0905 22:21:51.966000 40 grad.cc:81] grads[182] 'mtc.encoder.layer.1.channel_attn.q2_attn3' doesn't have gradient. It will be set to zero: Var(72483:1:1:1:i1:o0:s0:n0,float32,mtc.encoder.layer.1.channel_attn.q2_attn3,0)[1,]
+[w 0905 22:21:51.966000 40 grad.cc:81] grads[183] 'mtc.encoder.layer.1.channel_attn.q2_attn4' doesn't have gradient. It will be set to zero: Var(72485:1:1:1:i1:o0:s0:n0,float32,mtc.encoder.layer.1.channel_attn.q2_attn4,0)[1,]
+[w 0905 22:21:51.966000 40 grad.cc:81] grads[184] 'mtc.encoder.layer.1.channel_attn.q3_attn1' doesn't have gradient. It will be set to zero: Var(72487:1:1:1:i1:o0:s0:n0,float32,mtc.encoder.layer.1.channel_attn.q3_attn1,0)[1,]
+[w 0905 22:21:51.966000 40 grad.cc:81] grads[185] 'mtc.encoder.layer.1.channel_attn.q3_attn2' doesn't have gradient. It will be set to zero: Var(72489:1:1:1:i1:o0:s0:n0,float32,mtc.encoder.layer.1.channel_attn.q3_attn2,0)[1,]
+[w 0905 22:21:51.966000 40 grad.cc:81] grads[186] 'mtc.encoder.layer.1.channel_attn.q3_attn3' doesn't have gradient. It will be set to zero: Var(72491:1:1:1:i1:o0:s0:n0,float32,mtc.encoder.layer.1.channel_attn.q3_attn3,0)[1,]
+[w 0905 22:21:51.966000 40 grad.cc:81] grads[187] 'mtc.encoder.layer.1.channel_attn.q3_attn4' doesn't have gradient. It will be set to zero: Var(72493:1:1:1:i1:o0:s0:n0,float32,mtc.encoder.layer.1.channel_attn.q3_attn4,0)[1,]
+[w 0905 22:21:51.966000 40 grad.cc:81] grads[188] 'mtc.encoder.layer.1.channel_attn.q4_attn1' doesn't have gradient. It will be set to zero: Var(72495:1:1:1:i1:o0:s0:n0,float32,mtc.encoder.layer.1.channel_attn.q4_attn1,0)[1,]
+[w 0905 22:21:51.966000 40 grad.cc:81] grads[189] 'mtc.encoder.layer.1.channel_attn.q4_attn2' doesn't have gradient. It will be set to zero: Var(72497:1:1:1:i1:o0:s0:n0,float32,mtc.encoder.layer.1.channel_attn.q4_attn2,0)[1,]
+[w 0905 22:21:51.966000 40 grad.cc:81] grads[190] 'mtc.encoder.layer.1.channel_attn.q4_attn3' doesn't have gradient. It will be set to zero: Var(72499:1:1:1:i1:o0:s0:n0,float32,mtc.encoder.layer.1.channel_attn.q4_attn3,0)[1,]
+[w 0905 22:21:51.966000 40 grad.cc:81] grads[191] 'mtc.encoder.layer.1.channel_attn.q4_attn4' doesn't have gradient. It will be set to zero: Var(72501:1:1:1:i1:o0:s0:n0,float32,mtc.encoder.layer.1.channel_attn.q4_attn4,0)[1,]
+[w 0905 22:21:51.966000 40 grad.cc:81] grads[246] 'mtc.encoder.layer.2.channel_attn.q1_attn1' doesn't have gradient. It will be set to zero: Var(72611:1:1:1:i1:o0:s0:n0,float32,mtc.encoder.layer.2.channel_attn.q1_attn1,0)[1,]
+[w 0905 22:21:51.966000 40 grad.cc:81] grads[247] 'mtc.encoder.layer.2.channel_attn.q1_attn2' doesn't have gradient. It will be set to zero: Var(72613:1:1:1:i1:o0:s0:n0,float32,mtc.encoder.layer.2.channel_attn.q1_attn2,0)[1,]
+[w 0905 22:21:51.966000 40 grad.cc:81] grads[248] 'mtc.encoder.layer.2.channel_attn.q1_attn3' doesn't have gradient. It will be set to zero: Var(72615:1:1:1:i1:o0:s0:n0,float32,mtc.encoder.layer.2.channel_attn.q1_attn3,0)[1,]
+[w 0905 22:21:51.966000 40 grad.cc:81] grads[249] 'mtc.encoder.layer.2.channel_attn.q1_attn4' doesn't have gradient. It will be set to zero: Var(72617:1:1:1:i1:o0:s0:n0,float32,mtc.encoder.layer.2.channel_attn.q1_attn4,0)[1,]
+[w 0905 22:21:51.966000 40 grad.cc:81] grads[250] 'mtc.encoder.layer.2.channel_attn.q2_attn1' doesn't have gradient. It will be set to zero: Var(72619:1:1:1:i1:o0:s0:n0,float32,mtc.encoder.layer.2.channel_attn.q2_attn1,0)[1,]
+[w 0905 22:21:51.966000 40 grad.cc:81] grads[251] 'mtc.encoder.layer.2.channel_attn.q2_attn2' doesn't have gradient. It will be set to zero: Var(72621:1:1:1:i1:o0:s0:n0,float32,mtc.encoder.layer.2.channel_attn.q2_attn2,0)[1,]
+[w 0905 22:21:51.966000 40 grad.cc:81] grads[252] 'mtc.encoder.layer.2.channel_attn.q2_attn3' doesn't have gradient. It will be set to zero: Var(72623:1:1:1:i1:o0:s0:n0,float32,mtc.encoder.layer.2.channel_attn.q2_attn3,0)[1,]
+[w 0905 22:21:51.966000 40 grad.cc:81] grads[253] 'mtc.encoder.layer.2.channel_attn.q2_attn4' doesn't have gradient. It will be set to zero: Var(72625:1:1:1:i1:o0:s0:n0,float32,mtc.encoder.layer.2.channel_attn.q2_attn4,0)[1,]
+[w 0905 22:21:51.966000 40 grad.cc:81] grads[254] 'mtc.encoder.layer.2.channel_attn.q3_attn1' doesn't have gradient. It will be set to zero: Var(72627:1:1:1:i1:o0:s0:n0,float32,mtc.encoder.layer.2.channel_attn.q3_attn1,0)[1,]
+[w 0905 22:21:51.966000 40 grad.cc:81] grads[255] 'mtc.encoder.layer.2.channel_attn.q3_attn2' doesn't have gradient. It will be set to zero: Var(72629:1:1:1:i1:o0:s0:n0,float32,mtc.encoder.layer.2.channel_attn.q3_attn2,0)[1,]
+[w 0905 22:21:51.966000 40 grad.cc:81] grads[256] 'mtc.encoder.layer.2.channel_attn.q3_attn3' doesn't have gradient. It will be set to zero: Var(72631:1:1:1:i1:o0:s0:n0,float32,mtc.encoder.layer.2.channel_attn.q3_attn3,0)[1,]
+[w 0905 22:21:51.966000 40 grad.cc:81] grads[257] 'mtc.encoder.layer.2.channel_attn.q3_attn4' doesn't have gradient. It will be set to zero: Var(72633:1:1:1:i1:o0:s0:n0,float32,mtc.encoder.layer.2.channel_attn.q3_attn4,0)[1,]
+[w 0905 22:21:51.967000 40 grad.cc:81] grads[258] 'mtc.encoder.layer.2.channel_attn.q4_attn1' doesn't have gradient. It will be set to zero: Var(72635:1:1:1:i1:o0:s0:n0,float32,mtc.encoder.layer.2.channel_attn.q4_attn1,0)[1,]
+[w 0905 22:21:51.967000 40 grad.cc:81] grads[259] 'mtc.encoder.layer.2.channel_attn.q4_attn2' doesn't have gradient. It will be set to zero: Var(72637:1:1:1:i1:o0:s0:n0,float32,mtc.encoder.layer.2.channel_attn.q4_attn2,0)[1,]
+[w 0905 22:21:51.967000 40 grad.cc:81] grads[260] 'mtc.encoder.layer.2.channel_attn.q4_attn3' doesn't have gradient. It will be set to zero: Var(72639:1:1:1:i1:o0:s0:n0,float32,mtc.encoder.layer.2.channel_attn.q4_attn3,0)[1,]
+[w 0905 22:21:51.967000 40 grad.cc:81] grads[261] 'mtc.encoder.layer.2.channel_attn.q4_attn4' doesn't have gradient. It will be set to zero: Var(72641:1:1:1:i1:o0:s0:n0,float32,mtc.encoder.layer.2.channel_attn.q4_attn4,0)[1,]
+[w 0905 22:21:51.967000 40 grad.cc:81] grads[316] 'mtc.encoder.layer.3.channel_attn.q1_attn1' doesn't have gradient. It will be set to zero: Var(72751:1:1:1:i1:o0:s0:n0,float32,mtc.encoder.layer.3.channel_attn.q1_attn1,0)[1,]
+[w 0905 22:21:51.967000 40 grad.cc:81] grads[317] 'mtc.encoder.layer.3.channel_attn.q1_attn2' doesn't have gradient. It will be set to zero: Var(72753:1:1:1:i1:o0:s0:n0,float32,mtc.encoder.layer.3.channel_attn.q1_attn2,0)[1,]
+[w 0905 22:21:51.967000 40 grad.cc:81] grads[318] 'mtc.encoder.layer.3.channel_attn.q1_attn3' doesn't have gradient. It will be set to zero: Var(72755:1:1:1:i1:o0:s0:n0,float32,mtc.encoder.layer.3.channel_attn.q1_attn3,0)[1,]
+[w 0905 22:21:51.967000 40 grad.cc:81] grads[319] 'mtc.encoder.layer.3.channel_attn.q1_attn4' doesn't have gradient. It will be set to zero: Var(72757:1:1:1:i1:o0:s0:n0,float32,mtc.encoder.layer.3.channel_attn.q1_attn4,0)[1,]
+[w 0905 22:21:51.967000 40 grad.cc:81] grads[320] 'mtc.encoder.layer.3.channel_attn.q2_attn1' doesn't have gradient. It will be set to zero: Var(72759:1:1:1:i1:o0:s0:n0,float32,mtc.encoder.layer.3.channel_attn.q2_attn1,0)[1,]
+[w 0905 22:21:51.967000 40 grad.cc:81] grads[321] 'mtc.encoder.layer.3.channel_attn.q2_attn2' doesn't have gradient. It will be set to zero: Var(72761:1:1:1:i1:o0:s0:n0,float32,mtc.encoder.layer.3.channel_attn.q2_attn2,0)[1,]
+[w 0905 22:21:51.967000 40 grad.cc:81] grads[322] 'mtc.encoder.layer.3.channel_attn.q2_attn3' doesn't have gradient. It will be set to zero: Var(72763:1:1:1:i1:o0:s0:n0,float32,mtc.encoder.layer.3.channel_attn.q2_attn3,0)[1,]
+[w 0905 22:21:51.967000 40 grad.cc:81] grads[323] 'mtc.encoder.layer.3.channel_attn.q2_attn4' doesn't have gradient. It will be set to zero: Var(72765:1:1:1:i1:o0:s0:n0,float32,mtc.encoder.layer.3.channel_attn.q2_attn4,0)[1,]
+[w 0905 22:21:51.967000 40 grad.cc:81] grads[324] 'mtc.encoder.layer.3.channel_attn.q3_attn1' doesn't have gradient. It will be set to zero: Var(72767:1:1:1:i1:o0:s0:n0,float32,mtc.encoder.layer.3.channel_attn.q3_attn1,0)[1,]
+[w 0905 22:21:51.967000 40 grad.cc:81] grads[325] 'mtc.encoder.layer.3.channel_attn.q3_attn2' doesn't have gradient. It will be set to zero: Var(72769:1:1:1:i1:o0:s0:n0,float32,mtc.encoder.layer.3.channel_attn.q3_attn2,0)[1,]
+[w 0905 22:21:51.967000 40 grad.cc:81] grads[326] 'mtc.encoder.layer.3.channel_attn.q3_attn3' doesn't have gradient. It will be set to zero: Var(72771:1:1:1:i1:o0:s0:n0,float32,mtc.encoder.layer.3.channel_attn.q3_attn3,0)[1,]
+[w 0905 22:21:51.967000 40 grad.cc:81] grads[327] 'mtc.encoder.layer.3.channel_attn.q3_attn4' doesn't have gradient. It will be set to zero: Var(72773:1:1:1:i1:o0:s0:n0,float32,mtc.encoder.layer.3.channel_attn.q3_attn4,0)[1,]
+[w 0905 22:21:51.967000 40 grad.cc:81] grads[328] 'mtc.encoder.layer.3.channel_attn.q4_attn1' doesn't have gradient. It will be set to zero: Var(72775:1:1:1:i1:o0:s0:n0,float32,mtc.encoder.layer.3.channel_attn.q4_attn1,0)[1,]
+[w 0905 22:21:51.967000 40 grad.cc:81] grads[329] 'mtc.encoder.layer.3.channel_attn.q4_attn2' doesn't have gradient. It will be set to zero: Var(72777:1:1:1:i1:o0:s0:n0,float32,mtc.encoder.layer.3.channel_attn.q4_attn2,0)[1,]
+[w 0905 22:21:51.967000 40 grad.cc:81] grads[330] 'mtc.encoder.layer.3.channel_attn.q4_attn3' doesn't have gradient. It will be set to zero: Var(72779:1:1:1:i1:o0:s0:n0,float32,mtc.encoder.layer.3.channel_attn.q4_attn3,0)[1,]
+[w 0905 22:21:51.967000 40 grad.cc:81] grads[331] 'mtc.encoder.layer.3.channel_attn.q4_attn4' doesn't have gradient. It will be set to zero: Var(72781:1:1:1:i1:o0:s0:n0,float32,mtc.encoder.layer.3.channel_attn.q4_attn4,0)[1,]
+[w 0905 22:21:51.967000 40 grad.cc:81] grads[388] 'mtc.reconstruct_1.norm.running_mean' doesn't have gradient. It will be set to zero: Var(80932:2:1:1:i1:o0:s0:n0,float32,mtc.reconstruct_1.norm.running_mean,0)[32,]
+[w 0905 22:21:51.967000 40 grad.cc:81] grads[389] 'mtc.reconstruct_1.norm.running_var' doesn't have gradient. It will be set to zero: Var(80946:2:1:1:i1:o0:s0:n0,float32,mtc.reconstruct_1.norm.running_var,0)[32,]
+[w 0905 22:21:51.967000 40 grad.cc:81] grads[394] 'mtc.reconstruct_2.norm.running_mean' doesn't have gradient. It will be set to zero: Var(81164:2:1:1:i1:o0:s0:n0,float32,mtc.reconstruct_2.norm.running_mean,0)[64,]
+[w 0905 22:21:51.967000 40 grad.cc:81] grads[395] 'mtc.reconstruct_2.norm.running_var' doesn't have gradient. It will be set to zero: Var(81178:2:1:1:i1:o0:s0:n0,float32,mtc.reconstruct_2.norm.running_var,0)[64,]
+[w 0905 22:21:51.967000 40 grad.cc:81] grads[400] 'mtc.reconstruct_3.norm.running_mean' doesn't have gradient. It will be set to zero: Var(81396:2:1:1:i1:o0:s0:n0,float32,mtc.reconstruct_3.norm.running_mean,0)[128,]
+[w 0905 22:21:51.967000 40 grad.cc:81] grads[401] 'mtc.reconstruct_3.norm.running_var' doesn't have gradient. It will be set to zero: Var(81410:2:1:1:i1:o0:s0:n0,float32,mtc.reconstruct_3.norm.running_var,0)[128,]
+[w 0905 22:21:51.967000 40 grad.cc:81] grads[406] 'mtc.reconstruct_4.norm.running_mean' doesn't have gradient. It will be set to zero: Var(81628:2:1:1:i1:o0:s0:n0,float32,mtc.reconstruct_4.norm.running_mean,0)[256,]
+[w 0905 22:21:51.967000 40 grad.cc:81] grads[407] 'mtc.reconstruct_4.norm.running_var' doesn't have gradient. It will be set to zero: Var(81642:2:1:1:i1:o0:s0:n0,float32,mtc.reconstruct_4.norm.running_var,0)[256,]
+[w 0905 22:21:51.967000 40 grad.cc:81] grads[416] 'up_decoder4.nConvs.0.norm.running_mean' doesn't have gradient. It will be set to zero: Var(81845:2:1:1:i1:o0:s0:n0,float32,up_decoder4.nConvs.0.norm.running_mean,0)[128,]
+[w 0905 22:21:51.967000 40 grad.cc:81] grads[417] 'up_decoder4.nConvs.0.norm.running_var' doesn't have gradient. It will be set to zero: Var(81859:2:1:1:i1:o0:s0:n0,float32,up_decoder4.nConvs.0.norm.running_var,0)[128,]
+[w 0905 22:21:51.967000 40 grad.cc:81] grads[422] 'up_decoder4.nConvs.1.norm.running_mean' doesn't have gradient. It will be set to zero: Var(81942:2:1:1:i1:o0:s0:n0,float32,up_decoder4.nConvs.1.norm.running_mean,0)[128,]
+[w 0905 22:21:51.967000 40 grad.cc:81] grads[423] 'up_decoder4.nConvs.1.norm.running_var' doesn't have gradient. It will be set to zero: Var(81956:2:1:1:i1:o0:s0:n0,float32,up_decoder4.nConvs.1.norm.running_var,0)[128,]
+[w 0905 22:21:51.967000 40 grad.cc:81] grads[432] 'up_decoder3.nConvs.0.norm.running_mean' doesn't have gradient. It will be set to zero: Var(82143:2:1:1:i1:o0:s0:n0,float32,up_decoder3.nConvs.0.norm.running_mean,0)[64,]
+[w 0905 22:21:51.967000 40 grad.cc:81] grads[433] 'up_decoder3.nConvs.0.norm.running_var' doesn't have gradient. It will be set to zero: Var(82157:2:1:1:i1:o0:s0:n0,float32,up_decoder3.nConvs.0.norm.running_var,0)[64,]
+[w 0905 22:21:51.967000 40 grad.cc:81] grads[438] 'up_decoder3.nConvs.1.norm.running_mean' doesn't have gradient. It will be set to zero: Var(82240:2:1:1:i1:o0:s0:n0,float32,up_decoder3.nConvs.1.norm.running_mean,0)[64,]
+[w 0905 22:21:51.967000 40 grad.cc:81] grads[439] 'up_decoder3.nConvs.1.norm.running_var' doesn't have gradient. It will be set to zero: Var(82254:2:1:1:i1:o0:s0:n0,float32,up_decoder3.nConvs.1.norm.running_var,0)[64,]
+[w 0905 22:21:51.967000 40 grad.cc:81] grads[448] 'up_decoder2.nConvs.0.norm.running_mean' doesn't have gradient. It will be set to zero: Var(82441:2:1:1:i1:o0:s0:n0,float32,up_decoder2.nConvs.0.norm.running_mean,0)[32,]
+[w 0905 22:21:51.967000 40 grad.cc:81] grads[449] 'up_decoder2.nConvs.0.norm.running_var' doesn't have gradient. It will be set to zero: Var(82455:2:1:1:i1:o0:s0:n0,float32,up_decoder2.nConvs.0.norm.running_var,0)[32,]
+[w 0905 22:21:51.967000 40 grad.cc:81] grads[454] 'up_decoder2.nConvs.1.norm.running_mean' doesn't have gradient. It will be set to zero: Var(82538:2:1:1:i1:o0:s0:n0,float32,up_decoder2.nConvs.1.norm.running_mean,0)[32,]
+[w 0905 22:21:51.967000 40 grad.cc:81] grads[455] 'up_decoder2.nConvs.1.norm.running_var' doesn't have gradient. It will be set to zero: Var(82552:2:1:1:i1:o0:s0:n0,float32,up_decoder2.nConvs.1.norm.running_var,0)[32,]
+[w 0905 22:21:51.967000 40 grad.cc:81] grads[464] 'up_decoder1.nConvs.0.norm.running_mean' doesn't have gradient. It will be set to zero: Var(82739:2:1:1:i1:o0:s0:n0,float32,up_decoder1.nConvs.0.norm.running_mean,0)[32,]
+[w 0905 22:21:51.967000 40 grad.cc:81] grads[465] 'up_decoder1.nConvs.0.norm.running_var' doesn't have gradient. It will be set to zero: Var(82753:2:1:1:i1:o0:s0:n0,float32,up_decoder1.nConvs.0.norm.running_var,0)[32,]
+[w 0905 22:21:51.967000 40 grad.cc:81] grads[470] 'up_decoder1.nConvs.1.norm.running_mean' doesn't have gradient. It will be set to zero: Var(82836:2:1:1:i1:o0:s0:n0,float32,up_decoder1.nConvs.1.norm.running_mean,0)[32,]
+[w 0905 22:21:51.967000 40 grad.cc:81] grads[471] 'up_decoder1.nConvs.1.norm.running_var' doesn't have gradient. It will be set to zero: Var(82850:2:1:1:i1:o0:s0:n0,float32,up_decoder1.nConvs.1.norm.running_var,0)[32,]
+
+Compiling Operators(146/146) used: 11.7s eta:    0s 
+Deep-Supervision: True
+[test_sct/1] mode=train 随机输入 (2,3,256,256) -> 6 个输出, 形状 [(2, 1, 256, 256), (2, 1, 256, 256), (2, 1, 256, 256), (2, 1, 256, 256), (2, 1, 256, 256), (2, 1, 256, 256)]: PASS
+Deep-Supervision: True
+[test_sct/1b] mode=test -> 单输出 (2, 1, 256, 256): PASS
+Deep-Supervision: True
+[convert] 载入 484 个张量, 跳过 num_batches_tracked x 26, jittor 参数全覆盖 ✓
+[convert] jittor 权重已保存: C:\Users\Alienware\Documents\kimi\workspace\PAL_jittor\work_dirs\sct_torch_init_jt.pkl
+------------------------------------------------------------
+[test_sct/2a] fp32 对齐 (torch CPU 参考, eval):
+  [gt5] logit max abs diff = 1.825e-07 | sigmoid diff = 1.192e-07 (<1e-4) | 二值化不一致 = 0.00e+00 (要求0): PASS
+  [gt4] logit max abs diff = 1.937e-07 | sigmoid diff = 1.192e-07 (<1e-4) | 二值化不一致 = 0.00e+00 (要求0): PASS
+  [gt3] logit max abs diff = 9.686e-08 | sigmoid diff = 1.192e-07 (<1e-4) | 二值化不一致 = 0.00e+00 (要求0): PASS
+  [gt2] logit max abs diff = 2.384e-07 | sigmoid diff = 1.192e-07 (<1e-4) | 二值化不一致 = 0.00e+00 (要求0): PASS
+  [d0] logit max abs diff = 1.192e-07 | sigmoid diff = 8.941e-08 (<1e-4) | 二值化不一致 = 0.00e+00 (要求0): PASS
+  [out] logit max abs diff = 8.382e-08 | sigmoid diff = 1.192e-07 (<1e-4) | 二值化不一致 = 0.00e+00 (要求0): PASS
+------------------------------------------------------------
+Deep-Supervision: True
+[test_sct/2b] fp64 结构等价性 (阈值 1e-6):
+  [gt5] max abs diff = 2.424e-08: PASS
+  [gt4] max abs diff = 1.060e-08: PASS
+  [gt3] max abs diff = 4.123e-08: PASS
+  [gt2] max abs diff = 2.199e-07: PASS
+  [d0] max abs diff = 2.018e-08: PASS
+  [out] max abs diff = 2.775e-11: PASS
+------------------------------------------------------------
+Deep-Supervision: True
+[test_sct/3] train 模式前向+反向 (输入 1x3x64x64): loss = -0.297127, 全局梯度范数 = 4.179649e+01 (有限非零): PASS
+============================================================
+test_sct 全部通过 ✓
+
+# 退出码: 0（test_sct 全部通过 ✓）

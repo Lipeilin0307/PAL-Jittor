@@ -1,0 +1,1639 @@
+# 摘要提取自 train_acm.log（原始日志 125 MB，含 tqdm 进度条，GBK 编码）
+# 提取规则：头部环境/数据集信息 + 每 epoch train/val 指标行 + best 行 + 每 epoch 末 batch loss + 结尾
+
+== 头部 ==
+D:\Anaconda\envs\pal_torch\lib\site-packages\albumentations\augmentations\transforms.py:1149: FutureWarning: This class has been deprecated. Please use RandomBrightnessContrast
+warnings.warn(
+D:\Anaconda\envs\pal_torch\lib\site-packages\albumentations\augmentations\transforms.py:1175: FutureWarning: RandomContrast has been deprecated. Please use RandomBrightnessContrast
+warnings.warn(
+路径为： C:\Users\Alienware\Documents\kimi\workspace\PAL\dataset\SIRST3/origin/img
+数据集均值为： 0.3862517948161632
+数据集方差为： 0.14124445249304624
+初始数据已生成，共生成样本张数： 861
+初始数据已生成，共生成样本张数： 861
+初始数据已生成，共生成样本张数： 861
+0
+
+== 每 epoch 指标（train_mioU / val mioU, FA, PD / best） ==
+当前epoch:1  train_mioU:0.0003  train_nioU:0.0003
+当前epoch:2  train_mioU:0.0003  train_nioU:0.0003
+当前epoch:2  mioU:0.0005  nioU:0.0006  FA:985785.257  PD:0.0113
+best_epoch:2  best_miou:0.0005  b_niou:0.0006  FA:985785.257  PD:0.0113
+当前epoch:3  train_mioU:0.0003  train_nioU:0.0003
+当前epoch:3  mioU:0.0005  nioU:0.0006  FA:934658.03  PD:0.0053
+best_epoch:2  best_miou:0.0005  b_niou:0.0006  FA:985785.257  PD:0.0113
+当前epoch:4  train_mioU:0.0003  train_nioU:0.0003
+当前epoch:4  mioU:0.0008  nioU:0.0008  FA:122505.552  PD:0.0007
+best_epoch:4  best_miou:0.0008  b_niou:0.0008  FA:122505.552  PD:0.0007
+当前epoch:5  train_mioU:0.0004  train_nioU:0.0004
+当前epoch:5  mioU:0.0008  nioU:0.0008  FA:64292.224  PD:0.0013
+best_epoch:5  best_miou:0.0008  b_niou:0.0008  FA:64292.224  PD:0.0013
+当前epoch:6  train_mioU:0.0003  train_nioU:0.0003
+当前epoch:6  mioU:0.0009  nioU:0.0009  FA:72242.791  PD:0.0053
+best_epoch:6  best_miou:0.0009  b_niou:0.0009  FA:72242.791  PD:0.0053
+当前epoch:7  train_mioU:0.0003  train_nioU:0.0003
+当前epoch:7  mioU:0.0004  nioU:0.0006  FA:91508.086  PD:0.0
+best_epoch:6  best_miou:0.0009  b_niou:0.0009  FA:72242.791  PD:0.0053
+当前epoch:8  train_mioU:0.0004  train_nioU:0.0004
+当前epoch:8  mioU:0.0004  nioU:0.0005  FA:71375.986  PD:0.0007
+best_epoch:6  best_miou:0.0009  b_niou:0.0009  FA:72242.791  PD:0.0053
+当前epoch:9  train_mioU:0.0003  train_nioU:0.0003
+当前epoch:9  mioU:0.0005  nioU:0.0005  FA:41979.484  PD:0.0007
+best_epoch:6  best_miou:0.0009  b_niou:0.0009  FA:72242.791  PD:0.0053
+当前epoch:10  train_mioU:0.0004  train_nioU:0.0004
+当前epoch:10  mioU:0.0005  nioU:0.0005  FA:43860.722  PD:0.0
+best_epoch:6  best_miou:0.0009  b_niou:0.0009  FA:72242.791  PD:0.0053
+当前epoch:11  train_mioU:0.0003  train_nioU:0.0002
+当前epoch:11  mioU:0.0  nioU:0.0  FA:35.565  PD:0.0
+best_epoch:6  best_miou:0.0009  b_niou:0.0009  FA:72242.791  PD:0.0053
+当前epoch:12  train_mioU:0.0  train_nioU:0.0
+当前epoch:12  mioU:0.0  nioU:0.0  FA:5.055  PD:0.0
+best_epoch:6  best_miou:0.0009  b_niou:0.0009  FA:72242.791  PD:0.0053
+当前epoch:13  train_mioU:0.0  train_nioU:0.0
+当前epoch:13  mioU:0.0  nioU:0.0  FA:0.451  PD:0.0
+best_epoch:6  best_miou:0.0009  b_niou:0.0009  FA:72242.791  PD:0.0053
+当前epoch:14  train_mioU:0.0  train_nioU:0.0
+当前epoch:14  mioU:0.0  nioU:0.0  FA:0.0  PD:0.0
+best_epoch:6  best_miou:0.0009  b_niou:0.0009  FA:72242.791  PD:0.0053
+当前epoch:15  train_mioU:0.0  train_nioU:0.0
+当前epoch:15  mioU:0.0  nioU:0.0  FA:0.0  PD:0.0
+best_epoch:6  best_miou:0.0009  b_niou:0.0009  FA:72242.791  PD:0.0053
+当前epoch:16  train_mioU:0.0  train_nioU:0.0
+当前epoch:16  mioU:0.0  nioU:0.0  FA:0.0  PD:0.0
+best_epoch:6  best_miou:0.0009  b_niou:0.0009  FA:72242.791  PD:0.0053
+当前epoch:17  train_mioU:0.0  train_nioU:0.0
+当前epoch:17  mioU:0.0  nioU:0.0  FA:0.0  PD:0.0
+best_epoch:6  best_miou:0.0009  b_niou:0.0009  FA:72242.791  PD:0.0053
+当前epoch:18  train_mioU:0.0  train_nioU:0.0
+当前epoch:18  mioU:0.0  nioU:0.0  FA:0.0  PD:0.0
+best_epoch:6  best_miou:0.0009  b_niou:0.0009  FA:72242.791  PD:0.0053
+当前epoch:19  train_mioU:0.0  train_nioU:0.0
+当前epoch:19  mioU:0.0  nioU:0.0  FA:0.0  PD:0.0
+best_epoch:6  best_miou:0.0009  b_niou:0.0009  FA:72242.791  PD:0.0053
+当前epoch:20  train_mioU:0.0  train_nioU:0.0
+当前epoch:20  mioU:0.0  nioU:0.0  FA:0.0  PD:0.0
+best_epoch:6  best_miou:0.0009  b_niou:0.0009  FA:72242.791  PD:0.0053
+当前epoch:21  train_mioU:0.0  train_nioU:0.0
+当前epoch:21  mioU:0.0  nioU:0.0  FA:0.0  PD:0.0
+best_epoch:6  best_miou:0.0009  b_niou:0.0009  FA:72242.791  PD:0.0053
+当前epoch:22  train_mioU:0.0  train_nioU:0.0
+当前epoch:22  mioU:0.0  nioU:0.0  FA:0.0  PD:0.0
+best_epoch:6  best_miou:0.0009  b_niou:0.0009  FA:72242.791  PD:0.0053
+当前epoch:23  train_mioU:0.0  train_nioU:0.0
+当前epoch:23  mioU:0.0  nioU:0.0  FA:0.0  PD:0.0
+best_epoch:6  best_miou:0.0009  b_niou:0.0009  FA:72242.791  PD:0.0053
+当前epoch:24  train_mioU:0.0  train_nioU:0.0
+当前epoch:24  mioU:0.0  nioU:0.0  FA:0.0  PD:0.0
+best_epoch:6  best_miou:0.0009  b_niou:0.0009  FA:72242.791  PD:0.0053
+当前epoch:25  train_mioU:0.0  train_nioU:0.0
+当前epoch:25  mioU:0.0  nioU:0.0  FA:0.0  PD:0.0
+best_epoch:6  best_miou:0.0009  b_niou:0.0009  FA:72242.791  PD:0.0053
+当前epoch:26  train_mioU:0.0  train_nioU:0.0
+当前epoch:26  mioU:0.0  nioU:0.0  FA:0.0  PD:0.0
+best_epoch:6  best_miou:0.0009  b_niou:0.0009  FA:72242.791  PD:0.0053
+当前epoch:27  train_mioU:0.0  train_nioU:0.0
+当前epoch:27  mioU:0.0  nioU:0.0  FA:0.0  PD:0.0
+best_epoch:6  best_miou:0.0009  b_niou:0.0009  FA:72242.791  PD:0.0053
+当前epoch:28  train_mioU:0.0  train_nioU:0.0
+当前epoch:28  mioU:0.0  nioU:0.0  FA:0.0  PD:0.0
+best_epoch:6  best_miou:0.0009  b_niou:0.0009  FA:72242.791  PD:0.0053
+当前epoch:29  train_mioU:0.0  train_nioU:0.0
+当前epoch:29  mioU:0.0  nioU:0.0  FA:0.0  PD:0.0
+best_epoch:6  best_miou:0.0009  b_niou:0.0009  FA:72242.791  PD:0.0053
+当前epoch:30  train_mioU:0.0  train_nioU:0.0
+当前epoch:30  mioU:0.0  nioU:0.0  FA:0.0  PD:0.0
+best_epoch:6  best_miou:0.0009  b_niou:0.0009  FA:72242.791  PD:0.0053
+当前epoch:31  train_mioU:0.0  train_nioU:0.0
+当前epoch:31  mioU:0.0  nioU:0.0  FA:0.0  PD:0.0
+best_epoch:6  best_miou:0.0009  b_niou:0.0009  FA:72242.791  PD:0.0053
+当前epoch:32  train_mioU:0.0  train_nioU:0.0
+当前epoch:32  mioU:0.0  nioU:0.0  FA:0.0  PD:0.0
+best_epoch:6  best_miou:0.0009  b_niou:0.0009  FA:72242.791  PD:0.0053
+当前epoch:33  train_mioU:0.0  train_nioU:0.0
+当前epoch:33  mioU:0.0  nioU:0.0  FA:0.0  PD:0.0
+best_epoch:6  best_miou:0.0009  b_niou:0.0009  FA:72242.791  PD:0.0053
+当前epoch:34  train_mioU:0.0  train_nioU:0.0
+当前epoch:34  mioU:0.0  nioU:0.0  FA:0.0  PD:0.0
+best_epoch:6  best_miou:0.0009  b_niou:0.0009  FA:72242.791  PD:0.0053
+当前epoch:35  train_mioU:0.0  train_nioU:0.0
+当前epoch:35  mioU:0.0  nioU:0.0  FA:0.0  PD:0.0
+best_epoch:6  best_miou:0.0009  b_niou:0.0009  FA:72242.791  PD:0.0053
+当前epoch:36  train_mioU:0.0  train_nioU:0.0
+当前epoch:36  mioU:0.0  nioU:0.0  FA:0.0  PD:0.0
+best_epoch:6  best_miou:0.0009  b_niou:0.0009  FA:72242.791  PD:0.0053
+当前epoch:37  train_mioU:0.0  train_nioU:0.0
+当前epoch:37  mioU:0.0  nioU:0.0  FA:0.0  PD:0.0
+best_epoch:6  best_miou:0.0009  b_niou:0.0009  FA:72242.791  PD:0.0053
+当前epoch:38  train_mioU:0.0  train_nioU:0.0
+当前epoch:38  mioU:0.0  nioU:0.0  FA:0.0  PD:0.0
+best_epoch:6  best_miou:0.0009  b_niou:0.0009  FA:72242.791  PD:0.0053
+当前epoch:39  train_mioU:0.0  train_nioU:0.0
+当前epoch:39  mioU:0.0  nioU:0.0  FA:0.0  PD:0.0
+best_epoch:6  best_miou:0.0009  b_niou:0.0009  FA:72242.791  PD:0.0053
+当前epoch:40  train_mioU:0.0  train_nioU:0.0
+当前epoch:40  mioU:0.0  nioU:0.0  FA:0.0  PD:0.0
+best_epoch:6  best_miou:0.0009  b_niou:0.0009  FA:72242.791  PD:0.0053
+当前epoch:41  train_mioU:0.0  train_nioU:0.0
+当前epoch:41  mioU:0.0  nioU:0.0  FA:0.0  PD:0.0
+best_epoch:6  best_miou:0.0009  b_niou:0.0009  FA:72242.791  PD:0.0053
+当前epoch:42  train_mioU:0.0  train_nioU:0.0
+当前epoch:42  mioU:0.0  nioU:0.0  FA:0.0  PD:0.0
+best_epoch:6  best_miou:0.0009  b_niou:0.0009  FA:72242.791  PD:0.0053
+当前epoch:43  train_mioU:0.0  train_nioU:0.0
+当前epoch:43  mioU:0.0  nioU:0.0  FA:0.0  PD:0.0
+best_epoch:6  best_miou:0.0009  b_niou:0.0009  FA:72242.791  PD:0.0053
+当前epoch:44  train_mioU:0.0  train_nioU:0.0
+当前epoch:44  mioU:0.0  nioU:0.0  FA:0.0  PD:0.0
+best_epoch:6  best_miou:0.0009  b_niou:0.0009  FA:72242.791  PD:0.0053
+当前epoch:45  train_mioU:0.0  train_nioU:0.0
+当前epoch:45  mioU:0.0  nioU:0.0  FA:0.0  PD:0.0
+best_epoch:6  best_miou:0.0009  b_niou:0.0009  FA:72242.791  PD:0.0053
+当前epoch:46  train_mioU:0.0  train_nioU:0.0
+当前epoch:46  mioU:0.0  nioU:0.0  FA:0.0  PD:0.0
+best_epoch:6  best_miou:0.0009  b_niou:0.0009  FA:72242.791  PD:0.0053
+当前epoch:47  train_mioU:0.0  train_nioU:0.0
+当前epoch:47  mioU:0.0  nioU:0.0  FA:0.0  PD:0.0
+best_epoch:6  best_miou:0.0009  b_niou:0.0009  FA:72242.791  PD:0.0053
+当前epoch:48  train_mioU:0.0  train_nioU:0.0
+当前epoch:48  mioU:0.0  nioU:0.0  FA:0.0  PD:0.0
+best_epoch:6  best_miou:0.0009  b_niou:0.0009  FA:72242.791  PD:0.0053
+当前epoch:49  train_mioU:0.0  train_nioU:0.0
+当前epoch:49  mioU:0.0  nioU:0.0  FA:0.0  PD:0.0
+best_epoch:6  best_miou:0.0009  b_niou:0.0009  FA:72242.791  PD:0.0053
+当前epoch:50  train_mioU:0.0  train_nioU:0.0
+当前epoch:50  mioU:0.0  nioU:0.0  FA:0.0  PD:0.0
+best_epoch:6  best_miou:0.0009  b_niou:0.0009  FA:72242.791  PD:0.0053
+当前epoch:51  train_mioU:0.0  train_nioU:0.0
+当前epoch:51  mioU:0.0  nioU:0.0  FA:0.0  PD:0.0
+best_epoch:6  best_miou:0.0009  b_niou:0.0009  FA:72242.791  PD:0.0053
+当前epoch:52  train_mioU:0.0  train_nioU:0.0
+当前epoch:52  mioU:0.0  nioU:0.0  FA:0.0  PD:0.0
+best_epoch:6  best_miou:0.0009  b_niou:0.0009  FA:72242.791  PD:0.0053
+当前epoch:53  train_mioU:0.0  train_nioU:0.0
+当前epoch:53  mioU:0.0  nioU:0.0  FA:0.0  PD:0.0
+best_epoch:6  best_miou:0.0009  b_niou:0.0009  FA:72242.791  PD:0.0053
+当前epoch:54  train_mioU:0.0  train_nioU:0.0
+当前epoch:54  mioU:0.0  nioU:0.0  FA:0.0  PD:0.0
+best_epoch:6  best_miou:0.0009  b_niou:0.0009  FA:72242.791  PD:0.0053
+当前epoch:55  train_mioU:0.0  train_nioU:0.0
+当前epoch:55  mioU:0.0  nioU:0.0  FA:0.0  PD:0.0
+best_epoch:6  best_miou:0.0009  b_niou:0.0009  FA:72242.791  PD:0.0053
+当前epoch:56  train_mioU:0.0  train_nioU:0.0
+当前epoch:56  mioU:0.0  nioU:0.0  FA:0.0  PD:0.0
+best_epoch:6  best_miou:0.0009  b_niou:0.0009  FA:72242.791  PD:0.0053
+当前epoch:57  train_mioU:0.0  train_nioU:0.0
+当前epoch:57  mioU:0.0  nioU:0.0  FA:0.0  PD:0.0
+best_epoch:6  best_miou:0.0009  b_niou:0.0009  FA:72242.791  PD:0.0053
+当前epoch:58  train_mioU:0.0  train_nioU:0.0
+当前epoch:58  mioU:0.0  nioU:0.0  FA:0.0  PD:0.0
+best_epoch:6  best_miou:0.0009  b_niou:0.0009  FA:72242.791  PD:0.0053
+当前epoch:59  train_mioU:0.0  train_nioU:0.0
+当前epoch:59  mioU:0.0  nioU:0.0  FA:0.0  PD:0.0
+best_epoch:6  best_miou:0.0009  b_niou:0.0009  FA:72242.791  PD:0.0053
+当前epoch:60  train_mioU:0.0  train_nioU:0.0
+当前epoch:60  mioU:0.0  nioU:0.0  FA:0.0  PD:0.0
+best_epoch:6  best_miou:0.0009  b_niou:0.0009  FA:72242.791  PD:0.0053
+当前epoch:61  train_mioU:0.0  train_nioU:0.0
+当前epoch:61  mioU:0.0  nioU:0.0  FA:0.0  PD:0.0
+best_epoch:6  best_miou:0.0009  b_niou:0.0009  FA:72242.791  PD:0.0053
+当前epoch:62  train_mioU:0.0  train_nioU:0.0
+当前epoch:62  mioU:0.0  nioU:0.0  FA:0.0  PD:0.0
+best_epoch:6  best_miou:0.0009  b_niou:0.0009  FA:72242.791  PD:0.0053
+当前epoch:63  train_mioU:0.0  train_nioU:0.0
+当前epoch:63  mioU:0.0  nioU:0.0  FA:0.0  PD:0.0
+best_epoch:6  best_miou:0.0009  b_niou:0.0009  FA:72242.791  PD:0.0053
+当前epoch:64  train_mioU:0.0  train_nioU:0.0
+当前epoch:64  mioU:0.0  nioU:0.0  FA:0.0  PD:0.0
+best_epoch:6  best_miou:0.0009  b_niou:0.0009  FA:72242.791  PD:0.0053
+当前epoch:65  train_mioU:0.0  train_nioU:0.0
+当前epoch:65  mioU:0.0  nioU:0.0  FA:0.0  PD:0.0
+best_epoch:6  best_miou:0.0009  b_niou:0.0009  FA:72242.791  PD:0.0053
+当前epoch:66  train_mioU:0.0  train_nioU:0.0
+当前epoch:66  mioU:0.0  nioU:0.0  FA:0.0  PD:0.0
+best_epoch:6  best_miou:0.0009  b_niou:0.0009  FA:72242.791  PD:0.0053
+当前epoch:67  train_mioU:0.0  train_nioU:0.0
+当前epoch:67  mioU:0.0  nioU:0.0  FA:0.0  PD:0.0
+best_epoch:6  best_miou:0.0009  b_niou:0.0009  FA:72242.791  PD:0.0053
+当前epoch:68  train_mioU:0.0  train_nioU:0.0
+当前epoch:68  mioU:0.0  nioU:0.0  FA:0.0  PD:0.0
+best_epoch:6  best_miou:0.0009  b_niou:0.0009  FA:72242.791  PD:0.0053
+当前epoch:69  train_mioU:0.0  train_nioU:0.0
+当前epoch:69  mioU:0.0  nioU:0.0  FA:0.0  PD:0.0
+best_epoch:6  best_miou:0.0009  b_niou:0.0009  FA:72242.791  PD:0.0053
+当前epoch:70  train_mioU:0.0  train_nioU:0.0
+当前epoch:70  mioU:0.0  nioU:0.0  FA:0.0  PD:0.0
+best_epoch:6  best_miou:0.0009  b_niou:0.0009  FA:72242.791  PD:0.0053
+当前epoch:71  train_mioU:0.0  train_nioU:0.0
+当前epoch:71  mioU:0.0  nioU:0.0  FA:0.0  PD:0.0
+best_epoch:6  best_miou:0.0009  b_niou:0.0009  FA:72242.791  PD:0.0053
+当前epoch:72  train_mioU:0.0  train_nioU:0.0
+当前epoch:72  mioU:0.0  nioU:0.0  FA:0.0  PD:0.0
+best_epoch:6  best_miou:0.0009  b_niou:0.0009  FA:72242.791  PD:0.0053
+当前epoch:73  train_mioU:0.0  train_nioU:0.0
+当前epoch:73  mioU:0.0  nioU:0.0  FA:0.0  PD:0.0
+best_epoch:6  best_miou:0.0009  b_niou:0.0009  FA:72242.791  PD:0.0053
+当前epoch:74  train_mioU:0.0  train_nioU:0.0
+当前epoch:74  mioU:0.0  nioU:0.0  FA:0.0  PD:0.0
+best_epoch:6  best_miou:0.0009  b_niou:0.0009  FA:72242.791  PD:0.0053
+当前epoch:75  train_mioU:0.0  train_nioU:0.0
+当前epoch:75  mioU:0.0  nioU:0.0  FA:0.0  PD:0.0
+best_epoch:6  best_miou:0.0009  b_niou:0.0009  FA:72242.791  PD:0.0053
+当前epoch:76  train_mioU:0.0  train_nioU:0.0
+当前epoch:76  mioU:0.0  nioU:0.0  FA:0.0  PD:0.0
+best_epoch:6  best_miou:0.0009  b_niou:0.0009  FA:72242.791  PD:0.0053
+当前epoch:77  train_mioU:0.0  train_nioU:0.0
+当前epoch:77  mioU:0.0  nioU:0.0  FA:0.0  PD:0.0
+best_epoch:6  best_miou:0.0009  b_niou:0.0009  FA:72242.791  PD:0.0053
+当前epoch:78  train_mioU:0.0  train_nioU:0.0
+当前epoch:78  mioU:0.0  nioU:0.0  FA:0.0  PD:0.0
+best_epoch:6  best_miou:0.0009  b_niou:0.0009  FA:72242.791  PD:0.0053
+当前epoch:79  train_mioU:0.0  train_nioU:0.0
+当前epoch:79  mioU:0.0  nioU:0.0  FA:0.0  PD:0.0
+best_epoch:6  best_miou:0.0009  b_niou:0.0009  FA:72242.791  PD:0.0053
+当前epoch:80  train_mioU:0.0  train_nioU:0.0
+当前epoch:80  mioU:0.0  nioU:0.0  FA:0.0  PD:0.0
+best_epoch:6  best_miou:0.0009  b_niou:0.0009  FA:72242.791  PD:0.0053
+当前epoch:81  train_mioU:0.0  train_nioU:0.0
+当前epoch:81  mioU:0.0  nioU:0.0  FA:0.0  PD:0.0
+best_epoch:6  best_miou:0.0009  b_niou:0.0009  FA:72242.791  PD:0.0053
+当前epoch:82  train_mioU:0.0  train_nioU:0.0
+当前epoch:82  mioU:0.0  nioU:0.0  FA:0.0  PD:0.0
+best_epoch:6  best_miou:0.0009  b_niou:0.0009  FA:72242.791  PD:0.0053
+当前epoch:83  train_mioU:0.0  train_nioU:0.0
+当前epoch:83  mioU:0.0  nioU:0.0  FA:0.0  PD:0.0
+best_epoch:6  best_miou:0.0009  b_niou:0.0009  FA:72242.791  PD:0.0053
+当前epoch:84  train_mioU:0.0  train_nioU:0.0
+当前epoch:84  mioU:0.0  nioU:0.0  FA:0.0  PD:0.0
+best_epoch:6  best_miou:0.0009  b_niou:0.0009  FA:72242.791  PD:0.0053
+当前epoch:85  train_mioU:0.0  train_nioU:0.0
+当前epoch:85  mioU:0.0  nioU:0.0  FA:0.0  PD:0.0
+best_epoch:6  best_miou:0.0009  b_niou:0.0009  FA:72242.791  PD:0.0053
+当前epoch:86  train_mioU:0.0  train_nioU:0.0
+当前epoch:86  mioU:0.0  nioU:0.0  FA:0.0  PD:0.0
+best_epoch:6  best_miou:0.0009  b_niou:0.0009  FA:72242.791  PD:0.0053
+当前epoch:87  train_mioU:0.0  train_nioU:0.0
+当前epoch:87  mioU:0.0  nioU:0.0  FA:0.0  PD:0.0
+best_epoch:6  best_miou:0.0009  b_niou:0.0009  FA:72242.791  PD:0.0053
+当前epoch:88  train_mioU:0.0  train_nioU:0.0
+当前epoch:88  mioU:0.0  nioU:0.0  FA:0.0  PD:0.0
+best_epoch:6  best_miou:0.0009  b_niou:0.0009  FA:72242.791  PD:0.0053
+当前epoch:89  train_mioU:0.0  train_nioU:0.0
+当前epoch:89  mioU:0.0  nioU:0.0  FA:0.0  PD:0.0
+best_epoch:6  best_miou:0.0009  b_niou:0.0009  FA:72242.791  PD:0.0053
+当前epoch:90  train_mioU:0.0  train_nioU:0.0
+当前epoch:90  mioU:0.0  nioU:0.0  FA:0.0  PD:0.0
+best_epoch:6  best_miou:0.0009  b_niou:0.0009  FA:72242.791  PD:0.0053
+当前epoch:91  train_mioU:0.0271  train_nioU:0.0138
+当前epoch:91  mioU:0.042  nioU:0.0442  FA:0.993  PD:0.1355
+best_epoch:91  best_miou:0.042  b_niou:0.0442  FA:0.993  PD:0.1355
+当前epoch:92  train_mioU:0.1168  train_nioU:0.0585
+当前epoch:92  mioU:0.1854  nioU:0.1845  FA:5.109  PD:0.4193
+best_epoch:92  best_miou:0.1854  b_niou:0.1845  FA:5.109  PD:0.4193
+当前epoch:93  train_mioU:0.1898  train_nioU:0.0989
+当前epoch:93  mioU:0.1808  nioU:0.1836  FA:7.14  PD:0.4252
+best_epoch:92  best_miou:0.1854  b_niou:0.1845  FA:5.109  PD:0.4193
+当前epoch:94  train_mioU:0.1963  train_nioU:0.109
+当前epoch:94  mioU:0.0979  nioU:0.104  FA:2.293  PD:0.2831
+best_epoch:92  best_miou:0.1854  b_niou:0.1845  FA:5.109  PD:0.4193
+当前epoch:95  train_mioU:0.2252  train_nioU:0.1253
+当前epoch:95  mioU:0.1937  nioU:0.1955  FA:8.106  PD:0.4452
+best_epoch:95  best_miou:0.1937  b_niou:0.1955  FA:8.106  PD:0.4452
+当前epoch:96  train_mioU:0.3083  train_nioU:0.1742
+当前epoch:96  mioU:0.1697  nioU:0.1878  FA:5.687  PD:0.4698
+best_epoch:95  best_miou:0.1937  b_niou:0.1955  FA:8.106  PD:0.4452
+当前epoch:97  train_mioU:0.3071  train_nioU:0.1817
+当前epoch:97  mioU:0.1886  nioU:0.2092  FA:7.167  PD:0.5023
+best_epoch:95  best_miou:0.1937  b_niou:0.1955  FA:8.106  PD:0.4452
+当前epoch:98  train_mioU:0.3257  train_nioU:0.1842
+当前epoch:98  mioU:0.1857  nioU:0.2127  FA:8.341  PD:0.5037
+best_epoch:95  best_miou:0.1937  b_niou:0.1955  FA:8.106  PD:0.4452
+当前epoch:99  train_mioU:0.3516  train_nioU:0.2022
+当前epoch:99  mioU:0.1795  nioU:0.1984  FA:8.413  PD:0.5302
+best_epoch:95  best_miou:0.1937  b_niou:0.1955  FA:8.106  PD:0.4452
+当前epoch:100  train_mioU:0.3124  train_nioU:0.1792
+当前epoch:100  mioU:0.2745  nioU:0.2975  FA:20.833  PD:0.6458
+best_epoch:100  best_miou:0.2745  b_niou:0.2975  FA:20.833  PD:0.6458
+当前epoch:101  train_mioU:0.4035  train_nioU:0.25
+当前epoch:101  mioU:0.1179  nioU:0.1301  FA:4.531  PD:0.4027
+best_epoch:100  best_miou:0.2745  b_niou:0.2975  FA:20.833  PD:0.6458
+当前epoch:102  train_mioU:0.377  train_nioU:0.2195
+当前epoch:102  mioU:0.1965  nioU:0.2317  FA:5.804  PD:0.5083
+best_epoch:100  best_miou:0.2745  b_niou:0.2975  FA:20.833  PD:0.6458
+当前epoch:103  train_mioU:0.3988  train_nioU:0.2485
+当前epoch:103  mioU:0.3494  nioU:0.3825  FA:28.668  PD:0.7628
+best_epoch:103  best_miou:0.3494  b_niou:0.3825  FA:28.668  PD:0.7628
+当前epoch:104  train_mioU:0.4104  train_nioU:0.2524
+当前epoch:104  mioU:0.2978  nioU:0.3237  FA:15.138  PD:0.6392
+best_epoch:103  best_miou:0.3494  b_niou:0.3825  FA:28.668  PD:0.7628
+当前epoch:105  train_mioU:0.4208  train_nioU:0.2652
+当前epoch:105  mioU:0.1985  nioU:0.2253  FA:9.288  PD:0.5508
+best_epoch:103  best_miou:0.3494  b_niou:0.3825  FA:28.668  PD:0.7628
+当前epoch:106  train_mioU:0.4473  train_nioU:0.2816
+当前epoch:106  mioU:0.3315  nioU:0.3773  FA:36.991  PD:0.7674
+best_epoch:103  best_miou:0.3494  b_niou:0.3825  FA:28.668  PD:0.7628
+当前epoch:107  train_mioU:0.4424  train_nioU:0.2853
+当前epoch:107  mioU:0.3944  nioU:0.4251  FA:57.427  PD:0.8153
+best_epoch:107  best_miou:0.3944  b_niou:0.4251  FA:57.427  PD:0.8153
+当前epoch:108  train_mioU:0.4395  train_nioU:0.2868
+当前epoch:108  mioU:0.3652  nioU:0.4103  FA:47.39  PD:0.7907
+best_epoch:107  best_miou:0.3944  b_niou:0.4251  FA:57.427  PD:0.8153
+当前epoch:109  train_mioU:0.4626  train_nioU:0.2897
+当前epoch:109  mioU:0.2666  nioU:0.2953  FA:13.657  PD:0.6439
+best_epoch:107  best_miou:0.3944  b_niou:0.4251  FA:57.427  PD:0.8153
+当前epoch:110  train_mioU:0.417  train_nioU:0.2665
+当前epoch:110  mioU:0.2641  nioU:0.2832  FA:13.738  PD:0.6518
+best_epoch:107  best_miou:0.3944  b_niou:0.4251  FA:57.427  PD:0.8153
+当前epoch:111  train_mioU:0.4446  train_nioU:0.2829
+当前epoch:111  mioU:0.3815  nioU:0.4139  FA:35.826  PD:0.7854
+best_epoch:107  best_miou:0.3944  b_niou:0.4251  FA:57.427  PD:0.8153
+当前epoch:112  train_mioU:0.4787  train_nioU:0.3061
+当前epoch:112  mioU:0.3693  nioU:0.4103  FA:32.469  PD:0.8106
+best_epoch:107  best_miou:0.3944  b_niou:0.4251  FA:57.427  PD:0.8153
+当前epoch:113  train_mioU:0.4542  train_nioU:0.2864
+当前epoch:113  mioU:0.2797  nioU:0.327  FA:14.822  PD:0.705
+best_epoch:107  best_miou:0.3944  b_niou:0.4251  FA:57.427  PD:0.8153
+当前epoch:114  train_mioU:0.4751  train_nioU:0.3072
+当前epoch:114  mioU:0.2484  nioU:0.2767  FA:16.275  PD:0.6372
+best_epoch:107  best_miou:0.3944  b_niou:0.4251  FA:57.427  PD:0.8153
+当前epoch:115  train_mioU:0.4649  train_nioU:0.2973
+当前epoch:115  mioU:0.3505  nioU:0.3872  FA:20.906  PD:0.7734
+best_epoch:107  best_miou:0.3944  b_niou:0.4251  FA:57.427  PD:0.8153
+当前epoch:116  train_mioU:0.5096  train_nioU:0.332
+当前epoch:116  mioU:0.3045  nioU:0.3553  FA:17.132  PD:0.7508
+best_epoch:107  best_miou:0.3944  b_niou:0.4251  FA:57.427  PD:0.8153
+当前epoch:117  train_mioU:0.4978  train_nioU:0.3204
+当前epoch:117  mioU:0.3715  nioU:0.4028  FA:31.178  PD:0.7987
+best_epoch:107  best_miou:0.3944  b_niou:0.4251  FA:57.427  PD:0.8153
+当前epoch:118  train_mioU:0.4529  train_nioU:0.2849
+当前epoch:118  mioU:0.333  nioU:0.3595  FA:47.2  PD:0.7661
+best_epoch:107  best_miou:0.3944  b_niou:0.4251  FA:57.427  PD:0.8153
+当前epoch:119  train_mioU:0.4445  train_nioU:0.2828
+当前epoch:119  mioU:0.3089  nioU:0.3424  FA:15.21  PD:0.7123
+best_epoch:107  best_miou:0.3944  b_niou:0.4251  FA:57.427  PD:0.8153
+当前epoch:120  train_mioU:0.476  train_nioU:0.3139
+当前epoch:120  mioU:0.2972  nioU:0.3291  FA:13.504  PD:0.7083
+best_epoch:107  best_miou:0.3944  b_niou:0.4251  FA:57.427  PD:0.8153
+当前epoch:121  train_mioU:0.5016  train_nioU:0.321
+当前epoch:121  mioU:0.2473  nioU:0.2731  FA:12.737  PD:0.6445
+best_epoch:107  best_miou:0.3944  b_niou:0.4251  FA:57.427  PD:0.8153
+当前epoch:122  train_mioU:0.5158  train_nioU:0.3348
+当前epoch:122  mioU:0.3576  nioU:0.3736  FA:31.015  PD:0.7688
+best_epoch:107  best_miou:0.3944  b_niou:0.4251  FA:57.427  PD:0.8153
+当前epoch:123  train_mioU:0.4937  train_nioU:0.3123
+当前epoch:123  mioU:0.3122  nioU:0.3482  FA:23.406  PD:0.7422
+best_epoch:107  best_miou:0.3944  b_niou:0.4251  FA:57.427  PD:0.8153
+当前epoch:124  train_mioU:0.5071  train_nioU:0.3308
+当前epoch:124  mioU:0.3188  nioU:0.3513  FA:14.515  PD:0.7282
+best_epoch:107  best_miou:0.3944  b_niou:0.4251  FA:57.427  PD:0.8153
+当前epoch:125  train_mioU:0.5109  train_nioU:0.3313
+当前epoch:125  mioU:0.2683  nioU:0.2873  FA:8.891  PD:0.6611
+best_epoch:107  best_miou:0.3944  b_niou:0.4251  FA:57.427  PD:0.8153
+当前epoch:126  train_mioU:0.5227  train_nioU:0.3369
+当前epoch:126  mioU:0.3204  nioU:0.3434  FA:22.53  PD:0.7422
+best_epoch:107  best_miou:0.3944  b_niou:0.4251  FA:57.427  PD:0.8153
+当前epoch:127  train_mioU:0.5032  train_nioU:0.3377
+当前epoch:127  mioU:0.4073  nioU:0.4418  FA:42.578  PD:0.8485
+best_epoch:127  best_miou:0.4073  b_niou:0.4418  FA:42.578  PD:0.8485
+当前epoch:128  train_mioU:0.5108  train_nioU:0.328
+当前epoch:128  mioU:0.3709  nioU:0.4018  FA:18.631  PD:0.7973
+best_epoch:127  best_miou:0.4073  b_niou:0.4418  FA:42.578  PD:0.8485
+当前epoch:129  train_mioU:0.5347  train_nioU:0.3535
+当前epoch:129  mioU:0.2988  nioU:0.3323  FA:15.237  PD:0.7316
+best_epoch:127  best_miou:0.4073  b_niou:0.4418  FA:42.578  PD:0.8485
+当前epoch:130  train_mioU:0.4941  train_nioU:0.3148
+当前epoch:130  mioU:0.3312  nioU:0.3779  FA:18.893  PD:0.7595
+best_epoch:127  best_miou:0.4073  b_niou:0.4418  FA:42.578  PD:0.8485
+当前epoch:131  train_mioU:0.5225  train_nioU:0.3498
+当前epoch:131  mioU:0.2988  nioU:0.3289  FA:12.709  PD:0.7183
+best_epoch:127  best_miou:0.4073  b_niou:0.4418  FA:42.578  PD:0.8485
+当前epoch:132  train_mioU:0.5341  train_nioU:0.3413
+当前epoch:132  mioU:0.4067  nioU:0.4442  FA:27.793  PD:0.8432
+best_epoch:127  best_miou:0.4073  b_niou:0.4418  FA:42.578  PD:0.8485
+当前epoch:133  train_mioU:0.5143  train_nioU:0.3371
+当前epoch:133  mioU:0.3799  nioU:0.4253  FA:26.944  PD:0.8219
+best_epoch:127  best_miou:0.4073  b_niou:0.4418  FA:42.578  PD:0.8485
+当前epoch:134  train_mioU:0.5165  train_nioU:0.3309
+当前epoch:134  mioU:0.3455  nioU:0.3807  FA:21.51  PD:0.7787
+best_epoch:127  best_miou:0.4073  b_niou:0.4418  FA:42.578  PD:0.8485
+当前epoch:135  train_mioU:0.5103  train_nioU:0.3285
+当前epoch:135  mioU:0.2772  nioU:0.304  FA:11.68  PD:0.6963
+best_epoch:127  best_miou:0.4073  b_niou:0.4418  FA:42.578  PD:0.8485
+当前epoch:136  train_mioU:0.5253  train_nioU:0.3401
+当前epoch:136  mioU:0.3369  nioU:0.3947  FA:23.55  PD:0.7847
+best_epoch:127  best_miou:0.4073  b_niou:0.4418  FA:42.578  PD:0.8485
+当前epoch:137  train_mioU:0.5335  train_nioU:0.3411
+当前epoch:137  mioU:0.3348  nioU:0.3841  FA:14.253  PD:0.7688
+best_epoch:127  best_miou:0.4073  b_niou:0.4418  FA:42.578  PD:0.8485
+当前epoch:138  train_mioU:0.539  train_nioU:0.3552
+当前epoch:138  mioU:0.3274  nioU:0.3654  FA:13.016  PD:0.7621
+best_epoch:127  best_miou:0.4073  b_niou:0.4418  FA:42.578  PD:0.8485
+当前epoch:139  train_mioU:0.5337  train_nioU:0.3549
+当前epoch:139  mioU:0.3486  nioU:0.3911  FA:14.325  PD:0.7648
+best_epoch:127  best_miou:0.4073  b_niou:0.4418  FA:42.578  PD:0.8485
+当前epoch:140  train_mioU:0.5439  train_nioU:0.3658
+当前epoch:140  mioU:0.3123  nioU:0.3508  FA:10.001  PD:0.7475
+best_epoch:127  best_miou:0.4073  b_niou:0.4418  FA:42.578  PD:0.8485
+当前epoch:141  train_mioU:0.5526  train_nioU:0.3562
+当前epoch:141  mioU:0.3841  nioU:0.4291  FA:33.823  PD:0.8292
+best_epoch:127  best_miou:0.4073  b_niou:0.4418  FA:42.578  PD:0.8485
+当前epoch:142  train_mioU:0.5462  train_nioU:0.3573
+当前epoch:142  mioU:0.3806  nioU:0.4139  FA:15.815  PD:0.8073
+best_epoch:127  best_miou:0.4073  b_niou:0.4418  FA:42.578  PD:0.8485
+当前epoch:143  train_mioU:0.5467  train_nioU:0.3714
+当前epoch:143  mioU:0.3245  nioU:0.3639  FA:15.697  PD:0.7774
+best_epoch:127  best_miou:0.4073  b_niou:0.4418  FA:42.578  PD:0.8485
+当前epoch:144  train_mioU:0.5515  train_nioU:0.3592
+当前epoch:144  mioU:0.3481  nioU:0.3872  FA:14.84  PD:0.7907
+best_epoch:127  best_miou:0.4073  b_niou:0.4418  FA:42.578  PD:0.8485
+当前epoch:145  train_mioU:0.5499  train_nioU:0.3606
+当前epoch:145  mioU:0.3503  nioU:0.3892  FA:19.281  PD:0.7953
+best_epoch:127  best_miou:0.4073  b_niou:0.4418  FA:42.578  PD:0.8485
+当前epoch:146  train_mioU:0.5247  train_nioU:0.3509
+当前epoch:146  mioU:0.3672  nioU:0.4152  FA:22.079  PD:0.8066
+best_epoch:127  best_miou:0.4073  b_niou:0.4418  FA:42.578  PD:0.8485
+当前epoch:147  train_mioU:0.5646  train_nioU:0.3838
+当前epoch:147  mioU:0.373  nioU:0.4202  FA:21.294  PD:0.8246
+best_epoch:127  best_miou:0.4073  b_niou:0.4418  FA:42.578  PD:0.8485
+当前epoch:148  train_mioU:0.5603  train_nioU:0.3773
+当前epoch:148  mioU:0.3481  nioU:0.3904  FA:17.078  PD:0.7807
+best_epoch:127  best_miou:0.4073  b_niou:0.4418  FA:42.578  PD:0.8485
+当前epoch:149  train_mioU:0.5516  train_nioU:0.377
+当前epoch:149  mioU:0.2729  nioU:0.3189  FA:8.945  PD:0.7329
+best_epoch:127  best_miou:0.4073  b_niou:0.4418  FA:42.578  PD:0.8485
+当前epoch:150  train_mioU:0.5392  train_nioU:0.356
+当前epoch:150  mioU:0.4089  nioU:0.4328  FA:46.694  PD:0.8478
+best_epoch:150  best_miou:0.4089  b_niou:0.4328  FA:46.694  PD:0.8478
+当前epoch:151  train_mioU:0.5704  train_nioU:0.3754
+当前epoch:151  mioU:0.2447  nioU:0.2658  FA:10.182  PD:0.6
+best_epoch:150  best_miou:0.4089  b_niou:0.4328  FA:46.694  PD:0.8478
+当前epoch:152  train_mioU:0.5584  train_nioU:0.3688
+当前epoch:152  mioU:0.3856  nioU:0.4123  FA:25.139  PD:0.8073
+best_epoch:150  best_miou:0.4089  b_niou:0.4328  FA:46.694  PD:0.8478
+当前epoch:153  train_mioU:0.573  train_nioU:0.3648
+当前epoch:153  mioU:0.336  nioU:0.3511  FA:22.512  PD:0.7821
+best_epoch:150  best_miou:0.4089  b_niou:0.4328  FA:46.694  PD:0.8478
+当前epoch:154  train_mioU:0.5716  train_nioU:0.3862
+当前epoch:154  mioU:0.3767  nioU:0.4257  FA:17.9  PD:0.8086
+best_epoch:150  best_miou:0.4089  b_niou:0.4328  FA:46.694  PD:0.8478
+当前epoch:155  train_mioU:0.5746  train_nioU:0.387
+当前epoch:155  mioU:0.3833  nioU:0.4169  FA:22.648  PD:0.8319
+best_epoch:150  best_miou:0.4089  b_niou:0.4328  FA:46.694  PD:0.8478
+当前epoch:156  train_mioU:0.5859  train_nioU:0.4011
+当前epoch:156  mioU:0.3496  nioU:0.3849  FA:20.292  PD:0.7714
+best_epoch:150  best_miou:0.4089  b_niou:0.4328  FA:46.694  PD:0.8478
+当前epoch:157  train_mioU:0.5872  train_nioU:0.3888
+当前epoch:157  mioU:0.3149  nioU:0.3647  FA:11.364  PD:0.7488
+best_epoch:150  best_miou:0.4089  b_niou:0.4328  FA:46.694  PD:0.8478
+当前epoch:158  train_mioU:0.5851  train_nioU:0.3792
+当前epoch:158  mioU:0.3534  nioU:0.3718  FA:21.339  PD:0.7854
+best_epoch:150  best_miou:0.4089  b_niou:0.4328  FA:46.694  PD:0.8478
+当前epoch:159  train_mioU:0.5801  train_nioU:0.3909
+当前epoch:159  mioU:0.4134  nioU:0.4292  FA:22.332  PD:0.8266
+best_epoch:159  best_miou:0.4134  b_niou:0.4292  FA:22.332  PD:0.8266
+当前epoch:160  train_mioU:0.5793  train_nioU:0.3829
+当前epoch:160  mioU:0.4079  nioU:0.4499  FA:36.386  PD:0.8585
+best_epoch:159  best_miou:0.4134  b_niou:0.4292  FA:22.332  PD:0.8266
+当前epoch:161  train_mioU:0.5967  train_nioU:0.3971
+当前epoch:161  mioU:0.368  nioU:0.4229  FA:20.761  PD:0.8252
+best_epoch:159  best_miou:0.4134  b_niou:0.4292  FA:22.332  PD:0.8266
+当前epoch:162  train_mioU:0.591  train_nioU:0.4083
+当前epoch:162  mioU:0.3071  nioU:0.3334  FA:14.749  PD:0.7196
+best_epoch:159  best_miou:0.4134  b_niou:0.4292  FA:22.332  PD:0.8266
+当前epoch:163  train_mioU:0.5875  train_nioU:0.397
+当前epoch:163  mioU:0.4165  nioU:0.4552  FA:23.117  PD:0.8452
+best_epoch:163  best_miou:0.4165  b_niou:0.4552  FA:23.117  PD:0.8452
+当前epoch:164  train_mioU:0.5959  train_nioU:0.4
+当前epoch:164  mioU:0.3811  nioU:0.4143  FA:25.825  PD:0.8259
+best_epoch:163  best_miou:0.4165  b_niou:0.4552  FA:23.117  PD:0.8452
+当前epoch:165  train_mioU:0.5827  train_nioU:0.3956
+当前epoch:165  mioU:0.3784  nioU:0.4007  FA:20.662  PD:0.8159
+best_epoch:163  best_miou:0.4165  b_niou:0.4552  FA:23.117  PD:0.8452
+当前epoch:166  train_mioU:0.5863  train_nioU:0.3921
+当前epoch:166  mioU:0.4242  nioU:0.4606  FA:29.255  PD:0.8698
+best_epoch:166  best_miou:0.4242  b_niou:0.4606  FA:29.255  PD:0.8698
+当前epoch:167  train_mioU:0.5951  train_nioU:0.4025
+当前epoch:167  mioU:0.3851  nioU:0.4068  FA:25.699  PD:0.8286
+best_epoch:166  best_miou:0.4242  b_niou:0.4606  FA:29.255  PD:0.8698
+当前epoch:168  train_mioU:0.5909  train_nioU:0.392
+当前epoch:168  mioU:0.4372  nioU:0.4695  FA:32.559  PD:0.8751
+best_epoch:168  best_miou:0.4372  b_niou:0.4695  FA:32.559  PD:0.8751
+当前epoch:169  train_mioU:0.5952  train_nioU:0.4032
+当前epoch:169  mioU:0.4028  nioU:0.4334  FA:40.683  PD:0.8545
+best_epoch:168  best_miou:0.4372  b_niou:0.4695  FA:32.559  PD:0.8751
+当前epoch:170  train_mioU:0.5784  train_nioU:0.3929
+当前epoch:170  mioU:0.4056  nioU:0.4398  FA:23.415  PD:0.8538
+best_epoch:168  best_miou:0.4372  b_niou:0.4695  FA:32.559  PD:0.8751
+当前epoch:171  train_mioU:0.5993  train_nioU:0.3951
+当前epoch:171  mioU:0.3955  nioU:0.4179  FA:22.133  PD:0.8445
+best_epoch:168  best_miou:0.4372  b_niou:0.4695  FA:32.559  PD:0.8751
+当前epoch:172  train_mioU:0.6008  train_nioU:0.4028
+当前epoch:172  mioU:0.3675  nioU:0.4024  FA:16.636  PD:0.8053
+best_epoch:168  best_miou:0.4372  b_niou:0.4695  FA:32.559  PD:0.8751
+当前epoch:173  train_mioU:0.6128  train_nioU:0.4133
+当前epoch:173  mioU:0.4248  nioU:0.4489  FA:33.371  PD:0.8578
+best_epoch:168  best_miou:0.4372  b_niou:0.4695  FA:32.559  PD:0.8751
+当前epoch:174  train_mioU:0.6181  train_nioU:0.4202
+当前epoch:174  mioU:0.4156  nioU:0.4445  FA:25.283  PD:0.8472
+best_epoch:168  best_miou:0.4372  b_niou:0.4695  FA:32.559  PD:0.8751
+当前epoch:175  train_mioU:0.5946  train_nioU:0.4018
+当前epoch:175  mioU:0.4302  nioU:0.4556  FA:39.952  PD:0.8817
+best_epoch:168  best_miou:0.4372  b_niou:0.4695  FA:32.559  PD:0.8751
+当前epoch:176  train_mioU:0.5981  train_nioU:0.4081
+当前epoch:176  mioU:0.3575  nioU:0.3896  FA:14.334  PD:0.808
+best_epoch:168  best_miou:0.4372  b_niou:0.4695  FA:32.559  PD:0.8751
+当前epoch:177  train_mioU:0.614  train_nioU:0.4166
+当前epoch:177  mioU:0.4426  nioU:0.4644  FA:40.746  PD:0.8784
+best_epoch:177  best_miou:0.4426  b_niou:0.4644  FA:40.746  PD:0.8784
+当前epoch:178  train_mioU:0.6089  train_nioU:0.4067
+当前epoch:178  mioU:0.387  nioU:0.4045  FA:18.441  PD:0.8166
+best_epoch:177  best_miou:0.4426  b_niou:0.4644  FA:40.746  PD:0.8784
+当前epoch:179  train_mioU:0.5948  train_nioU:0.4071
+当前epoch:179  mioU:0.3736  nioU:0.4038  FA:16.898  PD:0.8173
+best_epoch:177  best_miou:0.4426  b_niou:0.4644  FA:40.746  PD:0.8784
+当前epoch:180  train_mioU:0.6134  train_nioU:0.418
+当前epoch:180  mioU:0.4471  nioU:0.4683  FA:40.484  PD:0.8864
+best_epoch:180  best_miou:0.4471  b_niou:0.4683  FA:40.484  PD:0.8864
+当前epoch:181  train_mioU:0.6314  train_nioU:0.4364
+当前epoch:181  mioU:0.4399  nioU:0.4567  FA:37.063  PD:0.8897
+best_epoch:180  best_miou:0.4471  b_niou:0.4683  FA:40.484  PD:0.8864
+当前epoch:182  train_mioU:0.6363  train_nioU:0.4276
+当前epoch:182  mioU:0.4378  nioU:0.4526  FA:35.267  PD:0.8777
+best_epoch:180  best_miou:0.4471  b_niou:0.4683  FA:40.484  PD:0.8864
+当前epoch:183  train_mioU:0.6358  train_nioU:0.4353
+当前epoch:183  mioU:0.4454  nioU:0.4673  FA:36.287  PD:0.8817
+best_epoch:180  best_miou:0.4471  b_niou:0.4683  FA:40.484  PD:0.8864
+当前epoch:184  train_mioU:0.6313  train_nioU:0.4278
+当前epoch:184  mioU:0.4257  nioU:0.4499  FA:46.442  PD:0.8724
+best_epoch:180  best_miou:0.4471  b_niou:0.4683  FA:40.484  PD:0.8864
+当前epoch:185  train_mioU:0.6261  train_nioU:0.4299
+当前epoch:185  mioU:0.4434  nioU:0.466  FA:29.995  PD:0.8718
+best_epoch:180  best_miou:0.4471  b_niou:0.4683  FA:40.484  PD:0.8864
+当前epoch:186  train_mioU:0.6116  train_nioU:0.4083
+当前epoch:186  mioU:0.3596  nioU:0.3644  FA:26.367  PD:0.6983
+best_epoch:180  best_miou:0.4471  b_niou:0.4683  FA:40.484  PD:0.8864
+当前epoch:187  train_mioU:0.6335  train_nioU:0.4267
+当前epoch:187  mioU:0.3002  nioU:0.3257  FA:9.18  PD:0.7475
+best_epoch:180  best_miou:0.4471  b_niou:0.4683  FA:40.484  PD:0.8864
+当前epoch:188  train_mioU:0.627  train_nioU:0.4376
+当前epoch:188  mioU:0.3814  nioU:0.3866  FA:49.646  PD:0.8472
+best_epoch:180  best_miou:0.4471  b_niou:0.4683  FA:40.484  PD:0.8864
+当前epoch:189  train_mioU:0.6342  train_nioU:0.4375
+当前epoch:189  mioU:0.4471  nioU:0.4643  FA:41.008  PD:0.8817
+best_epoch:189  best_miou:0.4471  b_niou:0.4643  FA:41.008  PD:0.8817
+当前epoch:190  train_mioU:0.6262  train_nioU:0.4216
+当前epoch:190  mioU:0.4157  nioU:0.4282  FA:41.071  PD:0.8744
+best_epoch:189  best_miou:0.4471  b_niou:0.4643  FA:41.008  PD:0.8817
+当前epoch:191  train_mioU:0.6269  train_nioU:0.4313
+当前epoch:191  mioU:0.3866  nioU:0.4049  FA:16.573  PD:0.8199
+best_epoch:189  best_miou:0.4471  b_niou:0.4643  FA:41.008  PD:0.8817
+当前epoch:192  train_mioU:0.6361  train_nioU:0.4471
+当前epoch:192  mioU:0.405  nioU:0.418  FA:26.177  PD:0.8326
+best_epoch:189  best_miou:0.4471  b_niou:0.4643  FA:41.008  PD:0.8817
+当前epoch:193  train_mioU:0.6508  train_nioU:0.4494
+当前epoch:193  mioU:0.4149  nioU:0.4184  FA:50.07  PD:0.9063
+best_epoch:189  best_miou:0.4471  b_niou:0.4643  FA:41.008  PD:0.8817
+当前epoch:194  train_mioU:0.6231  train_nioU:0.4304
+当前epoch:194  mioU:0.4273  nioU:0.4551  FA:34.662  PD:0.8817
+best_epoch:189  best_miou:0.4471  b_niou:0.4643  FA:41.008  PD:0.8817
+当前epoch:195  train_mioU:0.6326  train_nioU:0.4424
+当前epoch:195  mioU:0.4149  nioU:0.4257  FA:22.991  PD:0.8518
+best_epoch:189  best_miou:0.4471  b_niou:0.4643  FA:41.008  PD:0.8817
+当前epoch:196  train_mioU:0.6492  train_nioU:0.4423
+当前epoch:196  mioU:0.4539  nioU:0.4763  FA:25.635  PD:0.8897
+best_epoch:196  best_miou:0.4539  b_niou:0.4763  FA:25.635  PD:0.8897
+当前epoch:197  train_mioU:0.6469  train_nioU:0.4363
+当前epoch:197  mioU:0.4216  nioU:0.4297  FA:49.574  PD:0.891
+best_epoch:196  best_miou:0.4539  b_niou:0.4763  FA:25.635  PD:0.8897
+当前epoch:198  train_mioU:0.6516  train_nioU:0.4454
+当前epoch:198  mioU:0.4351  nioU:0.4587  FA:36.404  PD:0.8711
+best_epoch:196  best_miou:0.4539  b_niou:0.4763  FA:25.635  PD:0.8897
+当前epoch:199  train_mioU:0.6465  train_nioU:0.4377
+当前epoch:199  mioU:0.4258  nioU:0.4421  FA:28.479  PD:0.8771
+best_epoch:196  best_miou:0.4539  b_niou:0.4763  FA:25.635  PD:0.8897
+当前epoch:200  train_mioU:0.6441  train_nioU:0.4403
+当前epoch:200  mioU:0.4154  nioU:0.4421  FA:26.872  PD:0.8744
+best_epoch:196  best_miou:0.4539  b_niou:0.4763  FA:25.635  PD:0.8897
+当前epoch:201  train_mioU:0.627  train_nioU:0.4273
+当前epoch:201  mioU:0.4354  nioU:0.4478  FA:37.487  PD:0.8837
+best_epoch:196  best_miou:0.4539  b_niou:0.4763  FA:25.635  PD:0.8897
+当前epoch:202  train_mioU:0.6336  train_nioU:0.4277
+当前epoch:202  mioU:0.4499  nioU:0.4704  FA:35.926  PD:0.9023
+best_epoch:196  best_miou:0.4539  b_niou:0.4763  FA:25.635  PD:0.8897
+当前epoch:203  train_mioU:0.6452  train_nioU:0.448
+当前epoch:203  mioU:0.4383  nioU:0.4623  FA:34.617  PD:0.8944
+best_epoch:196  best_miou:0.4539  b_niou:0.4763  FA:25.635  PD:0.8897
+当前epoch:204  train_mioU:0.635  train_nioU:0.435
+当前epoch:204  mioU:0.4263  nioU:0.438  FA:40.069  PD:0.8757
+best_epoch:196  best_miou:0.4539  b_niou:0.4763  FA:25.635  PD:0.8897
+当前epoch:205  train_mioU:0.6424  train_nioU:0.4336
+当前epoch:205  mioU:0.4543  nioU:0.469  FA:44.7  PD:0.9043
+best_epoch:205  best_miou:0.4543  b_niou:0.469  FA:44.7  PD:0.9043
+当前epoch:206  train_mioU:0.66  train_nioU:0.4558
+当前epoch:206  mioU:0.3741  nioU:0.3959  FA:16.979  PD:0.794
+best_epoch:205  best_miou:0.4543  b_niou:0.469  FA:44.7  PD:0.9043
+当前epoch:207  train_mioU:0.6472  train_nioU:0.4514
+当前epoch:207  mioU:0.4335  nioU:0.4426  FA:62.301  PD:0.8611
+best_epoch:205  best_miou:0.4543  b_niou:0.469  FA:44.7  PD:0.9043
+当前epoch:208  train_mioU:0.6385  train_nioU:0.4364
+当前epoch:208  mioU:0.3822  nioU:0.4049  FA:14.858  PD:0.7967
+best_epoch:205  best_miou:0.4543  b_niou:0.469  FA:44.7  PD:0.9043
+当前epoch:209  train_mioU:0.6468  train_nioU:0.4405
+当前epoch:209  mioU:0.3632  nioU:0.3776  FA:11.753  PD:0.7402
+best_epoch:205  best_miou:0.4543  b_niou:0.469  FA:44.7  PD:0.9043
+当前epoch:210  train_mioU:0.646  train_nioU:0.4533
+当前epoch:210  mioU:0.4556  nioU:0.4788  FA:36.07  PD:0.9017
+best_epoch:210  best_miou:0.4556  b_niou:0.4788  FA:36.07  PD:0.9017
+当前epoch:211  train_mioU:0.6528  train_nioU:0.4402
+当前epoch:211  mioU:0.4285  nioU:0.441  FA:28.163  PD:0.8664
+best_epoch:210  best_miou:0.4556  b_niou:0.4788  FA:36.07  PD:0.9017
+当前epoch:212  train_mioU:0.6568  train_nioU:0.4503
+当前epoch:212  mioU:0.4476  nioU:0.4598  FA:35.998  PD:0.899
+best_epoch:210  best_miou:0.4556  b_niou:0.4788  FA:36.07  PD:0.9017
+当前epoch:213  train_mioU:0.6638  train_nioU:0.451
+当前epoch:213  mioU:0.438  nioU:0.4585  FA:24.047  PD:0.8598
+best_epoch:210  best_miou:0.4556  b_niou:0.4788  FA:36.07  PD:0.9017
+当前epoch:214  train_mioU:0.6385  train_nioU:0.4454
+当前epoch:214  mioU:0.4252  nioU:0.447  FA:29.201  PD:0.8598
+best_epoch:210  best_miou:0.4556  b_niou:0.4788  FA:36.07  PD:0.9017
+当前epoch:215  train_mioU:0.6524  train_nioU:0.4567
+当前epoch:215  mioU:0.4148  nioU:0.4393  FA:11.897  PD:0.8365
+best_epoch:210  best_miou:0.4556  b_niou:0.4788  FA:36.07  PD:0.9017
+当前epoch:216  train_mioU:0.6545  train_nioU:0.4366
+当前epoch:216  mioU:0.3963  nioU:0.4123  FA:18.929  PD:0.8432
+best_epoch:210  best_miou:0.4556  b_niou:0.4788  FA:36.07  PD:0.9017
+当前epoch:217  train_mioU:0.661  train_nioU:0.4466
+当前epoch:217  mioU:0.4456  nioU:0.4608  FA:35.61  PD:0.8977
+best_epoch:210  best_miou:0.4556  b_niou:0.4788  FA:36.07  PD:0.9017
+当前epoch:218  train_mioU:0.6704  train_nioU:0.474
+当前epoch:218  mioU:0.4061  nioU:0.4186  FA:12.05  PD:0.8206
+best_epoch:210  best_miou:0.4556  b_niou:0.4788  FA:36.07  PD:0.9017
+当前epoch:219  train_mioU:0.6417  train_nioU:0.4342
+当前epoch:219  mioU:0.4322  nioU:0.447  FA:21.375  PD:0.8571
+best_epoch:210  best_miou:0.4556  b_niou:0.4788  FA:36.07  PD:0.9017
+当前epoch:220  train_mioU:0.6572  train_nioU:0.4387
+当前epoch:220  mioU:0.4256  nioU:0.4509  FA:19.786  PD:0.8492
+best_epoch:210  best_miou:0.4556  b_niou:0.4788  FA:36.07  PD:0.9017
+当前epoch:221  train_mioU:0.6501  train_nioU:0.4455
+当前epoch:221  mioU:0.4395  nioU:0.4617  FA:37.505  PD:0.891
+best_epoch:210  best_miou:0.4556  b_niou:0.4788  FA:36.07  PD:0.9017
+当前epoch:222  train_mioU:0.6495  train_nioU:0.4338
+当前epoch:222  mioU:0.4391  nioU:0.4594  FA:35.429  PD:0.8904
+best_epoch:210  best_miou:0.4556  b_niou:0.4788  FA:36.07  PD:0.9017
+当前epoch:223  train_mioU:0.6449  train_nioU:0.4297
+当前epoch:223  mioU:0.4219  nioU:0.443  FA:23.198  PD:0.8565
+best_epoch:210  best_miou:0.4556  b_niou:0.4788  FA:36.07  PD:0.9017
+当前epoch:224  train_mioU:0.6633  train_nioU:0.4517
+当前epoch:224  mioU:0.4477  nioU:0.4653  FA:32.577  PD:0.907
+best_epoch:210  best_miou:0.4556  b_niou:0.4788  FA:36.07  PD:0.9017
+当前epoch:225  train_mioU:0.6507  train_nioU:0.4454
+当前epoch:225  mioU:0.3794  nioU:0.4076  FA:10.778  PD:0.792
+best_epoch:210  best_miou:0.4556  b_niou:0.4788  FA:36.07  PD:0.9017
+当前epoch:226  train_mioU:0.6493  train_nioU:0.451
+当前epoch:226  mioU:0.4309  nioU:0.4524  FA:26.051  PD:0.8704
+best_epoch:210  best_miou:0.4556  b_niou:0.4788  FA:36.07  PD:0.9017
+当前epoch:227  train_mioU:0.649  train_nioU:0.4422
+当前epoch:227  mioU:0.4164  nioU:0.437  FA:18.36  PD:0.8625
+best_epoch:210  best_miou:0.4556  b_niou:0.4788  FA:36.07  PD:0.9017
+当前epoch:228  train_mioU:0.6397  train_nioU:0.4407
+当前epoch:228  mioU:0.4229  nioU:0.4353  FA:28.93  PD:0.8844
+best_epoch:210  best_miou:0.4556  b_niou:0.4788  FA:36.07  PD:0.9017
+当前epoch:229  train_mioU:0.652  train_nioU:0.445
+当前epoch:229  mioU:0.4354  nioU:0.446  FA:30.447  PD:0.8897
+best_epoch:210  best_miou:0.4556  b_niou:0.4788  FA:36.07  PD:0.9017
+当前epoch:230  train_mioU:0.6634  train_nioU:0.4465
+当前epoch:230  mioU:0.4435  nioU:0.4635  FA:41.667  PD:0.895
+best_epoch:210  best_miou:0.4556  b_niou:0.4788  FA:36.07  PD:0.9017
+当前epoch:231  train_mioU:0.6494  train_nioU:0.4443
+当前epoch:231  mioU:0.4334  nioU:0.4568  FA:22.548  PD:0.8771
+best_epoch:210  best_miou:0.4556  b_niou:0.4788  FA:36.07  PD:0.9017
+当前epoch:232  train_mioU:0.6698  train_nioU:0.4556
+当前epoch:232  mioU:0.4314  nioU:0.4548  FA:24.444  PD:0.8784
+best_epoch:210  best_miou:0.4556  b_niou:0.4788  FA:36.07  PD:0.9017
+当前epoch:233  train_mioU:0.6595  train_nioU:0.4509
+当前epoch:233  mioU:0.4404  nioU:0.4627  FA:21.032  PD:0.8811
+best_epoch:210  best_miou:0.4556  b_niou:0.4788  FA:36.07  PD:0.9017
+当前epoch:234  train_mioU:0.6608  train_nioU:0.4487
+当前epoch:234  mioU:0.4043  nioU:0.4132  FA:28.488  PD:0.8239
+best_epoch:210  best_miou:0.4556  b_niou:0.4788  FA:36.07  PD:0.9017
+当前epoch:235  train_mioU:0.6528  train_nioU:0.4451
+当前epoch:235  mioU:0.427  nioU:0.4451  FA:21.285  PD:0.8651
+best_epoch:210  best_miou:0.4556  b_niou:0.4788  FA:36.07  PD:0.9017
+当前epoch:236  train_mioU:0.6643  train_nioU:0.4498
+当前epoch:236  mioU:0.4273  nioU:0.4424  FA:21.474  PD:0.8545
+best_epoch:210  best_miou:0.4556  b_niou:0.4788  FA:36.07  PD:0.9017
+当前epoch:237  train_mioU:0.6611  train_nioU:0.4514
+当前epoch:237  mioU:0.4448  nioU:0.4696  FA:22.711  PD:0.891
+best_epoch:210  best_miou:0.4556  b_niou:0.4788  FA:36.07  PD:0.9017
+当前epoch:238  train_mioU:0.6626  train_nioU:0.4489
+当前epoch:238  mioU:0.4423  nioU:0.4655  FA:33.57  PD:0.8997
+best_epoch:210  best_miou:0.4556  b_niou:0.4788  FA:36.07  PD:0.9017
+当前epoch:239  train_mioU:0.6656  train_nioU:0.4514
+当前epoch:239  mioU:0.4433  nioU:0.4615  FA:29.165  PD:0.8837
+best_epoch:210  best_miou:0.4556  b_niou:0.4788  FA:36.07  PD:0.9017
+当前epoch:240  train_mioU:0.6572  train_nioU:0.4393
+当前epoch:240  mioU:0.4442  nioU:0.4665  FA:46.622  PD:0.9063
+best_epoch:210  best_miou:0.4556  b_niou:0.4788  FA:36.07  PD:0.9017
+当前epoch:241  train_mioU:0.6599  train_nioU:0.4447
+当前epoch:241  mioU:0.4045  nioU:0.4234  FA:16.492  PD:0.8365
+best_epoch:210  best_miou:0.4556  b_niou:0.4788  FA:36.07  PD:0.9017
+当前epoch:242  train_mioU:0.679  train_nioU:0.4664
+当前epoch:242  mioU:0.4487  nioU:0.4619  FA:49.303  PD:0.913
+best_epoch:210  best_miou:0.4556  b_niou:0.4788  FA:36.07  PD:0.9017
+当前epoch:243  train_mioU:0.6562  train_nioU:0.4603
+当前epoch:243  mioU:0.4665  nioU:0.4885  FA:31.06  PD:0.907
+best_epoch:243  best_miou:0.4665  b_niou:0.4885  FA:31.06  PD:0.907
+当前epoch:244  train_mioU:0.6576  train_nioU:0.4423
+当前epoch:244  mioU:0.4474  nioU:0.477  FA:44.393  PD:0.9136
+best_epoch:243  best_miou:0.4665  b_niou:0.4885  FA:31.06  PD:0.907
+当前epoch:245  train_mioU:0.6576  train_nioU:0.4528
+当前epoch:245  mioU:0.4458  nioU:0.4712  FA:26.908  PD:0.885
+best_epoch:243  best_miou:0.4665  b_niou:0.4885  FA:31.06  PD:0.907
+当前epoch:246  train_mioU:0.6651  train_nioU:0.4697
+当前epoch:246  mioU:0.4437  nioU:0.4595  FA:33.272  PD:0.8924
+best_epoch:243  best_miou:0.4665  b_niou:0.4885  FA:31.06  PD:0.907
+当前epoch:247  train_mioU:0.6688  train_nioU:0.4604
+当前epoch:247  mioU:0.4516  nioU:0.4655  FA:25.879  PD:0.8963
+best_epoch:243  best_miou:0.4665  b_niou:0.4885  FA:31.06  PD:0.907
+当前epoch:248  train_mioU:0.6846  train_nioU:0.4678
+当前epoch:248  mioU:0.4259  nioU:0.4454  FA:34.897  PD:0.8957
+best_epoch:243  best_miou:0.4665  b_niou:0.4885  FA:31.06  PD:0.907
+当前epoch:249  train_mioU:0.6809  train_nioU:0.4661
+当前epoch:249  mioU:0.4363  nioU:0.4574  FA:35.592  PD:0.8884
+best_epoch:243  best_miou:0.4665  b_niou:0.4885  FA:31.06  PD:0.907
+当前epoch:250  train_mioU:0.6789  train_nioU:0.4764
+当前epoch:250  mioU:0.447  nioU:0.459  FA:34.635  PD:0.893
+best_epoch:243  best_miou:0.4665  b_niou:0.4885  FA:31.06  PD:0.907
+当前epoch:251  train_mioU:0.6716  train_nioU:0.4529
+当前epoch:251  mioU:0.4453  nioU:0.4638  FA:50.413  PD:0.8904
+best_epoch:243  best_miou:0.4665  b_niou:0.4885  FA:31.06  PD:0.907
+当前epoch:252  train_mioU:0.6565  train_nioU:0.4467
+当前epoch:252  mioU:0.4222  nioU:0.4403  FA:13.91  PD:0.8472
+best_epoch:243  best_miou:0.4665  b_niou:0.4885  FA:31.06  PD:0.907
+当前epoch:253  train_mioU:0.6679  train_nioU:0.4509
+当前epoch:253  mioU:0.4613  nioU:0.4833  FA:38.02  PD:0.9043
+best_epoch:243  best_miou:0.4665  b_niou:0.4885  FA:31.06  PD:0.907
+当前epoch:254  train_mioU:0.6683  train_nioU:0.4564
+当前epoch:254  mioU:0.4588  nioU:0.4748  FA:24.489  PD:0.8944
+best_epoch:243  best_miou:0.4665  b_niou:0.4885  FA:31.06  PD:0.907
+当前epoch:255  train_mioU:0.6677  train_nioU:0.4632
+当前epoch:255  mioU:0.4389  nioU:0.4549  FA:19.588  PD:0.8811
+best_epoch:243  best_miou:0.4665  b_niou:0.4885  FA:31.06  PD:0.907
+当前epoch:256  train_mioU:0.685  train_nioU:0.4622
+当前epoch:256  mioU:0.4507  nioU:0.4727  FA:26.231  PD:0.9023
+best_epoch:243  best_miou:0.4665  b_niou:0.4885  FA:31.06  PD:0.907
+当前epoch:257  train_mioU:0.6812  train_nioU:0.4647
+当前epoch:257  mioU:0.4437  nioU:0.4547  FA:36.494  PD:0.9017
+best_epoch:243  best_miou:0.4665  b_niou:0.4885  FA:31.06  PD:0.907
+当前epoch:258  train_mioU:0.6642  train_nioU:0.4514
+当前epoch:258  mioU:0.4535  nioU:0.4649  FA:32.848  PD:0.8844
+best_epoch:243  best_miou:0.4665  b_niou:0.4885  FA:31.06  PD:0.907
+当前epoch:259  train_mioU:0.6665  train_nioU:0.4602
+当前epoch:259  mioU:0.4449  nioU:0.4591  FA:30.952  PD:0.891
+best_epoch:243  best_miou:0.4665  b_niou:0.4885  FA:31.06  PD:0.907
+当前epoch:260  train_mioU:0.6757  train_nioU:0.4634
+当前epoch:260  mioU:0.4428  nioU:0.4636  FA:32.577  PD:0.8983
+best_epoch:243  best_miou:0.4665  b_niou:0.4885  FA:31.06  PD:0.907
+当前epoch:261  train_mioU:0.676  train_nioU:0.469
+当前epoch:261  mioU:0.4483  nioU:0.4641  FA:27.152  PD:0.8877
+best_epoch:243  best_miou:0.4665  b_niou:0.4885  FA:31.06  PD:0.907
+当前epoch:262  train_mioU:0.6716  train_nioU:0.4697
+当前epoch:262  mioU:0.4574  nioU:0.473  FA:21.294  PD:0.8751
+best_epoch:243  best_miou:0.4665  b_niou:0.4885  FA:31.06  PD:0.907
+当前epoch:263  train_mioU:0.6718  train_nioU:0.466
+当前epoch:263  mioU:0.459  nioU:0.4679  FA:23.0  PD:0.8784
+best_epoch:243  best_miou:0.4665  b_niou:0.4885  FA:31.06  PD:0.907
+当前epoch:264  train_mioU:0.6697  train_nioU:0.4614
+当前epoch:264  mioU:0.4378  nioU:0.4557  FA:36.404  PD:0.8864
+best_epoch:243  best_miou:0.4665  b_niou:0.4885  FA:31.06  PD:0.907
+当前epoch:265  train_mioU:0.6793  train_nioU:0.467
+当前epoch:265  mioU:0.4693  nioU:0.4878  FA:38.489  PD:0.911
+best_epoch:265  best_miou:0.4693  b_niou:0.4878  FA:38.489  PD:0.911
+当前epoch:266  train_mioU:0.6694  train_nioU:0.4585
+当前epoch:266  mioU:0.4391  nioU:0.4566  FA:31.846  PD:0.8977
+best_epoch:265  best_miou:0.4693  b_niou:0.4878  FA:38.489  PD:0.911
+当前epoch:267  train_mioU:0.6671  train_nioU:0.458
+当前epoch:267  mioU:0.4289  nioU:0.4368  FA:38.607  PD:0.8744
+best_epoch:265  best_miou:0.4693  b_niou:0.4878  FA:38.489  PD:0.911
+当前epoch:268  train_mioU:0.6761  train_nioU:0.4676
+当前epoch:268  mioU:0.4588  nioU:0.4747  FA:51.253  PD:0.9216
+best_epoch:265  best_miou:0.4693  b_niou:0.4878  FA:38.489  PD:0.911
+当前epoch:269  train_mioU:0.6758  train_nioU:0.4529
+当前epoch:269  mioU:0.385  nioU:0.3854  FA:102.632  PD:0.891
+best_epoch:265  best_miou:0.4693  b_niou:0.4878  FA:38.489  PD:0.911
+当前epoch:270  train_mioU:0.6887  train_nioU:0.4607
+当前epoch:270  mioU:0.4467  nioU:0.4651  FA:28.064  PD:0.8937
+best_epoch:265  best_miou:0.4693  b_niou:0.4878  FA:38.489  PD:0.911
+当前epoch:271  train_mioU:0.675  train_nioU:0.4587
+当前epoch:271  mioU:0.4519  nioU:0.4672  FA:23.198  PD:0.8831
+best_epoch:265  best_miou:0.4693  b_niou:0.4878  FA:38.489  PD:0.911
+当前epoch:272  train_mioU:0.6791  train_nioU:0.4605
+当前epoch:272  mioU:0.4441  nioU:0.4668  FA:17.06  PD:0.8811
+best_epoch:265  best_miou:0.4693  b_niou:0.4878  FA:38.489  PD:0.911
+当前epoch:273  train_mioU:0.6758  train_nioU:0.4624
+当前epoch:273  mioU:0.4373  nioU:0.45  FA:36.422  PD:0.8977
+best_epoch:265  best_miou:0.4693  b_niou:0.4878  FA:38.489  PD:0.911
+当前epoch:274  train_mioU:0.6688  train_nioU:0.451
+当前epoch:274  mioU:0.459  nioU:0.4714  FA:38.291  PD:0.905
+best_epoch:265  best_miou:0.4693  b_niou:0.4878  FA:38.489  PD:0.911
+当前epoch:275  train_mioU:0.6804  train_nioU:0.4557
+当前epoch:275  mioU:0.4375  nioU:0.442  FA:19.831  PD:0.8585
+best_epoch:265  best_miou:0.4693  b_niou:0.4878  FA:38.489  PD:0.911
+当前epoch:276  train_mioU:0.669  train_nioU:0.4558
+当前epoch:276  mioU:0.4607  nioU:0.4723  FA:38.327  PD:0.9063
+best_epoch:265  best_miou:0.4693  b_niou:0.4878  FA:38.489  PD:0.911
+当前epoch:277  train_mioU:0.6838  train_nioU:0.4624
+当前epoch:277  mioU:0.404  nioU:0.4076  FA:12.114  PD:0.8299
+best_epoch:265  best_miou:0.4693  b_niou:0.4878  FA:38.489  PD:0.911
+当前epoch:278  train_mioU:0.6699  train_nioU:0.4633
+当前epoch:278  mioU:0.4291  nioU:0.4413  FA:13.666  PD:0.8618
+best_epoch:265  best_miou:0.4693  b_niou:0.4878  FA:38.489  PD:0.911
+当前epoch:279  train_mioU:0.6817  train_nioU:0.473
+当前epoch:279  mioU:0.407  nioU:0.4015  FA:13.684  PD:0.8166
+best_epoch:265  best_miou:0.4693  b_niou:0.4878  FA:38.489  PD:0.911
+当前epoch:280  train_mioU:0.6847  train_nioU:0.4549
+当前epoch:280  mioU:0.4621  nioU:0.4774  FA:26.186  PD:0.903
+best_epoch:265  best_miou:0.4693  b_niou:0.4878  FA:38.489  PD:0.911
+当前epoch:281  train_mioU:0.6799  train_nioU:0.4607
+当前epoch:281  mioU:0.4329  nioU:0.4531  FA:28.515  PD:0.897
+best_epoch:265  best_miou:0.4693  b_niou:0.4878  FA:38.489  PD:0.911
+当前epoch:282  train_mioU:0.6852  train_nioU:0.471
+当前epoch:282  mioU:0.4406  nioU:0.4567  FA:28.632  PD:0.8857
+best_epoch:265  best_miou:0.4693  b_niou:0.4878  FA:38.489  PD:0.911
+当前epoch:283  train_mioU:0.6732  train_nioU:0.4621
+当前epoch:283  mioU:0.4641  nioU:0.4749  FA:38.733  PD:0.907
+best_epoch:265  best_miou:0.4693  b_niou:0.4878  FA:38.489  PD:0.911
+当前epoch:284  train_mioU:0.6898  train_nioU:0.4628
+当前epoch:284  mioU:0.4372  nioU:0.4511  FA:25.085  PD:0.8797
+best_epoch:265  best_miou:0.4693  b_niou:0.4878  FA:38.489  PD:0.911
+当前epoch:285  train_mioU:0.6851  train_nioU:0.4581
+当前epoch:285  mioU:0.4525  nioU:0.4616  FA:21.429  PD:0.8857
+best_epoch:265  best_miou:0.4693  b_niou:0.4878  FA:38.489  PD:0.911
+当前epoch:286  train_mioU:0.7021  train_nioU:0.4737
+当前epoch:286  mioU:0.4612  nioU:0.477  FA:22.666  PD:0.8897
+best_epoch:265  best_miou:0.4693  b_niou:0.4878  FA:38.489  PD:0.911
+当前epoch:287  train_mioU:0.6926  train_nioU:0.4675
+当前epoch:287  mioU:0.4361  nioU:0.4578  FA:17.773  PD:0.889
+best_epoch:265  best_miou:0.4693  b_niou:0.4878  FA:38.489  PD:0.911
+当前epoch:288  train_mioU:0.704  train_nioU:0.4817
+当前epoch:288  mioU:0.4326  nioU:0.4523  FA:21.014  PD:0.8804
+best_epoch:265  best_miou:0.4693  b_niou:0.4878  FA:38.489  PD:0.911
+当前epoch:289  train_mioU:0.7024  train_nioU:0.4819
+当前epoch:289  mioU:0.4515  nioU:0.4633  FA:45.584  PD:0.9116
+best_epoch:265  best_miou:0.4693  b_niou:0.4878  FA:38.489  PD:0.911
+当前epoch:290  train_mioU:0.6904  train_nioU:0.4703
+当前epoch:290  mioU:0.444  nioU:0.4605  FA:34.734  PD:0.8937
+best_epoch:265  best_miou:0.4693  b_niou:0.4878  FA:38.489  PD:0.911
+当前epoch:291  train_mioU:0.6996  train_nioU:0.4808
+当前epoch:291  mioU:0.44  nioU:0.4569  FA:17.295  PD:0.8751
+best_epoch:265  best_miou:0.4693  b_niou:0.4878  FA:38.489  PD:0.911
+当前epoch:292  train_mioU:0.6768  train_nioU:0.4687
+当前epoch:292  mioU:0.4384  nioU:0.446  FA:23.442  PD:0.8565
+best_epoch:265  best_miou:0.4693  b_niou:0.4878  FA:38.489  PD:0.911
+当前epoch:293  train_mioU:0.6867  train_nioU:0.4767
+当前epoch:293  mioU:0.448  nioU:0.4589  FA:49.98  PD:0.9103
+best_epoch:265  best_miou:0.4693  b_niou:0.4878  FA:38.489  PD:0.911
+当前epoch:294  train_mioU:0.6957  train_nioU:0.4905
+当前epoch:294  mioU:0.4669  nioU:0.4866  FA:32.369  PD:0.9076
+best_epoch:265  best_miou:0.4693  b_niou:0.4878  FA:38.489  PD:0.911
+当前epoch:295  train_mioU:0.6805  train_nioU:0.4818
+当前epoch:295  mioU:0.469  nioU:0.482  FA:44.384  PD:0.9169
+best_epoch:265  best_miou:0.4693  b_niou:0.4878  FA:38.489  PD:0.911
+当前epoch:296  train_mioU:0.6701  train_nioU:0.4548
+当前epoch:296  mioU:0.46  nioU:0.4708  FA:32.062  PD:0.9136
+best_epoch:265  best_miou:0.4693  b_niou:0.4878  FA:38.489  PD:0.911
+当前epoch:297  train_mioU:0.6813  train_nioU:0.4664
+当前epoch:297  mioU:0.4522  nioU:0.4632  FA:38.083  PD:0.9103
+best_epoch:265  best_miou:0.4693  b_niou:0.4878  FA:38.489  PD:0.911
+当前epoch:298  train_mioU:0.6886  train_nioU:0.4726
+当前epoch:298  mioU:0.4689  nioU:0.4789  FA:44.041  PD:0.9203
+best_epoch:265  best_miou:0.4693  b_niou:0.4878  FA:38.489  PD:0.911
+当前epoch:299  train_mioU:0.68  train_nioU:0.4611
+当前epoch:299  mioU:0.4619  nioU:0.478  FA:19.588  PD:0.8983
+best_epoch:265  best_miou:0.4693  b_niou:0.4878  FA:38.489  PD:0.911
+当前epoch:300  train_mioU:0.6875  train_nioU:0.4771
+当前epoch:300  mioU:0.459  nioU:0.4722  FA:26.168  PD:0.915
+best_epoch:265  best_miou:0.4693  b_niou:0.4878  FA:38.489  PD:0.911
+当前epoch:301  train_mioU:0.6916  train_nioU:0.4701
+当前epoch:301  mioU:0.4713  nioU:0.4843  FA:30.483  PD:0.9037
+best_epoch:301  best_miou:0.4713  b_niou:0.4843  FA:30.483  PD:0.9037
+当前epoch:302  train_mioU:0.7012  train_nioU:0.484
+当前epoch:302  mioU:0.4642  nioU:0.4752  FA:31.728  PD:0.9136
+best_epoch:301  best_miou:0.4713  b_niou:0.4843  FA:30.483  PD:0.9037
+当前epoch:303  train_mioU:0.6956  train_nioU:0.4758
+当前epoch:303  mioU:0.4692  nioU:0.4803  FA:31.719  PD:0.915
+best_epoch:301  best_miou:0.4713  b_niou:0.4843  FA:30.483  PD:0.9037
+当前epoch:304  train_mioU:0.6841  train_nioU:0.476
+当前epoch:304  mioU:0.438  nioU:0.4487  FA:19.895  PD:0.8864
+best_epoch:301  best_miou:0.4713  b_niou:0.4843  FA:30.483  PD:0.9037
+当前epoch:305  train_mioU:0.6919  train_nioU:0.4757
+当前epoch:305  mioU:0.4583  nioU:0.4759  FA:34.292  PD:0.9083
+best_epoch:301  best_miou:0.4713  b_niou:0.4843  FA:30.483  PD:0.9037
+当前epoch:306  train_mioU:0.694  train_nioU:0.4776
+当前epoch:306  mioU:0.453  nioU:0.4676  FA:17.963  PD:0.8924
+best_epoch:301  best_miou:0.4713  b_niou:0.4843  FA:30.483  PD:0.9037
+当前epoch:307  train_mioU:0.6865  train_nioU:0.4817
+当前epoch:307  mioU:0.4497  nioU:0.4608  FA:25.545  PD:0.9037
+best_epoch:301  best_miou:0.4713  b_niou:0.4843  FA:30.483  PD:0.9037
+当前epoch:308  train_mioU:0.687  train_nioU:0.4733
+当前epoch:308  mioU:0.4516  nioU:0.4589  FA:31.503  PD:0.8924
+best_epoch:301  best_miou:0.4713  b_niou:0.4843  FA:30.483  PD:0.9037
+当前epoch:309  train_mioU:0.6885  train_nioU:0.4674
+当前epoch:309  mioU:0.4565  nioU:0.4646  FA:25.401  PD:0.9023
+best_epoch:301  best_miou:0.4713  b_niou:0.4843  FA:30.483  PD:0.9037
+当前epoch:310  train_mioU:0.6995  train_nioU:0.4921
+当前epoch:310  mioU:0.4694  nioU:0.4789  FA:36.639  PD:0.913
+best_epoch:301  best_miou:0.4713  b_niou:0.4843  FA:30.483  PD:0.9037
+当前epoch:311  train_mioU:0.6903  train_nioU:0.4765
+当前epoch:311  mioU:0.4744  nioU:0.4854  FA:25.536  PD:0.9076
+best_epoch:311  best_miou:0.4744  b_niou:0.4854  FA:25.536  PD:0.9076
+当前epoch:312  train_mioU:0.6973  train_nioU:0.4917
+当前epoch:312  mioU:0.4591  nioU:0.4687  FA:24.588  PD:0.9043
+best_epoch:311  best_miou:0.4744  b_niou:0.4854  FA:25.536  PD:0.9076
+当前epoch:313  train_mioU:0.6935  train_nioU:0.4762
+当前epoch:313  mioU:0.4546  nioU:0.462  FA:41.748  PD:0.9296
+best_epoch:311  best_miou:0.4744  b_niou:0.4854  FA:25.536  PD:0.9076
+当前epoch:314  train_mioU:0.6833  train_nioU:0.4597
+当前epoch:314  mioU:0.4454  nioU:0.4562  FA:31.737  PD:0.9056
+best_epoch:311  best_miou:0.4744  b_niou:0.4854  FA:25.536  PD:0.9076
+当前epoch:315  train_mioU:0.6872  train_nioU:0.4698
+当前epoch:315  mioU:0.4569  nioU:0.4682  FA:22.124  PD:0.8824
+best_epoch:311  best_miou:0.4744  b_niou:0.4854  FA:25.536  PD:0.9076
+当前epoch:316  train_mioU:0.6946  train_nioU:0.4726
+当前epoch:316  mioU:0.4605  nioU:0.4665  FA:19.777  PD:0.8831
+best_epoch:311  best_miou:0.4744  b_niou:0.4854  FA:25.536  PD:0.9076
+当前epoch:317  train_mioU:0.6879  train_nioU:0.4734
+当前epoch:317  mioU:0.4554  nioU:0.4586  FA:33.579  PD:0.9136
+best_epoch:311  best_miou:0.4744  b_niou:0.4854  FA:25.536  PD:0.9076
+当前epoch:318  train_mioU:0.7004  train_nioU:0.4773
+当前epoch:318  mioU:0.456  nioU:0.473  FA:26.403  PD:0.905
+best_epoch:311  best_miou:0.4744  b_niou:0.4854  FA:25.536  PD:0.9076
+当前epoch:319  train_mioU:0.7019  train_nioU:0.475
+当前epoch:319  mioU:0.4533  nioU:0.4684  FA:27.089  PD:0.8924
+best_epoch:311  best_miou:0.4744  b_niou:0.4854  FA:25.536  PD:0.9076
+当前epoch:320  train_mioU:0.6874  train_nioU:0.4729
+当前epoch:320  mioU:0.4563  nioU:0.4666  FA:16.031  PD:0.8804
+best_epoch:311  best_miou:0.4744  b_niou:0.4854  FA:25.536  PD:0.9076
+当前epoch:321  train_mioU:0.6782  train_nioU:0.4432
+当前epoch:321  mioU:0.4342  nioU:0.441  FA:22.016  PD:0.8704
+best_epoch:311  best_miou:0.4744  b_niou:0.4854  FA:25.536  PD:0.9076
+当前epoch:322  train_mioU:0.6839  train_nioU:0.4398
+当前epoch:322  mioU:0.4587  nioU:0.4709  FA:29.977  PD:0.895
+best_epoch:311  best_miou:0.4744  b_niou:0.4854  FA:25.536  PD:0.9076
+当前epoch:323  train_mioU:0.6892  train_nioU:0.4542
+当前epoch:323  mioU:0.4588  nioU:0.4745  FA:27.504  PD:0.9063
+best_epoch:311  best_miou:0.4744  b_niou:0.4854  FA:25.536  PD:0.9076
+当前epoch:324  train_mioU:0.6644  train_nioU:0.4391
+当前epoch:324  mioU:0.4437  nioU:0.4397  FA:52.417  PD:0.9183
+best_epoch:311  best_miou:0.4744  b_niou:0.4854  FA:25.536  PD:0.9076
+当前epoch:325  train_mioU:0.6556  train_nioU:0.4334
+当前epoch:325  mioU:0.4629  nioU:0.4736  FA:26.285  PD:0.9123
+best_epoch:311  best_miou:0.4744  b_niou:0.4854  FA:25.536  PD:0.9076
+当前epoch:326  train_mioU:0.701  train_nioU:0.4764
+当前epoch:326  mioU:0.4617  nioU:0.4722  FA:37.632  PD:0.907
+best_epoch:311  best_miou:0.4744  b_niou:0.4854  FA:25.536  PD:0.9076
+当前epoch:327  train_mioU:0.6884  train_nioU:0.4633
+当前epoch:327  mioU:0.4507  nioU:0.4597  FA:30.736  PD:0.8963
+best_epoch:311  best_miou:0.4744  b_niou:0.4854  FA:25.536  PD:0.9076
+当前epoch:328  train_mioU:0.6906  train_nioU:0.4537
+当前epoch:328  mioU:0.4541  nioU:0.4584  FA:34.066  PD:0.8944
+best_epoch:311  best_miou:0.4744  b_niou:0.4854  FA:25.536  PD:0.9076
+当前epoch:329  train_mioU:0.6967  train_nioU:0.4522
+当前epoch:329  mioU:0.4538  nioU:0.4625  FA:24.462  PD:0.8924
+best_epoch:311  best_miou:0.4744  b_niou:0.4854  FA:25.536  PD:0.9076
+当前epoch:330  train_mioU:0.6922  train_nioU:0.4609
+当前epoch:330  mioU:0.4627  nioU:0.4686  FA:26.71  PD:0.8864
+best_epoch:311  best_miou:0.4744  b_niou:0.4854  FA:25.536  PD:0.9076
+当前epoch:331  train_mioU:0.6843  train_nioU:0.4527
+当前epoch:331  mioU:0.4511  nioU:0.4666  FA:37.74  PD:0.911
+best_epoch:311  best_miou:0.4744  b_niou:0.4854  FA:25.536  PD:0.9076
+当前epoch:332  train_mioU:0.6874  train_nioU:0.4533
+当前epoch:332  mioU:0.4546  nioU:0.4579  FA:22.278  PD:0.8791
+best_epoch:311  best_miou:0.4744  b_niou:0.4854  FA:25.536  PD:0.9076
+当前epoch:333  train_mioU:0.6993  train_nioU:0.4697
+当前epoch:333  mioU:0.4481  nioU:0.4712  FA:23.045  PD:0.901
+best_epoch:311  best_miou:0.4744  b_niou:0.4854  FA:25.536  PD:0.9076
+当前epoch:334  train_mioU:0.7072  train_nioU:0.464
+当前epoch:334  mioU:0.4422  nioU:0.4475  FA:14.668  PD:0.8545
+best_epoch:311  best_miou:0.4744  b_niou:0.4854  FA:25.536  PD:0.9076
+当前epoch:335  train_mioU:0.692  train_nioU:0.4537
+当前epoch:335  mioU:0.4546  nioU:0.4677  FA:33.119  PD:0.9123
+best_epoch:311  best_miou:0.4744  b_niou:0.4854  FA:25.536  PD:0.9076
+当前epoch:336  train_mioU:0.6947  train_nioU:0.4628
+当前epoch:336  mioU:0.4592  nioU:0.4782  FA:27.251  PD:0.915
+best_epoch:311  best_miou:0.4744  b_niou:0.4854  FA:25.536  PD:0.9076
+当前epoch:337  train_mioU:0.6952  train_nioU:0.4643
+当前epoch:337  mioU:0.4449  nioU:0.4644  FA:14.244  PD:0.8764
+best_epoch:311  best_miou:0.4744  b_niou:0.4854  FA:25.536  PD:0.9076
+当前epoch:338  train_mioU:0.6735  train_nioU:0.4416
+当前epoch:338  mioU:0.4496  nioU:0.4626  FA:24.029  PD:0.885
+best_epoch:311  best_miou:0.4744  b_niou:0.4854  FA:25.536  PD:0.9076
+当前epoch:339  train_mioU:0.6919  train_nioU:0.4665
+当前epoch:339  mioU:0.4612  nioU:0.4758  FA:34.319  PD:0.909
+best_epoch:311  best_miou:0.4744  b_niou:0.4854  FA:25.536  PD:0.9076
+当前epoch:340  train_mioU:0.7071  train_nioU:0.4684
+当前epoch:340  mioU:0.4691  nioU:0.4798  FA:33.416  PD:0.9083
+best_epoch:311  best_miou:0.4744  b_niou:0.4854  FA:25.536  PD:0.9076
+当前epoch:341  train_mioU:0.6854  train_nioU:0.4665
+当前epoch:341  mioU:0.4586  nioU:0.4662  FA:38.381  PD:0.913
+best_epoch:311  best_miou:0.4744  b_niou:0.4854  FA:25.536  PD:0.9076
+当前epoch:342  train_mioU:0.6957  train_nioU:0.4673
+当前epoch:342  mioU:0.4299  nioU:0.4431  FA:13.594  PD:0.8664
+best_epoch:311  best_miou:0.4744  b_niou:0.4854  FA:25.536  PD:0.9076
+当前epoch:343  train_mioU:0.6822  train_nioU:0.46
+当前epoch:343  mioU:0.4523  nioU:0.4592  FA:41.107  PD:0.9076
+best_epoch:311  best_miou:0.4744  b_niou:0.4854  FA:25.536  PD:0.9076
+当前epoch:344  train_mioU:0.6939  train_nioU:0.4639
+当前epoch:344  mioU:0.4698  nioU:0.4786  FA:38.67  PD:0.9196
+best_epoch:311  best_miou:0.4744  b_niou:0.4854  FA:25.536  PD:0.9076
+当前epoch:345  train_mioU:0.694  train_nioU:0.4699
+当前epoch:345  mioU:0.4462  nioU:0.4561  FA:33.055  PD:0.9063
+best_epoch:311  best_miou:0.4744  b_niou:0.4854  FA:25.536  PD:0.9076
+当前epoch:346  train_mioU:0.7116  train_nioU:0.4809
+当前epoch:346  mioU:0.4611  nioU:0.4723  FA:33.714  PD:0.9143
+best_epoch:311  best_miou:0.4744  b_niou:0.4854  FA:25.536  PD:0.9076
+当前epoch:347  train_mioU:0.696  train_nioU:0.4616
+当前epoch:347  mioU:0.4213  nioU:0.4348  FA:28.046  PD:0.903
+best_epoch:311  best_miou:0.4744  b_niou:0.4854  FA:25.536  PD:0.9076
+当前epoch:348  train_mioU:0.6936  train_nioU:0.4673
+当前epoch:348  mioU:0.4583  nioU:0.4623  FA:37.0  PD:0.9116
+best_epoch:311  best_miou:0.4744  b_niou:0.4854  FA:25.536  PD:0.9076
+当前epoch:349  train_mioU:0.6965  train_nioU:0.4723
+当前epoch:349  mioU:0.4595  nioU:0.4644  FA:30.573  PD:0.893
+best_epoch:311  best_miou:0.4744  b_niou:0.4854  FA:25.536  PD:0.9076
+当前epoch:350  train_mioU:0.6871  train_nioU:0.4743
+当前epoch:350  mioU:0.4485  nioU:0.4585  FA:28.75  PD:0.8957
+best_epoch:311  best_miou:0.4744  b_niou:0.4854  FA:25.536  PD:0.9076
+当前epoch:351  train_mioU:0.703  train_nioU:0.4798
+当前epoch:351  mioU:0.4769  nioU:0.4872  FA:30.708  PD:0.907
+best_epoch:351  best_miou:0.4769  b_niou:0.4872  FA:30.708  PD:0.907
+当前epoch:352  train_mioU:0.7046  train_nioU:0.4737
+当前epoch:352  mioU:0.4392  nioU:0.4451  FA:47.976  PD:0.911
+best_epoch:351  best_miou:0.4769  b_niou:0.4872  FA:30.708  PD:0.907
+当前epoch:353  train_mioU:0.7083  train_nioU:0.4739
+当前epoch:353  mioU:0.4573  nioU:0.4654  FA:30.889  PD:0.9083
+best_epoch:351  best_miou:0.4769  b_niou:0.4872  FA:30.708  PD:0.907
+当前epoch:354  train_mioU:0.6973  train_nioU:0.4652
+当前epoch:354  mioU:0.4495  nioU:0.4616  FA:21.619  PD:0.8897
+best_epoch:351  best_miou:0.4769  b_niou:0.4872  FA:30.708  PD:0.907
+当前epoch:355  train_mioU:0.6967  train_nioU:0.4739
+当前epoch:355  mioU:0.4602  nioU:0.4671  FA:31.06  PD:0.8977
+best_epoch:351  best_miou:0.4769  b_niou:0.4872  FA:30.708  PD:0.907
+当前epoch:356  train_mioU:0.7126  train_nioU:0.4725
+当前epoch:356  mioU:0.4691  nioU:0.4809  FA:28.831  PD:0.9169
+best_epoch:351  best_miou:0.4769  b_niou:0.4872  FA:30.708  PD:0.907
+当前epoch:357  train_mioU:0.6961  train_nioU:0.4587
+当前epoch:357  mioU:0.4651  nioU:0.4741  FA:33.335  PD:0.9003
+best_epoch:351  best_miou:0.4769  b_niou:0.4872  FA:30.708  PD:0.907
+当前epoch:358  train_mioU:0.6921  train_nioU:0.4648
+当前epoch:358  mioU:0.4475  nioU:0.4641  FA:30.257  PD:0.8977
+best_epoch:351  best_miou:0.4769  b_niou:0.4872  FA:30.708  PD:0.907
+当前epoch:359  train_mioU:0.7164  train_nioU:0.4881
+当前epoch:359  mioU:0.4571  nioU:0.4626  FA:45.467  PD:0.9103
+best_epoch:351  best_miou:0.4769  b_niou:0.4872  FA:30.708  PD:0.907
+当前epoch:360  train_mioU:0.6964  train_nioU:0.4683
+当前epoch:360  mioU:0.4636  nioU:0.4711  FA:21.411  PD:0.891
+best_epoch:351  best_miou:0.4769  b_niou:0.4872  FA:30.708  PD:0.907
+当前epoch:361  train_mioU:0.6999  train_nioU:0.4657
+当前epoch:361  mioU:0.4619  nioU:0.4744  FA:19.922  PD:0.901
+best_epoch:351  best_miou:0.4769  b_niou:0.4872  FA:30.708  PD:0.907
+当前epoch:362  train_mioU:0.7052  train_nioU:0.467
+当前epoch:362  mioU:0.4499  nioU:0.4606  FA:34.843  PD:0.9017
+best_epoch:351  best_miou:0.4769  b_niou:0.4872  FA:30.708  PD:0.907
+当前epoch:363  train_mioU:0.6994  train_nioU:0.4689
+当前epoch:363  mioU:0.4518  nioU:0.4583  FA:19.931  PD:0.8751
+best_epoch:351  best_miou:0.4769  b_niou:0.4872  FA:30.708  PD:0.907
+当前epoch:364  train_mioU:0.7186  train_nioU:0.4848
+当前epoch:364  mioU:0.4671  nioU:0.4799  FA:22.928  PD:0.9023
+best_epoch:351  best_miou:0.4769  b_niou:0.4872  FA:30.708  PD:0.907
+当前epoch:365  train_mioU:0.7037  train_nioU:0.4773
+当前epoch:365  mioU:0.4614  nioU:0.4727  FA:20.915  PD:0.8963
+best_epoch:351  best_miou:0.4769  b_niou:0.4872  FA:30.708  PD:0.907
+当前epoch:366  train_mioU:0.6944  train_nioU:0.445
+当前epoch:366  mioU:0.4604  nioU:0.4693  FA:30.528  PD:0.901
+best_epoch:351  best_miou:0.4769  b_niou:0.4872  FA:30.708  PD:0.907
+当前epoch:367  train_mioU:0.7042  train_nioU:0.468
+当前epoch:367  mioU:0.4185  nioU:0.4481  FA:98.841  PD:0.9076
+best_epoch:351  best_miou:0.4769  b_niou:0.4872  FA:30.708  PD:0.907
+当前epoch:368  train_mioU:0.6779  train_nioU:0.454
+当前epoch:368  mioU:0.4558  nioU:0.4646  FA:23.487  PD:0.8751
+best_epoch:351  best_miou:0.4769  b_niou:0.4872  FA:30.708  PD:0.907
+当前epoch:369  train_mioU:0.6951  train_nioU:0.4551
+当前epoch:369  mioU:0.4651  nioU:0.4839  FA:30.555  PD:0.9003
+best_epoch:351  best_miou:0.4769  b_niou:0.4872  FA:30.708  PD:0.907
+当前epoch:370  train_mioU:0.7151  train_nioU:0.469
+当前epoch:370  mioU:0.4494  nioU:0.4602  FA:27.423  PD:0.8837
+best_epoch:351  best_miou:0.4769  b_niou:0.4872  FA:30.708  PD:0.907
+当前epoch:371  train_mioU:0.7047  train_nioU:0.47
+当前epoch:371  mioU:0.4469  nioU:0.4599  FA:51.298  PD:0.9116
+best_epoch:351  best_miou:0.4769  b_niou:0.4872  FA:30.708  PD:0.907
+当前epoch:372  train_mioU:0.6946  train_nioU:0.4632
+当前epoch:372  mioU:0.4646  nioU:0.4731  FA:23.126  PD:0.8837
+best_epoch:351  best_miou:0.4769  b_niou:0.4872  FA:30.708  PD:0.907
+当前epoch:373  train_mioU:0.6953  train_nioU:0.4686
+当前epoch:373  mioU:0.4623  nioU:0.4726  FA:37.686  PD:0.9116
+best_epoch:351  best_miou:0.4769  b_niou:0.4872  FA:30.708  PD:0.907
+当前epoch:374  train_mioU:0.6893  train_nioU:0.4607
+当前epoch:374  mioU:0.4542  nioU:0.4705  FA:37.334  PD:0.9076
+best_epoch:351  best_miou:0.4769  b_niou:0.4872  FA:30.708  PD:0.907
+当前epoch:375  train_mioU:0.7023  train_nioU:0.4777
+当前epoch:375  mioU:0.4547  nioU:0.4664  FA:30.898  PD:0.8963
+best_epoch:351  best_miou:0.4769  b_niou:0.4872  FA:30.708  PD:0.907
+当前epoch:376  train_mioU:0.704  train_nioU:0.4694
+当前epoch:376  mioU:0.4514  nioU:0.4574  FA:18.504  PD:0.8704
+best_epoch:351  best_miou:0.4769  b_niou:0.4872  FA:30.708  PD:0.907
+当前epoch:377  train_mioU:0.7019  train_nioU:0.4636
+当前epoch:377  mioU:0.4537  nioU:0.467  FA:22.702  PD:0.897
+best_epoch:351  best_miou:0.4769  b_niou:0.4872  FA:30.708  PD:0.907
+当前epoch:378  train_mioU:0.7146  train_nioU:0.478
+当前epoch:378  mioU:0.4633  nioU:0.4671  FA:26.421  PD:0.9023
+best_epoch:351  best_miou:0.4769  b_niou:0.4872  FA:30.708  PD:0.907
+当前epoch:379  train_mioU:0.7138  train_nioU:0.4758
+当前epoch:379  mioU:0.4408  nioU:0.4586  FA:31.999  PD:0.9083
+best_epoch:351  best_miou:0.4769  b_niou:0.4872  FA:30.708  PD:0.907
+当前epoch:380  train_mioU:0.6987  train_nioU:0.4533
+当前epoch:380  mioU:0.4615  nioU:0.4658  FA:31.268  PD:0.9096
+best_epoch:351  best_miou:0.4769  b_niou:0.4872  FA:30.708  PD:0.907
+当前epoch:381  train_mioU:0.6837  train_nioU:0.467
+当前epoch:381  mioU:0.45  nioU:0.4589  FA:32.126  PD:0.9003
+best_epoch:351  best_miou:0.4769  b_niou:0.4872  FA:30.708  PD:0.907
+当前epoch:382  train_mioU:0.698  train_nioU:0.4637
+当前epoch:382  mioU:0.4512  nioU:0.4648  FA:26.258  PD:0.9083
+best_epoch:351  best_miou:0.4769  b_niou:0.4872  FA:30.708  PD:0.907
+当前epoch:383  train_mioU:0.7105  train_nioU:0.4684
+当前epoch:383  mioU:0.4374  nioU:0.4539  FA:28.118  PD:0.9037
+best_epoch:351  best_miou:0.4769  b_niou:0.4872  FA:30.708  PD:0.907
+当前epoch:384  train_mioU:0.7084  train_nioU:0.4703
+当前epoch:384  mioU:0.4714  nioU:0.4799  FA:27.224  PD:0.9017
+best_epoch:351  best_miou:0.4769  b_niou:0.4872  FA:30.708  PD:0.907
+当前epoch:385  train_mioU:0.7092  train_nioU:0.4721
+当前epoch:385  mioU:0.453  nioU:0.4699  FA:31.124  PD:0.905
+best_epoch:351  best_miou:0.4769  b_niou:0.4872  FA:30.708  PD:0.907
+当前epoch:386  train_mioU:0.7161  train_nioU:0.4731
+当前epoch:386  mioU:0.4431  nioU:0.4634  FA:13.892  PD:0.8738
+best_epoch:351  best_miou:0.4769  b_niou:0.4872  FA:30.708  PD:0.907
+当前epoch:387  train_mioU:0.702  train_nioU:0.4664
+当前epoch:387  mioU:0.4519  nioU:0.4678  FA:27.314  PD:0.913
+best_epoch:351  best_miou:0.4769  b_niou:0.4872  FA:30.708  PD:0.907
+当前epoch:388  train_mioU:0.7058  train_nioU:0.4702
+当前epoch:388  mioU:0.4757  nioU:0.4901  FA:20.933  PD:0.9003
+best_epoch:351  best_miou:0.4769  b_niou:0.4872  FA:30.708  PD:0.907
+当前epoch:389  train_mioU:0.7039  train_nioU:0.4779
+当前epoch:389  mioU:0.4604  nioU:0.4711  FA:36.531  PD:0.9003
+best_epoch:351  best_miou:0.4769  b_niou:0.4872  FA:30.708  PD:0.907
+当前epoch:390  train_mioU:0.7137  train_nioU:0.4775
+当前epoch:390  mioU:0.4503  nioU:0.4608  FA:23.911  PD:0.8897
+best_epoch:351  best_miou:0.4769  b_niou:0.4872  FA:30.708  PD:0.907
+当前epoch:391  train_mioU:0.7123  train_nioU:0.4725
+当前epoch:391  mioU:0.448  nioU:0.4564  FA:31.557  PD:0.8977
+best_epoch:351  best_miou:0.4769  b_niou:0.4872  FA:30.708  PD:0.907
+当前epoch:392  train_mioU:0.6928  train_nioU:0.4633
+当前epoch:392  mioU:0.4238  nioU:0.4288  FA:44.348  PD:0.8904
+best_epoch:351  best_miou:0.4769  b_niou:0.4872  FA:30.708  PD:0.907
+当前epoch:393  train_mioU:0.7028  train_nioU:0.4767
+当前epoch:393  mioU:0.4467  nioU:0.4559  FA:34.328  PD:0.8904
+best_epoch:351  best_miou:0.4769  b_niou:0.4872  FA:30.708  PD:0.907
+当前epoch:394  train_mioU:0.7098  train_nioU:0.4669
+当前epoch:394  mioU:0.4656  nioU:0.4699  FA:26.71  PD:0.8797
+best_epoch:351  best_miou:0.4769  b_niou:0.4872  FA:30.708  PD:0.907
+当前epoch:395  train_mioU:0.7112  train_nioU:0.4769
+当前epoch:395  mioU:0.4565  nioU:0.4578  FA:26.132  PD:0.8651
+best_epoch:351  best_miou:0.4769  b_niou:0.4872  FA:30.708  PD:0.907
+当前epoch:396  train_mioU:0.6962  train_nioU:0.4605
+当前epoch:396  mioU:0.4457  nioU:0.4587  FA:28.885  PD:0.8983
+best_epoch:351  best_miou:0.4769  b_niou:0.4872  FA:30.708  PD:0.907
+当前epoch:397  train_mioU:0.7028  train_nioU:0.4662
+当前epoch:397  mioU:0.4754  nioU:0.4766  FA:33.85  PD:0.897
+best_epoch:351  best_miou:0.4769  b_niou:0.4872  FA:30.708  PD:0.907
+当前epoch:398  train_mioU:0.7138  train_nioU:0.4684
+当前epoch:398  mioU:0.4522  nioU:0.457  FA:24.778  PD:0.885
+best_epoch:351  best_miou:0.4769  b_niou:0.4872  FA:30.708  PD:0.907
+当前epoch:399  train_mioU:0.7105  train_nioU:0.4781
+当前epoch:399  mioU:0.4676  nioU:0.4778  FA:46.469  PD:0.9163
+best_epoch:351  best_miou:0.4769  b_niou:0.4872  FA:30.708  PD:0.907
+当前epoch:400  train_mioU:0.7089  train_nioU:0.4735
+当前epoch:400  mioU:0.4607  nioU:0.4631  FA:18.965  PD:0.8704
+best_epoch:351  best_miou:0.4769  b_niou:0.4872  FA:30.708  PD:0.907
+
+== 每 epoch 末 batch loss（取自该 epoch 最后一条 tqdm 行） ==
+epoch 1: last_batch_loss=3.57
+epoch 2: last_batch_loss=3.28
+epoch 3: last_batch_loss=3.05
+epoch 4: last_batch_loss=2.83
+epoch 5: last_batch_loss=2.6
+epoch 6: last_batch_loss=2.37
+epoch 7: last_batch_loss=2.2
+epoch 8: last_batch_loss=1.77
+epoch 9: last_batch_loss=1.63
+epoch 10: last_batch_loss=1.5
+epoch 11: last_batch_loss=1.3
+epoch 12: last_batch_loss=1.21
+epoch 13: last_batch_loss=0.991
+epoch 14: last_batch_loss=0.938
+epoch 15: last_batch_loss=0.809
+epoch 16: last_batch_loss=0.711
+epoch 17: last_batch_loss=0.652
+epoch 18: last_batch_loss=0.577
+epoch 19: last_batch_loss=0.55
+epoch 20: last_batch_loss=0.504
+epoch 21: last_batch_loss=0.462
+epoch 22: last_batch_loss=0.442
+epoch 23: last_batch_loss=0.401
+epoch 24: last_batch_loss=0.381
+epoch 25: last_batch_loss=0.35
+epoch 26: last_batch_loss=0.344
+epoch 27: last_batch_loss=0.311
+epoch 28: last_batch_loss=0.303
+epoch 29: last_batch_loss=0.289
+epoch 30: last_batch_loss=0.274
+epoch 31: last_batch_loss=0.29
+epoch 32: last_batch_loss=0.25
+epoch 33: last_batch_loss=0.247
+epoch 34: last_batch_loss=0.234
+epoch 35: last_batch_loss=0.219
+epoch 36: last_batch_loss=0.332
+epoch 37: last_batch_loss=0.205
+epoch 38: last_batch_loss=0.202
+epoch 39: last_batch_loss=0.195
+epoch 40: last_batch_loss=0.192
+epoch 41: last_batch_loss=0.19
+epoch 42: last_batch_loss=0.181
+epoch 43: last_batch_loss=0.176
+epoch 44: last_batch_loss=0.179
+epoch 45: last_batch_loss=0.169
+epoch 46: last_batch_loss=0.169
+epoch 47: last_batch_loss=0.161
+epoch 48: last_batch_loss=0.186
+epoch 49: last_batch_loss=0.165
+epoch 50: last_batch_loss=0.15
+epoch 51: last_batch_loss=0.146
+epoch 52: last_batch_loss=0.144
+epoch 53: last_batch_loss=0.141
+epoch 54: last_batch_loss=0.142
+epoch 55: last_batch_loss=0.135
+epoch 56: last_batch_loss=0.133
+epoch 57: last_batch_loss=0.133
+epoch 58: last_batch_loss=0.127
+epoch 59: last_batch_loss=0.128
+epoch 60: last_batch_loss=0.128
+epoch 61: last_batch_loss=0.123
+epoch 62: last_batch_loss=0.119
+epoch 63: last_batch_loss=0.12
+epoch 64: last_batch_loss=0.113
+epoch 65: last_batch_loss=0.112
+epoch 66: last_batch_loss=0.107
+epoch 67: last_batch_loss=0.12
+epoch 68: last_batch_loss=0.106
+epoch 69: last_batch_loss=0.101
+epoch 70: last_batch_loss=0.103
+epoch 71: last_batch_loss=0.116
+epoch 72: last_batch_loss=0.103
+epoch 73: last_batch_loss=0.109
+epoch 74: last_batch_loss=0.0843
+epoch 75: last_batch_loss=0.0621
+epoch 76: last_batch_loss=0.0564
+epoch 77: last_batch_loss=0.0443
+epoch 78: last_batch_loss=0.0631
+epoch 79: last_batch_loss=0.0648
+epoch 80: last_batch_loss=0.0661
+epoch 81: last_batch_loss=0.0623
+epoch 82: last_batch_loss=0.0611
+epoch 83: last_batch_loss=0.0684
+epoch 84: last_batch_loss=0.0658
+epoch 85: last_batch_loss=0.0631
+epoch 86: last_batch_loss=0.0542
+epoch 87: last_batch_loss=0.0532
+epoch 88: last_batch_loss=0.0492
+epoch 89: last_batch_loss=0.0472
+epoch 90: last_batch_loss=0.0473
+epoch 91: last_batch_loss=0.0459
+epoch 92: last_batch_loss=0.0399
+epoch 93: last_batch_loss=0.0416
+epoch 94: last_batch_loss=0.0402
+epoch 95: last_batch_loss=0.0357
+epoch 96: last_batch_loss=0.035
+epoch 97: last_batch_loss=0.0399
+epoch 98: last_batch_loss=0.0317
+epoch 99: last_batch_loss=0.0314
+epoch 100: last_batch_loss=0.0325
+epoch 101: last_batch_loss=0.0361
+epoch 102: last_batch_loss=0.0257
+epoch 103: last_batch_loss=0.0323
+epoch 104: last_batch_loss=0.0282
+epoch 105: last_batch_loss=0.025
+epoch 106: last_batch_loss=0.0281
+epoch 107: last_batch_loss=0.0276
+epoch 108: last_batch_loss=0.0274
+epoch 109: last_batch_loss=0.0219
+epoch 110: last_batch_loss=0.0258
+epoch 111: last_batch_loss=0.0215
+epoch 112: last_batch_loss=0.0218
+epoch 113: last_batch_loss=0.0231
+epoch 114: last_batch_loss=0.0253
+epoch 115: last_batch_loss=0.0241
+epoch 116: last_batch_loss=0.0188
+epoch 117: last_batch_loss=0.0217
+epoch 118: last_batch_loss=0.0216
+epoch 119: last_batch_loss=0.0175
+epoch 120: last_batch_loss=0.0178
+epoch 121: last_batch_loss=0.0167
+epoch 122: last_batch_loss=0.0212
+epoch 123: last_batch_loss=0.0197
+epoch 124: last_batch_loss=0.0185
+epoch 125: last_batch_loss=0.0161
+epoch 126: last_batch_loss=0.0154
+epoch 127: last_batch_loss=0.0157
+epoch 128: last_batch_loss=0.0215
+epoch 129: last_batch_loss=0.0151
+epoch 130: last_batch_loss=0.0143
+epoch 131: last_batch_loss=0.0106
+epoch 132: last_batch_loss=0.0127
+epoch 133: last_batch_loss=0.0112
+epoch 134: last_batch_loss=0.0102
+epoch 135: last_batch_loss=0.0109
+epoch 136: last_batch_loss=0.0104
+epoch 137: last_batch_loss=0.0124
+epoch 138: last_batch_loss=0.0122
+epoch 139: last_batch_loss=0.00967
+epoch 140: last_batch_loss=0.0123
+epoch 141: last_batch_loss=0.00917
+epoch 142: last_batch_loss=0.00914
+epoch 143: last_batch_loss=0.0116
+epoch 144: last_batch_loss=0.0106
+epoch 145: last_batch_loss=0.0107
+epoch 146: last_batch_loss=0.01
+epoch 147: last_batch_loss=0.0117
+epoch 148: last_batch_loss=0.00586
+epoch 149: last_batch_loss=0.00722
+epoch 150: last_batch_loss=0.00857
+epoch 151: last_batch_loss=0.00907
+epoch 152: last_batch_loss=0.00694
+epoch 153: last_batch_loss=0.00922
+epoch 154: last_batch_loss=0.0075
+epoch 155: last_batch_loss=0.00632
+epoch 156: last_batch_loss=0.00776
+epoch 157: last_batch_loss=0.00594
+epoch 158: last_batch_loss=0.0131
+epoch 159: last_batch_loss=0.00363
+epoch 160: last_batch_loss=0.00509
+epoch 161: last_batch_loss=0.00345
+epoch 162: last_batch_loss=0.00552
+epoch 163: last_batch_loss=0.00397
+epoch 164: last_batch_loss=0.00489
+epoch 165: last_batch_loss=0.00865
+epoch 166: last_batch_loss=0.00496
+epoch 167: last_batch_loss=0.00689
+epoch 168: last_batch_loss=0.00415
+epoch 169: last_batch_loss=0.00545
+epoch 170: last_batch_loss=0.00391
+epoch 171: last_batch_loss=0.00326
+epoch 172: last_batch_loss=0.00341
+epoch 173: last_batch_loss=0.00457
+epoch 174: last_batch_loss=0.00311
+epoch 175: last_batch_loss=0.005
+epoch 176: last_batch_loss=0.00632
+epoch 177: last_batch_loss=0.00637
+epoch 178: last_batch_loss=0.00401
+epoch 179: last_batch_loss=0.0037
+epoch 180: last_batch_loss=0.00394
+epoch 181: last_batch_loss=0.00414
+epoch 182: last_batch_loss=0.00447
+epoch 183: last_batch_loss=0.00485
+epoch 184: last_batch_loss=0.00316
+epoch 185: last_batch_loss=0.00434
+epoch 186: last_batch_loss=0.00414
+epoch 187: last_batch_loss=0.00195
+epoch 188: last_batch_loss=0.00307
+epoch 189: last_batch_loss=0.00251
+epoch 190: last_batch_loss=0.00235
+epoch 191: last_batch_loss=0.00461
+epoch 192: last_batch_loss=0.00335
+epoch 193: last_batch_loss=0.00213
+epoch 194: last_batch_loss=0.00223
+epoch 195: last_batch_loss=0.00369
+epoch 196: last_batch_loss=0.00339
+epoch 197: last_batch_loss=0.00307
+epoch 198: last_batch_loss=0.00449
+epoch 199: last_batch_loss=0.00195
+epoch 200: last_batch_loss=0.00701
+epoch 201: last_batch_loss=0.00471
+epoch 202: last_batch_loss=0.00183
+epoch 203: last_batch_loss=0.00333
+epoch 204: last_batch_loss=0.00308
+epoch 205: last_batch_loss=0.00181
+epoch 206: last_batch_loss=0.00359
+epoch 207: last_batch_loss=0.00948
+epoch 208: last_batch_loss=0.00717
+epoch 209: last_batch_loss=0.00706
+epoch 210: last_batch_loss=0.00178
+epoch 211: last_batch_loss=0.00917
+epoch 212: last_batch_loss=0.00229
+epoch 213: last_batch_loss=0.00321
+epoch 214: last_batch_loss=0.00306
+epoch 215: last_batch_loss=0.00421
+epoch 216: last_batch_loss=0.00185
+epoch 217: last_batch_loss=0.00204
+epoch 218: last_batch_loss=0.00212
+epoch 219: last_batch_loss=0.0016
+epoch 220: last_batch_loss=0.00597
+epoch 221: last_batch_loss=0.00281
+epoch 222: last_batch_loss=0.00166
+epoch 223: last_batch_loss=0.00286
+epoch 224: last_batch_loss=0.00164
+epoch 225: last_batch_loss=0.00166
+epoch 226: last_batch_loss=0.0031
+epoch 227: last_batch_loss=0.00238
+epoch 228: last_batch_loss=0.00129
+epoch 229: last_batch_loss=0.0028
+epoch 230: last_batch_loss=0.00235
+epoch 231: last_batch_loss=0.00262
+epoch 232: last_batch_loss=0.0027
+epoch 233: last_batch_loss=0.00223
+epoch 234: last_batch_loss=0.00256
+epoch 235: last_batch_loss=0.00238
+epoch 236: last_batch_loss=0.00305
+epoch 237: last_batch_loss=0.00269
+epoch 238: last_batch_loss=0.00246
+epoch 239: last_batch_loss=0.00212
+epoch 240: last_batch_loss=0.00368
+epoch 241: last_batch_loss=0.00234
+epoch 242: last_batch_loss=0.00116
+epoch 243: last_batch_loss=0.00415
+epoch 244: last_batch_loss=0.0242
+epoch 245: last_batch_loss=0.00236
+epoch 246: last_batch_loss=0.0026
+epoch 247: last_batch_loss=0.00181
+epoch 248: last_batch_loss=0.0039
+epoch 249: last_batch_loss=0.00116
+epoch 250: last_batch_loss=0.00208
+epoch 251: last_batch_loss=0.0018
+epoch 252: last_batch_loss=0.00296
+epoch 253: last_batch_loss=0.00472
+epoch 254: last_batch_loss=0.00475
+epoch 255: last_batch_loss=0.00184
+epoch 256: last_batch_loss=0.000983
+epoch 257: last_batch_loss=0.0033
+epoch 258: last_batch_loss=0.00246
+epoch 259: last_batch_loss=0.00141
+epoch 260: last_batch_loss=0.00237
+epoch 261: last_batch_loss=0.00324
+epoch 262: last_batch_loss=0.00171
+epoch 263: last_batch_loss=0.00252
+epoch 264: last_batch_loss=0.00234
+epoch 265: last_batch_loss=0.00193
+epoch 266: last_batch_loss=0.0018
+epoch 267: last_batch_loss=0.00186
+epoch 268: last_batch_loss=0.00503
+epoch 269: last_batch_loss=0.000149
+epoch 270: last_batch_loss=0.000647
+epoch 271: last_batch_loss=0.00183
+epoch 272: last_batch_loss=0.00164
+epoch 273: last_batch_loss=0.00813
+epoch 274: last_batch_loss=0.00223
+epoch 275: last_batch_loss=0.00247
+epoch 276: last_batch_loss=0.00261
+epoch 277: last_batch_loss=0.00494
+epoch 278: last_batch_loss=0.00125
+epoch 279: last_batch_loss=0.0031
+epoch 280: last_batch_loss=0.0032
+epoch 281: last_batch_loss=0.00265
+epoch 282: last_batch_loss=0.00172
+epoch 283: last_batch_loss=0.00163
+epoch 284: last_batch_loss=0.00161
+epoch 285: last_batch_loss=0.00119
+epoch 286: last_batch_loss=0.0021
+epoch 287: last_batch_loss=0.00219
+epoch 288: last_batch_loss=0.00199
+epoch 289: last_batch_loss=0.00232
+epoch 290: last_batch_loss=0.00186
+epoch 291: last_batch_loss=0.00309
+epoch 292: last_batch_loss=0.00634
+epoch 293: last_batch_loss=0.00225
+epoch 294: last_batch_loss=0.00198
+epoch 295: last_batch_loss=0.00239
+epoch 296: last_batch_loss=0.00667
+epoch 297: last_batch_loss=0.00177
+epoch 298: last_batch_loss=0.00279
+epoch 299: last_batch_loss=0.00372
+epoch 300: last_batch_loss=0.00172
+epoch 301: last_batch_loss=0.00201
+epoch 302: last_batch_loss=0.0017
+epoch 303: last_batch_loss=0.00216
+epoch 304: last_batch_loss=0.00262
+epoch 305: last_batch_loss=0.00397
+epoch 306: last_batch_loss=0.00246
+epoch 307: last_batch_loss=0.00303
+epoch 308: last_batch_loss=0.00408
+epoch 309: last_batch_loss=0.00143
+epoch 310: last_batch_loss=0.00278
+epoch 311: last_batch_loss=0.00235
+epoch 312: last_batch_loss=0.00265
+epoch 313: last_batch_loss=0.00185
+epoch 314: last_batch_loss=0.00322
+epoch 315: last_batch_loss=0.00232
+epoch 316: last_batch_loss=0.00326
+epoch 317: last_batch_loss=0.00189
+epoch 318: last_batch_loss=0.0023
+epoch 319: last_batch_loss=0.00212
+epoch 320: last_batch_loss=0.00264
+epoch 321: last_batch_loss=0.00216
+epoch 322: last_batch_loss=0.00267
+epoch 323: last_batch_loss=0.00272
+epoch 324: last_batch_loss=0.00184
+epoch 325: last_batch_loss=0.00177
+epoch 326: last_batch_loss=0.00314
+epoch 327: last_batch_loss=0.00251
+epoch 328: last_batch_loss=0.00383
+epoch 329: last_batch_loss=0.00292
+epoch 330: last_batch_loss=0.00128
+epoch 331: last_batch_loss=0.00204
+epoch 332: last_batch_loss=0.00368
+epoch 333: last_batch_loss=0.00189
+epoch 334: last_batch_loss=0.0032
+epoch 335: last_batch_loss=0.00259
+epoch 336: last_batch_loss=0.00348
+epoch 337: last_batch_loss=0.00277
+epoch 338: last_batch_loss=0.00145
+epoch 339: last_batch_loss=0.00181
+epoch 340: last_batch_loss=0.00179
+epoch 341: last_batch_loss=0.00206
+epoch 342: last_batch_loss=0.00267
+epoch 343: last_batch_loss=0.00349
+epoch 344: last_batch_loss=0.00142
+epoch 345: last_batch_loss=0.00177
+epoch 346: last_batch_loss=0.00173
+epoch 347: last_batch_loss=0.00172
+epoch 348: last_batch_loss=0.0024
+epoch 349: last_batch_loss=0.0021
+epoch 350: last_batch_loss=0.00187
+epoch 351: last_batch_loss=0.00508
+epoch 352: last_batch_loss=0.00541
+epoch 353: last_batch_loss=0.00189
+epoch 354: last_batch_loss=0.00237
+epoch 355: last_batch_loss=0.00306
+epoch 356: last_batch_loss=0.00245
+epoch 357: last_batch_loss=0.0014
+epoch 358: last_batch_loss=0.00263
+epoch 359: last_batch_loss=0.0023
+epoch 360: last_batch_loss=0.00272
+epoch 361: last_batch_loss=0.00199
+epoch 362: last_batch_loss=0.00225
+epoch 363: last_batch_loss=0.00277
+epoch 364: last_batch_loss=0.00221
+epoch 365: last_batch_loss=0.00119
+epoch 366: last_batch_loss=0.00392
+epoch 367: last_batch_loss=0.0036
+epoch 368: last_batch_loss=0.00198
+epoch 369: last_batch_loss=0.00297
+epoch 370: last_batch_loss=0.00264
+epoch 371: last_batch_loss=0.00205
+epoch 372: last_batch_loss=0.00399
+epoch 373: last_batch_loss=0.00193
+epoch 374: last_batch_loss=0.00112
+epoch 375: last_batch_loss=0.00423
+epoch 376: last_batch_loss=0.00133
+epoch 377: last_batch_loss=0.00223
+epoch 378: last_batch_loss=0.00197
+epoch 379: last_batch_loss=0.00274
+epoch 380: last_batch_loss=0.00121
+epoch 381: last_batch_loss=0.00228
+epoch 382: last_batch_loss=0.00215
+epoch 383: last_batch_loss=0.00284
+epoch 384: last_batch_loss=0.00365
+epoch 385: last_batch_loss=0.00274
+epoch 386: last_batch_loss=0.00293
+epoch 387: last_batch_loss=0.00348
+epoch 388: last_batch_loss=0.00403
+epoch 389: last_batch_loss=0.00298
+epoch 390: last_batch_loss=0.00245
+epoch 391: last_batch_loss=0.00136
+epoch 392: last_batch_loss=0.00229
+epoch 393: last_batch_loss=0.00219
+epoch 394: last_batch_loss=0.00136
+epoch 395: last_batch_loss=0.00325
+epoch 396: last_batch_loss=0.00215
+epoch 397: last_batch_loss=0.00192
+epoch 398: last_batch_loss=0.00255
+epoch 399: last_batch_loss=0.00157
+epoch 400: last_batch_loss=0.00206
+
+== 结尾（最后 20 条非 tqdm 行） ==
+383
+384
+385
+开始标签的自更新--------
+386
+387
+388
+389
+390
+开始标签的自更新--------
+391
+392
+393
+394
+395
+开始标签的自更新--------
+396
+397
+398
+399

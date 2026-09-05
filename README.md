@@ -49,6 +49,55 @@
 
 > ACM/ALCNet/ISNet 为打包当日在本仓库 `tests/` 上的复测值；SCTransNet 的对齐夹具超过 5MB 未随仓库分发，其数值为验收记录，可用 `tools/export_sct_torch_refs.py` 重新生成夹具后复现（见[测试](#测试)）。跳过的键全部是 PyTorch BN 特有的 `num_batches_tracked` 计数器（Jittor BN 无此状态，不影响任何计算）。ISNet 的权重映射含 DCN offset 层 / GatedSpatialConv / register_buffer / 原版死模块的键名 1:1 直映，细节见 [docs/PAL_jittor_W5_ISNet迁移报告.md](docs/PAL_jittor_W5_ISNet迁移报告.md)。
 
+## 复现与对齐记录
+
+对应面试要求逐项留档：**环境配置**见[安装](#安装)；**数据准备脚本**见[数据集准备](#数据集准备)（`tools/gen_point_labels.py`）；**训练脚本**为 `train_pal_jt.py`（用法见[训练四个网络](#训练四个网络)）；**测试脚本**在 `tests/`。本节集中索引：**训练过程 Log**、**Loss 曲线**、**与 PyTorch 实现对齐的实验 Log**、**性能 Log（A/B 汇总）** 与全部可视化图。
+
+### 训练过程 Log（docs/logs/）
+
+| 文件 | 一句话说明（配置 / best mIoU / 逃离塌缩 epoch） |
+|---|---|
+| [acm_train_jittor_run2.log](docs/logs/acm_train_jittor_run2.log) | ACM，Jittor PAL 400ep（bs16, lr1e-3, SIRST3+masks_coarse，AutoDL 4090）：**best mIoU=0.4712 @ ep254**，逃离 ep94 |
+| [alcnet_train_jittor_run1.log](docs/logs/alcnet_train_jittor_run1.log) | ALCNet，同配置：**best mIoU=0.5057 @ ep361**，逃离 ep93 |
+| [sct_train_jittor_run1.log](docs/logs/sct_train_jittor_run1.log) | SCTransNet，同配置：**best mIoU=0.7052 @ ep313**，逃离 ep18（深监督天然抗塌缩） |
+| [isnet_train_jittor_run1.log](docs/logs/isnet_train_jittor_run1.log) | ISNet，同配置：**best mIoU=0.5998 @ ep389**，逃离 ep57 |
+| [torch_acm_train_run1_summary.txt](docs/logs/torch_acm_train_run1_summary.txt) | PyTorch 原版 ACM 自训 run1 摘要（原 log 145MB 含 tqdm 刷屏，提取每 epoch train/val 指标 + best 行 + 每 epoch 末 batch loss）：**best mIoU=0.4769 @ ep351** |
+| [torch_acm_train_run2_summary.txt](docs/logs/torch_acm_train_run2_summary.txt) | PyTorch 原版 ACM 自训 run2 摘要：**best mIoU=0.5113 @ ep241**（两发相差 ≈3.4pt，即正文所说的种子方差） |
+| [torch_alc_train_summary.txt](docs/logs/torch_alc_train_summary.txt) | PyTorch 原版 ALCNet 自训摘要：**best mIoU=0.5332 @ ep390**（Jittor 侧 0.5057，−2.75pt 在摆幅内） |
+
+### Loss 曲线（图 5）
+
+![四网 train loss 与 val mIoU 曲线](assets/figures/fig5_loss_curves.png)
+
+每格双轴：左轴 train loss_mean（对数坐标，动态范围跨 3 个数量级），右轴 val mIoU；竖虚线为逃离塌缩 epoch，星标为 best mIoU。可复现：`python tools/make_fig5.py`（直接解析 docs/logs/ 下 4 份训练日志）。
+
+### 对齐实验 Log（docs/alignment_logs/，2026-09-05 本机实跑原始输出）
+
+| 文件 | 关键结论（实跑） |
+|---|---|
+| [test_acm_output.txt](docs/alignment_logs/test_acm_output.txt) | **全部通过**：fp32 sigmoid diff ≤ 8.404e-06，二值化不一致 0，fp64 结构级 max abs diff = 1.066e-09 |
+| [test_alc_output.txt](docs/alignment_logs/test_alc_output.txt) | **全部通过**：fp32 sigmoid diff ≤ 1.502e-05，二值化不一致 0，fp64 max abs diff = 1.012e-10 |
+| [test_isnet_output.txt](docs/alignment_logs/test_isnet_output.txt) | **全部通过**：fp64 out/edge diff = 4.807e-14 / 5.851e-14，train 模式反向梯度范数 5.738119e+00 有限非零 |
+| [test_sct_output.txt](docs/alignment_logs/test_sct_output.txt) | **全部通过**：6 个深监督分支 fp64 diff ≤ 2.2e-07（`out` 支 2.775e-11），fp32 二值化不一致全 0（CPU 全程约 11 分钟） |
+| [test_guard_output.txt](docs/alignment_logs/test_guard_output.txt) | ① 平衡 BCE 数值对拍、② GuardController v2 状态机、④ 双模式冒烟 **通过**；③(b) guard-off 与旧函数逐位等价断言**未通过**（如实记录：3.2369099855422974 vs 3.2368162870407104，abs diff ≈ 9.4e-5、相对 ≈ 3e-5，CPU 确定性模式与 GPU 下均复现，疑为两训练脚本浮点归约顺序的平台相关差异；③(a) 静态等价检查通过，① 的数值对拍在 2.4e-07 量级通过） |
+
+### 性能 Log：PAL-Guard A/B 实验汇总（docs/logs/）
+
+| 文件 | 内容 |
+|---|---|
+| [ab_summary_2026-09-03.txt](docs/logs/ab_summary_2026-09-03.txt) | v1（硬切回 edgeSCE）3 对同种子配对：逃离 {vanilla 73/30/52 vs guard 41/33/42}，100ep 截断终点 vanilla 更高（负结果如实留档） |
+| [ab_summary_2026-09-04.txt](docs/logs/ab_summary_2026-09-04.txt) | v2（λ 渐进退出）3 对：逃离 {55/—/97 vs 41/26/47}；vanilla#2 全程 100 轮未逃离、终点 0.0000，guard 组同种子 0.4594（保险价值的直接证据） |
+
+### 可视化索引
+
+| 图 | 文件 | 内容 |
+|---|---|---|
+| 图 1 | [fig1_four_nets_curves.png](assets/figures/fig1_four_nets_curves.png) | 四网 PAL 训练 val mIoU 曲线与逃离时机标注 |
+| 图 2 | [fig2_escape_timing.png](assets/figures/fig2_escape_timing.png) | 逃离塌缩 epoch 的高方差性（torch vs jittor 多发对比） |
+| 图 3 | [fig3_guard_ab.png](assets/figures/fig3_guard_ab.png) | PAL-Guard A/B 对照（v1/v2 两轮 6 对配对） |
+| 图 4 | [fig4_collapse_anatomy.png](assets/figures/fig4_collapse_anatomy.png) | 塌缩解剖：Guard v1 run#1 的四次 GUARD 事件 |
+| 图 5 | [fig5_loss_curves.png](assets/figures/fig5_loss_curves.png) | 四网 train loss_mean（log 轴）与 val mIoU 双轴曲线（本节上方） |
+
 ## PAL-Guard：抗"全背景塌缩"机制（原创贡献）
 
 ### 现象：塌缩吸引子与高方差逃离时机
@@ -112,6 +161,15 @@ pip install jittor==1.3.8.5 "numpy<2" opencv-python scipy scikit-image albumenta
 3. 告诉本仓库数据在哪（二选一）：
    - 把本仓库与原版 PAL 仓库**同级放置**（默认读取 `../PAL/dataset/SIRST3/`）；
    - 或设环境变量 `PAL_ROOT` 指向包含 `dataset/SIRST3/` 的目录：`export PAL_ROOT=/path/to/PAL`（Windows: `set PAL_ROOT=D:/data/PAL`）。
+
+**自研点标签生成器（MATLAB-free）**：若要从原始 SIRST / IRSTD-1k 等数据集的**全监督二值掩码**自行生成 coarse / centroid 点标签（复刻 PAL 原版 `tools/coarse_anno.m` 与 `centroid_anno.m` 的逻辑），用 `tools/gen_point_labels.py`：
+
+```bash
+# coarse：每个连通域以质心为中心做高斯偏移采样，直到落入掩码内（带 off-mask 自检）
+python tools/gen_point_labels.py --masks_dir <二值掩码目录> --out_dir dataset/SIRST3/origin/masks_coarse --mode coarse --seed 42
+# centroid：直接取每个连通域质心
+python tools/gen_point_labels.py --masks_dir <二值掩码目录> --out_dir dataset/SIRST3/origin/masks_centroid --mode centroid
+```
 
 ### 训练四个网络
 
@@ -193,10 +251,12 @@ PAL-Jittor/
 │   └── convert_{acm,alc,sct}_weights.py
 ├── pal/                       # PAL 机制本体（伪标签圈定/难度准入/标签自更新/样本迁移）
 ├── probes/                    # 迁移期框架 API 探针（interpolate/pool/AMP 等语义对拍）
-├── tools/                     # torch 参考导出器、DCN/SCT 双盲探针、guard_ab.sh
+├── tools/                     # torch 参考导出器、DCN/SCT 双盲探针、guard_ab.sh、gen_point_labels.py、make_fig5.py
 ├── tests/                     # 验收测试 + data/ 下 <5MB 数值夹具
-├── assets/figures/            # README 插图
+├── assets/figures/            # README 插图（fig1~fig5）
 └── docs/                      # RESULTS.md（全部实验锚点）+ ISNet 迁移技术报告
+    ├── logs/                  # 训练过程 Log（jittor 4 发 + torch 摘要 3 份）+ A/B 汇总 ×2
+    └── alignment_logs/        # 对齐测试实跑原始输出（tests/test_*.py，2026-09-05）
 ```
 
 ## 引用

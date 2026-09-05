@@ -1,0 +1,31 @@
+# 运行日期: 2026-09-05
+# 解释器: D:/Anaconda/envs/jittor/python.exe (Python 3.9.25, jittor 1.3.8.5); 运行目录: C:/Users/Alienware/Documents/kimi/workspace/PAL_jittor
+
+[i 0905 22:05:46.654000 88 compiler.py:956] Jittor(1.3.8.5) src: d:\anaconda\envs\jittor\lib\site-packages\jittor
+[i 0905 22:05:46.732000 88 compiler.py:957] cl at C:\Users\Alienware\.cache\jittor\msvc\VC\_\_\_\_\_\bin\cl.exe(19.29.30133)
+[i 0905 22:05:46.733000 88 compiler.py:958] cache_path: C:\Users\Alienware\.cache\jittor\jt1.3.8\cl\py3.9.25\Windows-10-10.x85\11thGenIntelRCxaa\default
+[i 0905 22:05:46.744000 88 install_cuda.py:93] cuda_driver_version: [13, 2, 0]
+[i 0905 22:05:46.820000 88 __init__.py:411] Found C:\Users\Alienware\.cache\jittor\jtcuda\cuda11.2_cudnn8_win\bin\nvcc.exe(11.2.67) at C:\Users\Alienware\.cache\jittor\jtcuda\cuda11.2_cudnn8_win\bin\nvcc.exe.
+[i 0905 22:05:46.917000 88 compiler.py:1011] cuda key:cu11.2.67
+[i 0905 22:05:46.920000 88 __init__.py:227] Total mem: 31.67GB, using 10 procs for compiling.
+[i 0905 22:05:48.761000 88 jit_compiler.cc:28] Load cc_path: C:\Users\Alienware\.cache\jittor\msvc\VC\_\_\_\_\_\bin\cl.exe
+[i 0905 22:05:48.772000 88 init.cc:62] Found cuda archs: [86,]
+[test_alc/1] 随机输入 (2,3,256,256) -> 输出 (2, 1, 256, 256), 期望 (2, 1, 256, 256): PASS
+[convert] 载入 282 个张量, 跳过 num_batches_tracked x 47, jittor 参数全覆盖 ✓
+[convert] jittor 权重已保存: C:\Users\Alienware\Documents\kimi\workspace\PAL_jittor\work_dirs\alc_official_jt.pkl
+------------------------------------------------------------
+[test_alc/2a] fp32 参数对齐 (torch CPU 参考, eval):
+  [随机输入] 输出 (2, 1, 256, 256):
+    logit 级 max abs diff = 3.624e-04
+    sigmoid 级 max abs diff = 1.249e-06  阈值 1e-4: PASS
+    二值化不一致像素比例 = 0.00e+00  (要求 0): PASS
+  [val真实图像] 输出 (1, 1, 256, 256):
+    logit 级 max abs diff = 5.379e-04
+    sigmoid 级 max abs diff = 1.502e-05  阈值 1e-4: PASS
+    二值化不一致像素比例 = 0.00e+00  (要求 0): PASS
+------------------------------------------------------------
+[test_alc/2b] fp64 结构等价性: max abs diff = 1.012e-10, 阈值 1e-6: PASS
+============================================================
+test_alc 全部通过 ✓
+
+# 退出码: 0

@@ -1,0 +1,2131 @@
+nohup: ignoring input
+[38;5;2m[i 0901 20:01:12.482644 84 compiler.py:956] Jittor(1.3.8.5) src: /root/miniconda3/lib/python3.10/site-packages/jittor[m
+[38;5;2m[i 0901 20:01:12.489336 84 compiler.py:957] g++ at /usr/bin/g++(11.3.0)[m
+[38;5;2m[i 0901 20:01:12.489420 84 compiler.py:958] cache_path: /root/.cache/jittor/jt1.3.8/g++11.3.0/py3.10.8/Linux-5.15.0-9x46/IntelRXeonRGolx95/default[m
+[38;5;2m[i 0901 20:01:12.496010 84 __init__.py:411] Found nvcc(11.8.89) at /usr/local/cuda/bin/nvcc.[m
+[38;5;2m[i 0901 20:01:12.503178 84 __init__.py:411] Found addr2line(2.38) at /usr/bin/addr2line.[m
+[38;5;2m[i 0901 20:01:12.770164 84 compiler.py:1011] cuda key:cu11.8.89_sm_89[m
+[38;5;2m[i 0901 20:01:13.314769 84 __init__.py:227] Total mem: 1007.52GB, using 16 procs for compiling.[m
+[38;5;2m[i 0901 20:01:13.448866 84 jit_compiler.cc:28] Load cc_path: /usr/bin/g++[m
+[38;5;2m[i 0901 20:01:13.692167 84 init.cc:62] Found cuda archs: [89,][m
+[38;5;2m[i 0901 20:01:15.551883 84 cuda_flags.cc:49] CUDA enabled.[m
+======================================================================
+PAL 三阶段训练 (ALC, Jittor)
+args: {'model': 'ALC', 'epochs': 400, 'start_epoch': 0, 'pal_total_epochs': 400, 'batch_size': 16, 'lr': 0.001, 'init_from': '', 'pal_workspace': '/root/autodl-tmp/work_pal/PAL_jittor/pal_workspaces/ALC__SIRST3__masks_coarse__2026-09-01_20-01-16', 'save_dir': '/root/autodl-tmp/work_pal/PAL_jittor/work_dirs/pal_ALC_2026-09-01_20-01-16', 'limit_init': 0, 'limit_train': 0, 'limit_val': 0}
+jittor 1.3.8.5, use_cuda=1
+PAL 工作区: /root/autodl-tmp/work_pal/PAL_jittor/pal_workspaces/ALC__SIRST3__masks_coarse__2026-09-01_20-01-16
+计算数据集 mean/std ...
+路径为： /root/autodl-tmp/work_pal/PAL/dataset/SIRST3/origin/img
+数据集均值为： 0.3862517948161632
+数据集方差为： 0.14124445249304624
+cal_mean=0.38625179 cal_std=0.14124445
+生成初始池（data_inital_make_add_points）...
+[ WARN:0@13.078] global loadsave.cpp:848 imwrite_ Unsupported depth image for selected encoder is fallbacked to CV_8U.
+初始数据已生成，共生成样本张数： 861
+初始池: choose=861 no_choose=815 耗时 16.6s
+ALC 参数量: 0.523 M
+调度: 预启动 [0,80] 增强 (80,320] 每5ep 精炼 (320,400]（pal_total=400）
+--- epoch 1/400 (PAL 调度基准 400) ---
+/root/miniconda3/lib/python3.10/site-packages/albumentations/augmentations/transforms.py:1149: FutureWarning: This class has been deprecated. Please use RandomBrightnessContrast
+  warnings.warn(
+/root/miniconda3/lib/python3.10/site-packages/albumentations/augmentations/transforms.py:1175: FutureWarning: RandomContrast has been deprecated. Please use RandomBrightnessContrast
+  warnings.warn(
+[38;5;3m[w 0901 20:01:42.389177 84 grad.cc:81] grads[96] 'uplayer2.0.conv1.weight' doesn't have gradient. It will be set to zero: Var(1278:1:1:1:i0:o0:s1:n0,float32,uplayer2.0.conv1.weight,7f9894eb2400)[32,32,3,3,][m
+[38;5;3m[w 0901 20:01:42.389203 84 grad.cc:81] grads[97] 'uplayer2.0.bn1.weight' doesn't have gradient. It will be set to zero: Var(1283:1:1:1:i0:o0:s1:n1,float32,uplayer2.0.bn1.weight,7f9894e62c00)[32,][m
+[38;5;3m[w 0901 20:01:42.389209 84 grad.cc:81] grads[98] 'uplayer2.0.bn1.bias' doesn't have gradient. It will be set to zero: Var(1288:1:1:1:i0:o0:s1:n1,float32,uplayer2.0.bn1.bias,7f9894e63000)[32,][m
+[38;5;3m[w 0901 20:01:42.389214 84 grad.cc:81] grads[99] 'uplayer2.0.conv2.weight' doesn't have gradient. It will be set to zero: Var(1317:1:1:1:i0:o0:s1:n0,float32,uplayer2.0.conv2.weight,7f9894ebb400)[32,32,3,3,][m
+[38;5;3m[w 0901 20:01:42.389218 84 grad.cc:81] grads[100] 'uplayer2.0.bn2.weight' doesn't have gradient. It will be set to zero: Var(1322:1:1:1:i0:o0:s1:n1,float32,uplayer2.0.bn2.weight,7f9894e63200)[32,][m
+[38;5;3m[w 0901 20:01:42.389223 84 grad.cc:81] grads[101] 'uplayer2.0.bn2.bias' doesn't have gradient. It will be set to zero: Var(1327:1:1:1:i0:o0:s1:n1,float32,uplayer2.0.bn2.bias,7f9894f42400)[32,][m
+[38;5;3m[w 0901 20:01:42.389227 84 grad.cc:81] grads[102] 'uplayer2.1.conv1.weight' doesn't have gradient. It will be set to zero: Var(1356:1:1:1:i0:o0:s1:n0,float32,uplayer2.1.conv1.weight,7f9894ed6400)[32,32,3,3,][m
+[38;5;3m[w 0901 20:01:42.389243 84 grad.cc:81] grads[103] 'uplayer2.1.bn1.weight' doesn't have gradient. It will be set to zero: Var(1361:1:1:1:i0:o0:s1:n1,float32,uplayer2.1.bn1.weight,7f9894f42600)[32,][m
+[38;5;3m[w 0901 20:01:42.389248 84 grad.cc:81] grads[104] 'uplayer2.1.bn1.bias' doesn't have gradient. It will be set to zero: Var(1366:1:1:1:i0:o0:s1:n1,float32,uplayer2.1.bn1.bias,7f9894f42800)[32,][m
+[38;5;3m[w 0901 20:01:42.389252 84 grad.cc:81] grads[105] 'uplayer2.1.conv2.weight' doesn't have gradient. It will be set to zero: Var(1395:1:1:1:i0:o0:s1:n0,float32,uplayer2.1.conv2.weight,7f9894edf400)[32,32,3,3,][m
+[38;5;3m[w 0901 20:01:42.389256 84 grad.cc:81] grads[106] 'uplayer2.1.bn2.weight' doesn't have gradient. It will be set to zero: Var(1400:1:1:1:i0:o0:s1:n1,float32,uplayer2.1.bn2.weight,7f9894f42a00)[32,][m
+[38;5;3m[w 0901 20:01:42.389260 84 grad.cc:81] grads[107] 'uplayer2.1.bn2.bias' doesn't have gradient. It will be set to zero: Var(1405:1:1:1:i0:o0:s1:n1,float32,uplayer2.1.bn2.bias,7f9894f42c00)[32,][m
+[38;5;3m[w 0901 20:01:42.389264 84 grad.cc:81] grads[108] 'uplayer2.2.conv1.weight' doesn't have gradient. It will be set to zero: Var(1434:1:1:1:i0:o0:s1:n0,float32,uplayer2.2.conv1.weight,7f9894ee8400)[32,32,3,3,][m
+[38;5;3m[w 0901 20:01:42.389268 84 grad.cc:81] grads[109] 'uplayer2.2.bn1.weight' doesn't have gradient. It will be set to zero: Var(1439:1:1:1:i0:o0:s1:n1,float32,uplayer2.2.bn1.weight,7f9894f42e00)[32,][m
+[38;5;3m[w 0901 20:01:42.389272 84 grad.cc:81] grads[110] 'uplayer2.2.bn1.bias' doesn't have gradient. It will be set to zero: Var(1444:1:1:1:i0:o0:s1:n1,float32,uplayer2.2.bn1.bias,7f9894f43000)[32,][m
+[38;5;3m[w 0901 20:01:42.389276 84 grad.cc:81] grads[111] 'uplayer2.2.conv2.weight' doesn't have gradient. It will be set to zero: Var(1473:1:1:1:i0:o0:s1:n0,float32,uplayer2.2.conv2.weight,7f9894ef1400)[32,32,3,3,][m
+[38;5;3m[w 0901 20:01:42.389280 84 grad.cc:81] grads[112] 'uplayer2.2.bn2.weight' doesn't have gradient. It will be set to zero: Var(1478:1:1:1:i0:o0:s1:n1,float32,uplayer2.2.bn2.weight,7f9894f43200)[32,][m
+[38;5;3m[w 0901 20:01:42.389284 84 grad.cc:81] grads[113] 'uplayer2.2.bn2.bias' doesn't have gradient. It will be set to zero: Var(1483:1:1:1:i0:o0:s1:n1,float32,uplayer2.2.bn2.bias,7f9894f43400)[32,][m
+[38;5;3m[w 0901 20:01:42.389288 84 grad.cc:81] grads[114] 'uplayer2.3.conv1.weight' doesn't have gradient. It will be set to zero: Var(1512:1:1:1:i0:o0:s1:n0,float32,uplayer2.3.conv1.weight,7f96ff4d4000)[32,32,3,3,][m
+[38;5;3m[w 0901 20:01:42.389292 84 grad.cc:81] grads[115] 'uplayer2.3.bn1.weight' doesn't have gradient. It will be set to zero: Var(1517:1:1:1:i0:o0:s1:n1,float32,uplayer2.3.bn1.weight,7f9894f43600)[32,][m
+[38;5;3m[w 0901 20:01:42.389296 84 grad.cc:81] grads[116] 'uplayer2.3.bn1.bias' doesn't have gradient. It will be set to zero: Var(1522:1:1:1:i0:o0:s1:n1,float32,uplayer2.3.bn1.bias,7f9894f43800)[32,][m
+[38;5;3m[w 0901 20:01:42.389300 84 grad.cc:81] grads[117] 'uplayer2.3.conv2.weight' doesn't have gradient. It will be set to zero: Var(1551:1:1:1:i0:o0:s1:n0,float32,uplayer2.3.conv2.weight,7f96ff4dd000)[32,32,3,3,][m
+[38;5;3m[w 0901 20:01:42.389305 84 grad.cc:81] grads[118] 'uplayer2.3.bn2.weight' doesn't have gradient. It will be set to zero: Var(1556:1:1:1:i0:o0:s1:n1,float32,uplayer2.3.bn2.weight,7f9894f43a00)[32,][m
+[38;5;3m[w 0901 20:01:42.389309 84 grad.cc:81] grads[119] 'uplayer2.3.bn2.bias' doesn't have gradient. It will be set to zero: Var(1561:1:1:1:i0:o0:s1:n1,float32,uplayer2.3.bn2.bias,7f9894f43c00)[32,][m
+[38;5;3m[w 0901 20:01:42.389313 84 grad.cc:81] grads[124] 'uplayer1.0.conv1.weight' doesn't have gradient. It will be set to zero: Var(1666:1:1:1:i0:o0:s1:n0,float32,uplayer1.0.conv1.weight,7f9894e6c400)[16,16,3,3,][m
+[38;5;3m[w 0901 20:01:42.389317 84 grad.cc:81] grads[125] 'uplayer1.0.bn1.weight' doesn't have gradient. It will be set to zero: Var(1671:1:1:1:i0:o0:s1:n1,float32,uplayer1.0.bn1.weight,7f9894f43e00)[16,][m
+[38;5;3m[w 0901 20:01:42.389321 84 grad.cc:81] grads[126] 'uplayer1.0.bn1.bias' doesn't have gradient. It will be set to zero: Var(1676:1:1:1:i0:o0:s1:n1,float32,uplayer1.0.bn1.bias,7f9894f44400)[16,][m
+[38;5;3m[w 0901 20:01:42.389326 84 grad.cc:81] grads[127] 'uplayer1.0.conv2.weight' doesn't have gradient. It will be set to zero: Var(1705:1:1:1:i0:o0:s1:n0,float32,uplayer1.0.conv2.weight,7f9894e70c00)[16,16,3,3,][m
+[38;5;3m[w 0901 20:01:42.389331 84 grad.cc:81] grads[128] 'uplayer1.0.bn2.weight' doesn't have gradient. It will be set to zero: Var(1710:1:1:1:i0:o0:s1:n1,float32,uplayer1.0.bn2.weight,7f9894e73000)[16,][m
+[38;5;3m[w 0901 20:01:42.389335 84 grad.cc:81] grads[129] 'uplayer1.0.bn2.bias' doesn't have gradient. It will be set to zero: Var(1715:1:1:1:i0:o0:s1:n1,float32,uplayer1.0.bn2.bias,7f9894e73200)[16,][m
+[38;5;3m[w 0901 20:01:42.389339 84 grad.cc:81] grads[130] 'uplayer1.1.conv1.weight' doesn't have gradient. It will be set to zero: Var(1744:1:1:1:i0:o0:s1:n0,float32,uplayer1.1.conv1.weight,7f96ff4ee000)[16,16,3,3,][m
+[38;5;3m[w 0901 20:01:42.389344 84 grad.cc:81] grads[131] 'uplayer1.1.bn1.weight' doesn't have gradient. It will be set to zero: Var(1749:1:1:1:i0:o0:s1:n1,float32,uplayer1.1.bn1.weight,7f9894f44600)[16,][m
+[38;5;3m[w 0901 20:01:42.389348 84 grad.cc:81] grads[132] 'uplayer1.1.bn1.bias' doesn't have gradient. It will be set to zero: Var(1754:1:1:1:i0:o0:s1:n1,float32,uplayer1.1.bn1.bias,7f9894f44800)[16,][m
+[38;5;3m[w 0901 20:01:42.389352 84 grad.cc:81] grads[133] 'uplayer1.1.conv2.weight' doesn't have gradient. It will be set to zero: Var(1783:1:1:1:i0:o0:s1:n0,float32,uplayer1.1.conv2.weight,7f96ff4f0400)[16,16,3,3,][m
+[38;5;3m[w 0901 20:01:42.389356 84 grad.cc:81] grads[134] 'uplayer1.1.bn2.weight' doesn't have gradient. It will be set to zero: Var(1788:1:1:1:i0:o0:s1:n1,float32,uplayer1.1.bn2.weight,7f9894f44a00)[16,][m
+[38;5;3m[w 0901 20:01:42.389360 84 grad.cc:81] grads[135] 'uplayer1.1.bn2.bias' doesn't have gradient. It will be set to zero: Var(1793:1:1:1:i0:o0:s1:n1,float32,uplayer1.1.bn2.bias,7f9894f44c00)[16,][m
+[38;5;3m[w 0901 20:01:42.389364 84 grad.cc:81] grads[136] 'uplayer1.2.conv1.weight' doesn't have gradient. It will be set to zero: Var(1822:1:1:1:i0:o0:s1:n0,float32,uplayer1.2.conv1.weight,7f96ff4f2800)[16,16,3,3,][m
+[38;5;3m[w 0901 20:01:42.389369 84 grad.cc:81] grads[137] 'uplayer1.2.bn1.weight' doesn't have gradient. It will be set to zero: Var(1827:1:1:1:i0:o0:s1:n1,float32,uplayer1.2.bn1.weight,7f9894f44e00)[16,][m
+[38;5;3m[w 0901 20:01:42.389373 84 grad.cc:81] grads[138] 'uplayer1.2.bn1.bias' doesn't have gradient. It will be set to zero: Var(1832:1:1:1:i0:o0:s1:n1,float32,uplayer1.2.bn1.bias,7f9894f45000)[16,][m
+[38;5;3m[w 0901 20:01:42.389377 84 grad.cc:81] grads[139] 'uplayer1.2.conv2.weight' doesn't have gradient. It will be set to zero: Var(1861:1:1:1:i0:o0:s1:n0,float32,uplayer1.2.conv2.weight,7f96ff4f4c00)[16,16,3,3,][m
+[38;5;3m[w 0901 20:01:42.389381 84 grad.cc:81] grads[140] 'uplayer1.2.bn2.weight' doesn't have gradient. It will be set to zero: Var(1866:1:1:1:i0:o0:s1:n1,float32,uplayer1.2.bn2.weight,7f9894f45200)[16,][m
+[38;5;3m[w 0901 20:01:42.389385 84 grad.cc:81] grads[141] 'uplayer1.2.bn2.bias' doesn't have gradient. It will be set to zero: Var(1871:1:1:1:i0:o0:s1:n1,float32,uplayer1.2.bn2.bias,7f9894f45400)[16,][m
+[38;5;3m[w 0901 20:01:42.389389 84 grad.cc:81] grads[142] 'uplayer1.3.conv1.weight' doesn't have gradient. It will be set to zero: Var(1900:1:1:1:i0:o0:s1:n0,float32,uplayer1.3.conv1.weight,7f96ff4f7000)[16,16,3,3,][m
+[38;5;3m[w 0901 20:01:42.389393 84 grad.cc:81] grads[143] 'uplayer1.3.bn1.weight' doesn't have gradient. It will be set to zero: Var(1905:1:1:1:i0:o0:s1:n1,float32,uplayer1.3.bn1.weight,7f9894f45600)[16,][m
+[38;5;3m[w 0901 20:01:42.389397 84 grad.cc:81] grads[144] 'uplayer1.3.bn1.bias' doesn't have gradient. It will be set to zero: Var(1910:1:1:1:i0:o0:s1:n1,float32,uplayer1.3.bn1.bias,7f9894f45800)[16,][m
+[38;5;3m[w 0901 20:01:42.389401 84 grad.cc:81] grads[145] 'uplayer1.3.conv2.weight' doesn't have gradient. It will be set to zero: Var(1939:1:1:1:i0:o0:s1:n0,float32,uplayer1.3.conv2.weight,7f96ff4f9400)[16,16,3,3,][m
+[38;5;3m[w 0901 20:01:42.389407 84 grad.cc:81] grads[146] 'uplayer1.3.bn2.weight' doesn't have gradient. It will be set to zero: Var(1944:1:1:1:i0:o0:s1:n1,float32,uplayer1.3.bn2.weight,7f9894f45a00)[16,][m
+[38;5;3m[w 0901 20:01:42.389411 84 grad.cc:81] grads[147] 'uplayer1.3.bn2.bias' doesn't have gradient. It will be set to zero: Var(1949:1:1:1:i0:o0:s1:n1,float32,uplayer1.3.bn2.bias,7f9894f45c00)[16,][m
+  [train] epoch 1: loss_mean=2.069645 (min=1.9356, max=2.4032, batches=54) train_IoU=0.0042 train_nIoU=0.0021 耗时 23.0s
+[38;5;3m[w 0901 20:02:14.928198 84 cudnn_conv__Tx_float32__Ty_float32__Tw_float32__XFORMAT_abcd__WFORMAT_oihw__YFORMAT_abcd_____hash_4d5b3e2d24c769d3_op.cc:419] forward_ algorithm cache is full[m
+[38;5;3m[w 0901 20:02:16.684689 84 cudnn_conv_backward_x__Tx_float32__Ty_float32__Tw_float32__XFORMAT_abcd__WFORMAT_oihw__YFO___hash_af8994a8aef53c1c_op.cc:410] backward x algorithm cache is full[m
+  [val]   epoch 1: mIoU=0.0000 nIoU=0.0000 PD=0.0000 FA(x1e6)=0.00 耗时 21.8s
+  [ckpt] best mIoU=0.0000 已保存
+  epoch 1 总耗时 44.8s
+--- epoch 2/400 (PAL 调度基准 400) ---
+  [train] epoch 2: loss_mean=1.853274 (min=1.7793, max=1.9321, batches=54) train_IoU=0.0000 train_nIoU=0.0000 耗时 20.9s
+  [val]   epoch 2: mIoU=0.0000 nIoU=0.0000 PD=0.0000 FA(x1e6)=0.00 耗时 22.5s
+  epoch 2 总耗时 43.5s
+--- epoch 3/400 (PAL 调度基准 400) ---
+  [train] epoch 3: loss_mean=1.705596 (min=1.6358, max=1.7749, batches=54) train_IoU=0.0000 train_nIoU=0.0000 耗时 21.7s
+  [val]   epoch 3: mIoU=0.0000 nIoU=0.0000 PD=0.0000 FA(x1e6)=0.00 耗时 21.8s
+  epoch 3 总耗时 43.5s
+--- epoch 4/400 (PAL 调度基准 400) ---
+  [train] epoch 4: loss_mean=1.572843 (min=1.4905, max=1.6345, batches=54) train_IoU=0.0000 train_nIoU=0.0000 耗时 20.8s
+  [val]   epoch 4: mIoU=0.0000 nIoU=0.0000 PD=0.0000 FA(x1e6)=0.00 耗时 21.5s
+  epoch 4 总耗时 42.4s
+--- epoch 5/400 (PAL 调度基准 400) ---
+  [train] epoch 5: loss_mean=1.436354 (min=1.3470, max=1.5072, batches=54) train_IoU=0.0000 train_nIoU=0.0000 耗时 20.7s
+  [val]   epoch 5: mIoU=0.0000 nIoU=0.0000 PD=0.0000 FA(x1e6)=0.00 耗时 22.1s
+  epoch 5 总耗时 42.8s
+--- epoch 6/400 (PAL 调度基准 400) ---
+  [train] epoch 6: loss_mean=1.304089 (min=1.2247, max=1.4011, batches=54) train_IoU=0.0000 train_nIoU=0.0000 耗时 21.8s
+  [val]   epoch 6: mIoU=0.0000 nIoU=0.0000 PD=0.0000 FA(x1e6)=0.00 耗时 22.1s
+  epoch 6 总耗时 43.9s
+--- epoch 7/400 (PAL 调度基准 400) ---
+  [train] epoch 7: loss_mean=1.179909 (min=1.0739, max=1.2381, batches=54) train_IoU=0.0000 train_nIoU=0.0000 耗时 21.4s
+  [val]   epoch 7: mIoU=0.0000 nIoU=0.0000 PD=0.0000 FA(x1e6)=0.00 耗时 21.6s
+  epoch 7 总耗时 43.0s
+--- epoch 8/400 (PAL 调度基准 400) ---
+  [train] epoch 8: loss_mean=1.074867 (min=0.9722, max=1.1384, batches=54) train_IoU=0.0000 train_nIoU=0.0000 耗时 20.9s
+  [val]   epoch 8: mIoU=0.0000 nIoU=0.0000 PD=0.0000 FA(x1e6)=0.00 耗时 21.6s
+  epoch 8 总耗时 42.5s
+--- epoch 9/400 (PAL 调度基准 400) ---
+  [train] epoch 9: loss_mean=0.970865 (min=0.9095, max=1.0327, batches=54) train_IoU=0.0000 train_nIoU=0.0000 耗时 21.3s
+  [val]   epoch 9: mIoU=0.0000 nIoU=0.0000 PD=0.0000 FA(x1e6)=0.00 耗时 22.0s
+  epoch 9 总耗时 43.3s
+--- epoch 10/400 (PAL 调度基准 400) ---
+  [train] epoch 10: loss_mean=0.874189 (min=0.7931, max=0.9310, batches=54) train_IoU=0.0000 train_nIoU=0.0000 耗时 21.3s
+  [val]   epoch 10: mIoU=0.0000 nIoU=0.0000 PD=0.0000 FA(x1e6)=0.00 耗时 22.5s
+  epoch 10 总耗时 43.8s
+--- epoch 11/400 (PAL 调度基准 400) ---
+  [train] epoch 11: loss_mean=0.790646 (min=0.7063, max=0.8319, batches=54) train_IoU=0.0000 train_nIoU=0.0000 耗时 20.9s
+  [val]   epoch 11: mIoU=0.0000 nIoU=0.0000 PD=0.0000 FA(x1e6)=0.00 耗时 21.4s
+  epoch 11 总耗时 42.3s
+--- epoch 12/400 (PAL 调度基准 400) ---
+  [train] epoch 12: loss_mean=0.703993 (min=0.6272, max=0.7502, batches=54) train_IoU=0.0000 train_nIoU=0.0000 耗时 21.4s
+  [val]   epoch 12: mIoU=0.0000 nIoU=0.0000 PD=0.0000 FA(x1e6)=0.00 耗时 21.6s
+  epoch 12 总耗时 43.0s
+--- epoch 13/400 (PAL 调度基准 400) ---
+  [train] epoch 13: loss_mean=0.642297 (min=0.5783, max=0.6776, batches=54) train_IoU=0.0000 train_nIoU=0.0000 耗时 20.8s
+  [val]   epoch 13: mIoU=0.0000 nIoU=0.0000 PD=0.0000 FA(x1e6)=0.00 耗时 22.2s
+  epoch 13 总耗时 43.1s
+--- epoch 14/400 (PAL 调度基准 400) ---
+  [train] epoch 14: loss_mean=0.585152 (min=0.5228, max=0.6264, batches=54) train_IoU=0.0000 train_nIoU=0.0000 耗时 21.7s
+  [val]   epoch 14: mIoU=0.0000 nIoU=0.0000 PD=0.0000 FA(x1e6)=0.00 耗时 21.6s
+  epoch 14 总耗时 43.3s
+--- epoch 15/400 (PAL 调度基准 400) ---
+  [train] epoch 15: loss_mean=0.532756 (min=0.4884, max=0.5661, batches=54) train_IoU=0.0000 train_nIoU=0.0000 耗时 21.5s
+  [val]   epoch 15: mIoU=0.0000 nIoU=0.0000 PD=0.0000 FA(x1e6)=0.00 耗时 21.4s
+  epoch 15 总耗时 43.0s
+--- epoch 16/400 (PAL 调度基准 400) ---
+  [train] epoch 16: loss_mean=0.481091 (min=0.4169, max=0.5149, batches=54) train_IoU=0.0000 train_nIoU=0.0000 耗时 21.0s
+  [val]   epoch 16: mIoU=0.0000 nIoU=0.0000 PD=0.0000 FA(x1e6)=0.00 耗时 22.2s
+  epoch 16 总耗时 43.2s
+--- epoch 17/400 (PAL 调度基准 400) ---
+  [train] epoch 17: loss_mean=0.444650 (min=0.3806, max=0.4770, batches=54) train_IoU=0.0000 train_nIoU=0.0000 耗时 22.0s
+  [val]   epoch 17: mIoU=0.0000 nIoU=0.0000 PD=0.0000 FA(x1e6)=0.00 耗时 22.9s
+  epoch 17 总耗时 44.9s
+--- epoch 18/400 (PAL 调度基准 400) ---
+  [train] epoch 18: loss_mean=0.410081 (min=0.3536, max=0.4357, batches=54) train_IoU=0.0000 train_nIoU=0.0000 耗时 21.2s
+  [val]   epoch 18: mIoU=0.0000 nIoU=0.0000 PD=0.0000 FA(x1e6)=0.00 耗时 21.3s
+  epoch 18 总耗时 42.5s
+--- epoch 19/400 (PAL 调度基准 400) ---
+  [train] epoch 19: loss_mean=0.380354 (min=0.3443, max=0.4066, batches=54) train_IoU=0.0000 train_nIoU=0.0000 耗时 20.8s
+  [val]   epoch 19: mIoU=0.0000 nIoU=0.0000 PD=0.0000 FA(x1e6)=0.00 耗时 21.9s
+  epoch 19 总耗时 42.7s
+--- epoch 20/400 (PAL 调度基准 400) ---
+  [train] epoch 20: loss_mean=0.350760 (min=0.3044, max=0.3782, batches=54) train_IoU=0.0000 train_nIoU=0.0000 耗时 20.7s
+  [val]   epoch 20: mIoU=0.0000 nIoU=0.0000 PD=0.0000 FA(x1e6)=0.00 耗时 22.9s
+  epoch 20 总耗时 43.6s
+--- epoch 21/400 (PAL 调度基准 400) ---
+  [train] epoch 21: loss_mean=0.326074 (min=0.2831, max=0.3494, batches=54) train_IoU=0.0000 train_nIoU=0.0000 耗时 21.3s
+  [val]   epoch 21: mIoU=0.0000 nIoU=0.0000 PD=0.0000 FA(x1e6)=0.00 耗时 22.0s
+  epoch 21 总耗时 43.3s
+--- epoch 22/400 (PAL 调度基准 400) ---
+  [train] epoch 22: loss_mean=0.301832 (min=0.2584, max=0.3243, batches=54) train_IoU=0.0000 train_nIoU=0.0000 耗时 20.6s
+  [val]   epoch 22: mIoU=0.0000 nIoU=0.0000 PD=0.0000 FA(x1e6)=0.00 耗时 21.4s
+  epoch 22 总耗时 42.0s
+--- epoch 23/400 (PAL 调度基准 400) ---
+  [train] epoch 23: loss_mean=0.281733 (min=0.2315, max=0.3021, batches=54) train_IoU=0.0000 train_nIoU=0.0000 耗时 20.6s
+  [val]   epoch 23: mIoU=0.0000 nIoU=0.0000 PD=0.0000 FA(x1e6)=0.00 耗时 22.7s
+  epoch 23 总耗时 43.3s
+--- epoch 24/400 (PAL 调度基准 400) ---
+  [train] epoch 24: loss_mean=0.257944 (min=0.2183, max=0.2851, batches=54) train_IoU=0.0000 train_nIoU=0.0000 耗时 21.4s
+  [val]   epoch 24: mIoU=0.0000 nIoU=0.0000 PD=0.0000 FA(x1e6)=0.00 耗时 22.3s
+  epoch 24 总耗时 43.7s
+--- epoch 25/400 (PAL 调度基准 400) ---
+  [train] epoch 25: loss_mean=0.236052 (min=0.1989, max=0.2623, batches=54) train_IoU=0.0000 train_nIoU=0.0000 耗时 21.1s
+  [val]   epoch 25: mIoU=0.0000 nIoU=0.0000 PD=0.0000 FA(x1e6)=0.00 耗时 21.2s
+  epoch 25 总耗时 42.4s
+--- epoch 26/400 (PAL 调度基准 400) ---
+  [train] epoch 26: loss_mean=0.219399 (min=0.1739, max=0.2458, batches=54) train_IoU=0.0000 train_nIoU=0.0000 耗时 20.7s
+  [val]   epoch 26: mIoU=0.0000 nIoU=0.0000 PD=0.0000 FA(x1e6)=0.00 耗时 22.2s
+  epoch 26 总耗时 42.9s
+--- epoch 27/400 (PAL 调度基准 400) ---
+  [train] epoch 27: loss_mean=0.207918 (min=0.1721, max=0.2353, batches=54) train_IoU=0.0000 train_nIoU=0.0000 耗时 20.5s
+  [val]   epoch 27: mIoU=0.0000 nIoU=0.0000 PD=0.0000 FA(x1e6)=0.00 耗时 21.8s
+  epoch 27 总耗时 42.4s
+--- epoch 28/400 (PAL 调度基准 400) ---
+  [train] epoch 28: loss_mean=0.197413 (min=0.1645, max=0.2258, batches=54) train_IoU=0.0000 train_nIoU=0.0000 耗时 21.7s
+  [val]   epoch 28: mIoU=0.0000 nIoU=0.0000 PD=0.0000 FA(x1e6)=0.00 耗时 22.0s
+  epoch 28 总耗时 43.7s
+--- epoch 29/400 (PAL 调度基准 400) ---
+  [train] epoch 29: loss_mean=0.185141 (min=0.1569, max=0.2072, batches=54) train_IoU=0.0000 train_nIoU=0.0000 耗时 20.5s
+  [val]   epoch 29: mIoU=0.0000 nIoU=0.0000 PD=0.0000 FA(x1e6)=0.00 耗时 21.8s
+  epoch 29 总耗时 42.3s
+--- epoch 30/400 (PAL 调度基准 400) ---
+  [train] epoch 30: loss_mean=0.171837 (min=0.1430, max=0.1998, batches=54) train_IoU=0.0000 train_nIoU=0.0000 耗时 20.8s
+  [val]   epoch 30: mIoU=0.0000 nIoU=0.0000 PD=0.0000 FA(x1e6)=0.00 耗时 21.3s
+  epoch 30 总耗时 42.1s
+--- epoch 31/400 (PAL 调度基准 400) ---
+  [train] epoch 31: loss_mean=0.161676 (min=0.1304, max=0.1839, batches=54) train_IoU=0.0000 train_nIoU=0.0000 耗时 20.6s
+  [val]   epoch 31: mIoU=0.0000 nIoU=0.0000 PD=0.0000 FA(x1e6)=0.00 耗时 22.2s
+  epoch 31 总耗时 42.8s
+--- epoch 32/400 (PAL 调度基准 400) ---
+  [train] epoch 32: loss_mean=0.152202 (min=0.1195, max=0.1811, batches=54) train_IoU=0.0000 train_nIoU=0.0000 耗时 21.3s
+  [val]   epoch 32: mIoU=0.0000 nIoU=0.0000 PD=0.0000 FA(x1e6)=0.00 耗时 22.1s
+  epoch 32 总耗时 43.4s
+--- epoch 33/400 (PAL 调度基准 400) ---
+  [train] epoch 33: loss_mean=0.141433 (min=0.1124, max=0.1705, batches=54) train_IoU=0.0000 train_nIoU=0.0000 耗时 20.5s
+  [val]   epoch 33: mIoU=0.0000 nIoU=0.0000 PD=0.0000 FA(x1e6)=0.00 耗时 21.3s
+  epoch 33 总耗时 41.8s
+--- epoch 34/400 (PAL 调度基准 400) ---
+  [train] epoch 34: loss_mean=0.130620 (min=0.1018, max=0.1597, batches=54) train_IoU=0.0000 train_nIoU=0.0000 耗时 20.5s
+  [val]   epoch 34: mIoU=0.0000 nIoU=0.0000 PD=0.0000 FA(x1e6)=0.00 耗时 21.5s
+  epoch 34 总耗时 42.0s
+--- epoch 35/400 (PAL 调度基准 400) ---
+  [train] epoch 35: loss_mean=0.126612 (min=0.0973, max=0.1528, batches=54) train_IoU=0.0000 train_nIoU=0.0000 耗时 21.2s
+  [val]   epoch 35: mIoU=0.0000 nIoU=0.0000 PD=0.0000 FA(x1e6)=0.00 耗时 22.8s
+  epoch 35 总耗时 44.1s
+--- epoch 36/400 (PAL 调度基准 400) ---
+  [train] epoch 36: loss_mean=0.115439 (min=0.0938, max=0.1427, batches=54) train_IoU=0.0000 train_nIoU=0.0000 耗时 20.8s
+  [val]   epoch 36: mIoU=0.0000 nIoU=0.0000 PD=0.0000 FA(x1e6)=0.00 耗时 21.5s
+  epoch 36 总耗时 42.3s
+--- epoch 37/400 (PAL 调度基准 400) ---
+  [train] epoch 37: loss_mean=0.110020 (min=0.0882, max=0.1377, batches=54) train_IoU=0.0000 train_nIoU=0.0000 耗时 20.5s
+  [val]   epoch 37: mIoU=0.0000 nIoU=0.0000 PD=0.0000 FA(x1e6)=0.00 耗时 21.4s
+  epoch 37 总耗时 42.0s
+--- epoch 38/400 (PAL 调度基准 400) ---
+  [train] epoch 38: loss_mean=0.107171 (min=0.0862, max=0.1309, batches=54) train_IoU=0.0000 train_nIoU=0.0000 耗时 20.9s
+  [val]   epoch 38: mIoU=0.0000 nIoU=0.0000 PD=0.0000 FA(x1e6)=0.00 耗时 22.8s
+  epoch 38 总耗时 43.8s
+--- epoch 39/400 (PAL 调度基准 400) ---
+  [train] epoch 39: loss_mean=0.099870 (min=0.0774, max=0.1284, batches=54) train_IoU=0.0000 train_nIoU=0.0000 耗时 21.5s
+  [val]   epoch 39: mIoU=0.0000 nIoU=0.0000 PD=0.0000 FA(x1e6)=0.00 耗时 21.6s
+  epoch 39 总耗时 43.2s
+--- epoch 40/400 (PAL 调度基准 400) ---
+  [train] epoch 40: loss_mean=0.095880 (min=0.0762, max=0.1191, batches=54) train_IoU=0.0000 train_nIoU=0.0000 耗时 20.5s
+  [val]   epoch 40: mIoU=0.0000 nIoU=0.0000 PD=0.0000 FA(x1e6)=0.00 耗时 21.5s
+  epoch 40 总耗时 42.1s
+--- epoch 41/400 (PAL 调度基准 400) ---
+  [train] epoch 41: loss_mean=0.093903 (min=0.0731, max=0.1164, batches=54) train_IoU=0.0000 train_nIoU=0.0000 耗时 20.8s
+  [val]   epoch 41: mIoU=0.0000 nIoU=0.0000 PD=0.0000 FA(x1e6)=0.00 耗时 21.6s
+  epoch 41 总耗时 42.5s
+--- epoch 42/400 (PAL 调度基准 400) ---
+  [train] epoch 42: loss_mean=0.093689 (min=0.0734, max=0.1093, batches=54) train_IoU=0.0000 train_nIoU=0.0000 耗时 21.3s
+  [val]   epoch 42: mIoU=0.0000 nIoU=0.0000 PD=0.0000 FA(x1e6)=0.00 耗时 22.3s
+  epoch 42 总耗时 43.5s
+--- epoch 43/400 (PAL 调度基准 400) ---
+  [train] epoch 43: loss_mean=0.087777 (min=0.0669, max=0.1122, batches=54) train_IoU=0.0000 train_nIoU=0.0000 耗时 21.0s
+  [val]   epoch 43: mIoU=0.0000 nIoU=0.0000 PD=0.0000 FA(x1e6)=0.00 耗时 21.5s
+  epoch 43 总耗时 42.5s
+--- epoch 44/400 (PAL 调度基准 400) ---
+  [train] epoch 44: loss_mean=0.080775 (min=0.0641, max=0.1054, batches=54) train_IoU=0.0000 train_nIoU=0.0000 耗时 20.9s
+  [val]   epoch 44: mIoU=0.0000 nIoU=0.0000 PD=0.0000 FA(x1e6)=0.00 耗时 21.4s
+  epoch 44 总耗时 42.4s
+--- epoch 45/400 (PAL 调度基准 400) ---
+  [train] epoch 45: loss_mean=0.079868 (min=0.0593, max=0.1048, batches=54) train_IoU=0.0000 train_nIoU=0.0000 耗时 20.5s
+  [val]   epoch 45: mIoU=0.0000 nIoU=0.0000 PD=0.0000 FA(x1e6)=0.00 耗时 21.9s
+  epoch 45 总耗时 42.5s
+--- epoch 46/400 (PAL 调度基准 400) ---
+  [train] epoch 46: loss_mean=0.083078 (min=0.0626, max=0.1028, batches=54) train_IoU=0.0000 train_nIoU=0.0000 耗时 21.3s
+  [val]   epoch 46: mIoU=0.0000 nIoU=0.0000 PD=0.0000 FA(x1e6)=0.00 耗时 21.9s
+  epoch 46 总耗时 43.2s
+--- epoch 47/400 (PAL 调度基准 400) ---
+  [train] epoch 47: loss_mean=0.076725 (min=0.0589, max=0.1012, batches=54) train_IoU=0.0000 train_nIoU=0.0000 耗时 21.0s
+  [val]   epoch 47: mIoU=0.0000 nIoU=0.0000 PD=0.0000 FA(x1e6)=0.00 耗时 21.4s
+  epoch 47 总耗时 42.4s
+--- epoch 48/400 (PAL 调度基准 400) ---
+  [train] epoch 48: loss_mean=0.078096 (min=0.0610, max=0.0958, batches=54) train_IoU=0.0000 train_nIoU=0.0000 耗时 20.5s
+  [val]   epoch 48: mIoU=0.0000 nIoU=0.0000 PD=0.0000 FA(x1e6)=0.00 耗时 21.6s
+  epoch 48 总耗时 42.2s
+--- epoch 49/400 (PAL 调度基准 400) ---
+  [train] epoch 49: loss_mean=0.074765 (min=0.0616, max=0.0897, batches=54) train_IoU=0.0000 train_nIoU=0.0000 耗时 21.1s
+  [val]   epoch 49: mIoU=0.0000 nIoU=0.0000 PD=0.0000 FA(x1e6)=0.00 耗时 22.0s
+  epoch 49 总耗时 43.2s
+--- epoch 50/400 (PAL 调度基准 400) ---
+  [train] epoch 50: loss_mean=0.071490 (min=0.0523, max=0.0904, batches=54) train_IoU=0.0000 train_nIoU=0.0000 耗时 21.7s
+  [val]   epoch 50: mIoU=0.0000 nIoU=0.0000 PD=0.0000 FA(x1e6)=0.00 耗时 21.5s
+  epoch 50 总耗时 43.2s
+--- epoch 51/400 (PAL 调度基准 400) ---
+  [train] epoch 51: loss_mean=0.068341 (min=0.0514, max=0.0870, batches=54) train_IoU=0.0000 train_nIoU=0.0000 耗时 20.4s
+  [val]   epoch 51: mIoU=0.0000 nIoU=0.0000 PD=0.0000 FA(x1e6)=0.00 耗时 21.4s
+  epoch 51 总耗时 41.9s
+--- epoch 52/400 (PAL 调度基准 400) ---
+  [train] epoch 52: loss_mean=0.065582 (min=0.0481, max=0.0888, batches=54) train_IoU=0.0000 train_nIoU=0.0000 耗时 20.8s
+  [val]   epoch 52: mIoU=0.0000 nIoU=0.0000 PD=0.0000 FA(x1e6)=0.00 耗时 21.8s
+  epoch 52 总耗时 42.6s
+--- epoch 53/400 (PAL 调度基准 400) ---
+  [train] epoch 53: loss_mean=0.059194 (min=0.0456, max=0.0778, batches=54) train_IoU=0.0000 train_nIoU=0.0000 耗时 21.7s
+  [val]   epoch 53: mIoU=0.0000 nIoU=0.0000 PD=0.0000 FA(x1e6)=0.00 耗时 22.1s
+  epoch 53 总耗时 43.8s
+--- epoch 54/400 (PAL 调度基准 400) ---
+  [train] epoch 54: loss_mean=0.060019 (min=0.0435, max=0.0778, batches=54) train_IoU=0.0000 train_nIoU=0.0000 耗时 20.4s
+  [val]   epoch 54: mIoU=0.0000 nIoU=0.0000 PD=0.0000 FA(x1e6)=0.00 耗时 21.3s
+  epoch 54 总耗时 41.8s
+--- epoch 55/400 (PAL 调度基准 400) ---
+  [train] epoch 55: loss_mean=0.056200 (min=0.0435, max=0.0763, batches=54) train_IoU=0.0000 train_nIoU=0.0000 耗时 20.5s
+  [val]   epoch 55: mIoU=0.0000 nIoU=0.0000 PD=0.0000 FA(x1e6)=0.00 耗时 21.2s
+  epoch 55 总耗时 41.8s
+--- epoch 56/400 (PAL 调度基准 400) ---
+  [train] epoch 56: loss_mean=0.056250 (min=0.0421, max=0.0743, batches=54) train_IoU=0.0000 train_nIoU=0.0000 耗时 21.5s
+  [val]   epoch 56: mIoU=0.0000 nIoU=0.0000 PD=0.0000 FA(x1e6)=0.00 耗时 22.1s
+  epoch 56 总耗时 43.6s
+--- epoch 57/400 (PAL 调度基准 400) ---
+  [train] epoch 57: loss_mean=0.054482 (min=0.0405, max=0.0744, batches=54) train_IoU=0.0000 train_nIoU=0.0000 耗时 21.0s
+  [val]   epoch 57: mIoU=0.0000 nIoU=0.0000 PD=0.0000 FA(x1e6)=0.00 耗时 21.5s
+  epoch 57 总耗时 42.5s
+--- epoch 58/400 (PAL 调度基准 400) ---
+  [train] epoch 58: loss_mean=0.071583 (min=0.0389, max=0.1423, batches=54) train_IoU=0.0000 train_nIoU=0.0000 耗时 20.5s
+  [val]   epoch 58: mIoU=0.0000 nIoU=0.0000 PD=0.0000 FA(x1e6)=0.00 耗时 21.4s
+  epoch 58 总耗时 41.9s
+--- epoch 59/400 (PAL 调度基准 400) ---
+  [train] epoch 59: loss_mean=0.064084 (min=0.0550, max=0.0784, batches=54) train_IoU=0.0000 train_nIoU=0.0000 耗时 21.2s
+  [val]   epoch 59: mIoU=0.0000 nIoU=0.0000 PD=0.0000 FA(x1e6)=0.00 耗时 21.5s
+  epoch 59 总耗时 42.7s
+--- epoch 60/400 (PAL 调度基准 400) ---
+  [train] epoch 60: loss_mean=0.060947 (min=0.0533, max=0.0717, batches=54) train_IoU=0.0000 train_nIoU=0.0000 耗时 21.2s
+  [val]   epoch 60: mIoU=0.0000 nIoU=0.0000 PD=0.0000 FA(x1e6)=0.00 耗时 22.1s
+  epoch 60 总耗时 43.3s
+--- epoch 61/400 (PAL 调度基准 400) ---
+  [train] epoch 61: loss_mean=0.059731 (min=0.0503, max=0.0708, batches=54) train_IoU=0.0000 train_nIoU=0.0000 耗时 20.5s
+  [val]   epoch 61: mIoU=0.0000 nIoU=0.0000 PD=0.0000 FA(x1e6)=0.00 耗时 21.4s
+  epoch 61 总耗时 42.0s
+--- epoch 62/400 (PAL 调度基准 400) ---
+  [train] epoch 62: loss_mean=0.057394 (min=0.0490, max=0.0678, batches=54) train_IoU=0.0000 train_nIoU=0.0000 耗时 21.1s
+  [val]   epoch 62: mIoU=0.0000 nIoU=0.0000 PD=0.0000 FA(x1e6)=0.00 耗时 21.3s
+  epoch 62 总耗时 42.4s
+--- epoch 63/400 (PAL 调度基准 400) ---
+  [train] epoch 63: loss_mean=0.055867 (min=0.0468, max=0.0673, batches=54) train_IoU=0.0000 train_nIoU=0.0000 耗时 20.7s
+  [val]   epoch 63: mIoU=0.0000 nIoU=0.0000 PD=0.0000 FA(x1e6)=0.00 耗时 22.6s
+  epoch 63 总耗时 43.3s
+--- epoch 64/400 (PAL 调度基准 400) ---
+  [train] epoch 64: loss_mean=0.054755 (min=0.0470, max=0.0668, batches=54) train_IoU=0.0000 train_nIoU=0.0000 耗时 21.1s
+  [val]   epoch 64: mIoU=0.0000 nIoU=0.0000 PD=0.0000 FA(x1e6)=0.00 耗时 22.3s
+  epoch 64 总耗时 43.5s
+--- epoch 65/400 (PAL 调度基准 400) ---
+  [train] epoch 65: loss_mean=0.053278 (min=0.0449, max=0.0662, batches=54) train_IoU=0.0000 train_nIoU=0.0000 耗时 20.6s
+  [val]   epoch 65: mIoU=0.0000 nIoU=0.0000 PD=0.0000 FA(x1e6)=0.00 耗时 21.3s
+  epoch 65 总耗时 42.0s
+--- epoch 66/400 (PAL 调度基准 400) ---
+  [train] epoch 66: loss_mean=0.052772 (min=0.0440, max=0.0633, batches=54) train_IoU=0.0000 train_nIoU=0.0000 耗时 20.6s
+  [val]   epoch 66: mIoU=0.0000 nIoU=0.0000 PD=0.0000 FA(x1e6)=0.00 耗时 21.4s
+  epoch 66 总耗时 42.1s
+--- epoch 67/400 (PAL 调度基准 400) ---
+  [train] epoch 67: loss_mean=0.049430 (min=0.0296, max=0.0596, batches=54) train_IoU=0.0000 train_nIoU=0.0000 耗时 21.1s
+  [val]   epoch 67: mIoU=0.0000 nIoU=0.0000 PD=0.0000 FA(x1e6)=0.00 耗时 23.1s
+  epoch 67 总耗时 44.2s
+--- epoch 68/400 (PAL 调度基准 400) ---
+  [train] epoch 68: loss_mean=0.049181 (min=0.0276, max=0.0624, batches=54) train_IoU=0.0000 train_nIoU=0.0000 耗时 21.0s
+  [val]   epoch 68: mIoU=0.0000 nIoU=0.0000 PD=0.0000 FA(x1e6)=0.00 耗时 21.3s
+  epoch 68 总耗时 42.3s
+--- epoch 69/400 (PAL 调度基准 400) ---
+  [train] epoch 69: loss_mean=0.047943 (min=0.0343, max=0.0608, batches=54) train_IoU=0.0000 train_nIoU=0.0000 耗时 20.6s
+  [val]   epoch 69: mIoU=0.0000 nIoU=0.0000 PD=0.0000 FA(x1e6)=0.00 耗时 21.4s
+  epoch 69 总耗时 42.0s
+--- epoch 70/400 (PAL 调度基准 400) ---
+  [train] epoch 70: loss_mean=0.046838 (min=0.0287, max=0.0600, batches=54) train_IoU=0.0000 train_nIoU=0.0000 耗时 20.6s
+  [val]   epoch 70: mIoU=0.0000 nIoU=0.0000 PD=0.0000 FA(x1e6)=0.00 耗时 23.1s
+  epoch 70 总耗时 43.6s
+--- epoch 71/400 (PAL 调度基准 400) ---
+  [train] epoch 71: loss_mean=0.045119 (min=0.0274, max=0.0627, batches=54) train_IoU=0.0000 train_nIoU=0.0000 耗时 21.2s
+  [val]   epoch 71: mIoU=0.0000 nIoU=0.0000 PD=0.0000 FA(x1e6)=0.00 耗时 22.0s
+  epoch 71 总耗时 43.2s
+--- epoch 72/400 (PAL 调度基准 400) ---
+  [train] epoch 72: loss_mean=0.041905 (min=0.0249, max=0.0554, batches=54) train_IoU=0.0000 train_nIoU=0.0000 耗时 20.6s
+  [val]   epoch 72: mIoU=0.0000 nIoU=0.0000 PD=0.0000 FA(x1e6)=0.00 耗时 21.2s
+  epoch 72 总耗时 41.8s
+--- epoch 73/400 (PAL 调度基准 400) ---
+  [train] epoch 73: loss_mean=0.039828 (min=0.0255, max=0.0547, batches=54) train_IoU=0.0000 train_nIoU=0.0000 耗时 20.6s
+  [val]   epoch 73: mIoU=0.0000 nIoU=0.0000 PD=0.0000 FA(x1e6)=0.00 耗时 22.1s
+  epoch 73 总耗时 42.7s
+--- epoch 74/400 (PAL 调度基准 400) ---
+  [train] epoch 74: loss_mean=0.041843 (min=0.0245, max=0.0602, batches=54) train_IoU=0.0000 train_nIoU=0.0000 耗时 21.2s
+  [val]   epoch 74: mIoU=0.0000 nIoU=0.0000 PD=0.0000 FA(x1e6)=0.00 耗时 22.5s
+  epoch 74 总耗时 43.7s
+--- epoch 75/400 (PAL 调度基准 400) ---
+  [train] epoch 75: loss_mean=0.037355 (min=0.0235, max=0.0534, batches=54) train_IoU=0.0000 train_nIoU=0.0000 耗时 21.4s
+  [val]   epoch 75: mIoU=0.0000 nIoU=0.0000 PD=0.0000 FA(x1e6)=0.00 耗时 21.3s
+  epoch 75 总耗时 42.7s
+--- epoch 76/400 (PAL 调度基准 400) ---
+  [train] epoch 76: loss_mean=0.037075 (min=0.0248, max=0.0554, batches=54) train_IoU=0.0000 train_nIoU=0.0000 耗时 20.6s
+  [val]   epoch 76: mIoU=0.0000 nIoU=0.0000 PD=0.0000 FA(x1e6)=0.00 耗时 22.1s
+  epoch 76 总耗时 42.7s
+--- epoch 77/400 (PAL 调度基准 400) ---
+  [train] epoch 77: loss_mean=0.038080 (min=0.0229, max=0.0535, batches=54) train_IoU=0.0000 train_nIoU=0.0000 耗时 20.4s
+  [val]   epoch 77: mIoU=0.0000 nIoU=0.0000 PD=0.0000 FA(x1e6)=0.00 耗时 22.0s
+  epoch 77 总耗时 42.4s
+--- epoch 78/400 (PAL 调度基准 400) ---
+  [train] epoch 78: loss_mean=0.040576 (min=0.0241, max=0.0540, batches=54) train_IoU=0.0000 train_nIoU=0.0000 耗时 21.4s
+  [val]   epoch 78: mIoU=0.0000 nIoU=0.0000 PD=0.0000 FA(x1e6)=0.00 耗时 22.0s
+  epoch 78 总耗时 43.3s
+--- epoch 79/400 (PAL 调度基准 400) ---
+  [train] epoch 79: loss_mean=0.036568 (min=0.0257, max=0.0501, batches=54) train_IoU=0.0000 train_nIoU=0.0000 耗时 20.7s
+  [val]   epoch 79: mIoU=0.0000 nIoU=0.0000 PD=0.0000 FA(x1e6)=0.00 耗时 22.1s
+  epoch 79 总耗时 42.8s
+--- epoch 80/400 (PAL 调度基准 400) ---
+  [train] epoch 80: loss_mean=0.037275 (min=0.0223, max=0.0595, batches=54) train_IoU=0.0000 train_nIoU=0.0000 耗时 20.5s
+  [val]   epoch 80: mIoU=0.0000 nIoU=0.0000 PD=0.0000 FA(x1e6)=0.00 耗时 21.4s
+  epoch 80 总耗时 41.9s
+--- epoch 81/400 (PAL 调度基准 400) ---
+  [train] epoch 81: loss_mean=0.038198 (min=0.0203, max=0.0546, batches=54) train_IoU=0.0000 train_nIoU=0.0000 耗时 21.1s
+  [val]   epoch 81: mIoU=0.0000 nIoU=0.0000 PD=0.0000 FA(x1e6)=0.00 耗时 22.3s
+  epoch 81 总耗时 43.4s
+--- epoch 82/400 (PAL 调度基准 400) ---
+  [train] epoch 82: loss_mean=0.037224 (min=0.0207, max=0.0527, batches=54) train_IoU=0.0000 train_nIoU=0.0000 耗时 21.5s
+  [val]   epoch 82: mIoU=0.0000 nIoU=0.0000 PD=0.0000 FA(x1e6)=0.00 耗时 22.2s
+  epoch 82 总耗时 43.7s
+--- epoch 83/400 (PAL 调度基准 400) ---
+  [train] epoch 83: loss_mean=0.037644 (min=0.0212, max=0.0505, batches=54) train_IoU=0.0000 train_nIoU=0.0000 耗时 20.6s
+  [val]   epoch 83: mIoU=0.0000 nIoU=0.0000 PD=0.0000 FA(x1e6)=0.00 耗时 21.6s
+  epoch 83 总耗时 42.2s
+--- epoch 84/400 (PAL 调度基准 400) ---
+  [train] epoch 84: loss_mean=0.036521 (min=0.0211, max=0.0502, batches=54) train_IoU=0.0000 train_nIoU=0.0000 耗时 20.7s
+  [val]   epoch 84: mIoU=0.0000 nIoU=0.0000 PD=0.0000 FA(x1e6)=0.00 耗时 21.6s
+  epoch 84 总耗时 42.3s
+--- epoch 85/400 (PAL 调度基准 400) ---
+  [train] epoch 85: loss_mean=0.036411 (min=0.0213, max=0.0534, batches=54) train_IoU=0.0000 train_nIoU=0.0000 耗时 21.4s
+  [val]   epoch 85: mIoU=0.0000 nIoU=0.0000 PD=0.0000 FA(x1e6)=0.00 耗时 22.4s
+  epoch 85 总耗时 43.8s
+--- epoch 86/400 (PAL 调度基准 400) ---
+  [增强轮] lose_point_ratio=0.2200
+  开始标签的自更新--------
+    [自更新] choose 池 861 张
+  开始认识并学习困难样本-----------
+    [推理] no_choose 池 815 张
+  本轮准入 0 张: []
+生成的标签精细化完成！！！！！！
+  此轮数据转移完成！！！！！ choose=861 no_choose=815
+  [train] epoch 86: loss_mean=0.036290 (min=0.0221, max=0.0592, batches=54) train_IoU=0.0000 train_nIoU=0.0000 耗时 20.5s
+  [val]   epoch 86: mIoU=0.0000 nIoU=0.0000 PD=0.0000 FA(x1e6)=0.00 耗时 21.3s
+  epoch 86 总耗时 78.9s
+--- epoch 87/400 (PAL 调度基准 400) ---
+  [train] epoch 87: loss_mean=0.034483 (min=0.0210, max=0.0492, batches=54) train_IoU=0.0000 train_nIoU=0.0000 耗时 20.5s
+  [val]   epoch 87: mIoU=0.0000 nIoU=0.0000 PD=0.0000 FA(x1e6)=0.00 耗时 22.6s
+  epoch 87 总耗时 43.1s
+--- epoch 88/400 (PAL 调度基准 400) ---
+  [train] epoch 88: loss_mean=0.033811 (min=0.0201, max=0.0472, batches=54) train_IoU=0.0000 train_nIoU=0.0000 耗时 21.5s
+  [val]   epoch 88: mIoU=0.0000 nIoU=0.0000 PD=0.0000 FA(x1e6)=0.00 耗时 22.0s
+  epoch 88 总耗时 43.6s
+--- epoch 89/400 (PAL 调度基准 400) ---
+  [train] epoch 89: loss_mean=0.031122 (min=0.0203, max=0.0398, batches=54) train_IoU=0.0000 train_nIoU=0.0000 耗时 20.7s
+  [val]   epoch 89: mIoU=0.0000 nIoU=0.0000 PD=0.0000 FA(x1e6)=0.00 耗时 21.5s
+  epoch 89 总耗时 42.2s
+--- epoch 90/400 (PAL 调度基准 400) ---
+  [train] epoch 90: loss_mean=0.026584 (min=0.0182, max=0.0362, batches=54) train_IoU=0.0000 train_nIoU=0.0000 耗时 20.7s
+  [val]   epoch 90: mIoU=0.0000 nIoU=0.0000 PD=0.0000 FA(x1e6)=0.00 耗时 21.9s
+  epoch 90 总耗时 42.6s
+--- epoch 91/400 (PAL 调度基准 400) ---
+  [增强轮] lose_point_ratio=0.2367
+  开始标签的自更新--------
+    [自更新] choose 池 861 张
+  开始认识并学习困难样本-----------
+    [推理] no_choose 池 815 张
+  本轮准入 0 张: []
+生成的标签精细化完成！！！！！！
+  此轮数据转移完成！！！！！ choose=861 no_choose=815
+  [train] epoch 91: loss_mean=0.023872 (min=0.0168, max=0.0336, batches=54) train_IoU=0.0000 train_nIoU=0.0000 耗时 21.4s
+  [val]   epoch 91: mIoU=0.0000 nIoU=0.0000 PD=0.0000 FA(x1e6)=0.00 耗时 22.2s
+  epoch 91 总耗时 80.7s
+--- epoch 92/400 (PAL 调度基准 400) ---
+  [train] epoch 92: loss_mean=0.023472 (min=0.0162, max=0.0323, batches=54) train_IoU=0.0000 train_nIoU=0.0000 耗时 20.8s
+  [val]   epoch 92: mIoU=0.0000 nIoU=0.0000 PD=0.0000 FA(x1e6)=0.00 耗时 22.4s
+  epoch 92 总耗时 43.2s
+--- epoch 93/400 (PAL 调度基准 400) ---
+  [train] epoch 93: loss_mean=0.022814 (min=0.0180, max=0.0300, batches=54) train_IoU=0.0290 train_nIoU=0.0157 耗时 20.8s
+  [val]   epoch 93: mIoU=0.0372 nIoU=0.0399 PD=0.1150 FA(x1e6)=1.18 耗时 21.8s
+  [ckpt] best mIoU=0.0372 已保存
+  epoch 93 总耗时 42.6s
+--- epoch 94/400 (PAL 调度基准 400) ---
+  [train] epoch 94: loss_mean=0.021939 (min=0.0148, max=0.0315, batches=54) train_IoU=0.1070 train_nIoU=0.0541 耗时 21.0s
+  [val]   epoch 94: mIoU=0.0070 nIoU=0.0088 PD=0.0326 FA(x1e6)=0.08 耗时 22.4s
+  epoch 94 总耗时 43.4s
+--- epoch 95/400 (PAL 调度基准 400) ---
+  [train] epoch 95: loss_mean=0.021611 (min=0.0151, max=0.0280, batches=54) train_IoU=0.1203 train_nIoU=0.0620 耗时 21.5s
+  [val]   epoch 95: mIoU=0.0190 nIoU=0.0225 PD=0.0664 FA(x1e6)=0.24 耗时 21.7s
+  epoch 95 总耗时 43.3s
+--- epoch 96/400 (PAL 调度基准 400) ---
+  [增强轮] lose_point_ratio=0.2533
+  开始标签的自更新--------
+    [自更新] choose 池 861 张
+  开始认识并学习困难样本-----------
+    [推理] no_choose 池 815 张
+  本轮准入 6 张: ['Misc_223.png', 'Misc_77.png', 'XDU206.png', 'XDU266.png', 'XDU431.png', 'XDU623.png']
+生成的标签精细化完成！！！！！！
+  此轮数据转移完成！！！！！ choose=867 no_choose=809
+  [train] epoch 96: loss_mean=0.020701 (min=0.0132, max=0.0261, batches=55) train_IoU=0.1637 train_nIoU=0.0854 耗时 20.9s
+  [val]   epoch 96: mIoU=0.1600 nIoU=0.1674 PD=0.3522 FA(x1e6)=8.59 耗时 21.6s
+  [ckpt] best mIoU=0.1600 已保存
+  epoch 96 总耗时 79.6s
+--- epoch 97/400 (PAL 调度基准 400) ---
+  [train] epoch 97: loss_mean=0.020120 (min=0.0141, max=0.0268, batches=55) train_IoU=0.1511 train_nIoU=0.0819 耗时 21.5s
+  [val]   epoch 97: mIoU=0.0785 nIoU=0.0888 PD=0.2100 FA(x1e6)=1.05 耗时 23.3s
+  epoch 97 总耗时 44.9s
+--- epoch 98/400 (PAL 调度基准 400) ---
+  [train] epoch 98: loss_mean=0.019928 (min=0.0123, max=0.0264, batches=55) train_IoU=0.1909 train_nIoU=0.1072 耗时 21.8s
+  [val]   epoch 98: mIoU=0.1608 nIoU=0.1730 PD=0.3714 FA(x1e6)=7.27 耗时 21.9s
+  [ckpt] best mIoU=0.1608 已保存
+  epoch 98 总耗时 43.8s
+--- epoch 99/400 (PAL 调度基准 400) ---
+  [train] epoch 99: loss_mean=0.018848 (min=0.0128, max=0.0252, batches=55) train_IoU=0.1860 train_nIoU=0.1042 耗时 21.1s
+  [val]   epoch 99: mIoU=0.1465 nIoU=0.1569 PD=0.3382 FA(x1e6)=6.22 耗时 21.7s
+  epoch 99 总耗时 42.8s
+--- epoch 100/400 (PAL 调度基准 400) ---
+  [train] epoch 100: loss_mean=0.019369 (min=0.0133, max=0.0234, batches=55) train_IoU=0.1938 train_nIoU=0.1105 耗时 21.5s
+  [val]   epoch 100: mIoU=0.0765 nIoU=0.0776 PD=0.1814 FA(x1e6)=2.96 耗时 21.9s
+  epoch 100 总耗时 43.5s
+--- epoch 101/400 (PAL 调度基准 400) ---
+  [增强轮] lose_point_ratio=0.2700
+  开始标签的自更新--------
+    [自更新] choose 池 867 张
+  开始认识并学习困难样本-----------
+    [推理] no_choose 池 809 张
+  本轮准入 31 张: ['000667.png', 'Misc_129.png', 'Misc_184.png', 'Misc_232.png', 'XDU123.png', 'XDU130.png', 'XDU213.png', 'XDU236.png', 'XDU284.png', 'XDU31.png']...
+生成的标签精细化完成！！！！！！
+  此轮数据转移完成！！！！！ choose=898 no_choose=778
+  [train] epoch 101: loss_mean=0.018780 (min=0.0139, max=0.0256, batches=57) train_IoU=0.1783 train_nIoU=0.0992 耗时 22.1s
+  [val]   epoch 101: mIoU=0.1753 nIoU=0.1872 PD=0.4126 FA(x1e6)=8.11 耗时 21.7s
+  [ckpt] best mIoU=0.1753 已保存
+  epoch 101 总耗时 82.8s
+--- epoch 102/400 (PAL 调度基准 400) ---
+  [train] epoch 102: loss_mean=0.017873 (min=0.0122, max=0.0243, batches=57) train_IoU=0.2612 train_nIoU=0.1556 耗时 22.3s
+  [val]   epoch 102: mIoU=0.2016 nIoU=0.2169 PD=0.4764 FA(x1e6)=13.19 耗时 21.6s
+  [ckpt] best mIoU=0.2016 已保存
+  epoch 102 总耗时 43.9s
+--- epoch 103/400 (PAL 调度基准 400) ---
+  [train] epoch 103: loss_mean=0.018022 (min=0.0140, max=0.0240, batches=57) train_IoU=0.2712 train_nIoU=0.1571 耗时 21.8s
+  [val]   epoch 103: mIoU=0.2124 nIoU=0.2156 PD=0.4757 FA(x1e6)=15.53 耗时 22.1s
+  [ckpt] best mIoU=0.2124 已保存
+  epoch 103 总耗时 43.9s
+--- epoch 104/400 (PAL 调度基准 400) ---
+  [train] epoch 104: loss_mean=0.017239 (min=0.0130, max=0.0226, batches=57) train_IoU=0.2707 train_nIoU=0.1586 耗时 22.4s
+  [val]   epoch 104: mIoU=0.1478 nIoU=0.1639 PD=0.3701 FA(x1e6)=5.01 耗时 22.2s
+  epoch 104 总耗时 44.7s
+--- epoch 105/400 (PAL 调度基准 400) ---
+  [train] epoch 105: loss_mean=0.016749 (min=0.0119, max=0.0225, batches=57) train_IoU=0.3220 train_nIoU=0.1982 耗时 22.3s
+  [val]   epoch 105: mIoU=0.2575 nIoU=0.2990 PD=0.6146 FA(x1e6)=20.01 耗时 21.9s
+  [ckpt] best mIoU=0.2575 已保存
+  epoch 105 总耗时 44.3s
+--- epoch 106/400 (PAL 调度基准 400) ---
+  [增强轮] lose_point_ratio=0.2867
+  开始标签的自更新--------
+    [自更新] choose 池 898 张
+  开始认识并学习困难样本-----------
+    [推理] no_choose 池 778 张
+  本轮准入 194 张: ['000097.png', '000105.png', '000109.png', '000117.png', '000118.png', '000130.png', '000139.png', '000158.png', '000168.png', '000171.png']...
+生成的标签精细化完成！！！！！！
+  此轮数据转移完成！！！！！ choose=1092 no_choose=584
+[38;5;3m[w 0901 21:20:28.596201 84 cudnn_conv_backward_w__Tx_float32__Ty_float32__Tw_float32__XFORMAT_abcd__WFORMAT_oihw__YFO___hash_8e480e8564e59906_op.cc:418] backward w algorithm cache is full[m
+  [train] epoch 106: loss_mean=0.015993 (min=0.0119, max=0.0232, batches=69) train_IoU=0.3857 train_nIoU=0.2333 耗时 26.7s
+  [val]   epoch 106: mIoU=0.2148 nIoU=0.2406 PD=0.5236 FA(x1e6)=14.21 耗时 23.2s
+  epoch 106 总耗时 88.0s
+--- epoch 107/400 (PAL 调度基准 400) ---
+  [train] epoch 107: loss_mean=0.016182 (min=0.0127, max=0.0235, batches=69) train_IoU=0.3921 train_nIoU=0.2437 耗时 27.5s
+  [val]   epoch 107: mIoU=0.2221 nIoU=0.2547 PD=0.5435 FA(x1e6)=11.14 耗时 21.8s
+  epoch 107 总耗时 49.3s
+--- epoch 108/400 (PAL 调度基准 400) ---
+  [train] epoch 108: loss_mean=0.015360 (min=0.0103, max=0.0222, batches=69) train_IoU=0.3800 train_nIoU=0.2348 耗时 26.8s
+  [val]   epoch 108: mIoU=0.2218 nIoU=0.2554 PD=0.5362 FA(x1e6)=13.95 耗时 21.9s
+  epoch 108 总耗时 48.7s
+--- epoch 109/400 (PAL 调度基准 400) ---
+  [train] epoch 109: loss_mean=0.014858 (min=0.0113, max=0.0191, batches=69) train_IoU=0.4240 train_nIoU=0.2672 耗时 26.6s
+  [val]   epoch 109: mIoU=0.2592 nIoU=0.3016 PD=0.6399 FA(x1e6)=17.42 耗时 23.2s
+  [ckpt] best mIoU=0.2592 已保存
+  epoch 109 总耗时 49.9s
+--- epoch 110/400 (PAL 调度基准 400) ---
+  [train] epoch 110: loss_mean=0.015051 (min=0.0114, max=0.0213, batches=69) train_IoU=0.3792 train_nIoU=0.2434 耗时 27.4s
+  [val]   epoch 110: mIoU=0.2976 nIoU=0.3513 PD=0.7136 FA(x1e6)=27.04 耗时 22.1s
+  [ckpt] best mIoU=0.2976 已保存
+  epoch 110 总耗时 49.5s
+--- epoch 111/400 (PAL 调度基准 400) ---
+  [增强轮] lose_point_ratio=0.3033
+  开始标签的自更新--------
+    [自更新] choose 池 1092 张
+  开始认识并学习困难样本-----------
+    [推理] no_choose 池 584 张
+  本轮准入 71 张: ['000126.png', '000165.png', '000218.png', '000248.png', '000253.png', '000267.png', '000298.png', '000304.png', '000310.png', '000438.png']...
+生成的标签精细化完成！！！！！！
+  此轮数据转移完成！！！！！ choose=1163 no_choose=513
+  [train] epoch 111: loss_mean=0.014138 (min=0.0110, max=0.0301, batches=73) train_IoU=0.4887 train_nIoU=0.3148 耗时 29.0s
+  [val]   epoch 111: mIoU=0.1012 nIoU=0.1130 PD=0.2950 FA(x1e6)=3.14 耗时 21.8s
+  epoch 111 总耗时 89.9s
+--- epoch 112/400 (PAL 调度基准 400) ---
+  [train] epoch 112: loss_mean=0.013666 (min=0.0106, max=0.0197, batches=73) train_IoU=0.4808 train_nIoU=0.3137 耗时 28.8s
+  [val]   epoch 112: mIoU=0.1566 nIoU=0.1992 PD=0.4651 FA(x1e6)=3.65 耗时 22.3s
+  epoch 112 总耗时 51.1s
+--- epoch 113/400 (PAL 调度基准 400) ---
+  [train] epoch 113: loss_mean=0.013391 (min=0.0107, max=0.0205, batches=73) train_IoU=0.4929 train_nIoU=0.3277 耗时 28.5s
+  [val]   epoch 113: mIoU=0.1952 nIoU=0.2300 PD=0.4844 FA(x1e6)=7.07 耗时 23.2s
+  epoch 113 总耗时 51.7s
+--- epoch 114/400 (PAL 调度基准 400) ---
+  [train] epoch 114: loss_mean=0.013133 (min=0.0103, max=0.0197, batches=73) train_IoU=0.4959 train_nIoU=0.3291 耗时 28.0s
+  [val]   epoch 114: mIoU=0.2190 nIoU=0.2708 PD=0.5794 FA(x1e6)=8.17 耗时 22.2s
+  epoch 114 总耗时 50.2s
+--- epoch 115/400 (PAL 调度基准 400) ---
+  [train] epoch 115: loss_mean=0.012674 (min=0.0100, max=0.0209, batches=73) train_IoU=0.4708 train_nIoU=0.3101 耗时 28.8s
+  [val]   epoch 115: mIoU=0.2309 nIoU=0.2951 PD=0.6292 FA(x1e6)=10.47 耗时 22.1s
+  epoch 115 总耗时 50.9s
+--- epoch 116/400 (PAL 调度基准 400) ---
+  [增强轮] lose_point_ratio=0.3200
+  开始标签的自更新--------
+    [自更新] choose 池 1163 张
+  开始认识并学习困难样本-----------
+    [推理] no_choose 池 513 张
+  本轮准入 1 张: ['000228.png']
+生成的标签精细化完成！！！！！！
+  此轮数据转移完成！！！！！ choose=1164 no_choose=512
+  [train] epoch 116: loss_mean=0.012309 (min=0.0096, max=0.0178, batches=73) train_IoU=0.5007 train_nIoU=0.3350 耗时 28.0s
+  [val]   epoch 116: mIoU=0.3207 nIoU=0.3856 PD=0.7216 FA(x1e6)=27.61 耗时 22.0s
+  [ckpt] best mIoU=0.3207 已保存
+  epoch 116 总耗时 88.6s
+--- epoch 117/400 (PAL 调度基准 400) ---
+  [train] epoch 117: loss_mean=0.012132 (min=0.0092, max=0.0180, batches=73) train_IoU=0.4862 train_nIoU=0.3264 耗时 28.8s
+  [val]   epoch 117: mIoU=0.2503 nIoU=0.3032 PD=0.6598 FA(x1e6)=20.17 耗时 23.3s
+  epoch 117 总耗时 52.1s
+--- epoch 118/400 (PAL 调度基准 400) ---
+  [train] epoch 118: loss_mean=0.011672 (min=0.0089, max=0.0224, batches=73) train_IoU=0.5116 train_nIoU=0.3543 耗时 28.5s
+  [val]   epoch 118: mIoU=0.3035 nIoU=0.3620 PD=0.7143 FA(x1e6)=24.32 耗时 21.7s
+  epoch 118 总耗时 50.2s
+--- epoch 119/400 (PAL 调度基准 400) ---
+  [train] epoch 119: loss_mean=0.011436 (min=0.0087, max=0.0165, batches=73) train_IoU=0.5195 train_nIoU=0.3539 耗时 28.5s
+  [val]   epoch 119: mIoU=0.3127 nIoU=0.3724 PD=0.7302 FA(x1e6)=24.83 耗时 22.2s
+  epoch 119 总耗时 50.8s
+--- epoch 120/400 (PAL 调度基准 400) ---
+  [train] epoch 120: loss_mean=0.011092 (min=0.0085, max=0.0218, batches=73) train_IoU=0.4961 train_nIoU=0.3188 耗时 30.1s
+  [val]   epoch 120: mIoU=0.2505 nIoU=0.2965 PD=0.6252 FA(x1e6)=14.98 耗时 23.3s
+  epoch 120 总耗时 53.4s
+--- epoch 121/400 (PAL 调度基准 400) ---
+  [增强轮] lose_point_ratio=0.3367
+  开始标签的自更新--------
+    [自更新] choose 池 1164 张
+  开始认识并学习困难样本-----------
+    [推理] no_choose 池 512 张
+  本轮准入 27 张: ['000594.png', '000712.png', '000947.png', '001271.png', 'Misc_313.png', 'Misc_421.png', 'Misc_88.png', 'XDU122.png', 'XDU186.png', 'XDU264.png']...
+生成的标签精细化完成！！！！！！
+  此轮数据转移完成！！！！！ choose=1191 no_choose=485
+  [train] epoch 121: loss_mean=0.011132 (min=0.0083, max=0.0182, batches=75) train_IoU=0.5030 train_nIoU=0.3450 耗时 28.6s
+  [val]   epoch 121: mIoU=0.3239 nIoU=0.3805 PD=0.7276 FA(x1e6)=29.07 耗时 21.7s
+  [ckpt] best mIoU=0.3239 已保存
+  epoch 121 总耗时 88.3s
+--- epoch 122/400 (PAL 调度基准 400) ---
+  [train] epoch 122: loss_mean=0.010454 (min=0.0085, max=0.0160, batches=75) train_IoU=0.5238 train_nIoU=0.3572 耗时 30.0s
+  [val]   epoch 122: mIoU=0.2979 nIoU=0.3716 PD=0.7150 FA(x1e6)=20.30 耗时 22.4s
+  epoch 122 总耗时 52.4s
+--- epoch 123/400 (PAL 调度基准 400) ---
+  [train] epoch 123: loss_mean=0.010612 (min=0.0084, max=0.0166, batches=75) train_IoU=0.5075 train_nIoU=0.3469 耗时 29.6s
+  [val]   epoch 123: mIoU=0.2611 nIoU=0.3358 PD=0.7050 FA(x1e6)=16.22 耗时 21.7s
+  epoch 123 总耗时 51.3s
+--- epoch 124/400 (PAL 调度基准 400) ---
+  [train] epoch 124: loss_mean=0.010237 (min=0.0078, max=0.0183, batches=75) train_IoU=0.5199 train_nIoU=0.3453 耗时 28.9s
+  [val]   epoch 124: mIoU=0.3234 nIoU=0.3986 PD=0.7674 FA(x1e6)=22.80 耗时 22.0s
+  epoch 124 总耗时 50.9s
+--- epoch 125/400 (PAL 调度基准 400) ---
+  [train] epoch 125: loss_mean=0.009925 (min=0.0075, max=0.0153, batches=75) train_IoU=0.5223 train_nIoU=0.3594 耗时 29.0s
+  [val]   epoch 125: mIoU=0.3343 nIoU=0.4010 PD=0.7787 FA(x1e6)=33.28 耗时 22.5s
+  [ckpt] best mIoU=0.3343 已保存
+  epoch 125 总耗时 51.6s
+--- epoch 126/400 (PAL 调度基准 400) ---
+  [增强轮] lose_point_ratio=0.3533
+  开始标签的自更新--------
+    [自更新] choose 池 1191 张
+  开始认识并学习困难样本-----------
+    [推理] no_choose 池 485 张
+  本轮准入 62 张: ['000096.png', '000108.png', '000146.png', '000149.png', '000254.png', '000258.png', '000264.png', '000275.png', '000288.png', '000290.png']...
+生成的标签精细化完成！！！！！！
+  此轮数据转移完成！！！！！ choose=1253 no_choose=423
+  [train] epoch 126: loss_mean=0.009616 (min=0.0069, max=0.0191, batches=79) train_IoU=0.5328 train_nIoU=0.3657 耗时 30.8s
+  [val]   epoch 126: mIoU=0.2242 nIoU=0.2598 PD=0.5681 FA(x1e6)=11.27 耗时 21.6s
+  epoch 126 总耗时 90.9s
+--- epoch 127/400 (PAL 调度基准 400) ---
+  [train] epoch 127: loss_mean=0.009548 (min=0.0067, max=0.0192, batches=79) train_IoU=0.5344 train_nIoU=0.3729 耗时 30.3s
+  [val]   epoch 127: mIoU=0.2674 nIoU=0.3531 PD=0.6658 FA(x1e6)=11.61 耗时 22.8s
+  epoch 127 总耗时 53.2s
+--- epoch 128/400 (PAL 调度基准 400) ---
+  [train] epoch 128: loss_mean=0.009148 (min=0.0067, max=0.0231, batches=79) train_IoU=0.5354 train_nIoU=0.3698 耗时 31.6s
+  [val]   epoch 128: mIoU=0.2863 nIoU=0.3544 PD=0.6910 FA(x1e6)=19.83 耗时 22.1s
+  epoch 128 总耗时 53.7s
+--- epoch 129/400 (PAL 调度基准 400) ---
+  [train] epoch 129: loss_mean=0.009123 (min=0.0059, max=0.0193, batches=79) train_IoU=0.5340 train_nIoU=0.3700 耗时 30.2s
+  [val]   epoch 129: mIoU=0.2703 nIoU=0.3266 PD=0.6412 FA(x1e6)=11.33 耗时 21.9s
+  epoch 129 总耗时 52.1s
+--- epoch 130/400 (PAL 调度基准 400) ---
+  [train] epoch 130: loss_mean=0.008907 (min=0.0062, max=0.0195, batches=79) train_IoU=0.5269 train_nIoU=0.3585 耗时 30.5s
+  [val]   epoch 130: mIoU=0.2630 nIoU=0.3296 PD=0.6458 FA(x1e6)=14.30 耗时 23.2s
+  epoch 130 总耗时 53.7s
+--- epoch 131/400 (PAL 调度基准 400) ---
+  [增强轮] lose_point_ratio=0.3700
+  开始标签的自更新--------
+    [自更新] choose 池 1253 张
+  开始认识并学习困难样本-----------
+    [推理] no_choose 池 423 张
+  本轮准入 3 张: ['000777.png', 'XDU593.png', 'XDU683.png']
+生成的标签精细化完成！！！！！！
+  此轮数据转移完成！！！！！ choose=1256 no_choose=420
+  [train] epoch 131: loss_mean=0.008691 (min=0.0062, max=0.0149, batches=79) train_IoU=0.5476 train_nIoU=0.3803 耗时 30.2s
+  [val]   epoch 131: mIoU=0.3203 nIoU=0.4071 PD=0.7641 FA(x1e6)=20.08 耗时 21.4s
+  epoch 131 总耗时 89.5s
+--- epoch 132/400 (PAL 调度基准 400) ---
+  [train] epoch 132: loss_mean=0.008586 (min=0.0060, max=0.0176, batches=79) train_IoU=0.5379 train_nIoU=0.3714 耗时 30.4s
+  [val]   epoch 132: mIoU=0.2883 nIoU=0.3739 PD=0.7183 FA(x1e6)=12.19 耗时 23.0s
+  epoch 132 总耗时 53.4s
+--- epoch 133/400 (PAL 调度基准 400) ---
+  [train] epoch 133: loss_mean=0.008144 (min=0.0058, max=0.0176, batches=79) train_IoU=0.5548 train_nIoU=0.3776 耗时 31.1s
+  [val]   epoch 133: mIoU=0.2829 nIoU=0.3742 PD=0.7216 FA(x1e6)=8.84 耗时 21.7s
+  epoch 133 总耗时 52.7s
+--- epoch 134/400 (PAL 调度基准 400) ---
+  [train] epoch 134: loss_mean=0.008020 (min=0.0052, max=0.0181, batches=79) train_IoU=0.5601 train_nIoU=0.3959 耗时 30.0s
+  [val]   epoch 134: mIoU=0.3633 nIoU=0.4465 PD=0.8027 FA(x1e6)=28.02 耗时 21.8s
+  [ckpt] best mIoU=0.3633 已保存
+  epoch 134 总耗时 51.9s
+--- epoch 135/400 (PAL 调度基准 400) ---
+  [train] epoch 135: loss_mean=0.008528 (min=0.0059, max=0.0234, batches=79) train_IoU=0.5228 train_nIoU=0.3815 耗时 30.8s
+  [val]   epoch 135: mIoU=0.3217 nIoU=0.4034 PD=0.7688 FA(x1e6)=16.78 耗时 22.4s
+  epoch 135 总耗时 53.3s
+--- epoch 136/400 (PAL 调度基准 400) ---
+  [增强轮] lose_point_ratio=0.3867
+  开始标签的自更新--------
+    [自更新] choose 池 1256 张
+  开始认识并学习困难样本-----------
+    [推理] no_choose 池 420 张
+  本轮准入 24 张: ['000104.png', '000121.png', '000256.png', '000429.png', '000649.png', '000767.png', '000810.png', '000872.png', '000962.png', '000968.png']...
+生成的标签精细化完成！！！！！！
+  此轮数据转移完成！！！！！ choose=1280 no_choose=396
+  [train] epoch 136: loss_mean=0.007765 (min=0.0054, max=0.0139, batches=80) train_IoU=0.5653 train_nIoU=0.4074 耗时 31.1s
+  [val]   epoch 136: mIoU=0.3656 nIoU=0.4549 PD=0.8199 FA(x1e6)=24.31 耗时 22.3s
+  [ckpt] best mIoU=0.3656 已保存
+  epoch 136 总耗时 91.2s
+--- epoch 137/400 (PAL 调度基准 400) ---
+  [train] epoch 137: loss_mean=0.007784 (min=0.0047, max=0.0154, batches=80) train_IoU=0.5629 train_nIoU=0.3911 耗时 30.8s
+  [val]   epoch 137: mIoU=0.3223 nIoU=0.4051 PD=0.7714 FA(x1e6)=14.60 耗时 22.3s
+  epoch 137 总耗时 53.2s
+--- epoch 138/400 (PAL 调度基准 400) ---
+  [train] epoch 138: loss_mean=0.007389 (min=0.0048, max=0.0153, batches=80) train_IoU=0.5602 train_nIoU=0.3934 耗时 32.0s
+  [val]   epoch 138: mIoU=0.3463 nIoU=0.4316 PD=0.7934 FA(x1e6)=22.26 耗时 22.3s
+  epoch 138 总耗时 54.3s
+--- epoch 139/400 (PAL 调度基准 400) ---
+  [train] epoch 139: loss_mean=0.007110 (min=0.0047, max=0.0116, batches=80) train_IoU=0.5657 train_nIoU=0.3956 耗时 31.1s
+  [val]   epoch 139: mIoU=0.3322 nIoU=0.4249 PD=0.7654 FA(x1e6)=14.70 耗时 21.6s
+  epoch 139 总耗时 52.8s
+--- epoch 140/400 (PAL 调度基准 400) ---
+  [train] epoch 140: loss_mean=0.006989 (min=0.0042, max=0.0126, batches=80) train_IoU=0.5583 train_nIoU=0.3850 耗时 31.3s
+  [val]   epoch 140: mIoU=0.3758 nIoU=0.4514 PD=0.8080 FA(x1e6)=19.52 耗时 22.5s
+  [ckpt] best mIoU=0.3758 已保存
+  epoch 140 总耗时 53.8s
+--- epoch 141/400 (PAL 调度基准 400) ---
+  [增强轮] lose_point_ratio=0.4033
+  开始标签的自更新--------
+    [自更新] choose 池 1280 张
+  开始认识并学习困难样本-----------
+    [推理] no_choose 池 396 张
+  本轮准入 44 张: ['000094.png', '000190.png', '000236.png', '000238.png', '000251.png', '000283.png', '000299.png', '000322.png', '000323.png', '000432.png']...
+生成的标签精细化完成！！！！！！
+  此轮数据转移完成！！！！！ choose=1324 no_choose=352
+  [train] epoch 141: loss_mean=0.006935 (min=0.0044, max=0.0132, batches=83) train_IoU=0.5711 train_nIoU=0.3959 耗时 32.0s
+  [val]   epoch 141: mIoU=0.4050 nIoU=0.4703 PD=0.8532 FA(x1e6)=34.46 耗时 21.9s
+  [ckpt] best mIoU=0.4050 已保存
+  epoch 141 总耗时 92.5s
+--- epoch 142/400 (PAL 调度基准 400) ---
+  [train] epoch 142: loss_mean=0.007222 (min=0.0047, max=0.0131, batches=83) train_IoU=0.5729 train_nIoU=0.4040 耗时 32.6s
+  [val]   epoch 142: mIoU=0.3759 nIoU=0.4559 PD=0.8339 FA(x1e6)=30.95 耗时 22.9s
+  epoch 142 总耗时 55.5s
+--- epoch 143/400 (PAL 调度基准 400) ---
+  [train] epoch 143: loss_mean=0.006789 (min=0.0047, max=0.0131, batches=83) train_IoU=0.5811 train_nIoU=0.3931 耗时 32.7s
+  [val]   epoch 143: mIoU=0.3922 nIoU=0.4725 PD=0.8412 FA(x1e6)=25.27 耗时 21.6s
+  epoch 143 总耗时 54.3s
+--- epoch 144/400 (PAL 调度基准 400) ---
+  [train] epoch 144: loss_mean=0.006713 (min=0.0041, max=0.0104, batches=83) train_IoU=0.5842 train_nIoU=0.4127 耗时 31.9s
+  [val]   epoch 144: mIoU=0.3550 nIoU=0.4438 PD=0.7947 FA(x1e6)=15.60 耗时 21.6s
+  epoch 144 总耗时 53.5s
+--- epoch 145/400 (PAL 调度基准 400) ---
+  [train] epoch 145: loss_mean=0.006258 (min=0.0038, max=0.0102, batches=83) train_IoU=0.5786 train_nIoU=0.4038 耗时 33.2s
+  [val]   epoch 145: mIoU=0.4043 nIoU=0.4656 PD=0.8485 FA(x1e6)=30.68 耗时 22.4s
+  epoch 145 总耗时 55.6s
+--- epoch 146/400 (PAL 调度基准 400) ---
+  [增强轮] lose_point_ratio=0.4200
+  开始标签的自更新--------
+    [自更新] choose 池 1324 张
+  开始认识并学习困难样本-----------
+    [推理] no_choose 池 352 张
+  本轮准入 49 张: ['000119.png', '000132.png', '000242.png', '000321.png', '000768.png', '000778.png', '000827.png', '000847.png', '000856.png', '000857.png']...
+生成的标签精细化完成！！！！！！
+  此轮数据转移完成！！！！！ choose=1373 no_choose=303
+  [train] epoch 146: loss_mean=0.006652 (min=0.0040, max=0.0177, batches=86) train_IoU=0.5994 train_nIoU=0.4270 耗时 32.7s
+  [val]   epoch 146: mIoU=0.3527 nIoU=0.4329 PD=0.7947 FA(x1e6)=16.76 耗时 22.6s
+  epoch 146 总耗时 93.5s
+--- epoch 147/400 (PAL 调度基准 400) ---
+  [train] epoch 147: loss_mean=0.006096 (min=0.0039, max=0.0164, batches=86) train_IoU=0.6123 train_nIoU=0.4380 耗时 33.3s
+  [val]   epoch 147: mIoU=0.3389 nIoU=0.4126 PD=0.7601 FA(x1e6)=12.67 耗时 22.4s
+  epoch 147 总耗时 55.7s
+--- epoch 148/400 (PAL 调度基准 400) ---
+  [train] epoch 148: loss_mean=0.005965 (min=0.0036, max=0.0186, batches=86) train_IoU=0.6167 train_nIoU=0.4291 耗时 33.0s
+  [val]   epoch 148: mIoU=0.3936 nIoU=0.4669 PD=0.8385 FA(x1e6)=21.17 耗时 21.4s
+  epoch 148 总耗时 54.4s
+--- epoch 149/400 (PAL 调度基准 400) ---
+  [train] epoch 149: loss_mean=0.005901 (min=0.0037, max=0.0176, batches=86) train_IoU=0.6033 train_nIoU=0.4263 耗时 33.0s
+  [val]   epoch 149: mIoU=0.2721 nIoU=0.3737 PD=0.7083 FA(x1e6)=9.40 耗时 21.6s
+  epoch 149 总耗时 54.7s
+--- epoch 150/400 (PAL 调度基准 400) ---
+  [train] epoch 150: loss_mean=0.006190 (min=0.0039, max=0.0144, batches=86) train_IoU=0.5841 train_nIoU=0.4137 耗时 33.7s
+  [val]   epoch 150: mIoU=0.3541 nIoU=0.4377 PD=0.8053 FA(x1e6)=12.90 耗时 22.1s
+  epoch 150 总耗时 55.9s
+--- epoch 151/400 (PAL 调度基准 400) ---
+  [增强轮] lose_point_ratio=0.4367
+  开始标签的自更新--------
+    [自更新] choose 池 1373 张
+  开始认识并学习困难样本-----------
+    [推理] no_choose 池 303 张
+  本轮准入 4 张: ['000277.png', '000503.png', '000505.png', '001099.png']
+生成的标签精细化完成！！！！！！
+  此轮数据转移完成！！！！！ choose=1377 no_choose=299
+  [train] epoch 151: loss_mean=0.005874 (min=0.0028, max=0.0143, batches=87) train_IoU=0.6123 train_nIoU=0.4291 耗时 32.9s
+  [val]   epoch 151: mIoU=0.4111 nIoU=0.4794 PD=0.8299 FA(x1e6)=21.96 耗时 21.5s
+  [ckpt] best mIoU=0.4111 已保存
+  epoch 151 总耗时 91.8s
+--- epoch 152/400 (PAL 调度基准 400) ---
+  [train] epoch 152: loss_mean=0.005883 (min=0.0019, max=0.0119, batches=87) train_IoU=0.6101 train_nIoU=0.4202 耗时 33.9s
+  [val]   epoch 152: mIoU=0.3747 nIoU=0.4610 PD=0.8239 FA(x1e6)=18.07 耗时 22.5s
+  epoch 152 总耗时 56.4s
+--- epoch 153/400 (PAL 调度基准 400) ---
+  [train] epoch 153: loss_mean=0.005588 (min=0.0021, max=0.0113, batches=87) train_IoU=0.6173 train_nIoU=0.4362 耗时 32.7s
+  [val]   epoch 153: mIoU=0.3899 nIoU=0.4686 PD=0.8126 FA(x1e6)=24.13 耗时 21.5s
+  epoch 153 总耗时 54.2s
+--- epoch 154/400 (PAL 调度基准 400) ---
+  [train] epoch 154: loss_mean=0.005427 (min=0.0033, max=0.0103, batches=87) train_IoU=0.6074 train_nIoU=0.4322 耗时 32.7s
+  [val]   epoch 154: mIoU=0.4126 nIoU=0.4765 PD=0.8458 FA(x1e6)=22.63 耗时 22.3s
+  [ckpt] best mIoU=0.4126 已保存
+  epoch 154 总耗时 55.1s
+--- epoch 155/400 (PAL 调度基准 400) ---
+  [train] epoch 155: loss_mean=0.005153 (min=0.0018, max=0.0102, batches=87) train_IoU=0.6279 train_nIoU=0.4373 耗时 34.6s
+  [val]   epoch 155: mIoU=0.4437 nIoU=0.4965 PD=0.8684 FA(x1e6)=28.48 耗时 21.6s
+  [ckpt] best mIoU=0.4437 已保存
+  epoch 155 总耗时 56.3s
+--- epoch 156/400 (PAL 调度基准 400) ---
+  [增强轮] lose_point_ratio=0.4533
+  开始标签的自更新--------
+    [自更新] choose 池 1377 张
+  开始认识并学习困难样本-----------
+    [推理] no_choose 池 299 张
+  本轮准入 56 张: ['000114.png', '000147.png', '000244.png', '000247.png', '000317.png', '000428.png', '000435.png', '000471.png', '000489.png', '000539.png']...
+生成的标签精细化完成！！！！！！
+  此轮数据转移完成！！！！！ choose=1433 no_choose=243
+  [train] epoch 156: loss_mean=0.005443 (min=0.0029, max=0.0104, batches=90) train_IoU=0.6206 train_nIoU=0.4426 耗时 34.5s
+  [val]   epoch 156: mIoU=0.4242 nIoU=0.4966 PD=0.8691 FA(x1e6)=29.29 耗时 22.8s
+  epoch 156 总耗时 94.8s
+--- epoch 157/400 (PAL 调度基准 400) ---
+  [train] epoch 157: loss_mean=0.005927 (min=0.0033, max=0.0145, batches=90) train_IoU=0.6056 train_nIoU=0.4440 耗时 35.6s
+  [val]   epoch 157: mIoU=0.4435 nIoU=0.4947 PD=0.8591 FA(x1e6)=23.28 耗时 22.0s
+  epoch 157 总耗时 57.6s
+--- epoch 158/400 (PAL 调度基准 400) ---
+  [train] epoch 158: loss_mean=0.005439 (min=0.0031, max=0.0316, batches=90) train_IoU=0.6169 train_nIoU=0.4427 耗时 34.5s
+  [val]   epoch 158: mIoU=0.4509 nIoU=0.4899 PD=0.8784 FA(x1e6)=25.70 耗时 22.1s
+  [ckpt] best mIoU=0.4509 已保存
+  epoch 158 总耗时 56.5s
+--- epoch 159/400 (PAL 调度基准 400) ---
+  [train] epoch 159: loss_mean=0.005438 (min=0.0028, max=0.0106, batches=90) train_IoU=0.6110 train_nIoU=0.4384 耗时 35.6s
+  [val]   epoch 159: mIoU=0.4505 nIoU=0.5124 PD=0.8664 FA(x1e6)=28.81 耗时 22.5s
+  epoch 159 总耗时 58.1s
+--- epoch 160/400 (PAL 调度基准 400) ---
+  [train] epoch 160: loss_mean=0.005484 (min=0.0032, max=0.0153, batches=90) train_IoU=0.6129 train_nIoU=0.4364 耗时 34.9s
+  [val]   epoch 160: mIoU=0.4212 nIoU=0.4908 PD=0.8512 FA(x1e6)=21.04 耗时 21.6s
+  epoch 160 总耗时 56.5s
+--- epoch 161/400 (PAL 调度基准 400) ---
+  [增强轮] lose_point_ratio=0.4700
+  开始标签的自更新--------
+    [自更新] choose 池 1433 张
+  开始认识并学习困难样本-----------
+    [推理] no_choose 池 243 张
+  本轮准入 6 张: ['000828.png', '001017.png', '001041.png', '001048.png', 'XDU514.png', 'XDU642.png']
+生成的标签精细化完成！！！！！！
+  此轮数据转移完成！！！！！ choose=1439 no_choose=237
+  [train] epoch 161: loss_mean=0.005274 (min=0.0024, max=0.0121, batches=90) train_IoU=0.6245 train_nIoU=0.4488 耗时 35.0s
+  [val]   epoch 161: mIoU=0.4300 nIoU=0.5066 PD=0.8671 FA(x1e6)=31.15 耗时 22.8s
+  epoch 161 总耗时 95.9s
+--- epoch 162/400 (PAL 调度基准 400) ---
+  [train] epoch 162: loss_mean=0.004713 (min=0.0027, max=0.0089, batches=90) train_IoU=0.6328 train_nIoU=0.4532 耗时 35.1s
+  [val]   epoch 162: mIoU=0.4234 nIoU=0.5027 PD=0.8738 FA(x1e6)=18.61 耗时 22.3s
+  epoch 162 总耗时 57.4s
+--- epoch 163/400 (PAL 调度基准 400) ---
+  [train] epoch 163: loss_mean=0.004725 (min=0.0022, max=0.0139, batches=90) train_IoU=0.6302 train_nIoU=0.4516 耗时 34.2s
+  [val]   epoch 163: mIoU=0.4305 nIoU=0.5075 PD=0.8664 FA(x1e6)=24.18 耗时 21.7s
+  epoch 163 总耗时 56.0s
+--- epoch 164/400 (PAL 调度基准 400) ---
+  [train] epoch 164: loss_mean=0.004239 (min=0.0017, max=0.0138, batches=90) train_IoU=0.6377 train_nIoU=0.4533 耗时 35.9s
+  [val]   epoch 164: mIoU=0.4285 nIoU=0.5082 PD=0.8678 FA(x1e6)=19.98 耗时 23.1s
+  epoch 164 总耗时 59.0s
+--- epoch 165/400 (PAL 调度基准 400) ---
+  [train] epoch 165: loss_mean=0.004059 (min=0.0022, max=0.0083, batches=90) train_IoU=0.6340 train_nIoU=0.4548 耗时 34.5s
+  [val]   epoch 165: mIoU=0.4476 nIoU=0.5122 PD=0.8837 FA(x1e6)=30.09 耗时 21.7s
+  epoch 165 总耗时 56.2s
+--- epoch 166/400 (PAL 调度基准 400) ---
+  [增强轮] lose_point_ratio=0.4867
+  开始标签的自更新--------
+    [自更新] choose 池 1439 张
+  开始认识并学习困难样本-----------
+    [推理] no_choose 池 237 张
+  本轮准入 24 张: ['000101.png', '000311.png', '000477.png', '000486.png', '000570.png', '000602.png', '000884.png', '000946.png', '000952.png', '000964.png']...
+生成的标签精细化完成！！！！！！
+  此轮数据转移完成！！！！！ choose=1463 no_choose=213
+  [train] epoch 166: loss_mean=0.004192 (min=0.0023, max=0.0101, batches=92) train_IoU=0.6552 train_nIoU=0.4726 耗时 36.7s
+  [val]   epoch 166: mIoU=0.4610 nIoU=0.5178 PD=0.9056 FA(x1e6)=43.89 耗时 22.1s
+  [ckpt] best mIoU=0.4610 已保存
+  epoch 166 总耗时 95.9s
+--- epoch 167/400 (PAL 调度基准 400) ---
+  [train] epoch 167: loss_mean=0.004785 (min=0.0020, max=0.0121, batches=92) train_IoU=0.6351 train_nIoU=0.4661 耗时 35.1s
+  [val]   epoch 167: mIoU=0.4172 nIoU=0.4797 PD=0.8631 FA(x1e6)=49.98 耗时 21.6s
+  epoch 167 总耗时 56.7s
+--- epoch 168/400 (PAL 调度基准 400) ---
+  [train] epoch 168: loss_mean=0.004819 (min=0.0019, max=0.0103, batches=92) train_IoU=0.6278 train_nIoU=0.4448 耗时 35.0s
+  [val]   epoch 168: mIoU=0.4533 nIoU=0.5026 PD=0.8937 FA(x1e6)=31.01 耗时 23.4s
+  epoch 168 总耗时 58.4s
+--- epoch 169/400 (PAL 调度基准 400) ---
+  [train] epoch 169: loss_mean=0.003558 (min=0.0018, max=0.0083, batches=92) train_IoU=0.6483 train_nIoU=0.4584 耗时 36.1s
+  [val]   epoch 169: mIoU=0.4404 nIoU=0.5033 PD=0.8751 FA(x1e6)=22.77 耗时 21.3s
+  epoch 169 总耗时 57.4s
+--- epoch 170/400 (PAL 调度基准 400) ---
+  [train] epoch 170: loss_mean=0.003480 (min=0.0015, max=0.0093, batches=92) train_IoU=0.6405 train_nIoU=0.4604 耗时 35.2s
+  [val]   epoch 170: mIoU=0.4496 nIoU=0.4904 PD=0.8864 FA(x1e6)=28.01 耗时 22.4s
+  epoch 170 总耗时 57.5s
+--- epoch 171/400 (PAL 调度基准 400) ---
+  [增强轮] lose_point_ratio=0.5033
+  开始标签的自更新--------
+    [自更新] choose 池 1463 张
+  开始认识并学习困难样本-----------
+    [推理] no_choose 池 213 张
+  本轮准入 77 张: ['000013.png', '000099.png', '000125.png', '000136.png', '000143.png', '000152.png', '000154.png', '000160.png', '000183.png', '000227.png']...
+生成的标签精细化完成！！！！！！
+  此轮数据转移完成！！！！！ choose=1540 no_choose=136
+  [train] epoch 171: loss_mean=0.003549 (min=0.0017, max=0.0070, batches=97) train_IoU=0.6554 train_nIoU=0.4698 耗时 38.1s
+  [val]   epoch 171: mIoU=0.4375 nIoU=0.4801 PD=0.8817 FA(x1e6)=27.08 耗时 21.7s
+  epoch 171 总耗时 97.7s
+--- epoch 172/400 (PAL 调度基准 400) ---
+  [train] epoch 172: loss_mean=0.003098 (min=0.0017, max=0.0077, batches=97) train_IoU=0.6524 train_nIoU=0.4660 耗时 37.4s
+  [val]   epoch 172: mIoU=0.4527 nIoU=0.4985 PD=0.8817 FA(x1e6)=33.10 耗时 21.8s
+  epoch 172 总耗时 59.3s
+--- epoch 173/400 (PAL 调度基准 400) ---
+  [train] epoch 173: loss_mean=0.003138 (min=0.0015, max=0.0059, batches=97) train_IoU=0.6449 train_nIoU=0.4572 耗时 38.5s
+  [val]   epoch 173: mIoU=0.4425 nIoU=0.4917 PD=0.8771 FA(x1e6)=27.52 耗时 22.5s
+  epoch 173 总耗时 61.0s
+--- epoch 174/400 (PAL 调度基准 400) ---
+  [train] epoch 174: loss_mean=0.003268 (min=0.0018, max=0.0079, batches=97) train_IoU=0.6404 train_nIoU=0.4615 耗时 37.5s
+  [val]   epoch 174: mIoU=0.4545 nIoU=0.4851 PD=0.9103 FA(x1e6)=36.73 耗时 22.7s
+  epoch 174 总耗时 60.1s
+--- epoch 175/400 (PAL 调度基准 400) ---
+  [train] epoch 175: loss_mean=0.003766 (min=0.0019, max=0.0078, batches=97) train_IoU=0.6460 train_nIoU=0.4541 耗时 48.1s
+  [val]   epoch 175: mIoU=0.4542 nIoU=0.5038 PD=0.8944 FA(x1e6)=25.98 耗时 28.1s
+  epoch 175 总耗时 76.2s
+--- epoch 176/400 (PAL 调度基准 400) ---
+  [增强轮] lose_point_ratio=0.5200
+  开始标签的自更新--------
+    [自更新] choose 池 1540 张
+  开始认识并学习困难样本-----------
+    [推理] no_choose 池 136 张
+  本轮准入 11 张: ['000123.png', '000437.png', '000494.png', '000512.png', '001261.png', 'Misc_29.png', 'Misc_393.png', 'XDU304.png', 'XDU722.png', 'XDU843.png']...
+生成的标签精细化完成！！！！！！
+  此轮数据转移完成！！！！！ choose=1551 no_choose=125
+  [train] epoch 176: loss_mean=0.003954 (min=0.0022, max=0.0126, batches=97) train_IoU=0.6548 train_nIoU=0.4705 耗时 48.7s
+  [val]   epoch 176: mIoU=0.4647 nIoU=0.5225 PD=0.8957 FA(x1e6)=25.91 耗时 28.4s
+  [ckpt] best mIoU=0.4647 已保存
+  epoch 176 总耗时 130.3s
+--- epoch 177/400 (PAL 调度基准 400) ---
+  [train] epoch 177: loss_mean=0.004035 (min=0.0022, max=0.0083, batches=97) train_IoU=0.6623 train_nIoU=0.4777 耗时 49.6s
+  [val]   epoch 177: mIoU=0.4545 nIoU=0.5111 PD=0.8791 FA(x1e6)=17.74 耗时 28.3s
+  epoch 177 总耗时 77.8s
+--- epoch 178/400 (PAL 调度基准 400) ---
+  [train] epoch 178: loss_mean=0.004656 (min=0.0027, max=0.0112, batches=97) train_IoU=0.6451 train_nIoU=0.4568 耗时 47.8s
+  [val]   epoch 178: mIoU=0.4482 nIoU=0.5095 PD=0.8771 FA(x1e6)=20.83 耗时 29.1s
+  epoch 178 总耗时 77.0s
+--- epoch 179/400 (PAL 调度基准 400) ---
+  [train] epoch 179: loss_mean=0.003312 (min=0.0014, max=0.0077, batches=97) train_IoU=0.6609 train_nIoU=0.4686 耗时 48.2s
+  [val]   epoch 179: mIoU=0.4674 nIoU=0.5140 PD=0.9070 FA(x1e6)=29.35 耗时 28.0s
+  [ckpt] best mIoU=0.4674 已保存
+  epoch 179 总耗时 76.2s
+--- epoch 180/400 (PAL 调度基准 400) ---
+  [train] epoch 180: loss_mean=0.003063 (min=0.0012, max=0.0085, batches=97) train_IoU=0.6587 train_nIoU=0.4686 耗时 48.8s
+  [val]   epoch 180: mIoU=0.4338 nIoU=0.4921 PD=0.8698 FA(x1e6)=20.46 耗时 28.3s
+  epoch 180 总耗时 77.1s
+--- epoch 181/400 (PAL 调度基准 400) ---
+  [增强轮] lose_point_ratio=0.5367
+  开始标签的自更新--------
+    [自更新] choose 池 1551 张
+  开始认识并学习困难样本-----------
+    [推理] no_choose 池 125 张
+  本轮准入 0 张: []
+生成的标签精细化完成！！！！！！
+  此轮数据转移完成！！！！！ choose=1551 no_choose=125
+  [train] epoch 181: loss_mean=0.002434 (min=0.0014, max=0.0062, batches=97) train_IoU=0.6714 train_nIoU=0.4787 耗时 49.1s
+  [val]   epoch 181: mIoU=0.4562 nIoU=0.4936 PD=0.8990 FA(x1e6)=33.61 耗时 28.8s
+  epoch 181 总耗时 130.6s
+--- epoch 182/400 (PAL 调度基准 400) ---
+  [train] epoch 182: loss_mean=0.002526 (min=0.0013, max=0.0063, batches=97) train_IoU=0.6651 train_nIoU=0.4782 耗时 49.4s
+  [val]   epoch 182: mIoU=0.4532 nIoU=0.5175 PD=0.8897 FA(x1e6)=20.45 耗时 28.7s
+  epoch 182 总耗时 78.2s
+--- epoch 183/400 (PAL 调度基准 400) ---
+  [train] epoch 183: loss_mean=0.002346 (min=0.0010, max=0.0046, batches=97) train_IoU=0.6733 train_nIoU=0.4884 耗时 48.4s
+  [val]   epoch 183: mIoU=0.4574 nIoU=0.5129 PD=0.8890 FA(x1e6)=21.23 耗时 28.4s
+  epoch 183 总耗时 76.9s
+--- epoch 184/400 (PAL 调度基准 400) ---
+  [train] epoch 184: loss_mean=0.002434 (min=0.0013, max=0.0051, batches=97) train_IoU=0.6724 train_nIoU=0.4944 耗时 48.3s
+  [val]   epoch 184: mIoU=0.4672 nIoU=0.5284 PD=0.8904 FA(x1e6)=22.04 耗时 29.0s
+  epoch 184 总耗时 77.3s
+--- epoch 185/400 (PAL 调度基准 400) ---
+  [train] epoch 185: loss_mean=0.002366 (min=0.0012, max=0.0055, batches=97) train_IoU=0.6770 train_nIoU=0.4889 耗时 48.1s
+  [val]   epoch 185: mIoU=0.4537 nIoU=0.5059 PD=0.8837 FA(x1e6)=22.85 耗时 28.3s
+  epoch 185 总耗时 76.4s
+--- epoch 186/400 (PAL 调度基准 400) ---
+  [增强轮] lose_point_ratio=0.5533
+  开始标签的自更新--------
+    [自更新] choose 池 1551 张
+  开始认识并学习困难样本-----------
+    [推理] no_choose 池 125 张
+  本轮准入 1 张: ['XDU327.png']
+生成的标签精细化完成！！！！！！
+  此轮数据转移完成！！！！！ choose=1552 no_choose=124
+  [train] epoch 186: loss_mean=0.002288 (min=0.0011, max=0.0043, batches=97) train_IoU=0.6762 train_nIoU=0.4791 耗时 48.4s
+  [val]   epoch 186: mIoU=0.4725 nIoU=0.5055 PD=0.9090 FA(x1e6)=35.88 耗时 28.5s
+  [ckpt] best mIoU=0.4725 已保存
+  epoch 186 总耗时 129.6s
+--- epoch 187/400 (PAL 调度基准 400) ---
+  [train] epoch 187: loss_mean=0.002407 (min=0.0012, max=0.0073, batches=97) train_IoU=0.6775 train_nIoU=0.4867 耗时 39.4s
+  [val]   epoch 187: mIoU=0.4768 nIoU=0.5129 PD=0.9043 FA(x1e6)=32.48 耗时 22.7s
+  [ckpt] best mIoU=0.4768 已保存
+  epoch 187 总耗时 62.1s
+--- epoch 188/400 (PAL 调度基准 400) ---
+  [train] epoch 188: loss_mean=0.002455 (min=0.0013, max=0.0050, batches=97) train_IoU=0.6735 train_nIoU=0.4851 耗时 38.0s
+  [val]   epoch 188: mIoU=0.4661 nIoU=0.5027 PD=0.9050 FA(x1e6)=37.93 耗时 22.2s
+  epoch 188 总耗时 60.2s
+--- epoch 189/400 (PAL 调度基准 400) ---
+  [train] epoch 189: loss_mean=0.002387 (min=0.0013, max=0.0050, batches=97) train_IoU=0.6727 train_nIoU=0.4785 耗时 38.0s
+  [val]   epoch 189: mIoU=0.4673 nIoU=0.5116 PD=0.9076 FA(x1e6)=30.74 耗时 22.6s
+  epoch 189 总耗时 60.6s
+--- epoch 190/400 (PAL 调度基准 400) ---
+  [train] epoch 190: loss_mean=0.002266 (min=0.0014, max=0.0042, batches=97) train_IoU=0.6722 train_nIoU=0.4855 耗时 39.2s
+  [val]   epoch 190: mIoU=0.4759 nIoU=0.5082 PD=0.9183 FA(x1e6)=44.75 耗时 22.1s
+  epoch 190 总耗时 61.2s
+--- epoch 191/400 (PAL 调度基准 400) ---
+  [增强轮] lose_point_ratio=0.5700
+  开始标签的自更新--------
+    [自更新] choose 池 1552 张
+  开始认识并学习困难样本-----------
+    [推理] no_choose 池 124 张
+  本轮准入 12 张: ['000424.png', '000564.png', '000982.png', '001016.png', '001094.png', '001249.png', '001270.png', 'XDU396.png', 'XDU554.png', 'XDU62.png']...
+生成的标签精细化完成！！！！！！
+  此轮数据转移完成！！！！！ choose=1564 no_choose=112
+  [train] epoch 191: loss_mean=0.002364 (min=0.0010, max=0.0058, batches=98) train_IoU=0.6841 train_nIoU=0.4909 耗时 37.9s
+  [val]   epoch 191: mIoU=0.4730 nIoU=0.4980 PD=0.9143 FA(x1e6)=38.72 耗时 22.7s
+  epoch 191 总耗时 99.0s
+--- epoch 192/400 (PAL 调度基准 400) ---
+  [train] epoch 192: loss_mean=0.002452 (min=0.0010, max=0.0059, batches=98) train_IoU=0.6679 train_nIoU=0.4834 耗时 38.4s
+  [val]   epoch 192: mIoU=0.4619 nIoU=0.5090 PD=0.9003 FA(x1e6)=23.22 耗时 22.4s
+  epoch 192 总耗时 60.8s
+--- epoch 193/400 (PAL 调度基准 400) ---
+  [train] epoch 193: loss_mean=0.002474 (min=0.0011, max=0.0055, batches=98) train_IoU=0.6723 train_nIoU=0.4886 耗时 37.8s
+  [val]   epoch 193: mIoU=0.4714 nIoU=0.4997 PD=0.8990 FA(x1e6)=28.00 耗时 22.2s
+  epoch 193 总耗时 60.0s
+--- epoch 194/400 (PAL 调度基准 400) ---
+  [train] epoch 194: loss_mean=0.002423 (min=0.0013, max=0.0061, batches=98) train_IoU=0.6679 train_nIoU=0.4705 耗时 39.1s
+  [val]   epoch 194: mIoU=0.4607 nIoU=0.5141 PD=0.8957 FA(x1e6)=20.51 耗时 23.0s
+  epoch 194 总耗时 62.1s
+--- epoch 195/400 (PAL 调度基准 400) ---
+  [train] epoch 195: loss_mean=0.002585 (min=0.0012, max=0.0055, batches=98) train_IoU=0.6620 train_nIoU=0.4856 耗时 38.0s
+  [val]   epoch 195: mIoU=0.4694 nIoU=0.5033 PD=0.9123 FA(x1e6)=29.30 耗时 22.2s
+  epoch 195 总耗时 60.3s
+--- epoch 196/400 (PAL 调度基准 400) ---
+  [增强轮] lose_point_ratio=0.5867
+  开始标签的自更新--------
+    [自更新] choose 池 1564 张
+  开始认识并学习困难样本-----------
+    [推理] no_choose 池 112 张
+  本轮准入 7 张: ['000246.png', '000567.png', '000929.png', 'Misc_215.png', 'Misc_337.png', 'Misc_355.png', 'Misc_86.png']
+生成的标签精细化完成！！！！！！
+  此轮数据转移完成！！！！！ choose=1571 no_choose=105
+  [train] epoch 196: loss_mean=0.002298 (min=0.0011, max=0.0051, batches=99) train_IoU=0.6915 train_nIoU=0.4940 耗时 39.2s
+  [val]   epoch 196: mIoU=0.4649 nIoU=0.4911 PD=0.9090 FA(x1e6)=26.17 耗时 22.1s
+  epoch 196 总耗时 100.2s
+--- epoch 197/400 (PAL 调度基准 400) ---
+  [train] epoch 197: loss_mean=0.002317 (min=0.0014, max=0.0053, batches=99) train_IoU=0.6916 train_nIoU=0.5007 耗时 38.1s
+  [val]   epoch 197: mIoU=0.4626 nIoU=0.4930 PD=0.9050 FA(x1e6)=29.10 耗时 22.0s
+  epoch 197 总耗时 60.2s
+--- epoch 198/400 (PAL 调度基准 400) ---
+  [train] epoch 198: loss_mean=0.002273 (min=0.0012, max=0.0049, batches=99) train_IoU=0.6904 train_nIoU=0.4947 耗时 39.6s
+  [val]   epoch 198: mIoU=0.4430 nIoU=0.4717 PD=0.9017 FA(x1e6)=20.66 耗时 22.5s
+  epoch 198 总耗时 62.1s
+--- epoch 199/400 (PAL 调度基准 400) ---
+  [train] epoch 199: loss_mean=0.002321 (min=0.0012, max=0.0092, batches=99) train_IoU=0.6917 train_nIoU=0.4929 耗时 38.7s
+  [val]   epoch 199: mIoU=0.4507 nIoU=0.4805 PD=0.8884 FA(x1e6)=24.60 耗时 22.0s
+  epoch 199 总耗时 60.8s
+--- epoch 200/400 (PAL 调度基准 400) ---
+  [train] epoch 200: loss_mean=0.002341 (min=0.0013, max=0.0055, batches=99) train_IoU=0.6856 train_nIoU=0.4893 耗时 39.1s
+  [val]   epoch 200: mIoU=0.4559 nIoU=0.4908 PD=0.8983 FA(x1e6)=21.31 耗时 23.4s
+  epoch 200 总耗时 62.5s
+--- epoch 201/400 (PAL 调度基准 400) ---
+  [增强轮] lose_point_ratio=0.6033
+  开始标签的自更新--------
+    [自更新] choose 池 1571 张
+  开始认识并学习困难样本-----------
+    [推理] no_choose 池 105 张
+  本轮准入 2 张: ['000234.png', '000969.png']
+生成的标签精细化完成！！！！！！
+  此轮数据转移完成！！！！！ choose=1573 no_choose=103
+  [train] epoch 201: loss_mean=0.002584 (min=0.0011, max=0.0130, batches=99) train_IoU=0.6586 train_nIoU=0.4656 耗时 38.2s
+  [val]   epoch 201: mIoU=0.4635 nIoU=0.4800 PD=0.9262 FA(x1e6)=41.22 耗时 23.0s
+  epoch 201 总耗时 100.2s
+--- epoch 202/400 (PAL 调度基准 400) ---
+  [train] epoch 202: loss_mean=0.002345 (min=0.0011, max=0.0044, batches=99) train_IoU=0.6831 train_nIoU=0.4970 耗时 39.6s
+  [val]   epoch 202: mIoU=0.4664 nIoU=0.5112 PD=0.9083 FA(x1e6)=29.13 耗时 22.1s
+  epoch 202 总耗时 61.7s
+--- epoch 203/400 (PAL 调度基准 400) ---
+  [train] epoch 203: loss_mean=0.002263 (min=0.0012, max=0.0069, batches=99) train_IoU=0.6982 train_nIoU=0.5009 耗时 37.9s
+  [val]   epoch 203: mIoU=0.4658 nIoU=0.4814 PD=0.9362 FA(x1e6)=74.35 耗时 22.6s
+  epoch 203 总耗时 60.5s
+--- epoch 204/400 (PAL 调度基准 400) ---
+  [train] epoch 204: loss_mean=0.002333 (min=0.0010, max=0.0073, batches=99) train_IoU=0.6901 train_nIoU=0.4988 耗时 38.8s
+  [val]   epoch 204: mIoU=0.4607 nIoU=0.4881 PD=0.9203 FA(x1e6)=34.73 耗时 22.6s
+  epoch 204 总耗时 61.4s
+--- epoch 205/400 (PAL 调度基准 400) ---
+  [train] epoch 205: loss_mean=0.002368 (min=0.0011, max=0.0077, batches=99) train_IoU=0.6768 train_nIoU=0.4951 耗时 37.8s
+  [val]   epoch 205: mIoU=0.4532 nIoU=0.4833 PD=0.9223 FA(x1e6)=42.25 耗时 22.0s
+  epoch 205 总耗时 59.9s
+--- epoch 206/400 (PAL 调度基准 400) ---
+  [增强轮] lose_point_ratio=0.6200
+  开始标签的自更新--------
+    [自更新] choose 池 1573 张
+  开始认识并学习困难样本-----------
+    [推理] no_choose 池 103 张
+  本轮准入 2 张: ['001296.png', 'Misc_134.png']
+生成的标签精细化完成！！！！！！
+  此轮数据转移完成！！！！！ choose=1575 no_choose=101
+  [train] epoch 206: loss_mean=0.002210 (min=0.0011, max=0.0049, batches=99) train_IoU=0.6930 train_nIoU=0.4997 耗时 38.8s
+  [val]   epoch 206: mIoU=0.4548 nIoU=0.4610 PD=0.9030 FA(x1e6)=34.25 耗时 21.8s
+  epoch 206 总耗时 98.2s
+--- epoch 207/400 (PAL 调度基准 400) ---
+  [train] epoch 207: loss_mean=0.002299 (min=0.0013, max=0.0051, batches=99) train_IoU=0.6911 train_nIoU=0.5026 耗时 38.2s
+  [val]   epoch 207: mIoU=0.4577 nIoU=0.4691 PD=0.9110 FA(x1e6)=34.26 耗时 21.5s
+  epoch 207 总耗时 59.7s
+--- epoch 208/400 (PAL 调度基准 400) ---
+  [train] epoch 208: loss_mean=0.002236 (min=0.0012, max=0.0050, batches=99) train_IoU=0.6970 train_nIoU=0.5078 耗时 38.8s
+  [val]   epoch 208: mIoU=0.4459 nIoU=0.4643 PD=0.9090 FA(x1e6)=39.11 耗时 22.4s
+  epoch 208 总耗时 61.2s
+--- epoch 209/400 (PAL 调度基准 400) ---
+  [train] epoch 209: loss_mean=0.002458 (min=0.0013, max=0.0073, batches=99) train_IoU=0.6755 train_nIoU=0.4815 耗时 38.2s
+  [val]   epoch 209: mIoU=0.4403 nIoU=0.4783 PD=0.8957 FA(x1e6)=23.88 耗时 21.7s
+  epoch 209 总耗时 59.9s
+--- epoch 210/400 (PAL 调度基准 400) ---
+  [train] epoch 210: loss_mean=0.002535 (min=0.0014, max=0.0073, batches=99) train_IoU=0.6749 train_nIoU=0.4930 耗时 38.1s
+  [val]   epoch 210: mIoU=0.4735 nIoU=0.4938 PD=0.9090 FA(x1e6)=31.81 耗时 22.1s
+  epoch 210 总耗时 60.3s
+--- epoch 211/400 (PAL 调度基准 400) ---
+  [增强轮] lose_point_ratio=0.6367
+  开始标签的自更新--------
+    [自更新] choose 池 1575 张
+  开始认识并学习困难样本-----------
+    [推理] no_choose 池 101 张
+  本轮准入 6 张: ['000102.png', '000943.png', 'Misc_4.png', 'XDU324.png', 'XDU880.png', 'XDU98.png']
+生成的标签精细化完成！！！！！！
+  此轮数据转移完成！！！！！ choose=1581 no_choose=95
+  [train] epoch 211: loss_mean=0.002230 (min=0.0011, max=0.0055, batches=99) train_IoU=0.6970 train_nIoU=0.4998 耗时 38.2s
+  [val]   epoch 211: mIoU=0.4749 nIoU=0.4916 PD=0.9043 FA(x1e6)=32.28 耗时 21.7s
+  epoch 211 总耗时 99.8s
+--- epoch 212/400 (PAL 调度基准 400) ---
+  [train] epoch 212: loss_mean=0.002132 (min=0.0011, max=0.0062, batches=99) train_IoU=0.7094 train_nIoU=0.5087 耗时 39.4s
+  [val]   epoch 212: mIoU=0.4717 nIoU=0.4959 PD=0.9196 FA(x1e6)=35.69 耗时 22.7s
+  epoch 212 总耗时 62.1s
+--- epoch 213/400 (PAL 调度基准 400) ---
+  [train] epoch 213: loss_mean=0.002192 (min=0.0010, max=0.0058, batches=99) train_IoU=0.7029 train_nIoU=0.4988 耗时 38.3s
+  [val]   epoch 213: mIoU=0.4673 nIoU=0.4973 PD=0.9083 FA(x1e6)=33.41 耗时 21.9s
+  epoch 213 总耗时 60.2s
+--- epoch 214/400 (PAL 调度基准 400) ---
+  [train] epoch 214: loss_mean=0.002160 (min=0.0011, max=0.0049, batches=99) train_IoU=0.7112 train_nIoU=0.5157 耗时 38.8s
+  [val]   epoch 214: mIoU=0.4675 nIoU=0.5068 PD=0.8910 FA(x1e6)=19.25 耗时 22.9s
+  epoch 214 总耗时 61.8s
+--- epoch 215/400 (PAL 调度基准 400) ---
+  [train] epoch 215: loss_mean=0.002259 (min=0.0011, max=0.0049, batches=99) train_IoU=0.7011 train_nIoU=0.5018 耗时 38.9s
+  [val]   epoch 215: mIoU=0.4671 nIoU=0.4911 PD=0.9123 FA(x1e6)=27.77 耗时 21.6s
+  epoch 215 总耗时 60.5s
+--- epoch 216/400 (PAL 调度基准 400) ---
+  [增强轮] lose_point_ratio=0.6533
+  开始标签的自更新--------
+    [自更新] choose 池 1581 张
+  开始认识并学习困难样本-----------
+    [推理] no_choose 池 95 张
+  本轮准入 5 张: ['000103.png', '000276.png', '000453.png', '000518.png', 'XDU903.png']
+生成的标签精细化完成！！！！！！
+  此轮数据转移完成！！！！！ choose=1586 no_choose=90
+  [train] epoch 216: loss_mean=0.002409 (min=0.0010, max=0.0100, batches=100) train_IoU=0.6889 train_nIoU=0.5007 耗时 40.1s
+  [val]   epoch 216: mIoU=0.4631 nIoU=0.5118 PD=0.8857 FA(x1e6)=20.01 耗时 21.8s
+  epoch 216 总耗时 99.1s
+--- epoch 217/400 (PAL 调度基准 400) ---
+  [train] epoch 217: loss_mean=0.002314 (min=0.0010, max=0.0055, batches=100) train_IoU=0.6875 train_nIoU=0.4947 耗时 38.4s
+  [val]   epoch 217: mIoU=0.4697 nIoU=0.5023 PD=0.8784 FA(x1e6)=20.91 耗时 21.7s
+  epoch 217 总耗时 60.1s
+--- epoch 218/400 (PAL 调度基准 400) ---
+  [train] epoch 218: loss_mean=0.002300 (min=0.0009, max=0.0055, batches=100) train_IoU=0.6855 train_nIoU=0.4972 耗时 39.6s
+  [val]   epoch 218: mIoU=0.4582 nIoU=0.5115 PD=0.8718 FA(x1e6)=17.82 耗时 22.6s
+  epoch 218 总耗时 62.2s
+--- epoch 219/400 (PAL 调度基准 400) ---
+  [train] epoch 219: loss_mean=0.002263 (min=0.0012, max=0.0055, batches=100) train_IoU=0.6976 train_nIoU=0.5038 耗时 38.2s
+  [val]   epoch 219: mIoU=0.4587 nIoU=0.4758 PD=0.9203 FA(x1e6)=34.86 耗时 21.5s
+  epoch 219 总耗时 59.8s
+--- epoch 220/400 (PAL 调度基准 400) ---
+  [train] epoch 220: loss_mean=0.002401 (min=0.0010, max=0.0104, batches=100) train_IoU=0.6911 train_nIoU=0.5069 耗时 39.3s
+  [val]   epoch 220: mIoU=0.4544 nIoU=0.5104 PD=0.8598 FA(x1e6)=15.93 耗时 22.6s
+  epoch 220 总耗时 61.9s
+--- epoch 221/400 (PAL 调度基准 400) ---
+  [增强轮] lose_point_ratio=0.6700
+  开始标签的自更新--------
+    [自更新] choose 池 1586 张
+  开始认识并学习困难样本-----------
+    [推理] no_choose 池 90 张
+  本轮准入 6 张: ['000584.png', '000590.png', 'XDU180.png', 'XDU356.png', 'XDU461.png', 'XDU992.png']
+生成的标签精细化完成！！！！！！
+  此轮数据转移完成！！！！！ choose=1592 no_choose=84
+  [train] epoch 221: loss_mean=0.002172 (min=0.0011, max=0.0050, batches=100) train_IoU=0.7056 train_nIoU=0.5070 耗时 38.2s
+  [val]   epoch 221: mIoU=0.4656 nIoU=0.4885 PD=0.8924 FA(x1e6)=24.09 耗时 21.8s
+  epoch 221 总耗时 99.1s
+--- epoch 222/400 (PAL 调度基准 400) ---
+  [train] epoch 222: loss_mean=0.002213 (min=0.0011, max=0.0044, batches=100) train_IoU=0.6990 train_nIoU=0.5122 耗时 40.5s
+  [val]   epoch 222: mIoU=0.4797 nIoU=0.5004 PD=0.9236 FA(x1e6)=25.07 耗时 22.4s
+  [ckpt] best mIoU=0.4797 已保存
+  epoch 222 总耗时 63.0s
+--- epoch 223/400 (PAL 调度基准 400) ---
+  [train] epoch 223: loss_mean=0.002159 (min=0.0010, max=0.0060, batches=100) train_IoU=0.7050 train_nIoU=0.5165 耗时 38.1s
+  [val]   epoch 223: mIoU=0.4811 nIoU=0.4996 PD=0.9189 FA(x1e6)=31.04 耗时 21.7s
+  [ckpt] best mIoU=0.4811 已保存
+  epoch 223 总耗时 59.9s
+--- epoch 224/400 (PAL 调度基准 400) ---
+  [train] epoch 224: loss_mean=0.002113 (min=0.0010, max=0.0098, batches=100) train_IoU=0.7091 train_nIoU=0.5071 耗时 39.4s
+  [val]   epoch 224: mIoU=0.4794 nIoU=0.4978 PD=0.9103 FA(x1e6)=22.80 耗时 22.1s
+  epoch 224 总耗时 61.5s
+--- epoch 225/400 (PAL 调度基准 400) ---
+  [train] epoch 225: loss_mean=0.002100 (min=0.0008, max=0.0059, batches=100) train_IoU=0.7173 train_nIoU=0.5289 耗时 38.3s
+  [val]   epoch 225: mIoU=0.4652 nIoU=0.4843 PD=0.9183 FA(x1e6)=33.83 耗时 21.7s
+  epoch 225 总耗时 60.0s
+--- epoch 226/400 (PAL 调度基准 400) ---
+  [增强轮] lose_point_ratio=0.6867
+  开始标签的自更新--------
+    [自更新] choose 池 1592 张
+  开始认识并学习困难样本-----------
+    [推理] no_choose 池 84 张
+  本轮准入 4 张: ['000793.png', '000942.png', 'XDU309.png', 'XDU866.png']
+生成的标签精细化完成！！！！！！
+  此轮数据转移完成！！！！！ choose=1596 no_choose=80
+  [train] epoch 226: loss_mean=0.002144 (min=0.0008, max=0.0054, batches=100) train_IoU=0.7147 train_nIoU=0.5225 耗时 39.5s
+  [val]   epoch 226: mIoU=0.4753 nIoU=0.4868 PD=0.9236 FA(x1e6)=31.58 耗时 22.1s
+  epoch 226 总耗时 100.6s
+--- epoch 227/400 (PAL 调度基准 400) ---
+  [train] epoch 227: loss_mean=0.002227 (min=0.0011, max=0.0063, batches=100) train_IoU=0.7016 train_nIoU=0.5134 耗时 39.0s
+  [val]   epoch 227: mIoU=0.4571 nIoU=0.4864 PD=0.9163 FA(x1e6)=24.96 耗时 21.8s
+  epoch 227 总耗时 60.9s
+--- epoch 228/400 (PAL 调度基准 400) ---
+  [train] epoch 228: loss_mean=0.002210 (min=0.0011, max=0.0057, batches=100) train_IoU=0.7104 train_nIoU=0.5229 耗时 39.6s
+  [val]   epoch 228: mIoU=0.4632 nIoU=0.4932 PD=0.9130 FA(x1e6)=21.34 耗时 23.3s
+  epoch 228 总耗时 62.9s
+--- epoch 229/400 (PAL 调度基准 400) ---
+  [train] epoch 229: loss_mean=0.002321 (min=0.0010, max=0.0073, batches=100) train_IoU=0.6994 train_nIoU=0.5156 耗时 38.8s
+  [val]   epoch 229: mIoU=0.4684 nIoU=0.4933 PD=0.9103 FA(x1e6)=23.23 耗时 21.8s
+  epoch 229 总耗时 60.5s
+--- epoch 230/400 (PAL 调度基准 400) ---
+  [train] epoch 230: loss_mean=0.002180 (min=0.0009, max=0.0077, batches=100) train_IoU=0.7109 train_nIoU=0.5192 耗时 38.9s
+  [val]   epoch 230: mIoU=0.4601 nIoU=0.4732 PD=0.9156 FA(x1e6)=36.55 耗时 22.6s
+  epoch 230 总耗时 61.5s
+--- epoch 231/400 (PAL 调度基准 400) ---
+  [增强轮] lose_point_ratio=0.7033
+  开始标签的自更新--------
+    [自更新] choose 池 1596 张
+  开始认识并学习困难样本-----------
+    [推理] no_choose 池 80 张
+  本轮准入 3 张: ['001019.png', 'XDU15.png', 'XDU864.png']
+生成的标签精细化完成！！！！！！
+  此轮数据转移完成！！！！！ choose=1599 no_choose=77
+  [train] epoch 231: loss_mean=0.002153 (min=0.0009, max=0.0054, batches=100) train_IoU=0.7141 train_nIoU=0.5240 耗时 39.1s
+  [val]   epoch 231: mIoU=0.4649 nIoU=0.4902 PD=0.9037 FA(x1e6)=18.04 耗时 22.0s
+  epoch 231 总耗时 99.1s
+--- epoch 232/400 (PAL 调度基准 400) ---
+  [train] epoch 232: loss_mean=0.002079 (min=0.0009, max=0.0043, batches=100) train_IoU=0.7172 train_nIoU=0.5150 耗时 39.3s
+  [val]   epoch 232: mIoU=0.4494 nIoU=0.4789 PD=0.8850 FA(x1e6)=20.42 耗时 21.9s
+  epoch 232 总耗时 61.3s
+--- epoch 233/400 (PAL 调度基准 400) ---
+  [train] epoch 233: loss_mean=0.002128 (min=0.0010, max=0.0061, batches=100) train_IoU=0.7120 train_nIoU=0.5042 耗时 39.1s
+  [val]   epoch 233: mIoU=0.4583 nIoU=0.4824 PD=0.8884 FA(x1e6)=20.77 耗时 21.6s
+  epoch 233 总耗时 60.7s
+--- epoch 234/400 (PAL 调度基准 400) ---
+  [train] epoch 234: loss_mean=0.002266 (min=0.0011, max=0.0054, batches=100) train_IoU=0.7054 train_nIoU=0.5099 耗时 39.1s
+  [val]   epoch 234: mIoU=0.4615 nIoU=0.4961 PD=0.8957 FA(x1e6)=18.07 耗时 22.9s
+  epoch 234 总耗时 62.0s
+--- epoch 235/400 (PAL 调度基准 400) ---
+  [train] epoch 235: loss_mean=0.002116 (min=0.0009, max=0.0048, batches=100) train_IoU=0.7176 train_nIoU=0.5184 耗时 39.4s
+  [val]   epoch 235: mIoU=0.4652 nIoU=0.4867 PD=0.9130 FA(x1e6)=26.65 耗时 21.8s
+  epoch 235 总耗时 61.3s
+--- epoch 236/400 (PAL 调度基准 400) ---
+  [增强轮] lose_point_ratio=0.7200
+  开始标签的自更新--------
+    [自更新] choose 池 1599 张
+  开始认识并学习困难样本-----------
+    [推理] no_choose 池 77 张
+  本轮准入 1 张: ['000977.png']
+生成的标签精细化完成！！！！！！
+  此轮数据转移完成！！！！！ choose=1600 no_choose=76
+  [train] epoch 236: loss_mean=0.002166 (min=0.0011, max=0.0070, batches=100) train_IoU=0.7177 train_nIoU=0.5201 耗时 40.2s
+  [val]   epoch 236: mIoU=0.4731 nIoU=0.4912 PD=0.9189 FA(x1e6)=26.17 耗时 22.4s
+  epoch 236 总耗时 100.4s
+--- epoch 237/400 (PAL 调度基准 400) ---
+  [train] epoch 237: loss_mean=0.002068 (min=0.0011, max=0.0041, batches=100) train_IoU=0.7177 train_nIoU=0.5233 耗时 38.6s
+  [val]   epoch 237: mIoU=0.4579 nIoU=0.4849 PD=0.8924 FA(x1e6)=18.02 耗时 21.7s
+  epoch 237 总耗时 60.3s
+--- epoch 238/400 (PAL 调度基准 400) ---
+  [train] epoch 238: loss_mean=0.002314 (min=0.0010, max=0.0093, batches=100) train_IoU=0.7024 train_nIoU=0.5253 耗时 40.2s
+  [val]   epoch 238: mIoU=0.4890 nIoU=0.5123 PD=0.9256 FA(x1e6)=28.74 耗时 22.4s
+  [ckpt] best mIoU=0.4890 已保存
+  epoch 238 总耗时 62.6s
+--- epoch 239/400 (PAL 调度基准 400) ---
+  [train] epoch 239: loss_mean=0.002127 (min=0.0011, max=0.0062, batches=100) train_IoU=0.7113 train_nIoU=0.5086 耗时 38.4s
+  [val]   epoch 239: mIoU=0.4792 nIoU=0.5039 PD=0.9130 FA(x1e6)=25.38 耗时 21.8s
+  epoch 239 总耗时 60.2s
+--- epoch 240/400 (PAL 调度基准 400) ---
+  [train] epoch 240: loss_mean=0.002201 (min=0.0009, max=0.0059, batches=100) train_IoU=0.7127 train_nIoU=0.5188 耗时 39.4s
+  [val]   epoch 240: mIoU=0.4715 nIoU=0.4890 PD=0.9223 FA(x1e6)=25.53 耗时 23.7s
+  epoch 240 总耗时 63.1s
+--- epoch 241/400 (PAL 调度基准 400) ---
+  [增强轮] lose_point_ratio=0.7367
+  开始标签的自更新--------
+    [自更新] choose 池 1600 张
+  开始认识并学习困难样本-----------
+    [推理] no_choose 池 76 张
+  本轮准入 5 张: ['000308.png', 'Misc_142.png', 'Misc_284.png', 'XDU38.png', 'XDU971.png']
+生成的标签精细化完成！！！！！！
+  此轮数据转移完成！！！！！ choose=1605 no_choose=71
+  [train] epoch 241: loss_mean=0.002113 (min=0.0009, max=0.0053, batches=101) train_IoU=0.7235 train_nIoU=0.5186 耗时 38.5s
+  [val]   epoch 241: mIoU=0.4543 nIoU=0.4751 PD=0.8977 FA(x1e6)=18.85 耗时 22.0s
+  epoch 241 总耗时 98.2s
+--- epoch 242/400 (PAL 调度基准 400) ---
+  [train] epoch 242: loss_mean=0.002124 (min=0.0009, max=0.0052, batches=101) train_IoU=0.7192 train_nIoU=0.5259 耗时 41.2s
+  [val]   epoch 242: mIoU=0.4395 nIoU=0.4591 PD=0.8983 FA(x1e6)=20.97 耗时 22.4s
+  epoch 242 总耗时 63.6s
+--- epoch 243/400 (PAL 调度基准 400) ---
+  [train] epoch 243: loss_mean=0.002199 (min=0.0008, max=0.0053, batches=101) train_IoU=0.7122 train_nIoU=0.5279 耗时 39.0s
+  [val]   epoch 243: mIoU=0.4457 nIoU=0.4649 PD=0.9063 FA(x1e6)=21.68 耗时 21.6s
+  epoch 243 总耗时 60.6s
+--- epoch 244/400 (PAL 调度基准 400) ---
+  [train] epoch 244: loss_mean=0.002159 (min=0.0008, max=0.0054, batches=101) train_IoU=0.7177 train_nIoU=0.5108 耗时 40.6s
+  [val]   epoch 244: mIoU=0.4565 nIoU=0.4766 PD=0.9017 FA(x1e6)=20.36 耗时 22.6s
+  epoch 244 总耗时 63.2s
+--- epoch 245/400 (PAL 调度基准 400) ---
+  [train] epoch 245: loss_mean=0.002198 (min=0.0010, max=0.0064, batches=101) train_IoU=0.7091 train_nIoU=0.5251 耗时 38.7s
+  [val]   epoch 245: mIoU=0.4519 nIoU=0.4748 PD=0.8890 FA(x1e6)=18.18 耗时 21.8s
+  epoch 245 总耗时 60.5s
+--- epoch 246/400 (PAL 调度基准 400) ---
+  [增强轮] lose_point_ratio=0.7533
+  开始标签的自更新--------
+    [自更新] choose 池 1605 张
+  开始认识并学习困难样本-----------
+    [推理] no_choose 池 71 张
+  本轮准入 1 张: ['XDU118.png']
+生成的标签精细化完成！！！！！！
+  此轮数据转移完成！！！！！ choose=1606 no_choose=70
+  [train] epoch 246: loss_mean=0.002026 (min=0.0009, max=0.0045, batches=101) train_IoU=0.7237 train_nIoU=0.5195 耗时 39.7s
+  [val]   epoch 246: mIoU=0.4704 nIoU=0.4909 PD=0.9037 FA(x1e6)=18.36 耗时 22.2s
+  epoch 246 总耗时 101.2s
+--- epoch 247/400 (PAL 调度基准 400) ---
+  [train] epoch 247: loss_mean=0.002022 (min=0.0009, max=0.0048, batches=101) train_IoU=0.7239 train_nIoU=0.5206 耗时 39.0s
+  [val]   epoch 247: mIoU=0.4715 nIoU=0.4896 PD=0.9176 FA(x1e6)=27.36 耗时 21.8s
+  epoch 247 总耗时 60.9s
+--- epoch 248/400 (PAL 调度基准 400) ---
+  [train] epoch 248: loss_mean=0.002088 (min=0.0007, max=0.0044, batches=101) train_IoU=0.7239 train_nIoU=0.5326 耗时 40.0s
+  [val]   epoch 248: mIoU=0.4808 nIoU=0.4944 PD=0.9163 FA(x1e6)=27.94 耗时 21.8s
+  epoch 248 总耗时 61.8s
+--- epoch 249/400 (PAL 调度基准 400) ---
+  [train] epoch 249: loss_mean=0.002009 (min=0.0009, max=0.0049, batches=101) train_IoU=0.7270 train_nIoU=0.5284 耗时 39.0s
+  [val]   epoch 249: mIoU=0.4762 nIoU=0.4957 PD=0.9189 FA(x1e6)=26.11 耗时 21.7s
+  epoch 249 总耗时 60.8s
+--- epoch 250/400 (PAL 调度基准 400) ---
+  [train] epoch 250: loss_mean=0.002158 (min=0.0007, max=0.0113, batches=101) train_IoU=0.7218 train_nIoU=0.5143 耗时 40.0s
+  [val]   epoch 250: mIoU=0.4698 nIoU=0.4980 PD=0.9090 FA(x1e6)=18.11 耗时 22.8s
+  epoch 250 总耗时 62.9s
+--- epoch 251/400 (PAL 调度基准 400) ---
+  [增强轮] lose_point_ratio=0.7700
+  开始标签的自更新--------
+    [自更新] choose 池 1606 张
+  开始认识并学习困难样本-----------
+    [推理] no_choose 池 70 张
+  本轮准入 0 张: []
+生成的标签精细化完成！！！！！！
+  此轮数据转移完成！！！！！ choose=1606 no_choose=70
+  [train] epoch 251: loss_mean=0.002122 (min=0.0010, max=0.0071, batches=101) train_IoU=0.7267 train_nIoU=0.5410 耗时 38.9s
+  [val]   epoch 251: mIoU=0.4527 nIoU=0.4786 PD=0.9050 FA(x1e6)=23.23 耗时 22.5s
+  epoch 251 总耗时 99.7s
+--- epoch 252/400 (PAL 调度基准 400) ---
+  [train] epoch 252: loss_mean=0.002319 (min=0.0008, max=0.0079, batches=101) train_IoU=0.7095 train_nIoU=0.5160 耗时 40.0s
+  [val]   epoch 252: mIoU=0.4667 nIoU=0.4879 PD=0.9017 FA(x1e6)=27.15 耗时 22.1s
+  epoch 252 总耗时 62.2s
+--- epoch 253/400 (PAL 调度基准 400) ---
+  [train] epoch 253: loss_mean=0.002446 (min=0.0011, max=0.0099, batches=101) train_IoU=0.6956 train_nIoU=0.5154 耗时 39.1s
+  [val]   epoch 253: mIoU=0.4620 nIoU=0.4640 PD=0.9110 FA(x1e6)=37.13 耗时 21.9s
+  epoch 253 总耗时 61.0s
+--- epoch 254/400 (PAL 调度基准 400) ---
+  [train] epoch 254: loss_mean=0.002048 (min=0.0010, max=0.0056, batches=101) train_IoU=0.7241 train_nIoU=0.5206 耗时 39.7s
+  [val]   epoch 254: mIoU=0.4673 nIoU=0.4884 PD=0.9136 FA(x1e6)=23.08 耗时 22.1s
+  epoch 254 总耗时 61.8s
+--- epoch 255/400 (PAL 调度基准 400) ---
+  [train] epoch 255: loss_mean=0.002017 (min=0.0009, max=0.0054, batches=101) train_IoU=0.7288 train_nIoU=0.5174 耗时 38.9s
+  [val]   epoch 255: mIoU=0.4735 nIoU=0.4899 PD=0.9169 FA(x1e6)=29.91 耗时 21.7s
+  epoch 255 总耗时 60.6s
+--- epoch 256/400 (PAL 调度基准 400) ---
+  [增强轮] lose_point_ratio=0.7867
+  开始标签的自更新--------
+    [自更新] choose 池 1606 张
+  开始认识并学习困难样本-----------
+    [推理] no_choose 池 70 张
+  本轮准入 1 张: ['Misc_349.png']
+生成的标签精细化完成！！！！！！
+  此轮数据转移完成！！！！！ choose=1607 no_choose=69
+  [train] epoch 256: loss_mean=0.002229 (min=0.0011, max=0.0071, batches=101) train_IoU=0.7074 train_nIoU=0.5170 耗时 39.9s
+  [val]   epoch 256: mIoU=0.4691 nIoU=0.4930 PD=0.8983 FA(x1e6)=21.01 耗时 21.9s
+  epoch 256 总耗时 100.3s
+--- epoch 257/400 (PAL 调度基准 400) ---
+  [train] epoch 257: loss_mean=0.002056 (min=0.0010, max=0.0050, batches=101) train_IoU=0.7297 train_nIoU=0.5362 耗时 38.8s
+  [val]   epoch 257: mIoU=0.4671 nIoU=0.4783 PD=0.9110 FA(x1e6)=24.35 耗时 22.3s
+  epoch 257 总耗时 61.1s
+--- epoch 258/400 (PAL 调度基准 400) ---
+  [train] epoch 258: loss_mean=0.002063 (min=0.0009, max=0.0067, batches=101) train_IoU=0.7216 train_nIoU=0.5250 耗时 40.6s
+  [val]   epoch 258: mIoU=0.4516 nIoU=0.4785 PD=0.9070 FA(x1e6)=24.77 耗时 22.1s
+  epoch 258 总耗时 62.8s
+--- epoch 259/400 (PAL 调度基准 400) ---
+  [train] epoch 259: loss_mean=0.002217 (min=0.0011, max=0.0082, batches=101) train_IoU=0.7124 train_nIoU=0.5155 耗时 38.7s
+  [val]   epoch 259: mIoU=0.4620 nIoU=0.4815 PD=0.9176 FA(x1e6)=27.50 耗时 21.6s
+  epoch 259 总耗时 60.3s
+--- epoch 260/400 (PAL 调度基准 400) ---
+  [train] epoch 260: loss_mean=0.002090 (min=0.0010, max=0.0069, batches=101) train_IoU=0.7184 train_nIoU=0.5160 耗时 40.0s
+  [val]   epoch 260: mIoU=0.4490 nIoU=0.4789 PD=0.8910 FA(x1e6)=16.65 耗时 22.2s
+  epoch 260 总耗时 62.2s
+--- epoch 261/400 (PAL 调度基准 400) ---
+  [增强轮] lose_point_ratio=0.8033
+  开始标签的自更新--------
+    [自更新] choose 池 1607 张
+  开始认识并学习困难样本-----------
+    [推理] no_choose 池 69 张
+  本轮准入 0 张: []
+生成的标签精细化完成！！！！！！
+  此轮数据转移完成！！！！！ choose=1607 no_choose=69
+  [train] epoch 261: loss_mean=0.002106 (min=0.0008, max=0.0044, batches=101) train_IoU=0.7195 train_nIoU=0.5269 耗时 38.6s
+  [val]   epoch 261: mIoU=0.4559 nIoU=0.4774 PD=0.9116 FA(x1e6)=23.47 耗时 22.4s
+  epoch 261 总耗时 98.3s
+--- epoch 262/400 (PAL 调度基准 400) ---
+  [train] epoch 262: loss_mean=0.002013 (min=0.0008, max=0.0043, batches=101) train_IoU=0.7282 train_nIoU=0.5221 耗时 40.1s
+  [val]   epoch 262: mIoU=0.4675 nIoU=0.4837 PD=0.9150 FA(x1e6)=32.55 耗时 21.6s
+  epoch 262 总耗时 61.7s
+--- epoch 263/400 (PAL 调度基准 400) ---
+  [train] epoch 263: loss_mean=0.002078 (min=0.0009, max=0.0068, batches=101) train_IoU=0.7307 train_nIoU=0.5350 耗时 38.8s
+  [val]   epoch 263: mIoU=0.4610 nIoU=0.4737 PD=0.9056 FA(x1e6)=22.34 耗时 22.0s
+  epoch 263 总耗时 60.8s
+--- epoch 264/400 (PAL 调度基准 400) ---
+  [train] epoch 264: loss_mean=0.002049 (min=0.0010, max=0.0055, batches=101) train_IoU=0.7221 train_nIoU=0.5229 耗时 40.6s
+  [val]   epoch 264: mIoU=0.4607 nIoU=0.4728 PD=0.9076 FA(x1e6)=22.01 耗时 22.0s
+  epoch 264 总耗时 62.6s
+--- epoch 265/400 (PAL 调度基准 400) ---
+  [train] epoch 265: loss_mean=0.001959 (min=0.0008, max=0.0049, batches=101) train_IoU=0.7272 train_nIoU=0.5256 耗时 39.1s
+  [val]   epoch 265: mIoU=0.4739 nIoU=0.4880 PD=0.9136 FA(x1e6)=32.07 耗时 21.9s
+  epoch 265 总耗时 61.0s
+--- epoch 266/400 (PAL 调度基准 400) ---
+  [增强轮] lose_point_ratio=0.8200
+  开始标签的自更新--------
+    [自更新] choose 池 1607 张
+  开始认识并学习困难样本-----------
+    [推理] no_choose 池 69 张
+  本轮准入 2 张: ['XDU29.png', 'XDU901.png']
+生成的标签精细化完成！！！！！！
+  此轮数据转移完成！！！！！ choose=1609 no_choose=67
+  [train] epoch 266: loss_mean=0.002043 (min=0.0008, max=0.0044, batches=101) train_IoU=0.7220 train_nIoU=0.5265 耗时 39.9s
+  [val]   epoch 266: mIoU=0.4740 nIoU=0.4911 PD=0.9236 FA(x1e6)=26.37 耗时 22.1s
+  epoch 266 总耗时 102.2s
+--- epoch 267/400 (PAL 调度基准 400) ---
+  [train] epoch 267: loss_mean=0.001969 (min=0.0009, max=0.0073, batches=101) train_IoU=0.7355 train_nIoU=0.5318 耗时 39.6s
+  [val]   epoch 267: mIoU=0.4691 nIoU=0.4882 PD=0.9116 FA(x1e6)=21.19 耗时 22.8s
+  epoch 267 总耗时 62.5s
+--- epoch 268/400 (PAL 调度基准 400) ---
+  [train] epoch 268: loss_mean=0.002015 (min=0.0009, max=0.0067, batches=101) train_IoU=0.7327 train_nIoU=0.5239 耗时 40.3s
+  [val]   epoch 268: mIoU=0.4643 nIoU=0.4761 PD=0.9143 FA(x1e6)=21.91 耗时 22.4s
+  epoch 268 总耗时 62.6s
+--- epoch 269/400 (PAL 调度基准 400) ---
+  [train] epoch 269: loss_mean=0.002224 (min=0.0013, max=0.0058, batches=101) train_IoU=0.7146 train_nIoU=0.5230 耗时 40.0s
+  [val]   epoch 269: mIoU=0.4636 nIoU=0.4890 PD=0.8864 FA(x1e6)=16.09 耗时 22.2s
+  epoch 269 总耗时 62.3s
+--- epoch 270/400 (PAL 调度基准 400) ---
+  [train] epoch 270: loss_mean=0.002038 (min=0.0008, max=0.0059, batches=101) train_IoU=0.7261 train_nIoU=0.5236 耗时 40.0s
+  [val]   epoch 270: mIoU=0.4595 nIoU=0.4793 PD=0.8924 FA(x1e6)=15.98 耗时 21.7s
+  epoch 270 总耗时 61.7s
+--- epoch 271/400 (PAL 调度基准 400) ---
+  [增强轮] lose_point_ratio=0.8367
+  开始标签的自更新--------
+    [自更新] choose 池 1609 张
+  开始认识并学习困难样本-----------
+    [推理] no_choose 池 67 张
+  本轮准入 0 张: []
+生成的标签精细化完成！！！！！！
+  此轮数据转移完成！！！！！ choose=1609 no_choose=67
+  [train] epoch 271: loss_mean=0.002079 (min=0.0010, max=0.0078, batches=101) train_IoU=0.7295 train_nIoU=0.5320 耗时 39.0s
+  [val]   epoch 271: mIoU=0.4777 nIoU=0.4961 PD=0.9309 FA(x1e6)=25.58 耗时 22.2s
+  epoch 271 总耗时 99.9s
+--- epoch 272/400 (PAL 调度基准 400) ---
+  [train] epoch 272: loss_mean=0.001925 (min=0.0008, max=0.0042, batches=101) train_IoU=0.7397 train_nIoU=0.5314 耗时 39.4s
+  [val]   epoch 272: mIoU=0.4668 nIoU=0.4820 PD=0.9110 FA(x1e6)=21.07 耗时 22.5s
+  epoch 272 总耗时 61.9s
+--- epoch 273/400 (PAL 调度基准 400) ---
+  [train] epoch 273: loss_mean=0.002045 (min=0.0009, max=0.0045, batches=101) train_IoU=0.7221 train_nIoU=0.5206 耗时 39.3s
+  [val]   epoch 273: mIoU=0.4709 nIoU=0.4871 PD=0.9070 FA(x1e6)=20.51 耗时 22.7s
+  epoch 273 总耗时 62.0s
+--- epoch 274/400 (PAL 调度基准 400) ---
+  [train] epoch 274: loss_mean=0.001931 (min=0.0008, max=0.0039, batches=101) train_IoU=0.7307 train_nIoU=0.5198 耗时 39.9s
+  [val]   epoch 274: mIoU=0.4710 nIoU=0.4809 PD=0.9289 FA(x1e6)=26.46 耗时 22.6s
+  epoch 274 总耗时 62.6s
+--- epoch 275/400 (PAL 调度基准 400) ---
+  [train] epoch 275: loss_mean=0.002171 (min=0.0010, max=0.0070, batches=101) train_IoU=0.7267 train_nIoU=0.5353 耗时 38.8s
+  [val]   epoch 275: mIoU=0.4710 nIoU=0.4842 PD=0.9130 FA(x1e6)=22.03 耗时 21.9s
+  epoch 275 总耗时 60.6s
+--- epoch 276/400 (PAL 调度基准 400) ---
+  [增强轮] lose_point_ratio=0.8533
+  开始标签的自更新--------
+    [自更新] choose 池 1609 张
+  开始认识并学习困难样本-----------
+    [推理] no_choose 池 67 张
+  本轮准入 1 张: ['XDU229.png']
+生成的标签精细化完成！！！！！！
+  此轮数据转移完成！！！！！ choose=1610 no_choose=66
+  [train] epoch 276: loss_mean=0.002006 (min=0.0010, max=0.0061, batches=101) train_IoU=0.7321 train_nIoU=0.5233 耗时 40.1s
+  [val]   epoch 276: mIoU=0.4912 nIoU=0.5177 PD=0.9249 FA(x1e6)=21.11 耗时 22.2s
+  [ckpt] best mIoU=0.4912 已保存
+  epoch 276 总耗时 101.8s
+--- epoch 277/400 (PAL 调度基准 400) ---
+  [train] epoch 277: loss_mean=0.002083 (min=0.0011, max=0.0051, batches=101) train_IoU=0.7213 train_nIoU=0.5142 耗时 39.1s
+  [val]   epoch 277: mIoU=0.4733 nIoU=0.4890 PD=0.9196 FA(x1e6)=20.27 耗时 23.0s
+  epoch 277 总耗时 62.1s
+--- epoch 278/400 (PAL 调度基准 400) ---
+  [train] epoch 278: loss_mean=0.002046 (min=0.0010, max=0.0070, batches=101) train_IoU=0.7255 train_nIoU=0.5258 耗时 40.5s
+  [val]   epoch 278: mIoU=0.4633 nIoU=0.4837 PD=0.9003 FA(x1e6)=16.55 耗时 22.2s
+  epoch 278 总耗时 62.7s
+--- epoch 279/400 (PAL 调度基准 400) ---
+  [train] epoch 279: loss_mean=0.002114 (min=0.0010, max=0.0063, batches=101) train_IoU=0.7306 train_nIoU=0.5292 耗时 39.3s
+  [val]   epoch 279: mIoU=0.4541 nIoU=0.4825 PD=0.8890 FA(x1e6)=25.88 耗时 22.9s
+  epoch 279 总耗时 62.3s
+--- epoch 280/400 (PAL 调度基准 400) ---
+  [train] epoch 280: loss_mean=0.002232 (min=0.0009, max=0.0051, batches=101) train_IoU=0.7187 train_nIoU=0.5237 耗时 40.7s
+  [val]   epoch 280: mIoU=0.4665 nIoU=0.4958 PD=0.9209 FA(x1e6)=24.90 耗时 22.1s
+  epoch 280 总耗时 62.8s
+--- epoch 281/400 (PAL 调度基准 400) ---
+  [增强轮] lose_point_ratio=0.8700
+  开始标签的自更新--------
+    [自更新] choose 池 1610 张
+  开始认识并学习困难样本-----------
+    [推理] no_choose 池 66 张
+  本轮准入 1 张: ['XDU165.png']
+生成的标签精细化完成！！！！！！
+  此轮数据转移完成！！！！！ choose=1611 no_choose=65
+  [train] epoch 281: loss_mean=0.002057 (min=0.0009, max=0.0062, batches=101) train_IoU=0.7273 train_nIoU=0.5256 耗时 39.9s
+  [val]   epoch 281: mIoU=0.4885 nIoU=0.5010 PD=0.9375 FA(x1e6)=35.31 耗时 23.7s
+  epoch 281 总耗时 101.7s
+--- epoch 282/400 (PAL 调度基准 400) ---
+  [train] epoch 282: loss_mean=0.001967 (min=0.0006, max=0.0046, batches=101) train_IoU=0.7337 train_nIoU=0.5373 耗时 39.9s
+  [val]   epoch 282: mIoU=0.4798 nIoU=0.4971 PD=0.9189 FA(x1e6)=24.48 耗时 22.2s
+  epoch 282 总耗时 62.1s
+--- epoch 283/400 (PAL 调度基准 400) ---
+  [train] epoch 283: loss_mean=0.001929 (min=0.0008, max=0.0043, batches=101) train_IoU=0.7318 train_nIoU=0.5241 耗时 39.7s
+  [val]   epoch 283: mIoU=0.4707 nIoU=0.4898 PD=0.9196 FA(x1e6)=19.05 耗时 23.8s
+  epoch 283 总耗时 63.6s
+--- epoch 284/400 (PAL 调度基准 400) ---
+  [train] epoch 284: loss_mean=0.002183 (min=0.0008, max=0.0105, batches=101) train_IoU=0.7231 train_nIoU=0.5238 耗时 39.3s
+  [val]   epoch 284: mIoU=0.4680 nIoU=0.4860 PD=0.9282 FA(x1e6)=26.73 耗时 21.9s
+  epoch 284 总耗时 61.2s
+--- epoch 285/400 (PAL 调度基准 400) ---
+  [train] epoch 285: loss_mean=0.001978 (min=0.0008, max=0.0044, batches=101) train_IoU=0.7353 train_nIoU=0.5288 耗时 39.0s
+  [val]   epoch 285: mIoU=0.4742 nIoU=0.4832 PD=0.9296 FA(x1e6)=26.94 耗时 23.6s
+  epoch 285 总耗时 62.6s
+--- epoch 286/400 (PAL 调度基准 400) ---
+  [增强轮] lose_point_ratio=0.8867
+  开始标签的自更新--------
+    [自更新] choose 池 1611 张
+  开始认识并学习困难样本-----------
+    [推理] no_choose 池 65 张
+  本轮准入 1 张: ['Misc_103.png']
+生成的标签精细化完成！！！！！！
+  此轮数据转移完成！！！！！ choose=1612 no_choose=64
+  [train] epoch 286: loss_mean=0.002352 (min=0.0008, max=0.0082, batches=101) train_IoU=0.7062 train_nIoU=0.5119 耗时 38.7s
+  [val]   epoch 286: mIoU=0.4781 nIoU=0.4936 PD=0.9156 FA(x1e6)=26.27 耗时 21.5s
+  epoch 286 总耗时 98.3s
+--- epoch 287/400 (PAL 调度基准 400) ---
+  [train] epoch 287: loss_mean=0.002198 (min=0.0010, max=0.0053, batches=101) train_IoU=0.7237 train_nIoU=0.5390 耗时 40.3s
+  [val]   epoch 287: mIoU=0.4614 nIoU=0.4695 PD=0.9083 FA(x1e6)=28.18 耗时 22.7s
+  epoch 287 总耗时 63.0s
+--- epoch 288/400 (PAL 调度基准 400) ---
+  [train] epoch 288: loss_mean=0.002299 (min=0.0011, max=0.0056, batches=101) train_IoU=0.7161 train_nIoU=0.5176 耗时 39.6s
+  [val]   epoch 288: mIoU=0.4582 nIoU=0.4596 PD=0.9090 FA(x1e6)=31.67 耗时 21.7s
+  epoch 288 总耗时 61.3s
+--- epoch 289/400 (PAL 调度基准 400) ---
+  [train] epoch 289: loss_mean=0.002293 (min=0.0010, max=0.0058, batches=101) train_IoU=0.7084 train_nIoU=0.5111 耗时 40.0s
+  [val]   epoch 289: mIoU=0.4698 nIoU=0.4739 PD=0.9236 FA(x1e6)=34.30 耗时 22.4s
+  epoch 289 总耗时 62.4s
+--- epoch 290/400 (PAL 调度基准 400) ---
+  [train] epoch 290: loss_mean=0.002111 (min=0.0009, max=0.0052, batches=101) train_IoU=0.7226 train_nIoU=0.5141 耗时 39.2s
+  [val]   epoch 290: mIoU=0.4717 nIoU=0.4817 PD=0.9276 FA(x1e6)=28.29 耗时 21.7s
+  epoch 290 总耗时 60.9s
+--- epoch 291/400 (PAL 调度基准 400) ---
+  [增强轮] lose_point_ratio=0.9033
+  开始标签的自更新--------
+    [自更新] choose 池 1612 张
+  开始认识并学习困难样本-----------
+    [推理] no_choose 池 64 张
+  本轮准入 3 张: ['001061.png', 'XDU300.png', 'XDU738.png']
+生成的标签精细化完成！！！！！！
+  此轮数据转移完成！！！！！ choose=1615 no_choose=61
+  [train] epoch 291: loss_mean=0.001890 (min=0.0007, max=0.0043, batches=101) train_IoU=0.7474 train_nIoU=0.5427 耗时 40.1s
+  [val]   epoch 291: mIoU=0.4713 nIoU=0.4895 PD=0.9156 FA(x1e6)=26.22 耗时 22.4s
+  epoch 291 总耗时 101.2s
+--- epoch 292/400 (PAL 调度基准 400) ---
+  [train] epoch 292: loss_mean=0.002034 (min=0.0009, max=0.0064, batches=101) train_IoU=0.7402 train_nIoU=0.5361 耗时 38.8s
+  [val]   epoch 292: mIoU=0.4791 nIoU=0.4777 PD=0.9302 FA(x1e6)=33.29 耗时 22.5s
+  epoch 292 总耗时 61.3s
+--- epoch 293/400 (PAL 调度基准 400) ---
+  [train] epoch 293: loss_mean=0.002086 (min=0.0008, max=0.0066, batches=101) train_IoU=0.7358 train_nIoU=0.5358 耗时 39.7s
+  [val]   epoch 293: mIoU=0.4964 nIoU=0.4997 PD=0.9262 FA(x1e6)=34.45 耗时 22.5s
+  [ckpt] best mIoU=0.4964 已保存
+  epoch 293 总耗时 62.2s
+--- epoch 294/400 (PAL 调度基准 400) ---
+  [train] epoch 294: loss_mean=0.002097 (min=0.0007, max=0.0072, batches=101) train_IoU=0.7349 train_nIoU=0.5325 耗时 39.0s
+  [val]   epoch 294: mIoU=0.4835 nIoU=0.4890 PD=0.9302 FA(x1e6)=31.80 耗时 22.9s
+  epoch 294 总耗时 61.9s
+--- epoch 295/400 (PAL 调度基准 400) ---
+  [train] epoch 295: loss_mean=0.002001 (min=0.0006, max=0.0055, batches=101) train_IoU=0.7450 train_nIoU=0.5478 耗时 39.3s
+  [val]   epoch 295: mIoU=0.4899 nIoU=0.4962 PD=0.9269 FA(x1e6)=36.07 耗时 22.5s
+  epoch 295 总耗时 61.8s
+--- epoch 296/400 (PAL 调度基准 400) ---
+  [增强轮] lose_point_ratio=0.9200
+  开始标签的自更新--------
+    [自更新] choose 池 1615 张
+  开始认识并学习困难样本-----------
+    [推理] no_choose 池 61 张
+  本轮准入 8 张: ['000427.png', '000451.png', '000578.png', '000979.png', '001037.png', 'XDU710.png', 'XDU827.png', 'XDU914.png']
+生成的标签精细化完成！！！！！！
+  此轮数据转移完成！！！！！ choose=1623 no_choose=53
+  [train] epoch 296: loss_mean=0.002162 (min=0.0007, max=0.0101, batches=102) train_IoU=0.7394 train_nIoU=0.5353 耗时 39.8s
+  [val]   epoch 296: mIoU=0.4723 nIoU=0.4883 PD=0.9163 FA(x1e6)=20.33 耗时 21.6s
+  epoch 296 总耗时 100.0s
+--- epoch 297/400 (PAL 调度基准 400) ---
+  [train] epoch 297: loss_mean=0.001981 (min=0.0010, max=0.0047, batches=102) train_IoU=0.7385 train_nIoU=0.5214 耗时 40.3s
+  [val]   epoch 297: mIoU=0.4927 nIoU=0.5021 PD=0.9309 FA(x1e6)=27.74 耗时 23.1s
+  epoch 297 总耗时 63.4s
+--- epoch 298/400 (PAL 调度基准 400) ---
+  [train] epoch 298: loss_mean=0.002149 (min=0.0009, max=0.0083, batches=102) train_IoU=0.7316 train_nIoU=0.5374 耗时 39.7s
+  [val]   epoch 298: mIoU=0.4789 nIoU=0.4926 PD=0.9342 FA(x1e6)=25.86 耗时 22.0s
+  epoch 298 总耗时 61.7s
+--- epoch 299/400 (PAL 调度基准 400) ---
+  [train] epoch 299: loss_mean=0.002007 (min=0.0006, max=0.0060, batches=102) train_IoU=0.7387 train_nIoU=0.5378 耗时 39.9s
+  [val]   epoch 299: mIoU=0.4743 nIoU=0.4810 PD=0.9116 FA(x1e6)=31.87 耗时 22.5s
+  epoch 299 总耗时 62.4s
+--- epoch 300/400 (PAL 调度基准 400) ---
+  [train] epoch 300: loss_mean=0.002151 (min=0.0010, max=0.0067, batches=102) train_IoU=0.7278 train_nIoU=0.5256 耗时 39.8s
+  [val]   epoch 300: mIoU=0.4884 nIoU=0.4935 PD=0.9329 FA(x1e6)=28.10 耗时 21.5s
+  epoch 300 总耗时 61.4s
+--- epoch 301/400 (PAL 调度基准 400) ---
+  [增强轮] lose_point_ratio=0.9367
+  开始标签的自更新--------
+    [自更新] choose 池 1623 张
+  开始认识并学习困难样本-----------
+    [推理] no_choose 池 53 张
+  本轮准入 1 张: ['001277.png']
+生成的标签精细化完成！！！！！！
+  此轮数据转移完成！！！！！ choose=1624 no_choose=52
+  [train] epoch 301: loss_mean=0.002122 (min=0.0010, max=0.0068, batches=102) train_IoU=0.7344 train_nIoU=0.5337 耗时 40.8s
+  [val]   epoch 301: mIoU=0.4767 nIoU=0.4872 PD=0.9262 FA(x1e6)=28.72 耗时 21.9s
+  epoch 301 总耗时 101.3s
+--- epoch 302/400 (PAL 调度基准 400) ---
+  [train] epoch 302: loss_mean=0.001995 (min=0.0009, max=0.0057, batches=102) train_IoU=0.7413 train_nIoU=0.5393 耗时 39.4s
+  [val]   epoch 302: mIoU=0.4889 nIoU=0.4933 PD=0.9336 FA(x1e6)=40.08 耗时 21.8s
+  epoch 302 总耗时 61.2s
+--- epoch 303/400 (PAL 调度基准 400) ---
+  [train] epoch 303: loss_mean=0.001970 (min=0.0009, max=0.0084, batches=102) train_IoU=0.7404 train_nIoU=0.5337 耗时 40.5s
+  [val]   epoch 303: mIoU=0.4871 nIoU=0.5027 PD=0.9209 FA(x1e6)=21.50 耗时 22.6s
+  epoch 303 总耗时 63.1s
+--- epoch 304/400 (PAL 调度基准 400) ---
+  [train] epoch 304: loss_mean=0.002207 (min=0.0009, max=0.0089, batches=102) train_IoU=0.7323 train_nIoU=0.5340 耗时 39.3s
+  [val]   epoch 304: mIoU=0.4791 nIoU=0.4798 PD=0.9262 FA(x1e6)=25.87 耗时 21.9s
+  epoch 304 总耗时 61.2s
+--- epoch 305/400 (PAL 调度基准 400) ---
+  [train] epoch 305: loss_mean=0.002172 (min=0.0005, max=0.0084, batches=102) train_IoU=0.7314 train_nIoU=0.5326 耗时 40.1s
+  [val]   epoch 305: mIoU=0.4773 nIoU=0.4922 PD=0.9163 FA(x1e6)=21.02 耗时 23.0s
+  epoch 305 总耗时 63.1s
+--- epoch 306/400 (PAL 调度基准 400) ---
+  [增强轮] lose_point_ratio=0.9533
+  开始标签的自更新--------
+    [自更新] choose 池 1624 张
+  开始认识并学习困难样本-----------
+    [推理] no_choose 池 52 张
+  本轮准入 0 张: []
+生成的标签精细化完成！！！！！！
+  此轮数据转移完成！！！！！ choose=1624 no_choose=52
+  [train] epoch 306: loss_mean=0.002026 (min=0.0010, max=0.0046, batches=102) train_IoU=0.7389 train_nIoU=0.5363 耗时 39.2s
+  [val]   epoch 306: mIoU=0.4692 nIoU=0.4823 PD=0.9176 FA(x1e6)=19.52 耗时 22.3s
+  epoch 306 总耗时 99.7s
+--- epoch 307/400 (PAL 调度基准 400) ---
+  [train] epoch 307: loss_mean=0.001874 (min=0.0008, max=0.0065, batches=102) train_IoU=0.7510 train_nIoU=0.5417 耗时 40.9s
+  [val]   epoch 307: mIoU=0.4806 nIoU=0.4982 PD=0.9216 FA(x1e6)=22.61 耗时 22.1s
+  epoch 307 总耗时 63.0s
+--- epoch 308/400 (PAL 调度基准 400) ---
+  [train] epoch 308: loss_mean=0.002115 (min=0.0010, max=0.0059, batches=102) train_IoU=0.7307 train_nIoU=0.5328 耗时 39.2s
+  [val]   epoch 308: mIoU=0.4874 nIoU=0.4940 PD=0.9276 FA(x1e6)=26.95 耗时 22.0s
+  epoch 308 总耗时 61.1s
+--- epoch 309/400 (PAL 调度基准 400) ---
+  [train] epoch 309: loss_mean=0.002027 (min=0.0008, max=0.0061, batches=102) train_IoU=0.7412 train_nIoU=0.5409 耗时 40.5s
+  [val]   epoch 309: mIoU=0.4901 nIoU=0.4998 PD=0.9289 FA(x1e6)=25.45 耗时 22.4s
+  epoch 309 总耗时 62.9s
+--- epoch 310/400 (PAL 调度基准 400) ---
+  [train] epoch 310: loss_mean=0.001989 (min=0.0008, max=0.0075, batches=102) train_IoU=0.7410 train_nIoU=0.5322 耗时 39.1s
+  [val]   epoch 310: mIoU=0.4771 nIoU=0.4870 PD=0.9229 FA(x1e6)=21.94 耗时 21.8s
+  epoch 310 总耗时 61.0s
+--- epoch 311/400 (PAL 调度基准 400) ---
+  [增强轮] lose_point_ratio=0.9700
+  开始标签的自更新--------
+    [自更新] choose 池 1624 张
+  开始认识并学习困难样本-----------
+    [推理] no_choose 池 52 张
+  本轮准入 0 张: []
+生成的标签精细化完成！！！！！！
+  此轮数据转移完成！！！！！ choose=1624 no_choose=52
+  [train] epoch 311: loss_mean=0.002099 (min=0.0008, max=0.0069, batches=102) train_IoU=0.7352 train_nIoU=0.5329 耗时 39.7s
+  [val]   epoch 311: mIoU=0.4833 nIoU=0.4966 PD=0.9262 FA(x1e6)=23.24 耗时 21.4s
+  epoch 311 总耗时 100.2s
+--- epoch 312/400 (PAL 调度基准 400) ---
+  [train] epoch 312: loss_mean=0.002033 (min=0.0009, max=0.0070, batches=102) train_IoU=0.7326 train_nIoU=0.5278 耗时 39.8s
+  [val]   epoch 312: mIoU=0.4816 nIoU=0.4881 PD=0.9322 FA(x1e6)=29.15 耗时 21.8s
+  epoch 312 总耗时 61.6s
+--- epoch 313/400 (PAL 调度基准 400) ---
+  [train] epoch 313: loss_mean=0.001956 (min=0.0007, max=0.0051, batches=102) train_IoU=0.7499 train_nIoU=0.5504 耗时 40.1s
+  [val]   epoch 313: mIoU=0.4823 nIoU=0.4871 PD=0.9236 FA(x1e6)=33.76 耗时 21.9s
+  epoch 313 总耗时 62.0s
+--- epoch 314/400 (PAL 调度基准 400) ---
+  [train] epoch 314: loss_mean=0.001930 (min=0.0010, max=0.0047, batches=102) train_IoU=0.7522 train_nIoU=0.5491 耗时 39.5s
+  [val]   epoch 314: mIoU=0.4895 nIoU=0.4916 PD=0.9375 FA(x1e6)=33.87 耗时 21.7s
+  epoch 314 总耗时 61.3s
+--- epoch 315/400 (PAL 调度基准 400) ---
+  [train] epoch 315: loss_mean=0.002091 (min=0.0009, max=0.0069, batches=102) train_IoU=0.7393 train_nIoU=0.5314 耗时 39.8s
+  [val]   epoch 315: mIoU=0.4812 nIoU=0.4977 PD=0.9276 FA(x1e6)=31.70 耗时 22.2s
+  epoch 315 总耗时 62.0s
+--- epoch 316/400 (PAL 调度基准 400) ---
+  [增强轮] lose_point_ratio=0.9867
+  开始标签的自更新--------
+    [自更新] choose 池 1624 张
+  开始认识并学习困难样本-----------
+    [推理] no_choose 池 52 张
+  本轮准入 1 张: ['XDU280.png']
+生成的标签精细化完成！！！！！！
+  此轮数据转移完成！！！！！ choose=1625 no_choose=51
+  [train] epoch 316: loss_mean=0.002179 (min=0.0010, max=0.0057, batches=102) train_IoU=0.7289 train_nIoU=0.5289 耗时 39.4s
+  [val]   epoch 316: mIoU=0.4819 nIoU=0.4991 PD=0.9262 FA(x1e6)=19.53 耗时 22.0s
+  epoch 316 总耗时 99.7s
+--- epoch 317/400 (PAL 调度基准 400) ---
+  [train] epoch 317: loss_mean=0.001908 (min=0.0008, max=0.0051, batches=102) train_IoU=0.7448 train_nIoU=0.5317 耗时 40.7s
+  [val]   epoch 317: mIoU=0.4741 nIoU=0.4912 PD=0.9169 FA(x1e6)=19.51 耗时 22.6s
+  epoch 317 总耗时 63.3s
+--- epoch 318/400 (PAL 调度基准 400) ---
+  [train] epoch 318: loss_mean=0.002160 (min=0.0010, max=0.0068, batches=102) train_IoU=0.7292 train_nIoU=0.5270 耗时 39.3s
+  [val]   epoch 318: mIoU=0.4879 nIoU=0.4990 PD=0.9362 FA(x1e6)=27.61 耗时 21.8s
+  epoch 318 总耗时 61.1s
+--- epoch 319/400 (PAL 调度基准 400) ---
+  [train] epoch 319: loss_mean=0.002046 (min=0.0008, max=0.0046, batches=102) train_IoU=0.7406 train_nIoU=0.5265 耗时 41.0s
+  [val]   epoch 319: mIoU=0.4686 nIoU=0.4944 PD=0.9070 FA(x1e6)=16.61 耗时 23.0s
+  epoch 319 总耗时 64.0s
+--- epoch 320/400 (PAL 调度基准 400) ---
+  [train] epoch 320: loss_mean=0.002051 (min=0.0010, max=0.0050, batches=102) train_IoU=0.7438 train_nIoU=0.5385 耗时 39.2s
+  [val]   epoch 320: mIoU=0.4689 nIoU=0.4880 PD=0.9150 FA(x1e6)=17.73 耗时 21.9s
+  epoch 320 总耗时 61.1s
+--- epoch 321/400 (PAL 调度基准 400) ---
+  [增强轮] lose_point_ratio=1.0033
+  开始标签的自更新--------
+    [自更新] choose 池 1625 张
+  开始认识并学习困难样本-----------
+    [推理] no_choose 池 51 张
+  本轮准入 51 张: ['000274.png', '000282.png', '000459.png', '000460.png', '000462.png', '000464.png', '000514.png', '000515.png', '000522.png', '000530.png']...
+生成的标签精细化完成！！！！！！
+  此轮数据转移完成！！！！！ choose=1676 no_choose=0
+  [train] epoch 321: loss_mean=0.002123 (min=0.0008, max=0.0094, batches=105) train_IoU=0.7281 train_nIoU=0.5080 耗时 42.3s
+  [val]   epoch 321: mIoU=0.4767 nIoU=0.4976 PD=0.9169 FA(x1e6)=15.80 耗时 21.5s
+  epoch 321 总耗时 103.2s
+--- epoch 322/400 (PAL 调度基准 400) ---
+  [train] epoch 322: loss_mean=0.002012 (min=0.0007, max=0.0065, batches=105) train_IoU=0.7387 train_nIoU=0.5161 耗时 40.4s
+  [val]   epoch 322: mIoU=0.4919 nIoU=0.5007 PD=0.9289 FA(x1e6)=23.93 耗时 22.1s
+  epoch 322 总耗时 62.6s
+--- epoch 323/400 (PAL 调度基准 400) ---
+  [train] epoch 323: loss_mean=0.002073 (min=0.0010, max=0.0065, batches=105) train_IoU=0.7329 train_nIoU=0.5279 耗时 42.6s
+  [val]   epoch 323: mIoU=0.4913 nIoU=0.5135 PD=0.9229 FA(x1e6)=24.78 耗时 21.8s
+  epoch 323 总耗时 64.4s
+--- epoch 324/400 (PAL 调度基准 400) ---
+  [train] epoch 324: loss_mean=0.002304 (min=0.0009, max=0.0063, batches=105) train_IoU=0.7108 train_nIoU=0.5105 耗时 40.8s
+  [val]   epoch 324: mIoU=0.4889 nIoU=0.5076 PD=0.9336 FA(x1e6)=25.74 耗时 22.1s
+  epoch 324 总耗时 62.9s
+--- epoch 325/400 (PAL 调度基准 400) ---
+  [train] epoch 325: loss_mean=0.002063 (min=0.0010, max=0.0063, batches=105) train_IoU=0.7228 train_nIoU=0.5163 耗时 42.0s
+  [val]   epoch 325: mIoU=0.4835 nIoU=0.5027 PD=0.9276 FA(x1e6)=20.77 耗时 22.0s
+  epoch 325 总耗时 64.0s
+--- epoch 326/400 (PAL 调度基准 400) ---
+  [精炼轮] 开始标签的自更新--------
+    [自更新] choose 池 1676 张
+  [train] epoch 326: loss_mean=0.002108 (min=0.0008, max=0.0051, batches=105) train_IoU=0.7148 train_nIoU=0.4916 耗时 41.3s
+  [val]   epoch 326: mIoU=0.4704 nIoU=0.4988 PD=0.9130 FA(x1e6)=18.84 耗时 23.2s
+  epoch 326 总耗时 101.7s
+--- epoch 327/400 (PAL 调度基准 400) ---
+  [train] epoch 327: loss_mean=0.002056 (min=0.0008, max=0.0048, batches=105) train_IoU=0.7281 train_nIoU=0.5057 耗时 40.9s
+  [val]   epoch 327: mIoU=0.4927 nIoU=0.5034 PD=0.9249 FA(x1e6)=22.24 耗时 21.7s
+  epoch 327 总耗时 62.5s
+--- epoch 328/400 (PAL 调度基准 400) ---
+  [train] epoch 328: loss_mean=0.002062 (min=0.0009, max=0.0059, batches=105) train_IoU=0.7299 train_nIoU=0.5168 耗时 41.2s
+  [val]   epoch 328: mIoU=0.4913 nIoU=0.5088 PD=0.9196 FA(x1e6)=19.95 耗时 22.7s
+  epoch 328 总耗时 63.9s
+--- epoch 329/400 (PAL 调度基准 400) ---
+  [train] epoch 329: loss_mean=0.002019 (min=0.0009, max=0.0057, batches=105) train_IoU=0.7315 train_nIoU=0.5167 耗时 41.4s
+  [val]   epoch 329: mIoU=0.4888 nIoU=0.5074 PD=0.9209 FA(x1e6)=20.47 耗时 21.7s
+  epoch 329 总耗时 63.1s
+--- epoch 330/400 (PAL 调度基准 400) ---
+  [train] epoch 330: loss_mean=0.001983 (min=0.0009, max=0.0044, batches=105) train_IoU=0.7378 train_nIoU=0.5210 耗时 40.8s
+  [val]   epoch 330: mIoU=0.4945 nIoU=0.5001 PD=0.9243 FA(x1e6)=28.16 耗时 22.8s
+  epoch 330 总耗时 63.6s
+--- epoch 331/400 (PAL 调度基准 400) ---
+  [精炼轮] 开始标签的自更新--------
+    [自更新] choose 池 1676 张
+  [train] epoch 331: loss_mean=0.002230 (min=0.0008, max=0.0080, batches=105) train_IoU=0.7184 train_nIoU=0.5023 耗时 40.3s
+  [val]   epoch 331: mIoU=0.4745 nIoU=0.5036 PD=0.9037 FA(x1e6)=15.30 耗时 22.3s
+  epoch 331 总耗时 100.8s
+--- epoch 332/400 (PAL 调度基准 400) ---
+  [train] epoch 332: loss_mean=0.002040 (min=0.0007, max=0.0056, batches=105) train_IoU=0.7340 train_nIoU=0.5177 耗时 41.8s
+  [val]   epoch 332: mIoU=0.4730 nIoU=0.4919 PD=0.9150 FA(x1e6)=20.66 耗时 22.3s
+  epoch 332 总耗时 64.1s
+--- epoch 333/400 (PAL 调度基准 400) ---
+  [train] epoch 333: loss_mean=0.001924 (min=0.0007, max=0.0058, batches=105) train_IoU=0.7360 train_nIoU=0.5132 耗时 40.9s
+  [val]   epoch 333: mIoU=0.4936 nIoU=0.5090 PD=0.9309 FA(x1e6)=24.60 耗时 22.5s
+  epoch 333 总耗时 63.5s
+--- epoch 334/400 (PAL 调度基准 400) ---
+  [train] epoch 334: loss_mean=0.002022 (min=0.0009, max=0.0074, batches=105) train_IoU=0.7416 train_nIoU=0.5249 耗时 41.7s
+  [val]   epoch 334: mIoU=0.4898 nIoU=0.5076 PD=0.9183 FA(x1e6)=21.92 耗时 22.0s
+  epoch 334 总耗时 63.8s
+--- epoch 335/400 (PAL 调度基准 400) ---
+  [train] epoch 335: loss_mean=0.002000 (min=0.0009, max=0.0050, batches=105) train_IoU=0.7321 train_nIoU=0.5171 耗时 41.2s
+  [val]   epoch 335: mIoU=0.4802 nIoU=0.4938 PD=0.9203 FA(x1e6)=18.04 耗时 22.8s
+  epoch 335 总耗时 64.0s
+--- epoch 336/400 (PAL 调度基准 400) ---
+  [精炼轮] 开始标签的自更新--------
+    [自更新] choose 池 1676 张
+  [train] epoch 336: loss_mean=0.002096 (min=0.0008, max=0.0051, batches=105) train_IoU=0.7293 train_nIoU=0.5097 耗时 41.7s
+  [val]   epoch 336: mIoU=0.4865 nIoU=0.5010 PD=0.9150 FA(x1e6)=21.47 耗时 22.2s
+  epoch 336 总耗时 102.9s
+--- epoch 337/400 (PAL 调度基准 400) ---
+  [train] epoch 337: loss_mean=0.002049 (min=0.0008, max=0.0050, batches=105) train_IoU=0.7350 train_nIoU=0.5277 耗时 41.4s
+  [val]   epoch 337: mIoU=0.4960 nIoU=0.5187 PD=0.9143 FA(x1e6)=15.86 耗时 23.0s
+  epoch 337 总耗时 64.5s
+--- epoch 338/400 (PAL 调度基准 400) ---
+  [train] epoch 338: loss_mean=0.002075 (min=0.0010, max=0.0051, batches=105) train_IoU=0.7371 train_nIoU=0.5219 耗时 41.8s
+  [val]   epoch 338: mIoU=0.4755 nIoU=0.4942 PD=0.9090 FA(x1e6)=16.21 耗时 22.3s
+  epoch 338 总耗时 64.1s
+--- epoch 339/400 (PAL 调度基准 400) ---
+  [train] epoch 339: loss_mean=0.002088 (min=0.0008, max=0.0052, batches=105) train_IoU=0.7209 train_nIoU=0.4987 耗时 41.0s
+  [val]   epoch 339: mIoU=0.4866 nIoU=0.5030 PD=0.9150 FA(x1e6)=20.14 耗时 22.3s
+  epoch 339 总耗时 63.4s
+--- epoch 340/400 (PAL 调度基准 400) ---
+  [train] epoch 340: loss_mean=0.002239 (min=0.0008, max=0.0065, batches=105) train_IoU=0.7258 train_nIoU=0.5113 耗时 41.5s
+  [val]   epoch 340: mIoU=0.4886 nIoU=0.5114 PD=0.9289 FA(x1e6)=31.82 耗时 21.7s
+  epoch 340 总耗时 63.2s
+--- epoch 341/400 (PAL 调度基准 400) ---
+  [精炼轮] 开始标签的自更新--------
+    [自更新] choose 池 1676 张
+  [train] epoch 341: loss_mean=0.002179 (min=0.0011, max=0.0061, batches=105) train_IoU=0.7231 train_nIoU=0.5101 耗时 41.8s
+  [val]   epoch 341: mIoU=0.4892 nIoU=0.5067 PD=0.9169 FA(x1e6)=18.70 耗时 22.7s
+  epoch 341 总耗时 102.6s
+--- epoch 342/400 (PAL 调度基准 400) ---
+  [train] epoch 342: loss_mean=0.001970 (min=0.0009, max=0.0047, batches=105) train_IoU=0.7365 train_nIoU=0.5189 耗时 41.5s
+  [val]   epoch 342: mIoU=0.4836 nIoU=0.5044 PD=0.9203 FA(x1e6)=16.64 耗时 21.9s
+  epoch 342 总耗时 63.4s
+--- epoch 343/400 (PAL 调度基准 400) ---
+  [train] epoch 343: loss_mean=0.002003 (min=0.0010, max=0.0061, batches=105) train_IoU=0.7377 train_nIoU=0.5278 耗时 41.0s
+  [val]   epoch 343: mIoU=0.4910 nIoU=0.5132 PD=0.9169 FA(x1e6)=17.85 耗时 22.4s
+  epoch 343 总耗时 63.5s
+--- epoch 344/400 (PAL 调度基准 400) ---
+  [train] epoch 344: loss_mean=0.001806 (min=0.0008, max=0.0056, batches=105) train_IoU=0.7418 train_nIoU=0.5134 耗时 41.6s
+  [val]   epoch 344: mIoU=0.4901 nIoU=0.5022 PD=0.9223 FA(x1e6)=19.10 耗时 21.9s
+  epoch 344 总耗时 63.5s
+--- epoch 345/400 (PAL 调度基准 400) ---
+  [train] epoch 345: loss_mean=0.002591 (min=0.0010, max=0.0187, batches=105) train_IoU=0.6916 train_nIoU=0.4937 耗时 40.9s
+  [val]   epoch 345: mIoU=0.4759 nIoU=0.4939 PD=0.9070 FA(x1e6)=17.55 耗时 22.4s
+  epoch 345 总耗时 63.4s
+--- epoch 346/400 (PAL 调度基准 400) ---
+  [精炼轮] 开始标签的自更新--------
+    [自更新] choose 池 1676 张
+  [train] epoch 346: loss_mean=0.002213 (min=0.0010, max=0.0065, batches=105) train_IoU=0.7173 train_nIoU=0.4949 耗时 41.2s
+  [val]   epoch 346: mIoU=0.4860 nIoU=0.4963 PD=0.9209 FA(x1e6)=26.17 耗时 21.9s
+  epoch 346 总耗时 103.5s
+--- epoch 347/400 (PAL 调度基准 400) ---
+  [train] epoch 347: loss_mean=0.001981 (min=0.0007, max=0.0052, batches=105) train_IoU=0.7327 train_nIoU=0.5038 耗时 41.8s
+  [val]   epoch 347: mIoU=0.4899 nIoU=0.5189 PD=0.9276 FA(x1e6)=18.87 耗时 23.6s
+  epoch 347 总耗时 65.4s
+--- epoch 348/400 (PAL 调度基准 400) ---
+  [train] epoch 348: loss_mean=0.002082 (min=0.0007, max=0.0069, batches=105) train_IoU=0.7363 train_nIoU=0.5179 耗时 41.1s
+  [val]   epoch 348: mIoU=0.4716 nIoU=0.5018 PD=0.9023 FA(x1e6)=14.27 耗时 21.8s
+  epoch 348 总耗时 62.9s
+--- epoch 349/400 (PAL 调度基准 400) ---
+  [train] epoch 349: loss_mean=0.001977 (min=0.0008, max=0.0062, batches=105) train_IoU=0.7392 train_nIoU=0.5164 耗时 41.7s
+  [val]   epoch 349: mIoU=0.4804 nIoU=0.5021 PD=0.9123 FA(x1e6)=21.89 耗时 23.3s
+  epoch 349 总耗时 65.0s
+--- epoch 350/400 (PAL 调度基准 400) ---
+  [train] epoch 350: loss_mean=0.002004 (min=0.0008, max=0.0064, batches=105) train_IoU=0.7396 train_nIoU=0.5222 耗时 41.4s
+  [val]   epoch 350: mIoU=0.4933 nIoU=0.5080 PD=0.9189 FA(x1e6)=21.09 耗时 22.5s
+  epoch 350 总耗时 63.9s
+--- epoch 351/400 (PAL 调度基准 400) ---
+  [精炼轮] 开始标签的自更新--------
+    [自更新] choose 池 1676 张
+  [train] epoch 351: loss_mean=0.001903 (min=0.0008, max=0.0047, batches=105) train_IoU=0.7452 train_nIoU=0.5223 耗时 42.7s
+  [val]   epoch 351: mIoU=0.4902 nIoU=0.5133 PD=0.9223 FA(x1e6)=19.71 耗时 22.0s
+  epoch 351 总耗时 104.3s
+--- epoch 352/400 (PAL 调度基准 400) ---
+  [train] epoch 352: loss_mean=0.002016 (min=0.0009, max=0.0063, batches=105) train_IoU=0.7329 train_nIoU=0.5193 耗时 40.7s
+  [val]   epoch 352: mIoU=0.4874 nIoU=0.5099 PD=0.9196 FA(x1e6)=16.02 耗时 21.8s
+  epoch 352 总耗时 62.5s
+--- epoch 353/400 (PAL 调度基准 400) ---
+  [train] epoch 353: loss_mean=0.001913 (min=0.0009, max=0.0050, batches=105) train_IoU=0.7404 train_nIoU=0.5177 耗时 42.4s
+  [val]   epoch 353: mIoU=0.4801 nIoU=0.5046 PD=0.9176 FA(x1e6)=19.18 耗时 22.2s
+  epoch 353 总耗时 64.6s
+--- epoch 354/400 (PAL 调度基准 400) ---
+  [train] epoch 354: loss_mean=0.001936 (min=0.0009, max=0.0042, batches=105) train_IoU=0.7347 train_nIoU=0.5133 耗时 41.4s
+  [val]   epoch 354: mIoU=0.4847 nIoU=0.5149 PD=0.9176 FA(x1e6)=14.34 耗时 22.1s
+  epoch 354 总耗时 63.5s
+--- epoch 355/400 (PAL 调度基准 400) ---
+  [train] epoch 355: loss_mean=0.001792 (min=0.0009, max=0.0044, batches=105) train_IoU=0.7536 train_nIoU=0.5299 耗时 42.2s
+  [val]   epoch 355: mIoU=0.4853 nIoU=0.5049 PD=0.9150 FA(x1e6)=12.65 耗时 22.4s
+  epoch 355 总耗时 64.7s
+--- epoch 356/400 (PAL 调度基准 400) ---
+  [精炼轮] 开始标签的自更新--------
+    [自更新] choose 池 1676 张
+  [train] epoch 356: loss_mean=0.002123 (min=0.0009, max=0.0074, batches=105) train_IoU=0.7302 train_nIoU=0.5153 耗时 41.1s
+  [val]   epoch 356: mIoU=0.4961 nIoU=0.5176 PD=0.9349 FA(x1e6)=22.17 耗时 22.8s
+  epoch 356 总耗时 101.5s
+--- epoch 357/400 (PAL 调度基准 400) ---
+  [train] epoch 357: loss_mean=0.002069 (min=0.0007, max=0.0066, batches=105) train_IoU=0.7279 train_nIoU=0.5168 耗时 41.8s
+  [val]   epoch 357: mIoU=0.4838 nIoU=0.4987 PD=0.9163 FA(x1e6)=17.24 耗时 21.9s
+  epoch 357 总耗时 63.8s
+--- epoch 358/400 (PAL 调度基准 400) ---
+  [train] epoch 358: loss_mean=0.001927 (min=0.0008, max=0.0038, batches=105) train_IoU=0.7410 train_nIoU=0.5213 耗时 41.4s
+  [val]   epoch 358: mIoU=0.4821 nIoU=0.5137 PD=0.9196 FA(x1e6)=14.94 耗时 22.3s
+  epoch 358 总耗时 63.7s
+--- epoch 359/400 (PAL 调度基准 400) ---
+  [train] epoch 359: loss_mean=0.001929 (min=0.0007, max=0.0046, batches=105) train_IoU=0.7393 train_nIoU=0.5077 耗时 42.2s
+  [val]   epoch 359: mIoU=0.4843 nIoU=0.5162 PD=0.9169 FA(x1e6)=16.09 耗时 21.8s
+  epoch 359 总耗时 64.0s
+--- epoch 360/400 (PAL 调度基准 400) ---
+  [train] epoch 360: loss_mean=0.001890 (min=0.0009, max=0.0046, batches=105) train_IoU=0.7369 train_nIoU=0.5159 耗时 41.0s
+  [val]   epoch 360: mIoU=0.4822 nIoU=0.4976 PD=0.9256 FA(x1e6)=21.93 耗时 21.7s
+  epoch 360 总耗时 62.7s
+--- epoch 361/400 (PAL 调度基准 400) ---
+  [精炼轮] 开始标签的自更新--------
+    [自更新] choose 池 1676 张
+  [train] epoch 361: loss_mean=0.001954 (min=0.0008, max=0.0042, batches=105) train_IoU=0.7394 train_nIoU=0.5283 耗时 41.1s
+  [val]   epoch 361: mIoU=0.5057 nIoU=0.5176 PD=0.9449 FA(x1e6)=32.03 耗时 22.5s
+  [ckpt] best mIoU=0.5057 已保存
+  epoch 361 总耗时 102.2s
+--- epoch 362/400 (PAL 调度基准 400) ---
+  [train] epoch 362: loss_mean=0.001959 (min=0.0009, max=0.0071, batches=105) train_IoU=0.7379 train_nIoU=0.5270 耗时 41.1s
+  [val]   epoch 362: mIoU=0.4836 nIoU=0.5122 PD=0.9196 FA(x1e6)=16.56 耗时 23.4s
+  epoch 362 总耗时 64.5s
+--- epoch 363/400 (PAL 调度基准 400) ---
+  [train] epoch 363: loss_mean=0.001953 (min=0.0008, max=0.0061, batches=105) train_IoU=0.7412 train_nIoU=0.5171 耗时 41.4s
+  [val]   epoch 363: mIoU=0.4884 nIoU=0.5034 PD=0.9156 FA(x1e6)=16.75 耗时 22.8s
+  epoch 363 总耗时 64.2s
+--- epoch 364/400 (PAL 调度基准 400) ---
+  [train] epoch 364: loss_mean=0.002020 (min=0.0009, max=0.0059, batches=105) train_IoU=0.7361 train_nIoU=0.5189 耗时 40.4s
+  [val]   epoch 364: mIoU=0.4752 nIoU=0.5109 PD=0.9030 FA(x1e6)=11.55 耗时 22.2s
+  epoch 364 总耗时 62.7s
+--- epoch 365/400 (PAL 调度基准 400) ---
+  [train] epoch 365: loss_mean=0.001928 (min=0.0008, max=0.0102, batches=105) train_IoU=0.7441 train_nIoU=0.5165 耗时 41.5s
+  [val]   epoch 365: mIoU=0.4825 nIoU=0.5045 PD=0.9143 FA(x1e6)=17.05 耗时 22.4s
+  epoch 365 总耗时 63.9s
+--- epoch 366/400 (PAL 调度基准 400) ---
+  [精炼轮] 开始标签的自更新--------
+    [自更新] choose 池 1676 张
+  [train] epoch 366: loss_mean=0.001979 (min=0.0009, max=0.0055, batches=105) train_IoU=0.7341 train_nIoU=0.5206 耗时 41.1s
+  [val]   epoch 366: mIoU=0.4820 nIoU=0.5198 PD=0.9256 FA(x1e6)=19.97 耗时 22.5s
+  epoch 366 总耗时 101.0s
+--- epoch 367/400 (PAL 调度基准 400) ---
+  [train] epoch 367: loss_mean=0.001853 (min=0.0009, max=0.0050, batches=105) train_IoU=0.7416 train_nIoU=0.5220 耗时 41.4s
+  [val]   epoch 367: mIoU=0.4716 nIoU=0.4955 PD=0.9103 FA(x1e6)=12.62 耗时 21.7s
+  epoch 367 总耗时 63.1s
+--- epoch 368/400 (PAL 调度基准 400) ---
+  [train] epoch 368: loss_mean=0.001923 (min=0.0008, max=0.0052, batches=105) train_IoU=0.7442 train_nIoU=0.5252 耗时 40.8s
+  [val]   epoch 368: mIoU=0.4768 nIoU=0.5064 PD=0.9209 FA(x1e6)=15.07 耗时 22.2s
+  epoch 368 总耗时 63.0s
+--- epoch 369/400 (PAL 调度基准 400) ---
+  [train] epoch 369: loss_mean=0.001889 (min=0.0007, max=0.0049, batches=105) train_IoU=0.7457 train_nIoU=0.5299 耗时 41.2s
+  [val]   epoch 369: mIoU=0.4820 nIoU=0.5122 PD=0.9183 FA(x1e6)=16.65 耗时 21.6s
+  epoch 369 总耗时 62.9s
+--- epoch 370/400 (PAL 调度基准 400) ---
+  [train] epoch 370: loss_mean=0.001938 (min=0.0007, max=0.0052, batches=105) train_IoU=0.7431 train_nIoU=0.5327 耗时 40.6s
+  [val]   epoch 370: mIoU=0.4884 nIoU=0.5065 PD=0.9130 FA(x1e6)=17.50 耗时 22.4s
+  epoch 370 总耗时 63.0s
+--- epoch 371/400 (PAL 调度基准 400) ---
+  [精炼轮] 开始标签的自更新--------
+    [自更新] choose 池 1676 张
+  [train] epoch 371: loss_mean=0.001809 (min=0.0007, max=0.0041, batches=105) train_IoU=0.7490 train_nIoU=0.5205 耗时 40.3s
+  [val]   epoch 371: mIoU=0.4914 nIoU=0.5154 PD=0.9282 FA(x1e6)=17.06 耗时 21.7s
+  epoch 371 总耗时 101.9s
+--- epoch 372/400 (PAL 调度基准 400) ---
+  [train] epoch 372: loss_mean=0.001934 (min=0.0010, max=0.0058, batches=105) train_IoU=0.7424 train_nIoU=0.5209 耗时 41.7s
+  [val]   epoch 372: mIoU=0.4694 nIoU=0.4926 PD=0.9096 FA(x1e6)=17.71 耗时 22.1s
+  epoch 372 总耗时 63.8s
+--- epoch 373/400 (PAL 调度基准 400) ---
+  [train] epoch 373: loss_mean=0.001892 (min=0.0008, max=0.0040, batches=105) train_IoU=0.7427 train_nIoU=0.5319 耗时 40.4s
+  [val]   epoch 373: mIoU=0.4891 nIoU=0.5114 PD=0.9136 FA(x1e6)=13.57 耗时 21.4s
+  epoch 373 总耗时 61.9s
+--- epoch 374/400 (PAL 调度基准 400) ---
+  [train] epoch 374: loss_mean=0.001815 (min=0.0007, max=0.0042, batches=105) train_IoU=0.7508 train_nIoU=0.5280 耗时 41.7s
+  [val]   epoch 374: mIoU=0.4887 nIoU=0.5053 PD=0.9183 FA(x1e6)=15.93 耗时 22.4s
+  epoch 374 总耗时 64.1s
+--- epoch 375/400 (PAL 调度基准 400) ---
+  [train] epoch 375: loss_mean=0.001852 (min=0.0008, max=0.0039, batches=105) train_IoU=0.7445 train_nIoU=0.5160 耗时 40.2s
+  [val]   epoch 375: mIoU=0.5047 nIoU=0.5195 PD=0.9256 FA(x1e6)=22.11 耗时 21.8s
+  epoch 375 总耗时 62.0s
+--- epoch 376/400 (PAL 调度基准 400) ---
+  [精炼轮] 开始标签的自更新--------
+    [自更新] choose 池 1676 张
+  [train] epoch 376: loss_mean=0.001915 (min=0.0010, max=0.0046, batches=105) train_IoU=0.7459 train_nIoU=0.5282 耗时 41.2s
+  [val]   epoch 376: mIoU=0.4932 nIoU=0.5237 PD=0.9150 FA(x1e6)=12.12 耗时 21.8s
+  epoch 376 总耗时 101.8s
+--- epoch 377/400 (PAL 调度基准 400) ---
+  [train] epoch 377: loss_mean=0.001873 (min=0.0008, max=0.0049, batches=105) train_IoU=0.7468 train_nIoU=0.5231 耗时 40.7s
+  [val]   epoch 377: mIoU=0.4933 nIoU=0.5192 PD=0.9110 FA(x1e6)=16.18 耗时 23.3s
+  epoch 377 总耗时 64.0s
+--- epoch 378/400 (PAL 调度基准 400) ---
+  [train] epoch 378: loss_mean=0.001897 (min=0.0008, max=0.0045, batches=105) train_IoU=0.7373 train_nIoU=0.5015 耗时 41.6s
+  [val]   epoch 378: mIoU=0.4769 nIoU=0.5109 PD=0.9143 FA(x1e6)=13.47 耗时 21.9s
+  epoch 378 总耗时 63.5s
+--- epoch 379/400 (PAL 调度基准 400) ---
+  [train] epoch 379: loss_mean=0.001934 (min=0.0006, max=0.0057, batches=105) train_IoU=0.7331 train_nIoU=0.5176 耗时 40.7s
+  [val]   epoch 379: mIoU=0.4750 nIoU=0.5035 PD=0.8930 FA(x1e6)=11.71 耗时 22.9s
+  epoch 379 总耗时 63.7s
+--- epoch 380/400 (PAL 调度基准 400) ---
+  [train] epoch 380: loss_mean=0.002048 (min=0.0009, max=0.0046, batches=105) train_IoU=0.7259 train_nIoU=0.5089 耗时 42.3s
+  [val]   epoch 380: mIoU=0.4714 nIoU=0.5103 PD=0.9083 FA(x1e6)=12.10 耗时 21.6s
+  epoch 380 总耗时 63.9s
+--- epoch 381/400 (PAL 调度基准 400) ---
+  [精炼轮] 开始标签的自更新--------
+    [自更新] choose 池 1676 张
+  [train] epoch 381: loss_mean=0.001799 (min=0.0008, max=0.0055, batches=105) train_IoU=0.7541 train_nIoU=0.5290 耗时 41.6s
+  [val]   epoch 381: mIoU=0.4966 nIoU=0.5180 PD=0.9209 FA(x1e6)=20.52 耗时 22.5s
+  epoch 381 总耗时 101.9s
+--- epoch 382/400 (PAL 调度基准 400) ---
+  [train] epoch 382: loss_mean=0.001884 (min=0.0007, max=0.0066, batches=105) train_IoU=0.7443 train_nIoU=0.5240 耗时 40.5s
+  [val]   epoch 382: mIoU=0.4749 nIoU=0.4994 PD=0.9050 FA(x1e6)=13.49 耗时 21.7s
+  epoch 382 总耗时 62.2s
+--- epoch 383/400 (PAL 调度基准 400) ---
+  [train] epoch 383: loss_mean=0.002004 (min=0.0008, max=0.0061, batches=105) train_IoU=0.7350 train_nIoU=0.5191 耗时 41.7s
+  [val]   epoch 383: mIoU=0.4968 nIoU=0.5143 PD=0.9063 FA(x1e6)=17.19 耗时 22.5s
+  epoch 383 总耗时 64.2s
+--- epoch 384/400 (PAL 调度基准 400) ---
+  [train] epoch 384: loss_mean=0.002010 (min=0.0007, max=0.0067, batches=105) train_IoU=0.7398 train_nIoU=0.5323 耗时 40.5s
+  [val]   epoch 384: mIoU=0.4889 nIoU=0.5099 PD=0.9256 FA(x1e6)=17.11 耗时 21.6s
+  epoch 384 总耗时 62.1s
+--- epoch 385/400 (PAL 调度基准 400) ---
+  [train] epoch 385: loss_mean=0.001810 (min=0.0008, max=0.0050, batches=105) train_IoU=0.7410 train_nIoU=0.5206 耗时 41.7s
+  [val]   epoch 385: mIoU=0.4949 nIoU=0.5157 PD=0.9395 FA(x1e6)=24.62 耗时 22.4s
+  epoch 385 总耗时 64.1s
+--- epoch 386/400 (PAL 调度基准 400) ---
+  [精炼轮] 开始标签的自更新--------
+    [自更新] choose 池 1676 张
+  [train] epoch 386: loss_mean=0.001844 (min=0.0008, max=0.0046, batches=105) train_IoU=0.7436 train_nIoU=0.5191 耗时 41.1s
+  [val]   epoch 386: mIoU=0.4986 nIoU=0.5284 PD=0.9123 FA(x1e6)=17.52 耗时 21.8s
+  epoch 386 总耗时 100.6s
+--- epoch 387/400 (PAL 调度基准 400) ---
+  [train] epoch 387: loss_mean=0.001885 (min=0.0009, max=0.0045, batches=105) train_IoU=0.7373 train_nIoU=0.5141 耗时 41.4s
+  [val]   epoch 387: mIoU=0.4839 nIoU=0.5188 PD=0.9183 FA(x1e6)=15.75 耗时 22.9s
+  epoch 387 总耗时 64.2s
+--- epoch 388/400 (PAL 调度基准 400) ---
+  [train] epoch 388: loss_mean=0.001893 (min=0.0008, max=0.0041, batches=105) train_IoU=0.7343 train_nIoU=0.5155 耗时 41.8s
+  [val]   epoch 388: mIoU=0.4962 nIoU=0.5214 PD=0.9150 FA(x1e6)=16.47 耗时 22.3s
+  epoch 388 总耗时 64.1s
+--- epoch 389/400 (PAL 调度基准 400) ---
+  [train] epoch 389: loss_mean=0.001798 (min=0.0007, max=0.0049, batches=105) train_IoU=0.7506 train_nIoU=0.5276 耗时 42.6s
+  [val]   epoch 389: mIoU=0.4897 nIoU=0.5233 PD=0.9229 FA(x1e6)=13.71 耗时 22.5s
+  epoch 389 总耗时 65.1s
+--- epoch 390/400 (PAL 调度基准 400) ---
+  [train] epoch 390: loss_mean=0.001844 (min=0.0007, max=0.0037, batches=105) train_IoU=0.7389 train_nIoU=0.5216 耗时 42.0s
+  [val]   epoch 390: mIoU=0.4925 nIoU=0.5121 PD=0.9030 FA(x1e6)=12.99 耗时 22.1s
+  epoch 390 总耗时 64.1s
+--- epoch 391/400 (PAL 调度基准 400) ---
+  [精炼轮] 开始标签的自更新--------
+    [自更新] choose 池 1676 张
+  [train] epoch 391: loss_mean=0.001975 (min=0.0010, max=0.0043, batches=105) train_IoU=0.7317 train_nIoU=0.5206 耗时 42.0s
+  [val]   epoch 391: mIoU=0.4878 nIoU=0.5114 PD=0.9156 FA(x1e6)=16.78 耗时 22.8s
+  epoch 391 总耗时 104.2s
+--- epoch 392/400 (PAL 调度基准 400) ---
+  [train] epoch 392: loss_mean=0.002120 (min=0.0009, max=0.0075, batches=105) train_IoU=0.7244 train_nIoU=0.5166 耗时 42.2s
+  [val]   epoch 392: mIoU=0.5023 nIoU=0.5279 PD=0.9176 FA(x1e6)=18.81 耗时 22.7s
+  epoch 392 总耗时 65.0s
+--- epoch 393/400 (PAL 调度基准 400) ---
+  [train] epoch 393: loss_mean=0.001999 (min=0.0010, max=0.0062, batches=105) train_IoU=0.7274 train_nIoU=0.5158 耗时 42.4s
+  [val]   epoch 393: mIoU=0.4964 nIoU=0.5222 PD=0.9209 FA(x1e6)=15.13 耗时 22.4s
+  epoch 393 总耗时 64.8s
+--- epoch 394/400 (PAL 调度基准 400) ---
+  [train] epoch 394: loss_mean=0.001777 (min=0.0009, max=0.0034, batches=105) train_IoU=0.7374 train_nIoU=0.5058 耗时 41.7s
+  [val]   epoch 394: mIoU=0.5000 nIoU=0.5358 PD=0.9156 FA(x1e6)=10.72 耗时 23.0s
+  epoch 394 总耗时 64.8s
+--- epoch 395/400 (PAL 调度基准 400) ---
+  [train] epoch 395: loss_mean=0.001867 (min=0.0009, max=0.0056, batches=105) train_IoU=0.7419 train_nIoU=0.5166 耗时 42.3s
+  [val]   epoch 395: mIoU=0.4824 nIoU=0.5147 PD=0.9136 FA(x1e6)=12.18 耗时 22.1s
+  epoch 395 总耗时 64.4s
+--- epoch 396/400 (PAL 调度基准 400) ---
+  [精炼轮] 开始标签的自更新--------
+    [自更新] choose 池 1676 张
+  [train] epoch 396: loss_mean=0.001956 (min=0.0008, max=0.0060, batches=105) train_IoU=0.7402 train_nIoU=0.5234 耗时 42.7s
+  [val]   epoch 396: mIoU=0.4821 nIoU=0.5139 PD=0.9196 FA(x1e6)=16.67 耗时 22.8s
+  epoch 396 总耗时 103.9s
+--- epoch 397/400 (PAL 调度基准 400) ---
+  [train] epoch 397: loss_mean=0.001954 (min=0.0010, max=0.0064, batches=105) train_IoU=0.7368 train_nIoU=0.5234 耗时 41.6s
+  [val]   epoch 397: mIoU=0.4714 nIoU=0.5099 PD=0.8950 FA(x1e6)=10.70 耗时 22.1s
+  epoch 397 总耗时 63.7s
+--- epoch 398/400 (PAL 调度基准 400) ---
+  [train] epoch 398: loss_mean=0.001972 (min=0.0009, max=0.0048, batches=105) train_IoU=0.7291 train_nIoU=0.5148 耗时 42.5s
+  [val]   epoch 398: mIoU=0.4965 nIoU=0.5233 PD=0.9216 FA(x1e6)=14.22 耗时 23.4s
+  epoch 398 总耗时 65.9s
+--- epoch 399/400 (PAL 调度基准 400) ---
+  [train] epoch 399: loss_mean=0.001921 (min=0.0010, max=0.0039, batches=105) train_IoU=0.7366 train_nIoU=0.5224 耗时 41.7s
+  [val]   epoch 399: mIoU=0.4759 nIoU=0.4979 PD=0.8970 FA(x1e6)=13.34 耗时 21.9s
+  epoch 399 总耗时 63.5s
+--- epoch 400/400 (PAL 调度基准 400) ---
+  [train] epoch 400: loss_mean=0.001975 (min=0.0008, max=0.0098, batches=105) train_IoU=0.7294 train_nIoU=0.5091 耗时 42.8s
+  [val]   epoch 400: mIoU=0.4968 nIoU=0.5305 PD=0.9136 FA(x1e6)=12.02 耗时 23.2s
+  epoch 400 总耗时 66.1s
+======================================================================
+训练结束。best mIoU=0.5057; choose=1676 no_choose=0
+PAL_TRAIN_DONE
