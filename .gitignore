@@ -1,0 +1,27 @@
+# ---- 训练与工作区产物 ----
+work_dirs/
+pal_workspaces/
+
+# ---- 数据集（请放在仓库外，见 README「数据集准备」）----
+dataset/
+
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# ---- 权重与日志 ----
+*.pkl
+*.pth
+*.pth.tar
+*.log
+
+# ---- 数值夹具：大体积 npz 统一拦截（>5MB 不入库）----
+# tests/data/ 下 <5MB 的小夹具已人工筛选随仓库分发，显式放行
+*.npz
+!tests/data/*.npz
+
+# ---- 系统垃圾 ----
+.DS_Store
+Thumbs.db
+desktop.ini
